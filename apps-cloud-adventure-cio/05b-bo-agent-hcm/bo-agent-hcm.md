@@ -1,4 +1,4 @@
-# Create a Workflow Agent along with Business Object and Deep Link Tools using AI Agent Studio
+# Create an Agent along with supporting a Business Object Tool, Deep Link tool, and Topic using AI Agent Studio
 
 ## Introduction
 
@@ -8,8 +8,9 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 
 In this activity you will use Oracle Fusion AI Agent Studio to
 * Create a Business Object Tool that provides query and creation access to Absences.
-* Create a Deep Link Tool to provide drill down to absences
-* Create Benefits Absence Agent that leverages the above tools and a delivered User Details tool,
+* Create a Topic to provide detailed instructions for this and/or other agents.
+* Leverage a pre-defined Deep Link Tool to provide drill down to absences
+* Create Benefits Absence Agent that leverages the above tools and a delivered User Details tool.
 
 Estimated Time: 10-15 minutes
 
@@ -17,20 +18,18 @@ Estimated Time: 10-15 minutes
 
 ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download following files
-1. Agent Role file for the AI Agent
+1. Agent Role file to your local desktop as below.
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/role-bo-agent-hcm.txt)
 <br>
 2. Prompt file for the AI Agent
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/prompt-bo-agent-hcm.txt)
-3. Topic file for the AI Agent
+3. Topic Instructions
 <br>
 [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05b-bo-agent-hcm/files/topic-instructions-bo-agent-hcm.txt)
 
 ## Begin Exercise
-
-
 
 1. Create FMLA/Benefits Business Object Agent
 
@@ -46,6 +45,7 @@ As a pre-requisite for this adventure, please download following files
 3. Expand Menu
 
     > (1): Click the **Expand** Menu
+
 
     ![Expand Menu](../05b-bo-agent-hcm/images/bo-agent-hcm-image3.jpg)
 
@@ -71,9 +71,12 @@ As a pre-requisite for this adventure, please download following files
 
     > (1): Enter the following fields as shown:
     * Tool Type:  Select **Business Object** from the dropdown
-    * Tool Name:  CIOXXYYY Absence BO Tool, where XX is replaced with your user number and YYY is replaced with your initials.
-    * Family:  Select **HCM** from the dropdown* Product:  Select **Absences** from the dropdown<br>
+    * Tool Name:  **CIOXXYYY Absence BO Tool**, where XX is replaced with your user number and YYY is replaced with your initials.
+    * Family:  Select **HCM** from the dropdown
+    * Product:  Select **Absences** from the dropdown<br>
+
     > (2): Press the **Generate** button to generate description information. <br>
+
     > (3): Press the **Go** button to accept the generated description.
 
     ![Enter Tool Details](../05b-bo-agent-hcm/images/bo-agent-hcm-image7.jpg)
@@ -87,88 +90,133 @@ As a pre-requisite for this adventure, please download following files
 9. Add New Tool Details
 
     > (1): Click the **Checkbox** next to both **getFMLAAbsences** and **submitFMLAAbsence** to enable them for use in this tool. <br>
+
     > (2): Click the **Create and Close** button on the bottom toolbar.
 
     ![Select BO Functions](../05b-bo-agent-hcm/images/bo-agent-hcm-image9.jpg)
 
-10. Add Another tool
+10. You can see you new Absence Tool has been created.   Next, we want to create a Topic.
 
     > (1): Note that your first Tool has been created.  You may need to scroll to see yours as this will show all tools created by attendees. <br>
-    > (2): Click the **Add** button to create a new Tool
 
-    ![Add Tool](../05b-bo-agent-hcm/images/bo-agent-hcm-image10.jpg)
+    > (2): Click on **Topics** in the upper tab bar.
 
-11. Add New Tool Details
+    ![View Topics](../05b-bo-agent-hcm/images/bo-agent-hcm-image10.jpg)
+
+11. A Topic allows you to create with precise instructions that increase the effectiveness of your agents. You’ll create one here to use with your Agent.
+
+    > (1): Click the **Add** button to create a new Topic
+
+    ![Add Topic](../05b-bo-agent-hcm/images/bo-agent-hcm-image11.jpg)
+
+12. Add Your Topic Details
 
     > (1): Enter the following fields as shown:
-    * Tool Type:  Select **Deep Link** from the dropdown
-    * Tool Name:  CIOXXYYY Absence Deep Link Tool, where XX is replaced with your user number and YYY is replaced with your initials.
-    * Family:  Select **HCM** from the dropdown* Product:  Select **Absences** from the dropdown<br>
+    * Tool Name:  **CIOXXYYY Response Guidelines Topic**, where XX is replaced with your user number and YYY is replaced with your initials.
+    * Family:  Select **Common** from the dropdown
+    * Product:  Select **Other** from the dropdown<br>
 
-    > (2): Press the **Generate** button to generate description information. <br>
-    > (3): Press the **Go** button to accept the generated description.
+    > (2): Click the **Add Instruction** region.
 
-    ![Enter Tool Details](../05b-bo-agent-hcm/images/bo-agent-hcm-image11.jpg)
+    ![Enter Topic Details](../05b-bo-agent-hcm/images/bo-agent-hcm-image12.jpg)
 
-12. Select Deep Link Tool
+13. Here you will provide instructions specifying the detailed response guidelines for any agent that leverages this Topic.   Topics allow you to define standard instructions that can be used across multiple agents.  This greatly simplifies standardization and maintenance.
 
-    > (1): Type **AIA** in the **Search by deep link name, code, family, or product** field and select **AIA Existing Absences** from the resulting dropdown.
+    > (1): Paste the provided text into the Instructions area. The Topic text is available in the copy block below or from the downloadable file provided in the pre-requisites for this lab.<br>
 
-    ![Select Deep Link](../05b-bo-agent-hcm/images/bo-agent-hcm-image12.jpg)
+    > (2): Next, you’ll let AI Agent Studio generate the Description based on the entered information.  Click the **Generate** button as shown on the screen.  Be sure to click the **Generate** button immediately under the Description field.
 
-13. Confirm and Create
+    ![Enter Instructions](../05b-bo-agent-hcm/images/bo-agent-hcm-image13.jpg)
 
-    > (1): Note the message that will display to allow the customer to use the Deep Link. <br>
-    > (2): Click the **Create and Close** button on the bottom toolbar.
+**Instructions**:
+```
+<copy>
+RESPONSE GUIDELINES
+* Be concise, factual, and professional.
+* Base factual answers strictly on retrieved tool data.
+* Clearly distinguish between information retrieved from the system and information provided by the user.
+* Ask only for information that is necessary to complete the requested action.
+* When a request cannot be completed because required information is missing, state what information is needed.
+* Do not make assumptions about missing values.
+* When presenting multiple leave of absence, use a clear, readable format.
+ </copy>
+```
 
-    ![Select Deep Link](../05b-bo-agent-hcm/images/bo-agent-hcm-image13.jpg)
+14. The Generate button produced suggested prompt for create the description.  You can modify here if needed prior to the creation of the Topic description.
 
-14. View Agents
+    > (1): **Review** the generated prompt.  It will leverage the information you’ve entered, including the instructions.  You can made edits, if needed.<br>
+
+    > (2): Click the **Go** button. <br>
+
+
+    ![Generate Topic Description](../05b-bo-agent-hcm/images/bo-agent-hcm-image14.jpg)
+
+15. That’s it.   You’ve completed your Topic.  You can now review the generated description and Create the Topic.
+
+    > (1): **Review** the generated description and make any desired changes. <br>
+
+    > (2): Click the **Create & Close** button. <br>
+
+
+    ![Create and Save Topic](../05b-bo-agent-hcm/images/bo-agent-hcm-image15.jpg)
+
+16. View Agents
 
     > (1): Click the **Agents** tab at the top of the screen.
 
-    ![View Agents](../05b-bo-agent-hcm/images/bo-agent-hcm-image14.jpg)
 
-15. Add Agent
+    ![View Agents](../05b-bo-agent-hcm/images/bo-agent-hcm-image16.jpg)
+
+17. Add Agent
 
     > (1): Click the **Add** button to create a new Agent
 
-    ![Create Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image15.jpg)
 
-16. Add Agent Settings Details
+    ![Create Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image17.jpg)
+
+18. Add Agent Settings Details
 
     > (1): Enter the following fields as shown:
     * Agent Name:  **CIOXXYYY Absence Agent**, where XX is replaced with your user number and YYY is replaced with your initials.
-    * Family:  Select **HCM** from the dropdown* Product:  Select **Absences** from the dropdown* Description: **Absence Benefit Agent*** Maximum Interactions: **5**<br>
+    * Family:  Select **HCM** from the dropdown
+    * Product:  Select **Absences** from the dropdown
+    * Description: **Absence Benefit Agent**
+    * Maximum Interactions: **5**<br>
 
     > (2): Press the **Generate** button to generate description information.
 
-    ![Enter Tool Details](../05b-bo-agent-hcm/images/bo-agent-hcm-image16.jpg)
 
-17. Generate Description
+    ![Enter Tool Details](../05b-bo-agent-hcm/images/bo-agent-hcm-image18.jpg)
+
+19. Generate Description
 
     > (1): Press the **Go** button to accept the generated description.
 
-    ![Generate Description](../05b-bo-agent-hcm/images/bo-agent-hcm-image17.jpg)
 
-18. Review Description and Go To Prompts
+    ![Generate Description](../05b-bo-agent-hcm/images/bo-agent-hcm-image19.jpg)
+
+20. Review Description and Go To Prompts
 
     > (1): Note the generated description<br>
-    > (2): Press the **Generate** button to generate description information.
+    > (2): Click the **Prompt** tab under Agent Settings.
 
-    ![Begin prompts](../05b-bo-agent-hcm/images/bo-agent-hcm-image18.jpg)
 
-19. Agent Prompt
+    ![Begin prompts](../05b-bo-agent-hcm/images/bo-agent-hcm-image20.jpg)
 
-    > (1): Enter the value for the **Agent Role**: **As a FMLA Leave of Absence Agent, your role is to help workers view their existing FMLA leave absences or submit a new FMLA leave absence accurately and securely**<br>
-    > (2): Enter the value for the **Prompt**. Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent. To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below.
+21. Multi Agent Prompt
 
-    ![Agent Prompt](../05b-bo-agent-hcm/images/bo-agent-hcm-image19.jpg)
+    > (1): Enter the value for the **Agent Role**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below. <br>
+    > (2): Enter the value for the **Prompt**.   Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent. To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below. <br>
+    > (3): Type **AIA** in the Search by name, description or code field under Available Tools.<br>
+    > (4): **Hover** over **AIA Absence Deep Link Tool** and click the **+** sign.  This deep link tool will provide drilldown to specific transactions within HCM.
+
+
+    ![Multi Agent Prompt and Agent Composition](../05b-bo-agent-hcm/images/bo-agent-hcm-image21.jpg)
 
 **Agent Role**:
 ```
 <copy>
-As a FMLA Leave of Absence Agent, your role is to help workers view their existing FMLA leave absences or submit a new FMLA leave absence accurately and securely 
+As a FMLA Leave of Absence Agent, your role is to efficiently ask whether the user is interested in applying for FMLA Leave and providing existing leave of absences
  </copy>
 ```
 
@@ -237,16 +285,6 @@ TOOL USAGE RULES
 * Never fabricate tool results, requisition numbers, statuses, dates, quantities, links, or other business data.
 * Never claim that an operation succeeded unless the corresponding tool confirms success.
 
-RESPONSE GUIDELINES
-
-* Be concise, factual, and professional.
-* Base factual answers strictly on retrieved tool data.
-* Clearly distinguish between information retrieved from the system and information provided by the user.
-* Ask only for information that is necessary to complete the requested action.
-* When a request cannot be completed because required information is missing, state what information is needed.
-* Do not make assumptions about missing values.
-* When presenting multiple leave of absence, use a clear, readable format.
-
 BEHAVIOR EXAMPLES
 
 Existing FMLA Leave of Absence
@@ -271,37 +309,45 @@ Action:
 4. Report the result returned by the tool. </copy>
 ```
 
-20. Add Tools to your Agent
+22. Next you’ll add the Absence Tool that you previously created.
 
-    > (1) In the **Search by name, description, or code** field type **CIOXXYYY Absence Agent**, where XX is replaced with your user number and YYY is replaced with your initials. <br>
-    > (2) Hover over the Tool tile named **CIOXXYYY Absence Deep Link Tool** and a **+** sign will appear.  **Click** the **+** sign.
+    > (1) Type **CIOXXYYY** in the Search by name, description or code field under Available Tools, , where XX is replaced with your user number and YYY is replaced with your initials.  This replaces the AIA search you did previously<br>
+    > (2) Hover over the **CIOXXYYY Absence BO Tool and click the **+** sign.
 
-    ![Add Add Tools to your Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image20.jpg)
 
-21. Add Tools to your Agent
+    ![Add Add Tools to your Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image22.jpg)
 
-    > (1) Hover over the **CIOXXYYY Absence BO Tool, where XX is replaced with your user number and YYY is replaced with your initials, and click the **+** sign.
-
-    ![Add Add Tools to your Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image21.jpg)
-
-22. Add More Tools to your Agent
+23. Finally, you can add a Tool that provides the Agent with logged in user information.  This is important as the agent will limit any function and data access to the specific security roles of the user.  After that, you you’ll get started adding your Topic to the Agent.
 
     > (1) In the **Search by name, description, or code** field type **Fetch Logged**. <br>
-    > (2) Hover over the Tool tile named **Fetch Logged in user details** and a **+** sign will appear.  **Click** the **+** sign.
+    > (2) Hover over the Tool tile named **Fetch Logged in user details** and a **+** sign will appear.  **Click** the **+** sign.<br>
+    > (3) Click **Available Topics** in the top left panel
 
-    ![Add More Tools to your Agent](../05b-bo-agent-hcm/images/bo-agent-hcm-image22.jpg)
 
-23. That’s it.  You’ve created your Agent with 3 tools.  One standard tool, one pre-created, and one you just created today.
+    ![Add More Tools](../05b-bo-agent-hcm/images/bo-agent-hcm-image23.jpg)
+
+24. Now you can search for and add your Topic, which will provide detailed instructions to the Agent.
+
+    > (1) Type **CIOXXYYY** in the Search by name, description or code field under Available Topics, where XX is replaced with your user number and YYY is replaced with your initials. <br>
+    > (2) Hover over the **CIOXXYYY Response Guidelines Topics and click the **+** sign.
+
+
+    ![Add More Tools](../05b-bo-agent-hcm/images/bo-agent-hcm-image24.jpg)
+
+25. That’s it.  You’ve created your Agent with 3 tools (one that you created, one standard tool, and one that your AI Adventure Pit Crew pre-created for this Adventure.   You’re ready to save and complete this Adventure .  One standard tool, one pre-created, and one you just created today.
 
     > (1) Click the **Create & Close** button on the bottom toolbar.
 
-    ![Create and Close](../05b-bo-agent-hcm/images/bo-agent-hcm-image23.jpg)
 
-24. There it is
+    ![Create and Close](../05b-bo-agent-hcm/images/bo-agent-hcm-image25.jpg)
+
+26. There it is
 
     > (1) Make note of your new Agent.  You may have scroll it will lists agents created by all of today’s attendees.
 
-    ![List of agents](../05b-bo-agent-hcm/images/bo-agent-hcm-image24.jpg)
+
+    ![List of agents](../05b-bo-agent-hcm/images/bo-agent-hcm-image26.jpg)
+
 
 25. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
