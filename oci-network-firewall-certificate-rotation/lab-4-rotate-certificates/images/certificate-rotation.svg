@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-labelledby="title desc">
+<title id="title">Clone the policy before certificate rotation</title>
+<desc id="desc">Clone the active policy and add the renewed mapping, associate the clone with the firewall, renew Apache, then clone again to remove the old mapping and associate the final policy.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9Z" fill="#42666c"/></marker><style>text{font-family:Arial,sans-serif;fill:#183b42}.title{font-size:29px;font-weight:700}.heading{font-size:21px;font-weight:700}.body{font-size:18px}.small{font-size:16px;fill:#50676b}.tag{font-size:17px;font-weight:700}.arrow{fill:none;stroke:#42666c;stroke-width:3;marker-end:url(#arrow)}</style></defs>
+<rect width="1280" height="440" fill="#f6f8f7"/>
+<text x="40" y="51" class="title">Clone policy → add certificate → associate → renew Apache</text>
+<text x="40" y="82" class="body">Prepare the renewed certificate in an unattached policy. B-current remains throughout.</text>
+<rect x="40" y="115" width="270" height="254" rx="14" fill="#e4eff4"/>
+<rect x="350" y="115" width="270" height="254" rx="14" fill="#f7eade"/>
+<rect x="660" y="115" width="270" height="254" rx="14" fill="#f7eade"/>
+<rect x="970" y="115" width="270" height="254" rx="14" fill="#e4eee4"/>
+<path d="M315 241 H343" class="arrow"/><path d="M625 241 H653" class="arrow"/><path d="M935 241 H963" class="arrow"/>
+<text x="60" y="152" class="heading">1  Clone + modify</text><text x="370" y="152" class="heading">2  Associate clone</text><text x="680" y="152" class="heading">3  Renew Apache</text><text x="990" y="152" class="heading">4  Clone + clean up</text>
+<text x="60" y="194" class="small">Unattached rotation policy</text><text x="370" y="194" class="small">Active rotation policy</text><text x="680" y="194" class="small">Same active policy</text><text x="990" y="194" class="small">Prepare final policy</text>
+<text x="60" y="223" class="tag">A-current + A-renewed</text><text x="60" y="251" class="tag">B-current</text>
+<text x="370" y="223" class="tag">A-current + A-renewed</text><text x="370" y="251" class="tag">B-current</text>
+<text x="680" y="223" class="tag">A-current + A-renewed</text><text x="680" y="251" class="tag">B-current</text>
+<text x="990" y="223" class="tag">A-renewed</text><text x="990" y="251" class="tag">B-current</text>
+<text x="60" y="302" class="body">A serves A-current</text><text x="370" y="302" class="body">A still serves A-current</text><text x="680" y="302" class="body">A serves A-renewed</text><text x="990" y="302" class="body">Associate final policy</text>
+<text x="60" y="339" class="small">Authorize clone for Vault</text><text x="370" y="339" class="small">Wait for firewall update</text><text x="680" y="339" class="small">No policy switch here</text><text x="990" y="339" class="small">After the rollback window</text>
+<text x="40" y="410" class="small">Add A-renewed while preserving the current mappings and secret versions. Renew Apache after policy association.</text>
+</svg>
+

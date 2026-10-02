@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1440 720" role="img" aria-labelledby="title description">
+  <title id="title">Direct and gateway-based indirect device telemetry paths</title>
+  <desc id="description">A charcoal and Oracle-red diagram comparing a direct water pump connection to an indirect pump connection through Gateway 1.</desc>
+  <rect width="1440" height="720" fill="#ffffff"/>
+  <style>
+    .ink { fill:#252d31; stroke:#252d31; } .red { fill:#c74634; stroke:#c74634; }
+    .outline { fill:#ffffff; stroke:#c74634; stroke-width:4; } .line { fill:none; stroke:#c74634; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; }
+    .dashed { fill:none; stroke:#c74634; stroke-width:5; stroke-dasharray:13 11; stroke-linecap:round; }
+    .label { font-family:Arial,Helvetica,sans-serif; fill:#252d31; font-size:24px; font-weight:700; }
+    .caption { font-family:Arial,Helvetica,sans-serif; fill:#4b5559; font-size:19px; }
+    .small { font-family:Arial,Helvetica,sans-serif; fill:#4b5559; font-size:17px; }
+  </style>
+  <text x="80" y="70" class="label" font-size="30">Directly connected device</text>
+  <text x="80" y="402" class="label" font-size="30">Indirectly connected device</text>
+  <path d="M80 98 H1360" stroke="#e4e7e8" stroke-width="2"/>
+  <path d="M80 430 H1360" stroke="#e4e7e8" stroke-width="2"/>
+
+  <!-- direct pump -->
+  <g transform="translate(105 155)">
+    <rect x="0" y="42" width="128" height="55" rx="7" class="ink"/>
+    <rect x="13" y="27" width="55" height="70" rx="4" fill="#fff" stroke="#252d31" stroke-width="7"/>
+    <circle cx="41" cy="62" r="20" fill="none" stroke="#252d31" stroke-width="6"/>
+    <path d="M68 69 H115 L135 49 V92 L115 77 H68" fill="#fff" stroke="#252d31" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M20 104 H120" stroke="#252d31" stroke-width="7"/>
+  </g>
+  <text x="172" y="283" class="caption" text-anchor="middle">Pump: its own credentials</text>
+  <path d="M250 225 H385" class="dashed"/>
+  <path d="M370 208 L390 225 L370 242" class="line"/>
+
+  <!-- cloud -->
+  <g transform="translate(415 160)">
+    <path d="M22 82 C-4 82 -5 42 22 40 C31 7 82 4 98 35 C124 16 162 36 151 65 C176 72 171 105 145 106 H25 C7 106 2 87 22 82Z" class="outline"/>
+    <circle cx="55" cy="68" r="13" class="red"/><circle cx="89" cy="47" r="13" class="red"/><circle cx="123" cy="72" r="13" class="red"/>
+    <path d="M55 68 L89 47 L123 72" fill="none" stroke="#c74634" stroke-width="4"/>
+  </g>
+  <text x="500" y="290" class="caption" text-anchor="middle">OCI IoT Platform</text>
+  <path d="M590 225 H710" class="line"/><path d="M695 208 L715 225 L695 242" class="line"/>
+
+  <!-- direct adapter/twin -->
+  <g transform="translate(740 145)">
+    <rect width="230" height="160" rx="14" class="outline"/>
+    <rect x="24" y="31" width="74" height="96" rx="8" fill="#fff" stroke="#252d31" stroke-width="4"/>
+    <circle cx="45" cy="59" r="7" class="ink"/><path d="M59 59 H83" stroke="#252d31" stroke-width="4"/>
+    <rect x="38" y="83" width="14" height="14" class="ink"/><path d="M59 90 H83" stroke="#252d31" stroke-width="4"/>
+    <path d="M118 51 H177" class="line"/><path d="M163 39 L179 51 L163 63" class="line"/>
+    <path d="M118 91 H177" class="line"/><path d="M163 79 L179 91 L163 103" class="line"/>
+  </g>
+  <text x="855" y="329" class="small" text-anchor="middle">device adapter</text>
+  <path d="M990 225 H1085" class="line"/><path d="M1070 208 L1090 225 L1070 242" class="line"/>
+  <g transform="translate(1115 160)">
+    <rect width="205" height="130" rx="14" class="outline"/>
+    <rect x="69" y="25" width="65" height="47" rx="6" fill="#fff" stroke="#252d31" stroke-width="5"/>
+    <circle cx="102" cy="49" r="16" fill="none" stroke="#252d31" stroke-width="4"/>
+    <path d="M40 105 H165" stroke="#252d31" stroke-width="5"/>
+  </g>
+  <text x="1217" y="314" class="small" text-anchor="middle">direct twin</text>
+
+  <!-- indirect pump -->
+  <g transform="translate(105 488)">
+    <rect x="0" y="42" width="128" height="55" rx="7" class="ink"/>
+    <rect x="13" y="27" width="55" height="70" rx="4" fill="#fff" stroke="#252d31" stroke-width="7"/>
+    <circle cx="41" cy="62" r="20" fill="none" stroke="#252d31" stroke-width="6"/>
+    <path d="M68 69 H115 L135 49 V92 L115 77 H68" fill="#fff" stroke="#252d31" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M20 104 H120" stroke="#252d31" stroke-width="7"/>
+  </g>
+  <text x="172" y="616" class="caption" text-anchor="middle">Pump: no domain credentials</text>
+  <path d="M250 558 H355" class="dashed"/><path d="M340 541 L360 558 L340 575" class="line"/>
+
+  <!-- gateway -->
+  <g transform="translate(385 487)">
+    <rect width="160" height="116" rx="14" class="outline"/>
+    <path d="M38 84 H122 M49 84 V45 H111 V84" fill="none" stroke="#252d31" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M49 27 C62 9 98 9 111 27" fill="none" stroke="#c74634" stroke-width="5"/>
+    <path d="M61 38 C70 26 90 26 99 38" fill="none" stroke="#c74634" stroke-width="5"/>
+    <circle cx="80" cy="48" r="5" class="red"/>
+  </g>
+  <text x="465" y="627" class="small" text-anchor="middle">Gateway 1</text>
+  <text x="465" y="651" class="caption" text-anchor="middle">gateway credentials</text>
+  <path d="M565 558 H685" class="line"/><path d="M670 541 L690 558 L670 575" class="line"/>
+
+  <!-- lower cloud -->
+  <g transform="translate(715 493)">
+    <path d="M22 82 C-4 82 -5 42 22 40 C31 7 82 4 98 35 C124 16 162 36 151 65 C176 72 171 105 145 106 H25 C7 106 2 87 22 82Z" class="outline"/>
+    <circle cx="55" cy="68" r="13" class="red"/><circle cx="89" cy="47" r="13" class="red"/><circle cx="123" cy="72" r="13" class="red"/>
+    <path d="M55 68 L89 47 L123 72" fill="none" stroke="#c74634" stroke-width="4"/>
+  </g>
+  <text x="800" y="623" class="caption" text-anchor="middle">OCI IoT Platform</text>
+  <path d="M895 558 H1000" class="line"/><path d="M985 541 L1005 558 L985 575" class="line"/>
+
+  <!-- route -->
+  <g transform="translate(1030 478)">
+    <rect width="245" height="160" rx="14" class="outline"/>
+    <path d="M30 45 H92 C116 45 116 80 140 80 H205" class="line"/>
+    <path d="M30 115 H92 C116 115 116 80 140 80" class="line"/>
+    <circle cx="30" cy="45" r="7" class="ink"/><circle cx="30" cy="115" r="7" class="red"/><circle cx="205" cy="80" r="8" class="red"/>
+  </g>
+  <text x="1152" y="662" class="small" text-anchor="middle">gateway target → device adapter</text>
+  <path d="M1295 558 H1340" class="line"/><path d="M1325 541 L1345 558 L1325 575" class="line"/>
+  <g transform="translate(1350 507)">
+    <rect width="70" height="102" rx="10" class="outline"/>
+    <path d="M20 48 H50 M35 30 V65" stroke="#252d31" stroke-width="4"/>
+  </g>
+  <text x="1385" y="633" class="small" text-anchor="middle">Indirect</text>
+  <text x="1385" y="651" class="small" text-anchor="middle">twin</text>
+</svg>

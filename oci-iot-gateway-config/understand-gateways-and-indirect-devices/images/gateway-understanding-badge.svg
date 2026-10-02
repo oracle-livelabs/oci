@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-label="Gateway topology understanding badge">
+  <circle cx="120" cy="120" r="112" fill="#ffffff" stroke="#c74634" stroke-width="10"/>
+  <circle cx="120" cy="120" r="82" fill="#f8f8f8" stroke="#252d31" stroke-width="4"/>
+  <path d="M72 142 H168 M84 142 V100 H156 V142" fill="none" stroke="#252d31" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M84 77 C101 54 139 54 156 77" fill="none" stroke="#c74634" stroke-width="8"/>
+  <path d="M98 93 C110 78 130 78 142 93" fill="none" stroke="#c74634" stroke-width="8"/>
+  <circle cx="120" cy="105" r="8" fill="#c74634"/>
+  <path d="M85 164 L108 187 L158 140" fill="none" stroke="#c74634" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,23 @@
+[
+  {
+    "condition": "*",
+    "description": "Build the motor component from flat telemetry and convert PSI pressure to bar.",
+    "payloadMapping": {
+      "$.motor.motorTemperature": "$.motorTemperature",
+      "$.motor.vibrationLevel": "$.vibrationLevel",
+      "$.motor.powerConsumption": "$.powerConsumption",
+      "$.flowRate": "$.flowRate",
+      "$.dischargePressure": "${(.dischPressPsi * 0.0689475729)}"
+    },
+    "referencePayload": {
+      "dataFormat": "JSON",
+      "data": {
+        "motorTemperature": 68.4,
+        "vibrationLevel": 1.7,
+        "powerConsumption": 12.6,
+        "flowRate": 247.5,
+        "dischPressPsi": 62.37
+      }
+    }
+  }
+]

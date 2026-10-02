@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="580.645" viewBox="0 0 1240 600" role="img" aria-labelledby="title desc">
+  <title id="title">Gateway routing selects an associated indirect device</title>
+  <desc id="desc">One message enters the gateway routing adapter. The adapter extracts water-pump-4 from the endpoint and sends the payload to Water Pump 4 from the associated digital twin instances.</desc>
+  <rect width="1240" height="600" fill="#ffffff"/>
+  <style>
+    .outline { fill:#ffffff; stroke:#c74634; stroke-width:4; } .muted { fill:#f7f8f8; stroke:#c7ced0; stroke-width:3; }
+    .line { fill:none; stroke:#c74634; stroke-width:5; stroke-linecap:round; stroke-linejoin:round; }
+    .heading { font:700 29px Arial,Helvetica,sans-serif; fill:#252d31; }
+    .subhead { font:700 22px Arial,Helvetica,sans-serif; fill:#252d31; }
+    .copy { font:19px Arial,Helvetica,sans-serif; fill:#4b5559; }
+    .mono { font:20px Menlo,Consolas,monospace; fill:#252d31; }
+  </style>
+  <text x="48" y="55" class="heading">Gateway routing: one message selects one indirect device</text>
+  <text x="48" y="88" class="copy">The gateway authenticates. Its adapter extracts the target, then delegates the payload to that device's adapter.</text>
+  <g transform="translate(48 165)">
+    <rect width="270" height="250" rx="16" class="outline"/>
+    <path d="M16 0 H254 Q270 0 270 16 V57 H0 V16 Q0 0 16 0Z" fill="#c74634"/>
+    <text x="20" y="37" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#ffffff">Gateway message</text>
+    <text x="22" y="102" class="subhead">Topic</text>
+    <rect x="22" y="119" width="225" height="72" rx="7" fill="#f7f8f8" stroke="#252d31" stroke-width="3"/>
+    <text x="37" y="149" class="mono">water-pumps/</text>
+    <text x="37" y="176" class="mono">water-pump-4</text>
+    <text x="22" y="225" class="copy">Pump telemetry</text>
+  </g>
+  <path d="M342 290 H382" class="line"/><path d="M367 274 L386 290 L367 306" class="line"/>
+  <g transform="translate(408 140)">
+    <rect width="340" height="300" rx="16" class="outline"/>
+    <text x="26" y="46" class="subhead">Gateway routing adapter</text>
+    <path d="M26 67 H314" stroke="#e4e7e8" stroke-width="3"/>
+    <text x="26" y="111" class="copy">Extract target from endpoint</text>
+    <rect x="25" y="133" width="290" height="55" rx="7" fill="#f7f8f8" stroke="#252d31" stroke-width="3"/>
+    <text x="42" y="168" class="mono">target = water-pump-4</text>
+    <path d="M26 215 H314" stroke="#e4e7e8" stroke-width="3"/>
+    <text x="26" y="255" class="copy">Delegate payload to the</text>
+    <text x="26" y="281" class="copy">selected device adapter</text>
+  </g>
+  <text x="850" y="151" class="subhead">Associated indirect digital twins</text>
+  <text x="850" y="181" class="copy">Match the target to an external key.</text>
+  <g transform="translate(850 210)">
+    <rect width="344" height="68" rx="11" class="muted"/>
+    <rect x="18" y="16" width="36" height="36" rx="7" fill="#ffffff" stroke="#252d31" stroke-width="3"/>
+    <circle cx="36" cy="34" r="10" fill="none" stroke="#252d31" stroke-width="3"/>
+    <text x="73" y="32" class="subhead">Water Pump 3</text><text x="73" y="55" class="copy">water-pump-3</text>
+  </g>
+  <g transform="translate(850 301)">
+    <rect width="344" height="92" rx="11" class="outline"/>
+    <rect x="18" y="28" width="36" height="36" rx="7" fill="#ffffff" stroke="#c74634" stroke-width="4"/>
+    <circle cx="36" cy="46" r="10" fill="none" stroke="#c74634" stroke-width="4"/>
+    <text x="73" y="39" class="subhead">Water Pump 4</text><text x="73" y="66" class="copy">water-pump-4</text>
+  </g>
+  <g transform="translate(850 416)">
+    <rect width="344" height="68" rx="11" class="muted"/>
+    <rect x="18" y="16" width="36" height="36" rx="7" fill="#ffffff" stroke="#252d31" stroke-width="3"/>
+    <circle cx="36" cy="34" r="10" fill="none" stroke="#252d31" stroke-width="3"/>
+    <text x="73" y="32" class="subhead">Water Pump 5</text><text x="73" y="55" class="copy">water-pump-5</text>
+  </g>
+  <path d="M773 290 H801 V347 H842" class="line"/>
+  <path d="M824 329 L844 347 L824 365" class="line"/>
+  <text x="594" y="510" class="copy">The selected twin's own adapter normalizes the forwarded payload.</text>
+</svg>
