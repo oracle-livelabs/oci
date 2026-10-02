@@ -50,7 +50,7 @@ Let's install the examples in Cloud Editor.
 
     ![Cloud Editor](images/editor1.png)
 
-    If you have issue with the above link, you can also clone from the original git repo.
+    If you have an issue with the above link, you can also clone from the original git repo.
     ````
     <copy>    
     cd $HOME
@@ -109,7 +109,7 @@ Let's install the examples in Cloud Editor.
     Without a DAC (for example, if you have access to the Chicago region):
     ```
     <copy>    
-    GENAI_MODEL=xai.grok-4.20-0309-reasoning
+    GENAI_MODEL=xai.grok-4.6
     REGION=us-chicago-1
     COMPARTMENT_OCID=##COMPARTMENT_OCID##
     ex: COMPARTMENT_OCID=ocid1.compartment.oc1.xxxxxxxxxx
