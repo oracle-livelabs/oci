@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="680" viewBox="0 0 1280 680" role="img" aria-labelledby="title desc">
+  <title id="title">Inspect HTTPS after the load balancer</title>
+  <desc id="desc">A client connects to a public OCI Load Balancer. Separate backend HTTPS connections cross OCI Network Firewall to servers A and B. One inbound decryption rule contains both backend certificates. Return traffic follows the same firewall path.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto-start-reverse"><path d="M0 0 L9 4.5 L0 9Z" fill="#42666c"/></marker>
+    <style>text{font-family:Arial,sans-serif;fill:#183b42}.title{font-size:30px;font-weight:700}.subtitle{font-size:18px;fill:#50676b}.label{font-size:19px;font-weight:700}.body{font-size:17px}.small{font-size:15px;fill:#50676b}.route{fill:none;stroke:#42666c;stroke-width:3;marker-end:url(#arrow)}.box{fill:#fff;stroke:#afc4c7;stroke-width:2}</style>
+  </defs>
+  <rect width="1280" height="680" fill="#f6f8f7"/>
+  <text x="40" y="53" class="title">Multiple backend certificates. One inspection rule.</text>
+  <text x="40" y="85" class="subtitle">OCI Load Balancer → OCI Network Firewall → HTTPS backends</text>
+  <rect x="270" y="118" width="970" height="480" rx="18" fill="#edf3f2" stroke="#afc4c7"/>
+  <text x="294" y="149" class="label">VCN 10.50.0.0/16</text>
+  <rect x="294" y="173" width="235" height="304" rx="12" fill="#e4eff4"/>
+  <rect x="553" y="173" width="286" height="304" rx="12" fill="#f7eade"/>
+  <rect x="863" y="173" width="353" height="304" rx="12" fill="#e4eee4"/>
+  <text x="312" y="204" class="label">Public LB subnet</text><text x="312" y="230" class="small">10.50.10.0/24</text>
+  <text x="571" y="204" class="label">Private firewall subnet</text><text x="571" y="230" class="small">10.50.20.0/24</text>
+  <text x="881" y="204" class="label">Private backend subnet</text><text x="881" y="230" class="small">10.50.30.0/24</text>
+  <rect x="40" y="292" width="180" height="103" rx="12" class="box"/>
+  <text x="130" y="332" text-anchor="middle" class="label">HTTPS client</text><text x="130" y="360" text-anchor="middle" class="small">lab.example.com</text>
+  <rect x="312" y="276" width="199" height="141" rx="12" class="box"/>
+  <text x="411" y="310" text-anchor="middle" class="label">OCI Load Balancer</text><text x="411" y="339" text-anchor="middle" class="body">Listener certificate</text><text x="411" y="366" text-anchor="middle" class="small">Terminates client TLS</text><text x="411" y="391" text-anchor="middle" class="small">Starts backend TLS</text>
+  <rect x="572" y="276" width="248" height="141" rx="12" fill="#fff" stroke="#b66b3d" stroke-width="2"/>
+  <text x="696" y="310" text-anchor="middle" class="label">OCI Network Firewall</text><text x="696" y="339" text-anchor="middle" class="body">10.50.20.10</text><text x="696" y="366" text-anchor="middle" class="small">SSL inbound inspection</text><text x="696" y="391" text-anchor="middle" class="small">Backend certificates + keys</text>
+  <rect x="943" y="255" width="251" height="87" rx="10" class="box"/>
+  <text x="1068" y="285" text-anchor="middle" class="label">Apache A · HTTPS</text><text x="1068" y="310" text-anchor="middle" class="small">10.50.30.10:443 · A-current</text>
+  <rect x="943" y="368" width="251" height="87" rx="10" class="box"/>
+  <text x="1068" y="398" text-anchor="middle" class="label">Apache B · HTTPS</text><text x="1068" y="423" text-anchor="middle" class="small">10.50.30.20:443 · B-current</text>
+  <path d="M220 347 H307" class="route"/><text x="233" y="331" class="small">TLS 1</text>
+  <path d="M511 347 H567" class="route"/>
+  <path d="M820 347 H852 V298 H938" class="route"/>
+  <path d="M852 347 V412 H938" class="route"/>
+  <text x="865" y="282" class="small">TLS 2</text><text x="865" y="396" class="small">TLS 2</text>
+  <text x="312" y="453" class="small">HTTPS backend traffic</text>
+  <rect x="294" y="498" width="922" height="76" rx="10" fill="#fff"/>
+  <text x="316" y="529" class="label">decrypt-backend-https</text>
+  <text x="316" y="554" class="body">Source: LB subnet   |   Destination: A + B   |   Mapped secrets: ms-a-current + ms-b-current</text>
+  <text x="40" y="639" class="body">Routing: LB subnet → firewall → backend subnet. Return traffic follows the same path in reverse.</text>
+</svg>
+
