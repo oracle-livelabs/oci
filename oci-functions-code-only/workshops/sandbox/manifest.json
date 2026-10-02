@@ -3,6 +3,11 @@
   "help": "livelabs-help-oci_us@oracle.com",
   "tutorials": [
     {
+      "title": "Introduction",
+      "description": "Build an event-driven inventory workflow with code-only OCI Functions.",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
       "title": "Get Started",
       "description": "Access the reserved foundation and record the resource sheet.",
       "filename": "../../get-started/get-started-sandbox.md"
@@ -16,6 +21,11 @@
       "title": "Lab 2: Configure and Troubleshoot Your Function (Optional)",
       "description": "Change the threshold, investigate rejected records, and verify corrected data.",
       "filename": "../../configure-troubleshoot/configure-troubleshoot.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Troubleshooting and support for your LiveLabs sandbox reservation.",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }

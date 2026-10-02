@@ -5,7 +5,7 @@ $workshopRoot = Split-Path $PSScriptRoot -Parent
 $foundationRoot = Join-Path $workshopRoot 'foundation'
 $destinationDirectory = Join-Path $workshopRoot 'get-started/files'
 $destination = Join-Path $destinationDirectory 'functions-foundation.zip'
-$allowedFiles = @('versions.tf','variables.tf','main.tf','outputs.tf','schema.yaml','README.md','.terraform.lock.hcl')
+$allowedFiles = @('versions.tf','variables.tf','main.tf','outputs.tf','schema.yaml','readme.md','.terraform.lock.hcl')
 foreach ($fileName in $allowedFiles) {
     if (-not (Test-Path -LiteralPath (Join-Path $foundationRoot $fileName) -PathType Leaf)) {
         throw "Missing foundation source: $fileName. Run local Terraform init/validation first."

@@ -1,5 +1,15 @@
 # Author validation and initialization record
 
+## Introduction
+
+**Audience:** Workshop maintainers.
+
+**Estimated Time:** Reference material; no timed learner activity.
+
+### Objectives
+
+- Review historical code and cloud acceptance evidence without treating it as current release approval.
+
 Last updated: 2026-09-17. Region: US Midwest (Chicago).
 
 ## Current evidence
@@ -90,7 +100,7 @@ source experiment; it is not a working deployment path.
 6. DONE for the main flow: capture ten real Console screenshots and update the
    guide, including the log time-range controls. The source bundle contains the
    verified compact archive; its custom packager preserves every dependency byte.
-   Fresh learner-path capture gaps are recorded in `author/SCREENSHOTS.md`.
+   Fresh learner-path capture gaps are recorded in `author/screenshots.md`.
 
 For a later retest, pass a NEW suffix to both suites, for example
 `test_cloud.ps1 -Suite Core -SourceSuffix '-review2'`. Reusing an existing source
@@ -150,7 +160,7 @@ No additional function deployment was performed for this check.
 Translate these tested prerequisites into Terraform later; the current scripts
 are authoring aids, not a supported green-button implementation.
 
-See [INITIALIZATION.md](INITIALIZATION.md) for exact configuration, policy
+See [initialization.md](initialization.md) for exact configuration, policy
 templates, creation order, learner-owned steps, isolation, and teardown gates.
 
 | Prepared by initialization | Created by learner |
@@ -186,5 +196,10 @@ now creates buckets, application/configuration, and invocation logging, using a
 resource sheet rather than fixed authoring names. Historical September 17 cloud
 results remain valid for the original environment, not proof of the new stack.
 No live Apply, new IAM mutation, reservation integration, or new UI capture was
-performed while authoring these changes. Consult FOUNDATION-VALIDATION.md for
+performed while authoring these changes. Consult foundation-validation.md for
 local test evidence and outstanding live checks.
+
+## Acknowledgements
+
+- **Author** - Graham Shroyer
+- **Last Updated By/Date** - Graham Shroyer, September 2026

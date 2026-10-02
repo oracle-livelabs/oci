@@ -6,4 +6,4 @@ The reservation administrator runs the shared foundation and supplies its resour
 
 Learners create both buckets, the application/configuration, invocation log,
 function, and Events rule. Follow [Get Started](../../get-started/get-started-sandbox.md)
-and [cleanup](../../get-started/cleanup.md). See [review status](../../README.md).
+and [cleanup](../../get-started/cleanup.md). See [review status](../../readme.md).

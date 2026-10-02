@@ -2,7 +2,9 @@
 
 Use this same Terraform root configuration for sandbox provisioning and the
 own-tenancy Resource Manager stack. It is a foundation, not a complete application
-deployment. Live cloud validation and reservation integration remain required.
+deployment. A fresh administrator-led Chicago deployment and all four CSV cases
+passed on September 30, 2026. Restricted learner permissions, reservation
+integration, and teardown still require validation before release.
 
 ## Creates
 

@@ -1,13 +1,14 @@
 # From Code to Cloud in Minutes with OCI Functions
 
 Beginner workshop demonstrating code-only OCI Functions deployment and an
-Object Storage -> OCI Events -> Python -> report workflow. Learners now create the two buckets, application, configuration, and invocation log.
-The earlier proposed deliberate-bug and independent-challenge exercises are not included.
+Object Storage -> OCI Events -> Python -> report workflow. Learners create the two buckets, application, configuration, and invocation log.
 
 ## Workshop structure
 
 ```text
 oci-functions-code-only/
+  introduction/
+    introduction.md
   get-started/
     get-started-sandbox.md
     get-started-tenancy.md
@@ -24,23 +25,23 @@ oci-functions-code-only/
     sandbox/
       index.html
       manifest.json
-      README.md
+      readme.md
     tenancy/
       index.html
       manifest.json
-      README.md
+      readme.md
   foundation/                    Shared Terraform root, Resource Manager schema, mock tests
   author/                        Maintenance scripts and review records; not a learner lab
 ```
 
-Both manifests contain exactly three entries: **Get Started**, **Lab 1**, and
-**Lab 2 (Optional)**. Get Started differs by environment; Lab 1 and Lab 2 are
+Both manifests contain **Introduction**, **Get Started**, **Lab 1**, **Lab 2 (Optional)**,
+and the environment-specific common **Need Help?** page. Get Started differs by environment; Lab 1 and Lab 2 are
 shared. Folder names use lowercase, hyphen-separated descriptions, matching
 the repository's sample-workshop conventions.
 
-Plan 60-80 minutes including optional Lab 2, plus buffer within the 90-minute
-session. Own-tenancy foundation deployment is pre-work and may take extra time.
-These estimates need a beginner dry run.
+Estimated workshop time: **60–90 minutes**. Arranging a tenancy, permissions,
+or additional capacity can take extra time. The estimate still needs a novice
+timing run; this author-only note is not part of the learner instructions.
 
 ## Local preview
 
@@ -64,22 +65,25 @@ directories; image and download paths are relative to their lab Markdown files.
 
 The function archive, all four cloud exercises, and the Cloud Shell checks were
 verified in the authoring environment on September 17, 2026. See
-[validation evidence](author/VALIDATION.md).
+[validation evidence](author/validation.md).
 
-The shared [foundation](foundation/README.md) and downloadable Resource Manager
+The shared [foundation](foundation/readme.md) and downloadable Resource Manager
 package prepare the network/log group and optionally administrator-approved runtime
 IAM. Learners build the application-facing resources. See
-[administrator setup](author/ADMINISTRATOR-SETUP.md) and
-[initialization ownership](author/INITIALIZATION.md).
+[administrator setup](author/administrator-setup.md) and
+[initialization ownership](author/initialization.md).
 
 Remaining release gates:
 
-- Live deployment of the new stack and final learner-role end-to-end validation.
+- Restricted learner-role validation; the fresh foundation and all four CSV cases
+  passed an administrator-led Console walkthrough on September 30, 2026.
 - LiveLabs reservation/expiry integration and a published deploy-button package URL.
-- New screenshots for bucket/application/log creation, novice timing, and cleanup tests.
+- Normal-browser report/custom-ZIP download checks, novice timing, and cleanup tests.
+- Final screenshot coverage review.
 - Confirmation of OCI help routing and final contributor acknowledgements.
 
-The original cloud acceptance results do not validate the new foundation automatically.
+See [QA corrections and remaining release checks](author/qa-corrections.md).
+For GitHub Pages and Oracle LiveLabs updates, see [publication instructions](author/publication.md).
 
 ## Maintainer notes
 
@@ -98,7 +102,7 @@ python author/build_assets.py
 Rebuild the foundation download after configuration changes with
 `pwsh -File author/package_foundation.ps1`. It packages only approved source files;
 run the foundation's validation and mock tests before publishing the new ZIP.
-See [foundation validation evidence](author/FOUNDATION-VALIDATION.md).
+See [foundation validation evidence](author/foundation-validation.md).
 
 The archive was copied byte-for-byte during migration, not rebuilt. The author
 scripts have updated asset paths; the legacy provision/check scripts still describe
@@ -114,5 +118,4 @@ retained unchanged as a migration backup. This folder belongs to the enclosing
 `oci` repository and must not contain its own `.git` directory.
 
 For later contribution, follow the enclosing repository's CONTRIBUTING.md and
-its Oracle Contributor Agreement/sign-off requirements. No commit or push is
-part of this migration.
+its Oracle Contributor Agreement/sign-off requirements. Review the full workshop diff before committing or pushing.

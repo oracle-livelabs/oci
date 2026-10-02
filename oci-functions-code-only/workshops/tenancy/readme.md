@@ -6,4 +6,4 @@ The administrator or authorized operator uploads the supplied foundation ZIP to 
 
 Learners create both buckets, the application/configuration, invocation log,
 function, and Events rule. Follow [Get Started](../../get-started/get-started-tenancy.md)
-and [cleanup](../../get-started/cleanup.md). See [review status](../../README.md).
+and [cleanup](../../get-started/cleanup.md). See [review status](../../readme.md).

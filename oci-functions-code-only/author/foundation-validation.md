@@ -1,5 +1,13 @@
 # Foundation validation record
 
+**Audience:** Workshop maintainers.
+
+**Estimated Time:** Reference material; no timed learner activity.
+
+### Objectives
+
+- Review the recorded foundation validation results and their limitations.
+
 Date: September 25, 2026. This records local validation, not a cloud deployment.
 
 ## Passed locally
@@ -19,7 +27,7 @@ Date: September 25, 2026. This records local validation, not a cloud deployment.
 - Resource Manager schema parses as JSON (also valid YAML 1.2) and covers all six
   Terraform input variables. Console schema rendering still needs live verification.
 - The ZIP build is deterministic and allowlists seven root-level files only:
-  versions.tf, variables.tf, main.tf, outputs.tf, schema.yaml, README.md, and
+  versions.tf, variables.tf, main.tf, outputs.tf, schema.yaml, readme.md, and
   .terraform.lock.hcl. No state, tfvars, credentials, providers, or mock tests ship.
 
 Foundation ZIP SHA-256:
@@ -43,3 +51,8 @@ The existing function deployment ZIP and source bundle are unchanged.
 No OCI deployment, IAM modification, live 20-user test, reservation integration,
 repository commit, or push was performed in this update. Mock success does not
 establish service availability, IAM correctness, or the green-button integration.
+
+## Acknowledgements
+
+- **Author** - Graham Shroyer
+- **Last Updated By/Date** - Graham Shroyer, September 2026

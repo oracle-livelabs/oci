@@ -1,11 +1,24 @@
 # Finish and Clean Up
 
+## Introduction
+
+Finish using your environment when you no longer need the lab resources. Follow only the section that applies to your sandbox reservation or own tenancy.
+
+**Estimated Time:** 5–10 minutes, excluding waits for resource deletion.
+
+### Objectives
+
+- Retain any reports you want to keep.
+- Identify the correct owner and order for removing lab resources.
+
+### Prerequisites
+
+- Finish Lab 1 and any optional exercises you want to complete.
+- Have your resource sheet and the resource owner's approval before deleting resources in your own tenancy.
+
 ## Sandbox reservations
 
-Follow your facilitator's reservation-end instructions. Do not destroy a stack,
-delete the shared foundation, or change IAM yourself. Sandbox owners must include
-learner-created resources in their reservation teardown; Terraform manages only
-the foundation.
+Save any reports you want to keep before your reservation ends. Follow the end-reservation instructions in LiveLabs. Do not destroy a stack, delete the foundation, or change IAM yourself. Use **Need Help?** in the workshop menu if you need assistance with your reservation.
 
 ## Your own tenancy
 
@@ -34,3 +47,8 @@ irreversible. Never delete a shared compartment or another learner's resources.
 **Important:** Destroy does not discover or remove manually created buckets,
 applications, functions, logs, or Events rules. Remove those dependencies first.
 No automated destructive cleanup is included in this workshop.
+
+## Acknowledgements
+
+- **Author** - Graham Shroyer
+- **Last Updated By/Date** - Graham Shroyer, September 2026

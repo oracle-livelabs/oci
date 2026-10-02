@@ -1,5 +1,13 @@
 # Administrator preparation
 
+**Audience:** Workshop maintainers.
+
+**Estimated Time:** Reference material; no timed learner activity.
+
+### Objectives
+
+- Review provisioning, runtime, and learner permission ownership before deploying the foundation.
+
 ## Scope and prerequisites
 
 Use one existing, isolated compartment per participant, with one foundation
@@ -82,6 +90,11 @@ integration, validate expiry/cleanup, and test the final participant role.
 
 ## Readiness gate
 
+Sandbox teardown must also remove the learner-created buckets, objects,
+application, function, invocation log, and Events rule. Terraform manages only
+the foundation. Validate the reservation's expiry/cleanup hook before enabling
+the sandbox publishing entry; do not give platform-integration tasks to learners.
+
 Before handing over, confirm Apply succeeded, the private subnet routes only via
 the regional service gateway, HTTPS egress is present, and the log group exists.
 Check both runtime IAM and learner IAM; allow propagation. Use a fresh disposable
@@ -93,3 +106,8 @@ References:
 - [Functions user/network/logging permissions](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionscreatingpolicies.htm)
 - [Function resource principals](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsaccessingociresources.htm)
 - [Object Storage policy conditions](https://docs.oracle.com/en-us/iaas/Content/Identity/Reference/objectstoragepolicyreference.htm)
+
+## Acknowledgements
+
+- **Author** - Graham Shroyer
+- **Last Updated By/Date** - Graham Shroyer, September 2026

@@ -2,113 +2,90 @@
 
 ## Introduction
 
-**Description**
+Prepare the resources that your function will use in your own OCI tenancy. A small Terraform package creates the private network and log group, and can create the function's runtime permissions with administrator approval. OCI Resource Manager runs this package for you; you do not need Terraform installed on your computer.
 
-A supplier sends an inventory CSV. Your operations team needs to know which products need restocking. In this lab, you create a Python function and connect it to an Object Storage upload event. Upload a file and the function writes two reports: products below the stock threshold and records that need correction.
+**Estimated Time:** 15–20 minutes with administrator access already arranged. If your administrator has provided a completed foundation and resource sheet, start at Task 2.
 
-**Lab Objectives**
+### Objectives
 
-- Explain how an application, a function, and an event work together.
-- Review Python logic, using a supplied AI prompt or the tested reference implementation.
-- Deploy a function and connect an Object Storage event to it.
-- Upload a CSV and verify the resulting reports.
+- Deploy or locate the foundation in an isolated lab compartment.
+- Record the exact resource names used throughout the workshop.
+- Verify access to the network, log group, and Cloud Shell.
 
-**Intended Audience**
+### Prerequisites
 
-Beginner technical learners. No previous OCI Functions experience is required.
-
-**Estimated Workshop Time**
-
-Plan 60-80 minutes including the optional exercises, with the remainder of the 90-minute session available for questions and troubleshooting. Own-tenancy foundation deployment is pre-work and may take additional time. These estimates still need a beginner dry run.
-
-**Prerequisites**
-
-- Access to the prepared lab compartment and OCI Console.
-- A prepared foundation: isolated compartment, private network, log group, and permissions. You create the buckets, application, and invocation log during Lab 1.
-- A browser and access to OCI Cloud Shell for checking the supplied Python code.
-- Optional: an AI coding assistant you already have access to. The reference code lets you complete the lab without one.
-
-**What OCI Functions does**
-
-OCI Functions runs your code when it is invoked, without requiring you to administer a server. An **application** groups functions that share networking and configuration. A **function** contains the code for one task. An **event rule** decides when a change in another OCI service should invoke that function.
-
-In this lab, an upload creates an object in the incoming bucket. OCI Events matches that event and invokes your function. The function reads the CSV and writes reports to a separate output bucket.
-
-```text
-Upload inventory CSV -> Incoming bucket -> OCI Events -> Python function -> Output bucket
-```
-
-The reports are stored under a prefix named after the input file. For example, `inventory-run1.csv` produces `inventory-run1/restock-report.csv` and `inventory-run1/rejected-records.csv`.
-
-**Resources**
-
-- [OCI Functions overview](https://docs.oracle.com/en-us/iaas/Content/Functions/Concepts/functionsoverview.htm)
-- [Creating Functions using Code Editor](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionscreatingfunctions-usingcodeeditor.htm)
-- [Creating an Events rule](https://docs.oracle.com/en-us/iaas/Content/Events/Task/create-events-rule.htm)
-- [Function logging](https://docs.oracle.com/en-us/iaas/Content/Logging/Reference/details_for_functions.htm)
-
-**Contact us**
-
-For help during the workshop, contact your instructor or lab facilitator.
-
-> **Author review edition:** The original function workflow and Cloud Shell checks were cloud-tested. The new Terraform foundation and learner-created resource steps require a fresh end-to-end dry run before publication; LiveLabs green-button integration is not yet deployed.
+- An OCI account and access to **US Midwest (Chicago)** (`us-chicago-1`).
+- An existing, isolated lab **compartment**: a container used to organize resources and control access. Do not use production resources or share the compartment with another learner.
+- Administrator assistance to confirm service limits and configure permissions. Give your administrator the [administrator setup guide](../author/administrator-setup.md). The foundation does not grant your user account additional access.
+- Your tenancy's **home region**, which is where tenancy-wide identity resources are managed. It may differ from Chicago, where you will run this lab.
 
 ## Task 1: Deploy the foundation in your own tenancy
 
-**Complete this before the scheduled hands-on session if possible.** An administrator can deploy the foundation for you; you do not need administrator access for the lab activities.
+Your administrator can perform this task for you. A successful deployment is not a substitute for configuring your learner permissions.
 
-1. Ask your administrator to prepare an **isolated, existing lab compartment** and the learner permissions in the [administrator setup guide](../author/ADMINISTRATOR-SETUP.md). Confirm service limits, the tenancy's **home region**, and code-only Functions availability in Chicago. Do not use production resources or a shared learner compartment.
+1. Sign in to the [OCI Console](https://cloud.oracle.com/) with your tenancy credentials. Select **US Midwest (Chicago)** in the region selector. Confirm your lab compartment and home region with your administrator.
 
-2. Download [functions-foundation.zip](files/functions-foundation.zip). This is a **Terraform configuration package**, not a function deployment ZIP. Do not upload it to Functions.
+2. Download [functions-foundation.zip](files/functions-foundation.zip). This is a **Terraform configuration package**, not a function deployment archive. Do not upload it to Functions.
 
-3. In the OCI Console, select **US Midwest (Chicago)**. Open **Developer Services > Resource Manager > Stacks**, choose the lab compartment, and select **Create stack**. Select **My configuration** (upload a ZIP configuration) and upload the foundation ZIP. No local Terraform installation or API key is required for this Console workflow.
+3. Open **Developer Services > Resource Manager > Stacks** from the navigation menu. Under **Applied filters**, select your lab compartment. Select **Create stack**.
 
-4. Name the stack for your lab. Keep a supported Terraform version compatible with the package (1.5 or later, below 2.0). Review the variables:
+4. Select **My configuration**, then **.Zip file** instead of **Folder**. Select **Browse** and attach `functions-foundation.zip`. Name the stack for your lab, keep Terraform **1.5.x** or a supported version below 2.0, and select **Next**.
 
-   | Variable | Value |
-   | --- | --- |
-   | Existing learner compartment | Your assigned lab compartment, not the tenancy root |
-   | Workload region | us-chicago-1 |
-   | Tenancy home region | Your actual home region; it may not be Chicago |
-   | Lab name prefix | A short lowercase label, such as inventory |
-   | Create runtime IAM | Administrator decision below |
+5. Review the variables:
 
-   **Create runtime IAM is off by default.** An authorized administrator may enable it after reviewing the dynamic-group rule and three policy statements. Otherwise the administrator must establish those permissions separately using the stack's **administrator_runtime_iam** output before learner handoff. The stack never grants its operator new permissions or creates learner user/group policies.
+    | Variable | Value |
+    | --- | --- |
+    | Existing learner compartment | Your assigned compartment, not the tenancy root |
+    | Workload region | `us-chicago-1` |
+    | Tenancy home region | Your actual home region; it may not be Chicago |
+    | Lab name prefix | A short lowercase label, such as `inventory` |
+    | Create runtime IAM | Administrator decision below |
 
-5. Review the configuration and run **Plan** first (clear **Run apply** at creation if offered). Confirm that it contains only a new VCN, service gateway, route table, security list, private subnet, and log group, plus a dynamic group and scoped runtime policy only when explicitly selected. The VCN also has OCI-created default network resources. No buckets, application, Compute instance, function, Events rule, or service log should be provisioned.
+    **Create runtime IAM** is off by default. IAM means Identity and Access Management. An authorized administrator may enable this option after reviewing the dynamic group and three policy statements in the setup guide. A dynamic group identifies the lab's functions; the policy permits them to read the incoming bucket and create or overwrite reports, and permits the Functions service to use the lab network.
 
-6. With administrator approval of the plan, run **Apply**. Wait for **Succeeded** and open **Outputs**. Record **resource_sheet** and have your administrator complete/verify IAM. Allow for IAM propagation before testing access. Do not treat an Apply success as proof that learner permissions or event delivery work.
+    If this option remains off, the administrator must establish those permissions separately using the `administrator_runtime_iam` output. Neither choice creates learner user/group policies.
 
-7. Continue to Task 2. If Apply fails, inspect the job log and ask the administrator to correct the cause; do not create duplicate stacks or grant broad tenancy-wide access as a workaround.
+6. Continue to the review page. Clear **Run apply** if selected, and create the stack. On the stack details page, select **Actions > Plan**, then **Plan** in the side panel. Wait for **Succeeded** and review the job's **Logs**.
 
-The same configuration will back a **Deploy to Oracle Cloud** shortcut once its ZIP is hosted at an approved public URL. The ZIP-upload workflow above works without depending on an unpublished GitHub path. This Resource Manager shortcut is separate from a LiveLabs sandbox reservation.
+    Expect six additions: a VCN, service gateway, route table, security list, private subnet, and log group. If runtime IAM is enabled, expect eight additions including the dynamic group and policy. The VCN also has OCI-created default network resources. The plan must not change or delete existing resources or create the buckets, application, function, Events rule, or invocation log.
 
-## Task 2: Record your resource sheet
+7. After your administrator approves the plan, return to **Stack details > Actions > Apply**. Under **Apply job plan resolution**, select the successful saved plan instead of **Automatically approved**. Select **Apply** and wait for **Succeeded**.
 
-Your facilitator or the Resource Manager stack supplies the **resource_sheet** output. Keep it open throughout the workshop. Uppercase resource-name placeholders in the instructions mean the values below; do not type the placeholders literally.
+8. Open the successful Apply job's **Logs**. Near the end, find `resource_sheet`. Copy its values into a local note for Task 2. If runtime IAM was left off, also give `administrator_runtime_iam` to your administrator. Allow time for new permissions to take effect.
 
-| Instruction placeholder | Resource sheet field |
-| --- | --- |
-| LAB_COMPARTMENT | compartment_ocid (select the matching compartment) |
-| VCN_NAME | vcn_name |
-| SUBNET_NAME | subnet_name |
-| LOG_GROUP_NAME | log_group_name |
-| INCOMING_BUCKET_NAME | incoming_bucket_name |
-| OUTPUT_BUCKET_NAME | output_bucket_name |
-| APPLICATION_NAME | application_name |
-| EVENT_RULE_NAME | event_rule_name |
-| Object Storage namespace | object_storage_namespace |
+    If a job fails, read its log and ask the administrator to correct the cause. Do not create duplicate stacks or grant broad tenancy-wide access as a workaround. For workshop assistance, use **Need Help?** in the workshop menu.
 
-1. In Networking, find the supplied VCN and private regional subnet. You will select them for the application; do not create or change network rules.
+## Task 2: Record and verify your resources
 
-2. In Logging, find the supplied log group. The application's invocation log does not exist yet; you will enable it after creating the application.
+1. Keep your `resource_sheet` output or the equivalent sheet from your administrator open throughout the workshop. Replace the uppercase placeholders in the instructions with these values; do not type the placeholders themselves.
 
-3. Open **Cloud Shell** from **Developer tools** and confirm that it starts. The supplied Python checks require no package installation.
+    | Instruction placeholder | Resource sheet field |
+    | --- | --- |
+    | `LAB_COMPARTMENT` | `compartment_ocid` (select the matching compartment) |
+    | `VCN_NAME` | `vcn_name` |
+    | `SUBNET_NAME` | `subnet_name` |
+    | `LOG_GROUP_NAME` | `log_group_name` |
+    | `INCOMING_BUCKET_NAME` | `incoming_bucket_name` |
+    | `OUTPUT_BUCKET_NAME` | `output_bucket_name` |
+    | `APPLICATION_NAME` | `application_name` |
+    | `EVENT_RULE_NAME` | `event_rule_name` |
+    | Object Storage namespace | `object_storage_namespace` |
 
-4. Confirm with your facilitator or administrator that the function runtime permissions and your learner permissions are ready. A successful Terraform Apply with **create_runtime_iam=false** does not establish runtime permissions.
+    An **OCID** uniquely identifies an OCI resource. The Object Storage **namespace** identifies the tenancy's Object Storage space; it is not a bucket or compartment name.
 
-> **Checkpoint:** You have a compartment, private network, log group, exact resource names, and access. The two buckets, application, function, invocation log, and Events rule are deliberately left for you to create in Lab 1.
+2. Open **Networking > Virtual cloud networks**. Select `LAB_COMPARTMENT` in the compartment filter and open `VCN_NAME`. Under **Subnets**, confirm `SUBNET_NAME` exists and is a private regional subnet. Do not change its network rules.
 
-Use only your assigned environment. The reference screenshots show the author's earlier names; substitute your resource sheet values.
+3. Search for **Logging** in the Console and select **Logs** under **Logging**. Expand the service navigation and select **Log Groups**. Select `LAB_COMPARTMENT` and confirm `LOG_GROUP_NAME` exists. You will enable the application's invocation log in Lab 1.
 
-You may now **proceed to Lab 1** using the workshop navigation.
+4. Open **Developer tools > Cloud Shell** in the Console header. On first use, close any informational notice and enter `N` if asked whether to run the introductory tutorial. Wait for the terminal prompt. The welcome message may identify the tenancy's home region; keep the Console workload region set to Chicago.
+
+5. Confirm with your administrator that both your learner permissions and the function's runtime permissions are ready. An Apply with `create_runtime_iam=false` does not establish runtime permissions.
+
+    **Checkpoint:** You have a compartment, private network, log group, resource sheet, and access. You will create the two buckets, application, function, invocation log, and Events rule in Lab 1.
+
+You may now **proceed to the next lab**.
+
+## Acknowledgements
+
+- **Author** - Graham Shroyer
+- **Last Updated By/Date** - Graham Shroyer, September 2026

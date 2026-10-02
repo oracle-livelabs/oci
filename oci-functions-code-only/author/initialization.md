@@ -1,8 +1,16 @@
 # Initialization ownership and release gates
 
-The shared configuration is in [foundation](../foundation/README.md). Sandbox
+**Audience:** Workshop maintainers.
+
+**Estimated Time:** Reference material; no timed learner activity.
+
+### Objectives
+
+- Identify resource ownership, sandbox integration requirements, and release gates.
+
+The shared configuration is in [foundation](../foundation/readme.md). Sandbox
 automation and own-tenancy Resource Manager use the same inputs and outputs.
-See [administrator setup](ADMINISTRATOR-SETUP.md) for IAM and the reservation contract.
+See [administrator setup](administrator-setup.md) for IAM and the reservation contract.
 
 | Owner | Resources/actions |
 | --- | --- |
@@ -14,7 +22,7 @@ See [administrator setup](ADMINISTRATOR-SETUP.md) for IAM and the reservation co
 | Learner | Uploads, report inspection, optional threshold change and bad-row diagnosis |
 
 No application or bucket should exist in a fresh learner reservation. Give the
-learner resource_sheet before starting; names include a compartment-derived suffix.
+learner `resource_sheet` before starting; names include a compartment-derived suffix.
 The code archive remains the verified Python 3.12 x86-64 package. Cloud Shell may
 be Arm because the checker/packager use only the standard library and copy SDK
 bytes without importing/rebuilding native deployment libraries.
@@ -28,7 +36,8 @@ bytes without importing/rebuilding native deployment libraries.
 - Validate all four CSV cases and logging; test cleanup before stack Destroy.
 - Implement the LiveLabs platform's actual reservation and expiry integration.
 - Publish the approved ZIP URL, then activate the own-tenancy deployment shortcut.
-- Capture the new bucket/application/log creation screens; current images are reference end states.
+- Review current screenshot coverage; see [capture notes](screenshots.md).
+- Complete ordinary-browser download checks; the in-app browser did not save reports.
 - Run a timed beginner rehearsal and recheck regional quotas for the event.
 
 The older author/provision.ps1 prepares the ORIGINAL complete authoring environment
@@ -36,3 +45,8 @@ The older author/provision.ps1 prepares the ORIGINAL complete authoring environm
 command. Older check_environment.ps1/test_cloud.ps1 use original private author state.
 Do not run them against a fresh learner foundation or claim they verify this new flow.
 No cloud apply or IAM mutation is authorized merely by editing this specification.
+
+## Acknowledgements
+
+- **Author** - Graham Shroyer
+- **Last Updated By/Date** - Graham Shroyer, September 2026
