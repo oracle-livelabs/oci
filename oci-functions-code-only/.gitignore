@@ -1,0 +1,11 @@
+__pycache__/
+author/state/
+author/.venv/
+*.pyc
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+*.tfvars.json
+crash.log
