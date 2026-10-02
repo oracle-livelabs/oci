@@ -35,10 +35,11 @@ For more information: https://opencode.ai/
     cd oci-vibe-dac
     cat install_opencode.sh
     ./install_opencode.sh
+    source ~/.bashrc
     </copy>    
     ````
 
-    If you have issue with the above link, you can also clone from the original git repo.
+    If you have an issue with the above link, you can also clone from the original git repo.
     ````
     <copy>    
     cd $HOME
@@ -54,7 +55,7 @@ For more information: https://opencode.ai/
         - If you have access to the Chicago region, use the proposed default value.
         - Or look up the model and region here: https://docs.oracle.com/en-us/iaas/Content/generative-ai/model-endpoint-regions.htm. Find the base URL here: https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-inference/20231130/
         - Here is an example:    
-            - Model ID: ex: *xai.grok-4.20-0309-reasoning*
+            - Model ID: ex: *xai.grok-4.6*
             - OCI Generative AI base URL: *https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/20231130/actions/v1*
             - Model name: *Grok*
             - API Key: *sk-xxx* (see your notes in previous lab)
@@ -122,7 +123,7 @@ For more information: https://opencode.ai/
 
 3. Type: *Deploy it.*
 
-   This uses a skill explained later in Task 5.
+   This uses a skill explained later in Task 6.
 
     ![Space Invaders](images/opencode_game2.png)
 
@@ -157,7 +158,7 @@ For more information: https://opencode.ai/
 
 ## Task 5: Mobile : plan + build
 
-1. Start OpenCode in the space-invaders directory.
+1. Start OpenCode in the mobile directory.
 
     ````
     <copy>    
