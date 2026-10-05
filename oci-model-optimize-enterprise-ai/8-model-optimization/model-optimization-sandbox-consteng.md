@@ -112,4 +112,6 @@ You may now proceed to Lab 5.
 
 ## Acknowledgements
 
-- **Author** - Oracle LiveLabs
+- **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Contributors** — Oracle LiveLabs Platform Team
+- **Last Updated By/Date** — Eli Schilling, October 2026

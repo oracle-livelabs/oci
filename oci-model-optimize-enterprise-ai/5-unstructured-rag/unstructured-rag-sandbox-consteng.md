@@ -231,4 +231,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Contributors** — Oracle LiveLabs Platform Team
+- **Last Updated By/Date** — Eli Schilling, October 2026

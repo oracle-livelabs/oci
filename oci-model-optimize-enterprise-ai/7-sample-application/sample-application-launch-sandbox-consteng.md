@@ -107,4 +107,6 @@ You may now proceed to Lab 4. Keep the application open.
 
 ## Acknowledgements
 
-- **Author** - Oracle LiveLabs
+- **Author** — Eli Schilling, Technical Engagement Services, Oracle
+- **Contributors** — Oracle LiveLabs Platform Team
+- **Last Updated By/Date** — Eli Schilling, October 2026
