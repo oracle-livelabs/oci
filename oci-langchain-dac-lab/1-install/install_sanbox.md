@@ -135,7 +135,7 @@ First, create an OpenAI-compatible API key.
     - api-key1=sk-xxxxxxxxx
     - api-key2=sk-xxxxxxxxx
     - Click **Close**.
-Although you can choose any model from any provider to continue the lab, this guide covers several models available in OCI.
+    Although you can choose any model from any provider to continue the lab, this guide covers several models available in OCI.
 
 7. Note, if you use a API Key the policy defined above can be more specific like this:
 
