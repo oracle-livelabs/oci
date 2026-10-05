@@ -39,16 +39,17 @@ For more information: https://opencode.ai/
     </copy>    
     ````
 
+    ![Install](images/opencode_install1.png)   
+    
     If you have an issue with the above link, you can also clone from the original git repo.
     ````
     <copy>    
     cd $HOME
     git clone https://github.com/mgueury/oci-vibe-dac.git
+    cd oci-vibe-dac
     ...
     </copy>    
-    ````
-
-    ![Install](images/opencode_install1.png)    
+    ```` 
 
     You will be asked some questions. The answers depend on whether you use a Dedicated AI Cluster.
     - Without a DAC:
