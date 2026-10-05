@@ -27,6 +27,8 @@ This lab assumes you have:
 
 1. Select **Vector stores**.
 
+    > **Console navigation:** If **Vector stores** is not visible on the Generative AI overview, select **Applications** and expand the left navigation to find it.
+
 1. Select the reservation-specific child compartment from your sandbox resource list.
 
 1. Click **Create vector store**.

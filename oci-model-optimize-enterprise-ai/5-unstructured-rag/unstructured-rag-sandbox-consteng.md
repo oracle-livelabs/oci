@@ -34,16 +34,18 @@ In this lab, you will:
     | Autonomous AI Database OCID | Sandbox resource list | `OCI_ADB_DATABASE_OCID` | `.env` |
     | Database Tools enrichment connection OCID | Sandbox resource list |  | Semantic Store configuration |
     | Database Tools query connection OCID | Sandbox resource list |  | Semantic Store configuration |
-    | CONSTRUCTION_ENGINEERING password secret OCID | Sandbox resource list | `OCI_ADB_MCP_PASSWORD_SECRET_OCID` | `.env` |
+    | CONSTRUCTION_ENGINEERING password secret OCID | Generated sample app `.env` or Launch helper | `OCI_ADB_MCP_PASSWORD_SECRET_OCID` | `.env` |
     | Project OCID | Project created in this lab | `OCI_GENAI_PROJECT_OCID` | `.env` |
-    | Unstructured Vector store ID, for example | Vector store created in this lab | `OCI_GENAI_VECTOR_STORE_IDS` | `.env` |
+    | Unstructured Vector store ID | Vector store created in this lab | `OCI_GENAI_VECTOR_STORE_IDS` | `.env` |
     | Structured semantic store OCID | Semantic Store lab | `OCI_GENAI_SEMANTIC_STORE_OCID` | `.env` |
     | Configured sample app PAR | Sandbox resource list |  | Build path download |
     | Launch helper PAR | Sandbox resource list |  | Launch path download |
     | OCI config file path | Build path | `OCI_CONFIG_FILE` | `.env` |
     | OCI config profile | Build path | `OCI_CONFIG_PROFILE` | `.env` |
 
-    Copy the following values into your text file. Fill in each value as you complete the workshop. At this time, you should fill in the six values found on the Sandbox Resource List.
+    Copy the following worksheet into your text file. Fill in the values available in the Sandbox Resource List. Add the project and vector-store identifiers after creating those resources. The same workshop region fills all three region entries.
+
+    > **Important:** The resource list may show only the **Admin Password Secret OCID**. This is not the application schema secret. The configured sample app and Launch helper already contain the secret for the `CONSTRUCTION_ENGINEERING` database user. Preserve that generated value; do not replace it with the ADMIN secret or copy the secret password into your worksheet.
 
     ```
     <copy>
@@ -52,7 +54,7 @@ In this lab, you will:
     (Sandbox Resource List)     OCI_ADB_MCP_PASSWORD_SECRET_REGION=
     (Sandbox Resource List)     OCI_GENAI_REGION=
     (Sandbox Resource List)     OCI_ADB_DATABASE_OCID=
-    (Sandbox Resource List)     OCI_ADB_MCP_PASSWORD_SECRET_OCID=
+    (Generated configuration)  OCI_ADB_MCP_PASSWORD_SECRET_OCID=
     (OCI Gen AI)                OCI_GENAI_PROJECT_OCID=
     (OCI Gen AI)                OCI_GENAI_VECTOR_STORE_IDS=
     (OCI Gen AI)                OCI_GENAI_SEMANTIC_STORE_OCID=
@@ -79,6 +81,8 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 1. In the Console navigation menu, go to **Analytics & AI**, then **Generative AI**.
 
 1. Under **Generative AI**, select **Projects**.
+
+    > **Console navigation:** If the overview does not show **Projects**, select **Applications** and expand the left navigation. Select **Projects** there. Use the same navigation to reach **Vector stores** in Task 4 and Lab 2.
 
     ![Generative AI projects list](images/generative-ai-projects.png)
 
@@ -120,13 +124,11 @@ The sandbox already includes the Object Storage bucket that stores the source do
 
 3. Open the bucket named in your sandbox resource list.
 
-    ![Object Storage buckets list](images/buckets-list.png)
-
 4. Click the **Objects** tab.
 
 5. Confirm that the bucket contains `austin_structural_engineering_specification.pdf`.
 
-    ![Bucket object list with pairing guide PDF](images/bucket-object-list.png)
+    ![Construction evidence bucket containing the Austin structural engineering specification](images/bucket-object-list-consteng-validation.png)
 
 ## Task 4: Create the unstructured vector store
 
@@ -154,9 +156,7 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
 
 5. Click **Create**.
 
-6. Wait until the vector store status is `Completed`. The vector store might take a short while to appear on the list.
-
-    ![Created vector store in completed state](images/vector-store-created.png)
+6. Wait for the vector store to appear in the list, then open it. An empty vector store can remain **In progress** until its first ingestion finishes. Continue with connector creation in Task 5; do not wait for an empty store to become **Completed**. The final readiness check follows the data sync.
 
 7. Open the vector store details page.
 
