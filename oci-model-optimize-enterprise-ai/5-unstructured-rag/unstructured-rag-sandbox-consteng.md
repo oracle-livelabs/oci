@@ -6,6 +6,8 @@ In this lab, you create the unstructured retrieval source for the Seer Construct
 
 Estimated Time: 15 minutes
 
+> **Screenshots:** Some console images have been adapted to illustrate the Construction Engineering resource names. Use your reservation-specific compartment and bucket; example identifiers and timestamps are not values to copy.
+
 ### Objectives
 
 In this lab, you will:
@@ -112,7 +114,7 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 
 1. Open the project, copy the project OCID, and record it as the value for `Project OCID` in your text file.
 
-    ![Copy the project OCID](images/copy-project-ocid.png)
+    ![Copy the Seer Construction project OCID](images/copy-project-ocid-consteng.png)
 
 ## Task 3: Confirm the construction evidence bucket
 
@@ -160,7 +162,7 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
 
 7. Open the vector store details page.
 
-    ![Vector store details page](images/vector-store-details.png)
+    ![Construction evidence vector store before ingestion](images/vector-store-details-consteng.png)
 
 8. Copy the **Vector store ID** and record it as the value for `Unstructured Vector store ID`. The value should look like `vs_iad_3vw620r...`.
 
@@ -172,7 +174,7 @@ The data sync connector facilitates the processing pipeline where files are read
 
 2. Click **Create data sync connector**.
 
-    ![Create data sync connector button](images/create-data-sync-connector.png)
+    ![Create a connector for the construction evidence vector store](images/create-data-sync-connector-consteng.png)
 
 3. Data sync connector configuration:
 
@@ -183,39 +185,39 @@ The data sync connector facilitates the processing pipeline where files are read
     Turn Select all in bucket on.
     ```
 
-    ![Select all files in bucket for data sync connector](images/select-all-files-in-bucket.png)
+    ![Select all files in the construction evidence bucket, including the Austin structural engineering specification](images/select-construction-evidence-consteng.png)
 
 4. Click **Create**.
 
 5. Confirm that the data sync connector appears in the list in an **Active** state.
 
-    ![Data sync connector created](images/data-sync-created.png)
+    ![Active construction-evidence connector](images/data-sync-created-consteng.png)
 
 6. Open the data sync connector details page.
 
-    ![Data sync connector details page](images/data-sync-connector-details.png)
+    ![Construction connector and reservation-specific evidence bucket](images/data-sync-connector-details-consteng.png)
 
 7. Open the **Data sync** tab.
 
-    ![Data sync details page](images/data-sync-details.png)
+    ![Construction evidence data sync tab](images/data-sync-details-consteng.png)
 
 8. Under the **Data Sync Jobs** list, click **Perform Data Sync**.
 
 9. Name the data sync job: `construction-evidence`
 
-    ![Perform data sync dialog](images/create-perform-data-sync.png)
+    ![Name the data sync job construction-evidence](images/create-perform-data-sync-consteng.png)
 
 10. Click **Perform**.
 
 11. Wait until the data sync job reaches a **Succeeded** state.
 
-    ![Performed data sync job created](images/perform-data-sync-created.png)
+    ![Successful construction-evidence data sync job](images/perform-data-sync-created-consteng.png)
 
 12. Return to the vector store details page.
 
 13. Confirm that the completed file count is `1`. Do not continue until the data sync job is **Succeeded**, the vector store is **Completed**, and the processed file count is nonzero.
 
-    ![Processed file count](images/processed-file-count.png)
+    ![Completed construction vector store with one processed PDF](images/processed-file-count-consteng.png)
 
 At this point, we have populated our vector store with the PDF stored in the Object Storage bucket. The Data Sync Job read the file, broke it into chunks, embedded each chunk for search, and stored the results in the vector store. The service manages this process so your code does not have to.
 
