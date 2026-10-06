@@ -38,7 +38,7 @@ Let's install the examples in Cloud Editor.
     ```
     <copy>
     cd $HOME
-    wget https://livelabs.oracle.com/cdn/oci/oci-langchain-dac-lab/2-test/files/oci-langchain-dac.zip
+    wget --no-cache https://livelabs.oracle.com/cdn/oci/oci-langchain-dac-lab/2-test/files/oci-langchain-dac.zip
     unzip oci-langchain-dac.zip
     cd oci-langchain-dac
     cp .env.example .env

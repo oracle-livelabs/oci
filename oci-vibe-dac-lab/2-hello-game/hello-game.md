@@ -30,12 +30,11 @@ For more information: https://opencode.ai/
     ````
     <copy>    
     cd $HOME
-    wget https://livelabs.oracle.com/cdn/oci/oci-vibe-dac-lab/2-hello-game/files/oci-vibe-dac.zip
+    wget --no-cache https://livelabs.oracle.com/cdn/oci/oci-vibe-dac-lab/2-hello-game/files/oci-vibe-dac.zip
     unzip oci-vibe-dac.zip
     cd oci-vibe-dac
     cat install_opencode.sh
     ./install_opencode.sh
-    source ~/.bashrc
     </copy>    
     ````
 
@@ -82,6 +81,7 @@ For more information: https://opencode.ai/
 
     ````
     <copy>    
+    source ~/.bashrc
     cd $HOME/oci-vibe-dac/hello
     opencode
     </copy>    
