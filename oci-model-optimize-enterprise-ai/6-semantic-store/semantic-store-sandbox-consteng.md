@@ -27,6 +27,8 @@ This lab assumes you have:
 
 1. Select **Vector stores**.
 
+    > **Console navigation:** If **Vector stores** is not visible on the Generative AI overview, select **Applications** and expand the left navigation to find it.
+
 1. Select the reservation-specific child compartment from your sandbox resource list.
 
 1. Click **Create vector store**.
@@ -74,4 +76,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Contributors** — Oracle LiveLabs Platform Team
+- **Last Updated By/Date** — Eli Schilling, October 2026
