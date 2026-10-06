@@ -40,7 +40,7 @@ For more information: https://opencode.ai/
     ````
 
     ![Install](images/opencode_install1.png)   
-    
+
     If you have an issue with the above link, you can also clone from the original git repo.
     ````
     <copy>    
@@ -56,7 +56,7 @@ For more information: https://opencode.ai/
         - If you have access to the Chicago region, use the proposed default value.
         - Or look up the model and region here: https://docs.oracle.com/en-us/iaas/Content/generative-ai/model-endpoint-regions.htm. Find the base URL here: https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-inference/20231130/
         - Here is an example:    
-            - Model ID: ex: *xai.grok-4.6*
+            - Model ID: ex: *xai.grok-4.7*
             - OCI Generative AI base URL: *https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/20231130/actions/v1*
             - Model name: *Grok*
             - API Key: *sk-xxx* (see your notes in previous lab)

@@ -109,7 +109,7 @@ Let's install the examples in Cloud Editor.
     Without a DAC (for example, if you have access to the Chicago region):
     ```
     <copy>    
-    GENAI_MODEL=xai.grok-4.6
+    GENAI_MODEL=xai.grok-4.7
     REGION=us-chicago-1
     COMPARTMENT_OCID=##COMPARTMENT_OCID##
     ex: COMPARTMENT_OCID=ocid1.compartment.oc1.xxxxxxxxxx
