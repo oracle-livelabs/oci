@@ -7,6 +7,10 @@
             "filename": "./../../0-intro/intro.md"
         },
         {
+            "title": "Get Started",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/event-register-free-tier-account.md"
+        },
+        {
             "title": "Lab 1: Installation",
             "filename": "./../../1-install/install.md"
         },
