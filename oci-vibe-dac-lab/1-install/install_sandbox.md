@@ -77,11 +77,18 @@ Estimated time: 30 min
     ```  
 2. Since you are in LiveLab SandBox, a part of the work was done already for you.
     - Click on the view info
-    - Copy the values in your notes od
+    - Copy the values in your notes
         - ##Username##
         - and ##COMPARTMENT_OCID##   
 
-    ![LiveLab View Info](images/livelab-view-info.png)       
+    ![LiveLab View Info](images/livelab-view-info.png)   
+
+3. Now, be sure to navigate to your compartment in LiveLab. If not things like Cloud Shell, Cloud Editor, or creation of resources will not work. 
+    - Click on the Hamburger Menu
+    - Storage -> Buckets
+    - Then in the Applied Filters - Choose Compartment - LiveLabs - ##Username## (from above)
+    ![LiveLab Compartment](images/livelab-compartment1.png)   
+    ![LiveLab Compartment](images/livelab-compartment2.png)     
 
 ## Task 2: Create a Compartment (Done for you)
 
