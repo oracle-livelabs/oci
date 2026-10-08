@@ -8,7 +8,7 @@ Estimated Time: 10 minutes
 
 ## Objectives
 
-In this lab, you will:
+In this activity, you will:
 * Experience how Manager Concierge helps managers quickly surface relevant team insights and identify what needs attention. 
 * View the Team Activity Center for managers and explore the various actions that can be taken for an employee. 
 * Perform a Promotion. 

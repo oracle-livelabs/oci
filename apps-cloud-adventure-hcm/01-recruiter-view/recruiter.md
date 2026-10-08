@@ -2,13 +2,13 @@
 
 ## Introduction
 
-In this lab, you will review candidates and job requisitions in Oracle Recruiting. You will also use Generative AI to update a requisition posting.
+In this activity, you will review candidates and job requisitions in Oracle Recruiting. You will also use Generative AI to update a requisition posting.
 
 Estimated Time: 12 minutes
 
 ## Objectives
 
-In this lab, you will:
+In this activity, you will:
 * Find and access an open job requisition.
 * Review candidate information and AI insights.
 * Preview resumes and navigate between candidates.
