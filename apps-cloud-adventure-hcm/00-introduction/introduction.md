@@ -6,8 +6,6 @@ Welcome to the AI Adventure in Human Resources. This hands-on experience explore
 
 Guided activities show how each role uses connected tools and AI capabilities to complete common HR tasks.
 
-Estimated Workshop Time: 41 minutes
-
 ## Objectives
 
 In this activity guide, you will:

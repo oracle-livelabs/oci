@@ -2,13 +2,13 @@
 
 ## Introduction
 
-In this lab, you will review candidates and job requisitions in Oracle Recruiting. You will also use Generative AI to update a requisition posting.
+In this activity, you will review candidates and job requisitions in Oracle Recruiting. You will also use Generative AI to update a requisition posting.
 
 Estimated Time: 12 minutes
 
 ## Objectives
 
-In this lab, you will:
+In this activity, you will:
 * Find and access an open job requisition.
 * Review candidate information and AI insights.
 * Preview resumes and navigate between candidates.
@@ -38,25 +38,25 @@ Easily manage and view candidates in your hiring/recruiting area.
         
     ![Applicant List](images/applicationsnumber.png)
    
-    Find the application you submitted, review different application elements and available actions for this candidate.
-4. Click on the **name** of the applicant you submitted. This will bring you to the candidate profile, which looks like the screen below.
-5. Review the **AI insights** surrounding your candidate.
-6. Review different elements and details of the application through the **tabs** circled below. You can manage everything for your candidate here.
-7. All the actions you may need are available by clicking ***‘…’*** (three dots above candidate name).
+    Find the application of your persona, review different application elements and available actions for this candidate.
+6. Click on the **name** of the applicant on your persona card (used to log into the solution). This will bring you to the candidate profile, which looks like the screen below.
+7. Review the **AI insights** surrounding your candidate.
+8. Review different elements and details of the application through the **tabs** circled below. You can manage everything for your candidate here.
+9. All the actions you may need are available by clicking ***‘…’*** (three dots above candidate name).
 
     ![Applicant Overview](images/candidateprofile.png)
 
     Quickly cycle through different candidates.
 
-8. To the top-right of the screen, you may use the **arrows** to quickly move to different candidate profiles for those that applied to this requisition.
+10. To the top-right of the screen, you may use the **arrows** to quickly move to different candidate profiles for those that applied to this requisition.
 
     ![Candidate Profile](images/candidateprofilearrows.png)
 
     Efficiently review resumes without downloading.
 
-9. Scroll down and click the **preview button (image of an eye)** within the ‘Candidate attachments’ table to quickly view the candidate’s resume.
-10. After you’ve finished previewing the resume, click the **‘X’** at the top-right corner of the attachment preview.
-11. Click the **Requisitions** tab to start Task 2 below
+11. Scroll down and click the **preview button (image of an eye)** within the ‘Candidate attachments’ table to quickly view the candidate’s resume.
+12. After you’ve finished previewing the resume, click the **‘X’** at the top-right corner of the attachment preview.
+13. Click the **Requisitions** tab to start Task 2 below
 
 ## Task 2: Use AI to Assist in Updating and/or Creating a Requisition
 
