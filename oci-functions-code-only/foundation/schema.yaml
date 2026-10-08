@@ -1,0 +1,58 @@
+{
+  "title": "OCI Functions Code-Only — Lab Foundation",
+  "description": "Prepare networking and a log group. Learners create buckets, application, invocation log, function, and Events rule. IAM is an explicit administrator option.",
+  "schemaVersion": "1.1.0",
+  "version": "1.0.0",
+  "locale": "en",
+  "variableGroups": [
+    {
+      "title": "Lab placement",
+      "variables": [
+        "compartment_ocid",
+        "region",
+        "home_region",
+        "name_prefix"
+      ]
+    },
+    {
+      "title": "Administrator-only runtime permissions",
+      "variables": [
+        "create_runtime_iam"
+      ]
+    }
+  ],
+  "variables": {
+    "tenancy_ocid": {
+      "type": "string",
+      "visible": false
+    },
+    "compartment_ocid": {
+      "type": "oci:identity:compartment:id",
+      "title": "Existing learner compartment",
+      "required": true
+    },
+    "region": {
+      "type": "oci:identity:region:name",
+      "title": "Workload region (use Chicago)",
+      "required": true
+    },
+    "home_region": {
+      "type": "oci:identity:region:name",
+      "title": "Tenancy home region (for IAM)",
+      "required": true
+    },
+    "name_prefix": {
+      "type": "string",
+      "title": "Lab name prefix",
+      "required": true,
+      "default": "inventory",
+      "pattern": "^[a-z][a-z0-9-]{2,19}$"
+    },
+    "create_runtime_iam": {
+      "type": "boolean",
+      "title": "Create runtime IAM (administrator only)",
+      "default": false,
+      "description": "Creates a dynamic group and scoped policies. Leave unchecked only if an administrator installs the generated IAM requirements separately."
+    }
+  }
+}
