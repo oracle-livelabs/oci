@@ -39,7 +39,7 @@ Easily manage and view candidates in your hiring/recruiting area.
     ![Applicant List](images/applicationsnumber.png)
    
     Find the application you submitted, review different application elements and available actions for this candidate.
-4. Click on the **name** of the applicant you submitted. This will bring you to the candidate profile, which looks like the screen below.
+4. Click on the **name** of the applicant on your persona card (used to log into the solution). This will bring you to the candidate profile, which looks like the screen below.
 5. Review the **AI insights** surrounding your candidate.
 6. Review different elements and details of the application through the **tabs** circled below. You can manage everything for your candidate here.
 7. All the actions you may need are available by clicking ***‘…’*** (three dots above candidate name).
