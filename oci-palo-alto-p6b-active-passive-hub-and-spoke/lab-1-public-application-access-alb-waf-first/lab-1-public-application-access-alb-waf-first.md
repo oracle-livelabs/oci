@@ -181,7 +181,7 @@ This route table is attached to the **LB Subnet** in the Hub VCN. It forwards In
 2. Add the two route rules: `0.0.0.0/0 → IGW` (for Internet egress) and `10.0.0.0/24 → 172.16.0.22` (the Palo Alto Untrust floating IP as a **Private IP** target).
 3. Click the back arrow to return to the Hub VCN route tables list.
 
-    ![[lab-1-public-application-access-alb-waf-first-50.png]]
+    ![Configure rt-lb route rules](images/configure-rt-lb-route-rules.png)
 
 > **Note:** The **target type** for the `10.0.0.0/24` route is **Private IP** pointing at the Palo Alto Untrust floating IP (`172.16.0.22`), not the DRG. This is what forces the ALB-to-APP flow into the firewall pair instead of letting OCI deliver it directly through the DRG.
 
@@ -199,7 +199,7 @@ This is the **Ingress Route Table** assigned to the Hub VCN's DRG attachment. It
 2. Add the route rule `172.16.0.48/28 → 172.16.0.42` (target type **Private IP**, pointing at the Palo Alto Trust floating IP).
 3. Click the back arrow to return to the Hub VCN route tables list.
 
-    ![[lab-1-public-application-access-alb-waf-first-51.png]]
+    ![Configure rt-drg-ingress route rules](images/configure-rt-drg-ingress-route-rules.png)
 
 #### Step 4: Configure `rt-trust` (Hub VCN - Trust subnet route table)
 
