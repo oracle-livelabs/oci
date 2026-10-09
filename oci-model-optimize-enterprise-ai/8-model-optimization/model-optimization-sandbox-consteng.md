@@ -18,23 +18,35 @@ Estimated Time: 15 minutes
 - A running application from Lab 3A or Lab 3B
 - Access to both configured models in the workshop region
 
+Follow only the subsection for your chosen application path in Task 2. **Launch (Lab 3B)** uses the running application's configuration panel and requires no Python file edits or completion of Lab 3A. **Build (Lab 3A)** uses your downloaded local sample-app folder and code editor.
+
 ## Task 1: Record the baseline
 
-1. Confirm that the runtime bar shows **Routing** disabled. In the Build path, also confirm that `.env` contains `OCI_GENAI_MODEL_ROUTING_ENABLED=false`.
+1. Open **Runtime configuration** on the right side of the Launch application. Enable **Specification search** and **Governed project data**, and leave **Model routing** and **Prompt-injection protection** disabled for the baseline. Close the panel and confirm that the runtime bar shows **Routing** disabled. In the Build path, confirm the equivalent `.env` settings, including `OCI_GENAI_MODEL_ROUTING_ENABLED=false`, and restart the local app if you changed them.
 
 2. Select **Supplier recommendation**, submit the prompt, and record the model shown in the runtime bar and the approximate response time.
 
-3. Attach a nonconfidential construction image and ask the application to separate observations from assumptions. Record the selected model and approximate response time.
+3. Download the [synthetic structural-steel delivery image](images/austin-steel-delivery-synthetic-consteng.png). Start a fresh conversation (**Reset conversation** in Launch), use the paperclip in the prompt composer to attach the downloaded image, and submit the following prompt. Record the selected model and approximate response time.
 
-    Confirm that the attachment preview appears before submitting. Use the same image and prompt for the routed comparison in Task 3.
+    ![Synthetic steel delivery for Austin Regional Bank project AUS-BANK-01](images/austin-steel-delivery-synthetic-consteng.png)
+
+    ```text
+    <copy>
+    For project AUS-BANK-01, describe only what is visibly shown in this synthetic construction image: the structural-steel members, their staging, and the project placard. Separate observations from assumptions. Do not query the database, infer certification or inspection approval, or treat the image as inspection evidence.
+    </copy>
+    ```
+
+    The placard matches the seeded project, asset `STR-AUS-STEEL-01`, supplier Atlas Structural Fabrication, and purchase order `PO-88142`. The image is synthetic, not inspection evidence. Supplier status and readiness must come from governed data; a photograph cannot establish certification, material grade, acceptance, or structural safety.
+
+    Confirm that the attachment preview appears before submitting. Expect observations about the steel, staging, and placard, with assumptions identified separately. Use the same image and prompt for the routed comparison in Task 3. Keep the visual task separate from a database question so the answer does not skip the image description in favor of supplier records.
 
 ## Task 2: Enable model routing
 
 ### Build path: implement the routing decision
 
-1. Stop the local application with Ctrl+C and open `llm.py` in your editor.
+1. In the terminal running your Build application, press Ctrl+C. In your code editor, use **File > Open Folder** to open the extracted sample-app folder from Lab 3A (the folder containing `app.py`, `llm.py`, and `.env`). Open `llm.py` from the editor's file list. Do not edit the ZIP archive or a file in Cloud Shell; these are your local Build files.
 
-2. Find `response_model`. The starter always returns the primary model. Add the following decision immediately below the function definition:
+2. Find `response_model`. The starter always returns the primary model. Add the following decision immediately below the function definition, indented four spaces so it is inside the function. Keep the existing image-capability check and `return model` below it:
 
     ```python
     <copy>
@@ -71,7 +83,25 @@ Estimated Time: 15 minutes
 
 2. Confirm that the runtime bar reports the lower-cost text model for this text-only request.
 
-3. Attach a construction image and ask for observations separated from assumptions. Confirm that the stronger multimodal model is selected.
+3. Start another fresh conversation, attach the **same synthetic structural-steel delivery image from Task 1**, and submit the **same prompt**. Confirm that the attachment preview appears and the stronger multimodal model is selected. Compare visible observations with the baseline; do not use an unrelated image from outside the construction-project scope.
+
+    ![Synthetic construction image attached in a fresh routed conversation](images/synthetic-image-attached-focused-consteng.jpg)
+
+    A complete answer should describe visible features of the image and distinguish observations from assumptions. A database-only answer is not a successful image-analysis result, even when the selected model is correct.
+
+    After recording the image result, submit this separate text-only follow-up:
+
+    ```text
+    <copy>
+    For project AUS-BANK-01, return the recommended suppliers with recommendation status, fit score, risk level, and explanation. Do not aggregate document names.
+    </copy>
+    ```
+
+    Expect governed supplier records and supporting evidence, rather than a conclusion based only on the picture. Routing is based on the current submission: a text-only follow-up can use the lower-cost model even when an earlier message contained an image. Attach the image again in a fresh conversation when comparing image workloads.
+
+    If generated SQL is rejected by the application's project-scope safety check, do not weaken the check or treat the response as proof that data is missing. Reset the conversation, use this narrower supplier prompt, and record the rejection for the facilitator. Open-ended readiness questions can produce more complex SQL than this exercise requires.
+
+    If the assistant refuses this relevant construction image, record the prompt, selected model, and response, then contact the facilitator. Do not interpret refusal as successful image analysis or disable security controls to force an answer.
 
 4. Compare capability, latency, response depth, and grounding with the baseline. Use the same prompts and start a new conversation for each comparison so that earlier image attachments and conversation history do not affect model selection or token usage.
 
