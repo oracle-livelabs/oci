@@ -104,7 +104,7 @@ The lab's `rt-drg-ingress` routes both spoke CIDRs to the Palo Alto Trust interf
 
 - Click on the route table **rt-drg-ingress**.
 
-    ![Confirm rt-drg-ingress](images/3802b4b81df2ff3223fa52a923f7158d.png)
+    ![Confirm rt-drg-ingress](images/confirm-rt-drg-ingress.png)
 
 <!-- -->
 
@@ -271,7 +271,7 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
     - `10.0.2.0/28` and `10.0.2.16/28` (Spoke-2 FE/BE subnets) via **Spoke-2 VCN Attachment**. 
 2. Click **Close**.
 
-    ![Verify the DRG configuration rt](images/f460419775fc9e8dee0addc6eb9011da.png)
+    ![Verify the DRG configuration rt](images/verify-the-drg-configuration-rt.png)
 
 - Click the back arrow to return to the DRG.
 
@@ -326,22 +326,22 @@ Open the Palo Alto Web GUI, then:
 
 - Notice that the **default** Virtual Router now shows **Static Routes: 2**. Click on the **Commit** button at the top right.
 
-    ![Commit the Palo Alto configuration](images/76cd4a62a684f4a4aaea46c88ff6c3db.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration.png)
 
 <!-- -->
 
 1. Select **Commit All Changes**.
 2. In the **Commit** dialog, click the **Commit** button to confirm.
 
-    ![Commit the Palo Alto configuration](images/ccc96d14c4afcfe117c2f22949208a9c.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-2.png)
 
 - The **Commit Status** dialog shows the operation as **Pending** while the configuration is applied.
 
-    ![Commit the Palo Alto configuration](images/ed8e82cde5631fe4b1215a9a6b595271.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-3.png)
 
 - Notice the **Commit Status** shows **Completed** and **Successful**.
 
-    ![Commit the Palo Alto configuration](images/d9e86828f7363d0262ac51dd2f2254c4.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-4.png)
 
 ## Task 3: Test and Validate
 

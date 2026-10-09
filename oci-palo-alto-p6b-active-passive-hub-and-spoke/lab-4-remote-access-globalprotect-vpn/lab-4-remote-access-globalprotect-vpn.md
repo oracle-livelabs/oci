@@ -291,7 +291,7 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
     - `10.0.2.0/28` and `10.0.2.16/28` (Spoke-2 FE/BE subnets) via **Spoke-2 VCN Attachment**. 
 2. Click **Close** when done.
 
-    ![Verify the DRG configuration rt](images/f460419775fc9e8dee0addc6eb9011da.png)
+    ![Verify the DRG configuration rt](images/verify-the-drg-configuration-rt.png)
 
 - Click the back arrow to return to the DRG route tables list.
 
@@ -348,22 +348,22 @@ Open the active firewall's Web GUI, then:
 
 - Notice that the **default** Virtual Router now shows **Static Routes: 3**. Click on the **Commit** button at the top right.
 
-    ![Configure Palo Alto VR static](images/c60c4d6f1d8f3b103c0c38e3a8082589.png)
+    ![Configure Palo Alto VR static](images/configure-palo-alto-vr-static.png)
 
 <!-- -->
 
 1. Select **Commit All Changes**.
 2. In the **Commit** dialog, click the **Commit** button to confirm.
 
-    ![Commit the Palo Alto configuration](images/01d325b50f7e15bf9832293eaddba3e1.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration.png)
 
 - The **Commit Status** dialog shows the operation as **Pending** while the configuration is applied.
 
-    ![Commit the Palo Alto configuration](images/0b614af80bb05c3c8fdebaaeaa77316a.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-2.png)
 
 - Notice the **Commit Status** shows **Completed** and **Successful**.
 
-    ![Commit the Palo Alto configuration](images/1b16969f961309ab72adfdc0fe1f7864.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-3.png)
 
 - Back on the **Virtual Routers** list. Click on **More Runtime Stats** to inspect the runtime route table.
 
@@ -388,14 +388,14 @@ The diagram below shows the intended split-tunnel routing. The following steps c
 - From a terminal on the client, ping all four spoke VMs (`10.0.1.10`, `10.0.1.20`, `10.0.2.10`, `10.0.2.20`). 
 - All four pings **fail** because the client has no route into OCI without the VPN.
 
-    ![Confirm initial reachability client without](images/d3390ef900d26293691ce0e85d6710bc.png)
+    ![Confirm initial reachability client without](images/confirm-initial-reachability-client-without.png)
 
 #### Step 2: Connect GlobalProtect in full tunnel mode
 
 - Open the **GlobalProtect** agent and connect. 
 - Notice that the agent shows **Connected** to `GP-Ext-GW` (Best Available Gateway).
 
-    ![Connect GlobalProtect in full tunnel](images/0880bbbdb5e722ac5c14be83c703783c.png)
+    ![Connect GlobalProtect in full tunnel](images/connect-globalprotect-in-full-tunnel.png)
 
 <!-- -->
 
@@ -407,14 +407,14 @@ The diagram below shows the intended split-tunnel routing. The following steps c
 
 - Ping all four spoke VMs again. All of them now **succeed**, because the full tunnel sends everything into the firewall pair and the active firewall has routes to both Spoke-1 and Spoke-2.
 
-    ![Connect GlobalProtect in full tunnel](images/afd39ff46fffa5957f050503aba8d599.png)
+    ![Connect GlobalProtect in full tunnel](images/connect-globalprotect-in-full-tunnel-2.png)
 
 <!-- -->
 
 1. Open a browser and try to reach `https://www.oracle.com`. 
 2. The page fails to load because full tunnel sends public Internet traffic into OCI through GlobalProtect. OCI is not intended to act as the client’s Internet provider; public Internet traffic should use the client’s local connection instead of traversing the firewall pair.
 
-    ![Connect GlobalProtect in full tunnel](images/aead6b03f7108aed21c46ef545dae337.png)
+    ![Connect GlobalProtect in full tunnel](images/connect-globalprotect-in-full-tunnel-3.png)
 
 #### Step 3: Collect GlobalProtect debug logs to inspect the client routing table
 
@@ -424,14 +424,14 @@ To prove that the full tunnel is what is hijacking the default route, collect th
 2. Click on the **hamburger menu** in the top-right of the agent panel.
 3. Click on **Settings**.
 
-    ![Collect GlobalProtect debug logs to](images/66c577d9ad74bcbdb5b58d0a3b6190cb.png)
+    ![Collect GlobalProtect debug logs to](images/collect-globalprotect-debug-logs-to.png)
 
 <!-- -->
 
 1. On the **Connections** tab, notice the **Tunnel Statistics** showing **Assigned IP Address** `IPv4 192.168.1.1` (your tunnel pool IP).
 2. Click on the **Troubleshooting** tab.
 
-    ![Collect GlobalProtect debug logs to](images/043e2f917ff3d67e0fb992cee6c204df.png)
+    ![Collect GlobalProtect debug logs to](images/collect-globalprotect-debug-logs-to-2.png)
 
 <!-- -->
 
@@ -481,7 +481,7 @@ Edit the GlobalProtect Gateway created in Part 5 of the workshop series and add 
 2. Click on **Gateways** under **GlobalProtect**.
 3. Click on the existing **GP-Gateway** entry.
 
-    ![Configure Split Tunnel on the](images/9c901a70aacceda00f36964f2a685709.png)
+    ![Configure Split Tunnel on the](images/configure-split-tunnel-on-the.png)
 
 - In the **GlobalProtect Gateway Configuration** dialog, click on the **Agent** entry in the left-hand menu.
 
@@ -489,15 +489,15 @@ Edit the GlobalProtect Gateway created in Part 5 of the workshop series and add 
 
 - On the **Agent** page, click on the **Client Settings** sub-tab (the **Tunnel Settings** sub-tab is shown by default).
 
-    ![Configure Split Tunnel on the](images/164bd4975b837346961f6597168e688c.png)
+    ![Configure Split Tunnel on the](images/configure-split-tunnel-on-the-2.png)
 
 - Click on the existing **GP-Client-Settings** entry to edit it.
 
-    ![Configure Split Tunnel on the](images/225e1ed178b9ef7152cff8e3314083de.png)
+    ![Configure Split Tunnel on the](images/configure-split-tunnel-on-the-3.png)
 
 - In the **Configs** dialog, click on the **Split Tunnel** sub-tab.
 
-    ![Configure Split Tunnel on the](images/e544652c909a33434e90d70f76664a5a.png)
+    ![Configure Split Tunnel on the](images/configure-split-tunnel-on-the-4.png)
 
 <!-- -->
 
@@ -507,12 +507,12 @@ Edit the GlobalProtect Gateway created in Part 5 of the workshop series and add 
 
 > **Note:** Including only `10.0.1.0/24` sends Spoke-1 traffic through the VPN. The client receives no VPN route for Spoke-2, so Spoke-2 is unreachable in this lab.
 
-![Configure Split Tunnel on the](images/8702655e3e2b30461f308d00d35b899a.png)
+![Configure Split Tunnel on the](images/configure-split-tunnel-on-the-5.png)
 
 - Back on the **Client Settings** sub-tab, notice that the `GP-Client-Settings` row now shows `10.0.1.0/24` in the **INCLUDE ACCESS ROUTE** column. 
 - Click on the **OK** button to save the Gateway.
 
-    ![Configure Split Tunnel on the](images/ac55adfa11c00a8698716559a3bab533.png)
+    ![Configure Split Tunnel on the](images/configure-split-tunnel-on-the-6.png)
 
 #### Step 5: Commit the Palo Alto configuration
 
@@ -525,15 +525,15 @@ Edit the GlobalProtect Gateway created in Part 5 of the workshop series and add 
 1. Select **Commit All Changes**.
 2. In the **Commit** dialog, click the **Commit** button to confirm.
 
-    ![Commit the Palo Alto configuration](images/b717fae156691607771adaa8ae36cd89.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-4.png)
 
 - The **Commit Status** dialog shows the operation as **Pending** while the configuration is applied.
 
-    ![Commit the Palo Alto configuration](images/75918b16fe8fc745a9e0a7abca0f90be.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-5.png)
 
 - Notice the **Commit Status** shows **Completed** and **Successful**.
 
-    ![Commit the Palo Alto configuration](images/2eee31cea4c78e60800dfde213728c78.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-6.png)
 
 ## Task 4: Test and Validate
 
@@ -553,19 +553,19 @@ These fields show that split tunneling moves the client’s default route from G
 - The pings to Spoke-1 (`10.0.1.10`, `10.0.1.20`) **succeed**, and the pings to Spoke-2 (`10.0.2.10`, `10.0.2.20`) **fail** - the client never even sends the Spoke-2 packets into the tunnel because `10.0.2.0/24` is not in the Include list. 
 - The active firewall is not blocking Spoke-2; the client routing is enforcing the access decision.
 
-    ![Validate split-tunnel spoke access](images/722fdd594a35e634da9ce56fdf8128db.png)
+    ![Validate split-tunnel spoke access](images/validate-split-tunnel-spoke-access.png)
 
 <!-- -->
 
 1. Open a browser and reach `https://www.oracle.com`. 
 2. The page now **loads** because Internet traffic is no longer being sent into the tunnel.
 
-    ![Validate local Internet access](images/1a52b4f02cccef97dc9467def20c7022.png)
+    ![Validate local Internet access](images/validate-local-internet-access.png)
 
 - Collect a fresh set of GP debug logs (Task 3 - Step 3) and open the new `RoutePrint.txt`. 
 - Notice the routing table now shows `10.0.1/24 → 192.168.1.1 (utun4)` and the default route on `192.168.100.1 (en0)` - split tunnel confirmed.
 
-    ![Verify split-tunnel RoutePrint](images/1cecade31553f3f0c6bfbaa947ad4058.png)
+    ![Verify split-tunnel RoutePrint](images/verify-split-tunnel-routeprint.png)
 
 <!-- -->
 
@@ -573,7 +573,7 @@ These fields show that split tunneling moves the client’s default route from G
 2. Click **Traffic**.
 3. Notice that the only sessions logged are from the GlobalProtect pool to Spoke-1 destinations (`10.0.1.10`, `10.0.1.20`) with zones `remote-vpn-zone → trust-zone` and application `ping`. There are **no** sessions to `10.0.2.x` - the active firewall confirms the access control is being enforced at the client (the packets never arrive at the firewall pair in the first place).
 
-    ![Verify GlobalProtect traffic logs](images/2357cec45f37915aef3e399ec03528dc.png)
+    ![Verify GlobalProtect traffic logs](images/verify-globalprotect-traffic-logs.png)
 
 ## Learn More
 

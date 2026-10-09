@@ -26,11 +26,11 @@ Before following the routing steps below, complete the items that are out of sco
 
 2. Create a **Service Gateway (SGW)** in the **Hub VCN** and assign `rt-sgw-ingress` to it. Open the Hub VCN and click the Gateways tab.
 
-    ![Open Hub VCN gateways](images/17e44a30feb34b4989b205724187cf8d.png)
+    ![Open Hub VCN gateways](images/open-hub-vcn-gateways.png)
 
 - Verify that **SGW** is **Available** and that `rt-sgw-ingress` appears in the **Route Table** column.
   
-![Verify gateway routes](images/696a5c8ebf4c0376d0ecb1acb8fcfebd.png)
+![Verify gateway routes](images/verify-gateway-routes.png)
 
 An **SGW ingress route table** controls traffic returning from OSN into the VCN. In this lab, it sends the return traffic to the Trust NLB (`172.16.0.45`) for inspection, instead of allowing it to return directly to the spoke through normal VCN routing. This keeps the flow symmetric.
 
@@ -68,7 +68,7 @@ A **VCN Route Table** is assigned to a DRG attachment (also called an **Ingress*
 
     - Create a text file named `Test-Object.txt` with a short line, such as `This is a test object...`, and upload it to the bucket.
 
-    ![Upload Object Storage test](images/aeb061972e6ceead7774fbdc321510dd.png)
+    ![Upload Object Storage test](images/upload-object-storage-test.png)
 
 <!-- -->
 
@@ -77,7 +77,7 @@ A **VCN Route Table** is assigned to a DRG attachment (also called an **Ingress*
 3. Open the row's **Actions** menu
 4. and click **Create pre-authenticated request**.
 
-    ![Create pre-authenticated request](images/d64884a5c2b24e006b513eebea01d88e.png)
+    ![Create pre-authenticated request](images/create-pre-authenticated-request.png)
 
 <!-- -->
 
@@ -88,14 +88,14 @@ A **VCN Route Table** is assigned to a DRG attachment (also called an **Ingress*
 5. Choose an expiration date/time.
 6. Click **Create pre-authenticated request**.
 
-    ![Configure pre-authenticated request](images/a55431f7ed6b21f3485e379f4ce60172.png)
+    ![Configure pre-authenticated request](images/configure-pre-authenticated-request.png)
 
 <!-- -->
 
 1. Notice the warning.
 2. In the **Pre-authenticated request details** dialog, copy the **Pre-authenticated request URL** and save it - you will `curl` it in the Test & Validate step. The URL is only shown once.
 
-    ![Copy pre-authenticated request URL](images/5b65b1f1a6e1df009c39a2265df21dc2.png)
+    ![Copy pre-authenticated request URL](images/copy-pre-authenticated-request-url.png)
 
 ## Task 1: Review the Use Case
 
@@ -335,7 +335,7 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
     - `10.0.2.0/28` and `10.0.2.16/28` (Spoke-2 FE/BE subnets) via **Spoke-2 VCN Attachment**. 
 2. Click **Close**.
 
-    ![Verify DRG configuration](images/f460419775fc9e8dee0addc6eb9011da.png)
+    ![Verify DRG configuration](images/verify-drg-configuration.png)
 
 - Click the back arrow to return to the DRG route tables list.
 
@@ -388,28 +388,28 @@ The prerequisite automation retrieves Oracle's JSON file and updates the IP rang
 
 2. Click on the **OK** button to save the Virtual Router configuration.
 
-    ![Confirm OSN routes](images/95175fd0207c1b72cf52df12b3fdedc0.png)
+    ![Confirm OSN routes](images/confirm-osn-routes.png)
 
 #### Step 8: Commit Palo Alto config
 
 - Notice that the **default** Virtual Router now shows **Static Routes: 21**. Click on the **Commit** button at the top right.
 
-    ![Commit Palo Alto config](images/c2128ff22b7a5f01699b10252224f1e6.png)
+    ![Commit Palo Alto config](images/commit-palo-alto-config.png)
 
 <!-- -->
 
 1. Select **Commit All Changes**.
 2. In the **Commit** dialog, click the **Commit** button to confirm.
 
-    ![Commit Palo Alto config](images/cbdf0252137a9aa85ccb8b5ce6e95f96.png)
+    ![Commit Palo Alto config](images/commit-palo-alto-config-2.png)
 
 - The **Commit Status** dialog shows the operation as **Pending** while the configuration is applied.
 
-    ![Commit Palo Alto config](images/5bfca4d08acc8c142be15229a0f65fa8.png)
+    ![Commit Palo Alto config](images/commit-palo-alto-config-3.png)
 
 - Notice the **Commit Status** shows **Completed** and **Successful**.
 
-    ![Commit Palo Alto config](images/a628b6b0f458decc876648d00f47dd75.png)
+    ![Commit Palo Alto config](images/commit-palo-alto-config-4.png)
 
 ## Task 3: Test and Validate
 
@@ -434,7 +434,7 @@ The prerequisite automation retrieves Oracle's JSON file and updates the IP rang
 7. Click **OK**.
 8. Click **Commit** in the upper-right corner.
 
-    ![Configure TCP MSS adjustment](images/176b4c6d0fe9d1447f6e2e31eff68238.png)
+    ![Configure TCP MSS adjustment](images/configure-tcp-mss-adjustment.png)
 
 <!-- -->
 

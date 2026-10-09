@@ -280,22 +280,22 @@ Open the Palo Alto management Web GUI, then:
 
 - Notice that the **default** Virtual Router now shows **Static Routes: 2**. Click on the **Commit** button at the top right.
 
-    ![Configure Palo Alto VR static](images/76cd4a62a684f4a4aaea46c88ff6c3db.png)
+    ![Configure Palo Alto VR static](images/configure-palo-alto-vr-static.png)
 
 <!-- -->
 
 1. Select **Commit All Changes**.
 2.  In the **Commit** dialog, click the **Commit** button to confirm.
 
-    ![Commit the Palo Alto configuration](images/ccc96d14c4afcfe117c2f22949208a9c.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration.png)
 
 - The **Commit Status** dialog shows the operation as **Pending** while the configuration is applied.
 
-    ![Commit the Palo Alto configuration](images/ed8e82cde5631fe4b1215a9a6b595271.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-2.png)
 
 - Notice the **Commit Status** shows **Completed** and **Successful**.
 
-    ![Commit the Palo Alto configuration](images/d9e86828f7363d0262ac51dd2f2254c4.png)
+    ![Commit the Palo Alto configuration](images/commit-the-palo-alto-configuration-3.png)
 
 ## Task 3: Configure NAT
 
@@ -365,15 +365,15 @@ On the **Translated Packet** tab, configure the **SNAT** side (Source Address Tr
 1. In the **Commit** dialog, notice the **Commit Scope** is `policy-and-objects` (because only the NAT policy changed).
 2. Click on the **Commit** button to confirm.
 
-    ![Outbound NAT commit](images/ed1436310d116266b821cda9ce5a8dbb.png)
+    ![Outbound NAT commit](images/outbound-nat-commit.png)
 
 - The **Commit Status** dialog shows the operation as **Pending** while the configuration is applied.
 
-    ![Outbound NAT pending](images/aafcdb3dd7caa790f24fd123c9c1269d.png)
+    ![Outbound NAT pending](images/outbound-nat-pending.png)
 
 - Notice the **Commit Status** shows **Completed** and **Successful**.
 
-    ![Outbound NAT success](images/ea23a1e87ebf4552f238510f8cc45463.png)
+    ![Outbound NAT success](images/outbound-nat-success.png)
 
 ## Task 4: Test and Validate
 

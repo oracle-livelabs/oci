@@ -292,22 +292,22 @@ Open the selected firewall's management Web GUI, then:
 
 - Notice that the **default** Virtual Router now shows **Static Routes: 2**. Click on the **Commit** button at the top right.
 
-    ![Configure Palo Alto routes](images/76cd4a62a684f4a4aaea46c88ff6c3db.png)
+    ![Configure Palo Alto routes](images/configure-palo-alto-routes.png)
 
 <!-- -->
 
 1. Select **Commit All Changes**.
 2.  In the **Commit** dialog, click the **Commit** button to confirm.
 
-    ![Commit Palo Alto config](images/ccc96d14c4afcfe117c2f22949208a9c.png)
+    ![Commit Palo Alto config](images/commit-palo-alto-config.png)
 
 - The **Commit Status** dialog shows the operation as **Pending** while the configuration is applied.
 
-    ![Commit Palo Alto config](images/ed8e82cde5631fe4b1215a9a6b595271.png)
+    ![Commit Palo Alto config](images/commit-palo-alto-config-2.png)
 
 - Notice the **Commit Status** shows **Completed** and **Successful**.
 
-    ![Commit Palo Alto config](images/d9e86828f7363d0262ac51dd2f2254c4.png)
+    ![Commit Palo Alto config](images/commit-palo-alto-config-3.png)
 
 ## Task 3: Configure NAT
 

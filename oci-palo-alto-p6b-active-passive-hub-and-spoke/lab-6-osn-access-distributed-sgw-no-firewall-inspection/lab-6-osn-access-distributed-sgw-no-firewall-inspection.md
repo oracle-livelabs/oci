@@ -34,13 +34,13 @@ Before following the routing steps below, complete the items that are out of sco
 
 2. Create a **Service Gateway (SGW)** in **each spoke VCN** (one per spoke). Each SGW provides direct OSN access for that spoke.
 
-    ![Verify Service Gateways in both spokes](images/38e6dea61bced931ade77736517a28d7.png)
+    ![Verify Service Gateways in both spokes](images/verify-service-gateways-in-both-spokes.png)
 
 3. Create a test bucket in OCI Object Storage and a **Pre-Authenticated Request (PAR)** for a test object. A PAR is a time-limited URL that provides access to the object without requiring IAM authentication; you use it for end-to-end testing.
 
     - Create a text file named `Test-Object.txt` with a short line, such as `This is a test object...`, and upload it to the bucket.
 
-    ![Upload test object to Object Storage](images/aeb061972e6ceead7774fbdc321510dd.png)
+    ![Upload test object to Object Storage](images/upload-test-object-to-object-storage.png)
 
 <!-- -->
 
@@ -49,7 +49,7 @@ Before following the routing steps below, complete the items that are out of sco
 3. Open the row's **Actions** menu
 4. and click **Create pre-authenticated request**.
 
-    ![Create pre-authenticated request](images/d64884a5c2b24e006b513eebea01d88e.png)
+    ![Create pre-authenticated request](images/create-pre-authenticated-request.png)
 
 <!-- -->
 
@@ -60,14 +60,14 @@ Before following the routing steps below, complete the items that are out of sco
 5. Choose an expiration date/time.
 6. Click **Create pre-authenticated request**.
 
-    ![Configure pre-authenticated request](images/a55431f7ed6b21f3485e379f4ce60172.png)
+    ![Configure pre-authenticated request](images/configure-pre-authenticated-request.png)
 
 <!-- -->
 
 1. Notice the warning.
 2. In the **Pre-authenticated request details** dialog, copy the **Pre-authenticated request URL** and save it - you will `curl` it in the Test & Validate step. The URL is only shown once.
 
-    ![Copy pre-authenticated request URL](images/5b65b1f1a6e1df009c39a2265df21dc2.png)
+    ![Copy pre-authenticated request URL](images/copy-pre-authenticated-request-url.png)
 
 ## Task 1: Review the Use Case
 
