@@ -1,0 +1,53 @@
+{
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Active/Active Palo Alto hub-and-spoke routing scenarios in OCI.",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Prerequisites for using Free Trial, Paid, and Always Free accounts.",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Lab 1: Configure Public Application Access - ALB (WAF) First",
+      "filename": "../../lab-1-public-application-access-alb-waf-first/lab-1-public-application-access-alb-waf-first.md"
+    },
+    {
+      "title": "Lab 2: Configure Outbound Internet Access",
+      "filename": "../../lab-2-outbound-internet-access/lab-2-outbound-internet-access.md"
+    },
+    {
+      "title": "Lab 3: Configure OSN Access - Centralized SGW with Firewall Inspection",
+      "filename": "../../lab-3-osn-access-centralized-sgw-firewall-inspection/lab-3-osn-access-centralized-sgw-firewall-inspection.md"
+    },
+    {
+      "title": "Lab 4: Configure OSN Access - Distributed SGW with No Firewall Inspection",
+      "filename": "../../lab-4-osn-access-distributed-sgw-no-firewall-inspection/lab-4-osn-access-distributed-sgw-no-firewall-inspection.md"
+    },
+    {
+      "title": "Lab 5: Configure Intra-VCN Subnet-to-Subnet Communication",
+      "filename": "../../lab-5-intra-vcn-subnet-to-subnet-communication/lab-5-intra-vcn-subnet-to-subnet-communication.md"
+    },
+    {
+      "title": "Lab 6: Configure Inter-VCN Spoke-to-Spoke Communication",
+      "filename": "../../lab-6-inter-vcn-spoke-to-spoke-communication/lab-6-inter-vcn-spoke-to-spoke-communication.md"
+    },
+    {
+      "title": "Lab 7: Configure Hybrid Connectivity via IPSec VPN",
+      "filename": "../../lab-7-hybrid-connectivity-ipsec-vpn/lab-7-hybrid-connectivity-ipsec-vpn.md"
+    },
+    {
+      "title": "Lab 8: Review Workshop Conclusions",
+      "filename": "../../lab-8-conclusion/lab-8-conclusion.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to common problems and how to get live help.",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+    }
+  ],
+  "help": "anas.abdallah@oracle.com",
+  "workshoptitle": "Configure Hub-and-Spoke Routing for an Active/Active Palo Alto NGFW Deployment in OCI"
+}

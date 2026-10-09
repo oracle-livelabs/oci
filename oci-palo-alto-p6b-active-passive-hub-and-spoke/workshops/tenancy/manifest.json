@@ -1,0 +1,61 @@
+{
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Active/Passive Palo Alto hub-and-spoke routing scenarios in OCI.",
+      "filename": "../../introduction/introduction.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Prerequisites for using Free Trial, Paid, and Always Free accounts.",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+    },
+    {
+      "title": "Lab 1: Configure Public Application Access - ALB (WAF) First",
+      "filename": "../../lab-1-public-application-access-alb-waf-first/lab-1-public-application-access-alb-waf-first.md"
+    },
+    {
+      "title": "Lab 2: Configure Public Application Access - Palo Alto Firewall First",
+      "filename": "../../lab-2-public-application-access-ngfw-first/lab-2-public-application-access-ngfw-first.md"
+    },
+    {
+      "title": "Lab 3: Configure Outbound Internet Access",
+      "filename": "../../lab-3-outbound-internet-access/lab-3-outbound-internet-access.md"
+    },
+    {
+      "title": "Lab 4: Configure Remote Access via GlobalProtect VPN",
+      "filename": "../../lab-4-remote-access-globalprotect-vpn/lab-4-remote-access-globalprotect-vpn.md"
+    },
+    {
+      "title": "Lab 5: Configure OSN Access - Centralized SGW with Firewall Inspection",
+      "filename": "../../lab-5-osn-access-centralized-sgw-firewall-inspection/lab-5-osn-access-centralized-sgw-firewall-inspection.md"
+    },
+    {
+      "title": "Lab 6: Configure OSN Access - Distributed SGW with No Firewall Inspection",
+      "filename": "../../lab-6-osn-access-distributed-sgw-no-firewall-inspection/lab-6-osn-access-distributed-sgw-no-firewall-inspection.md"
+    },
+    {
+      "title": "Lab 7: Configure Intra-VCN Subnet-to-Subnet Communication",
+      "filename": "../../lab-7-intra-vcn-subnet-to-subnet-communication/lab-7-intra-vcn-subnet-to-subnet-communication.md"
+    },
+    {
+      "title": "Lab 8: Configure Inter-VCN Spoke-to-Spoke Communication",
+      "filename": "../../lab-8-inter-vcn-spoke-to-spoke-communication/lab-8-inter-vcn-spoke-to-spoke-communication.md"
+    },
+    {
+      "title": "Lab 9: Configure Hybrid Connectivity via IPSec VPN",
+      "filename": "../../lab-9-hybrid-connectivity-ipsec-vpn/lab-9-hybrid-connectivity-ipsec-vpn.md"
+    },
+    {
+      "title": "Lab 10: Review Workshop Conclusions",
+      "filename": "../../lab-10-conclusion/lab-10-conclusion.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to common problems and how to get live help.",
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+    }
+  ],
+  "help": "anas.abdallah@oracle.com",
+  "workshoptitle": "Configure Hub-and-Spoke Routing for an Active/Passive Palo Alto NGFW Deployment in OCI"
+}
