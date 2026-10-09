@@ -16,7 +16,7 @@ This workshop walks through **seven common routing scenarios on an Active/Active
 - **Lab 6: Configure Inter-VCN Spoke-to-Spoke Communication** - East-west traffic between spoke VCNs routed through the firewall pair.
 - **Lab 7: Configure Hybrid Connectivity via IPSec VPN** - Hybrid IPSec connectivity between the selected Frankfurt firewall and an OCI native DRG in Milan.
 
-Estimated Workshop Time: 4 hours
+Estimated Workshop Time: 3 hours
 
 ### Objectives
 
