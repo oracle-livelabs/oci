@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">OCI IoT Platform Introduction badge</title>
+  <desc id="desc">A circular completion badge with a water-pump icon and a check mark.</desc>
+  <circle cx="128" cy="128" r="118" fill="#312D2A"/>
+  <circle cx="128" cy="128" r="102" fill="#C74634"/>
+  <path d="M49 128h42V93c0-13 10-23 23-23h28c13 0 23 10 23 23v35h42v25h-42v31c0 13-10 23-23 23h-28c-13 0-23-10-23-23v-31H49z" fill="#FFF"/>
+  <path d="m102 139 17 17 37-42" fill="none" stroke="#312D2A" stroke-linecap="round" stroke-linejoin="round" stroke-width="14"/>
+  <text x="128" y="236" fill="#FFF" font-family="Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">OCI IOT</text>
+</svg>

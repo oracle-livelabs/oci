@@ -1,0 +1,16 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1",
+    "dtmi:com:oracle:dtdl:extension:validation;1"
+  ],
+  "@id": "dtmi:com:oracle:iot:example:WaterPump;1",
+  "@type": "Interface",
+  "displayName": "Water Pump",
+  "contents": [
+    {"@type": "Component", "name": "motor", "schema": "dtmi:com:oracle:iot:example:ElectricMotor;1"},
+    {"@type": ["Telemetry", "Validated"], "name": "flowRate", "schema": "double", "minimum": 0, "maximum": 1000},
+    {"@type": ["Telemetry", "Pressure"], "name": "dischargePressure", "schema": "double", "unit": "bar"},
+    {"@type": "Relationship", "name": "installedOn", "target": "dtmi:com:oracle:beverage:ProductionLine;1"}
+  ]
+}

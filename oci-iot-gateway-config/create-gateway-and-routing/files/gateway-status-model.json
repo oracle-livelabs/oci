@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "dtmi:dtdl:context;3"
+  ],
+  "@id": "dtmi:com:oracle:iot:example:GatewayStatus;1",
+  "@type": "Interface",
+  "displayName": "Gateway Status",
+  "description": "Reports the essential operating state of an OCI IoT gateway.",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "connectedDeviceCount",
+      "displayName": "Connected Device Count",
+      "description": "Reports the number of indirectly connected devices currently communicating through the gateway.",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "cpuUtilization",
+      "displayName": "CPU Utilization",
+      "description": "Reports the percentage of gateway CPU capacity currently in use.",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "memoryUtilization",
+      "displayName": "Memory Utilization",
+      "description": "Reports the percentage of gateway memory currently in use.",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "firmwareVersion",
+      "displayName": "Firmware Version",
+      "description": "Reports the firmware version running on the gateway.",
+      "schema": "string"
+    }
+  ]
+}

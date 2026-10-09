@@ -11,7 +11,7 @@ Estimated time: 10 min
 
 In this sample, using terraform, we will create:
 - a Container Instance running 2 docker containers
-- 1 container with a Java program
+- 1 container with a .NET program
 - 1 container with HTML pages on NGINX
 - and an Autonomous Database. 
 

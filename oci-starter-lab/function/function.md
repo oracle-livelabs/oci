@@ -105,7 +105,7 @@ Before to run the build. Notice that the build will create:
     - Rest Info API : https://xxxxxx.apigateway.eu-xxxx.oci.customer-oci.com/starter/info
     </copy>
     ```
-2. Notice, during a cold start, the first function call with take about 40 secs to run. If you want instant response, you need to configure the [Provisioned Concurrency](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsusingprovisionedconcurrency.htm].
+2. Notice, during a cold start, the first function call with take about 40 secs to run. If you want instant response, you need to configure the [Provisioned Concurrency](https://docs.oracle.com/en-us/iaas/Content/Functions/Tasks/functionsusingprovisionedconcurrency.htm).
 3. Click on the URL or go to the link to check that it works:
     - All running in Serverless Mode 
     - You have HTML pages stored in Object Storage doing REST calls 

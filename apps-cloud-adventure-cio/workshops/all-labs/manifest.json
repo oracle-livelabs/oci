@@ -31,64 +31,68 @@
             "filename": "../../02-configure-prc/configure-prc.md"
         },
         {
+            "title": "Lab 3: Extend the UI (HCM)",
+            "filename": "../../03-extend-hcm/extend-hcm.md"
+        },
+        {
             "title": "Lab 3: Extend the UI (PRC)",
             "filename": "../../03-extend-prc/extend-prc.md"
         },
         {
-            "title": "Lab 4: External AI (HCM)",
-            "filename": "../../04-extend-oicai-hcm/extend-oicai-hcm.md"
-        },
-        {
-            "title": "Lab 4: External AI (PRC)",
-            "filename": "../../04-extend-oicai-prc/extend-oicai-prc.md"
-        },
-        {
-            "title": "Lab 5a: Create an AI Agent (HCM)",
+            "title": "Lab 5a: Create a RAG AI Agent (HCM)",
             "filename": "../../05a-rag-agent-hcm/rag-agent-hcm.md"
         },
         {
-            "title": "Lab 5b: Assemble an AI Agent Team (HCM)",
-            "filename": "../../05b-agent-team-hcm/agent-team-hcm.md"
+            "title": "Lab 5b: Create a BO AI Agent (HCM)",
+            "filename": "../../05b-bo-agent-hcm/bo-agent-hcm.md"
         },
         {
-            "title": "Lab 5c: Assemble an AI Agent Team and Embed (HCM)",
-            "filename": "../../05c-embed-agent-hcm/embed-agent-hcm.md"
+            "title": "Lab 5c: Assemble an Multi-Agent Team (HCM)",
+            "filename": "../../05c-multi-agent-hcm/multi-agent-hcm.md"
         },
         {
-            "title": "Lab 5d: Assemble an AI Agent Team (HCM Template)",
-            "filename": "../../05d-pre-agent-team-hcm/pre-agent-team-hcm.md"
+            "title": "Lab 5d: Assemble an Workflow Agent (HCM)",
+            "filename": "../../05d-workflow-agent-hcm/workflow-agent-hcm.md"
         },
         {
-            "title": "Lab 5e: Evaluate an AI Agent Team",
+            "title": "Lab 5e: Evaluate an AI Agent Team (HCM)",
             "filename": "../../05e-agent-evaluation-hcm/agent-evaluation-hcm.md"
         },
         {
-            "title": "Lab 6a: Create an AI Agent (SCM)",
-            "filename": "../../06a-external-agent-scm/external-agent-scm.md"
+            "title": "Lab 5f: Embed an AI Agent (HCM)",
+            "filename": "../../05f-embed-agent-hcm/embed-agent-hcm.md"
         },
         {
-            "title": "Lab 6b: Assemble an AI Agent Team (SCM)",
-            "filename": "../../06b-embed-agent-scm/embed-agent-scm.md"
-        },
-        {
-            "title": "Lab 7a: Create an AI Agent (PRC)",
+            "title": "Lab 7a: Create a RAG AI Agent (PRC)",
             "filename": "../../07a-rag-agent-prc/rag-agent-prc.md"
         },
         {
-            "title": "Lab 7b: Assemble an AI Agent Team (PRC)",
-            "filename": "../../07b-agent-team-prc/agent-team-prc.md"
+            "title": "Lab 7b: Create a BO AI Agent (PRC)",
+            "filename": "../../07b-bo-agent-prc/bo-agent-prc.md"
         },
         {
-            "title": "Lab 7d: Assemble an AI Agent Team (PRC Template)",
-            "filename": "../../07d-pre-agent-team-prc/pre-agent-team-prc.md"
+            "title": "Lab 7c: Assemble an Multi-Agent Team (PRC)",
+            "filename": "../../07c-multi-agent-prc/multi-agent-prc.md"
         },
         {
-            "title": "Lab 7e: Evaluate an AI Agent Team",
+            "title": "Lab 7d: Assemble an Workflow Agent (PRC)",
+            "filename": "../../07d-workflow-agent-prc/workflow-agent-prc.md"
+        },
+        {
+            "title": "Lab 7e: Evaluate an AI Agent Team (PRC)",
             "filename": "../../07e-agent-evaluation-prc/agent-evaluation-prc.md"
         },
         {
-            "title": "Lab 8: Audit",
-            "filename": "../../08-audit/audit.md"
+            "title": "Lab 7f: Embed an AI Agent (PRC)",
+            "filename": "../../07f-embed-agent-prc/embed-agent-prc.md"
+        },
+        {
+            "title": "Lab 8a: Workflow Agentic Application (PRC)",
+            "filename": "../../08a-workflow-agenticapp-prc/workflow-agenticapp-prc.md"
+        },
+        {
+            "title": "Lab 8b: Create an Agentic Application (PRC)",
+            "filename": "../../08b-agentic-app-prc/agentic-app-prc.md"
         },
         {
             "title": "Lab 9: Analytics",
