@@ -74,7 +74,7 @@ The GlobalProtect Portal and Gateway are bound to the primary private IP of the 
 
 #### **Single Instance Setup:**
 
-Before starting this lab, ensure the following prerequisites are completed:
+Before starting this workshop, ensure the following prerequisites are completed:
 
 <!-- -->
 
@@ -90,7 +90,7 @@ Before starting this lab, ensure the following prerequisites are completed:
 
 #### **Active/Passive Setup:**
 
-Before starting this lab, ensure the following prerequisites are completed:
+Before starting this workshop, ensure the following prerequisites are completed:
 
 <!-- -->
 
@@ -106,7 +106,7 @@ Before starting this lab, ensure the following prerequisites are completed:
 
 #### **Active/Active Setup:**
 
-Before starting this lab, ensure the following prerequisites are completed:
+Before starting this workshop, ensure the following prerequisites are completed:
 
 <!-- -->
 

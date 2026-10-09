@@ -73,7 +73,7 @@ Each firewall uses a three-interface design:
 
 #### **Single Instance Setup:**
 
-Before starting this lab, ensure the following prerequisites are completed:
+Before starting this workshop, ensure the following prerequisites are completed:
 
 1. Complete [Deploy Palo Alto NGFW in OCI (Standalone)](https://livelabs.oracle.com/ords/dbpm/r/livelabs/view-workshop?wid=4487). This workshop deploys the baseline Palo Alto VM-Series firewall in OCI Frankfurt, including the Hub VCN, subnets, Internet Gateway, and base firewall configuration.
 
@@ -97,7 +97,7 @@ Before starting this lab, ensure the following prerequisites are completed:
 
 #### **Active/Passive Setup:**
 
-Before starting this lab, ensure the following prerequisites are completed:
+Before starting this workshop, ensure the following prerequisites are completed:
 
 <!-- -->
 
@@ -123,7 +123,7 @@ Before starting this lab, ensure the following prerequisites are completed:
 
 #### **Active/Active Setup:**
 
-Before starting this lab, ensure the following prerequisites are completed:
+Before starting this workshop, ensure the following prerequisites are completed:
 
 <!-- -->
 
