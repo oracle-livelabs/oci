@@ -139,11 +139,11 @@ The diagram below summarises the routing plan for Lab 3.
 
     ![Open Virtual Cloud Networks](images/open-networking-virtual-cloud-networks.png)
 
-- Click on the **Hub VCN**.
+    - Click on the **Hub VCN**.
 
     ![Open Hub VCN](images/open-hub-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Hub VCN Routing](images/open-hub-vcn-routing.png)
 
@@ -226,7 +226,7 @@ Each spoke subnet needs the OSN service CIDR routed to the DRG so OSN-bound traf
 
     ![Configure rt-fe-01 OSN route](images/configure-rt-fe-01-osn-route.png)
 
-- Click on the route table for the **Backend Subnet** (`rt-be-01`) and add the same OSN → DRG rule.
+    - Click on the route table for the **Backend Subnet** (`rt-be-01`) and add the same OSN → DRG rule.
 
     ![Confirm rt-be-01](images/confirm-rt-be-01.png)
 
@@ -245,15 +245,15 @@ Each spoke subnet needs the OSN service CIDR routed to the DRG so OSN-bound traf
 
     ![Confirm Spoke-1 route tables](images/confirm-spoke-1-route-tables.png)
 
-- Click on **Spoke-2 VCN**.
+    - Click on **Spoke-2 VCN**.
 
     ![Open Spoke-2 VCN](images/open-spoke-2-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Spoke-2 VCN Routing](images/open-spoke-2-vcn-routing.png)
 
-- Click on the route table for the **Frontend Subnet** (`rt-fe-02`).
+    - Click on the route table for the **Frontend Subnet** (`rt-fe-02`).
 
     ![Confirm rt-fe-02](images/confirm-rt-fe-02.png)
 
@@ -265,7 +265,7 @@ Each spoke subnet needs the OSN service CIDR routed to the DRG so OSN-bound traf
 
     ![Configure rt-fe-02 OSN route](images/configure-rt-fe-02-osn-route.png)
 
-- Click on the route table for the **Backend Subnet** (`rt-be-02`) and add the same OSN → DRG rule.
+    - Click on the route table for the **Backend Subnet** (`rt-be-02`) and add the same OSN → DRG rule.
 
     ![Confirm rt-be-02](images/confirm-rt-be-02.png)
 
@@ -286,11 +286,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Open Dynamic Routing Gateways](images/open-drg-navigation.png)
 
-- Click on the **DRG**.
+    - Click on the **DRG**.
 
     ![Open DRG](images/open-drg.png)
 
-- Click on the **Attachments** tab.
+    - Click on the **Attachments** tab.
 
     ![Open DRG Attachments](images/open-drg-attachments.png)
 
@@ -301,15 +301,15 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Confirm two-spoke VCN attachments](images/confirm-two-spoke-vcn-attachments.png)
 
-- Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
+    - Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
 
     ![Open Hub rt-hub](images/open-rt-hub-two-spoke.png)
 
-- On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
+    - On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
 
     ![Open ird-hub](images/open-ird-hub.png)
 
-- Click on the **Statements** tab.
+    - Click on the **Statements** tab.
 
     ![Open ird-hub Statements](images/open-ird-hub-statements.png)
 
@@ -320,11 +320,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Confirm two-spoke ird-hub statements](images/confirm-two-spoke-ird-hub-statements.png)
 
-- On the DRG, click on the **Routing** tab and notice both `rt-hub` and `rt-spoke` are present. Click on the route table **rt-hub**.
+    - On the DRG, click on the **Routing** tab and notice both `rt-hub` and `rt-spoke` are present. Click on the route table **rt-hub**.
 
     ![Open DRG rt-hub](images/open-rt-hub-from-drg-routing-two-spoke.png)
 
-- Click on the **Get all route rules** button.
+    - Click on the **Get all route rules** button.
 
     ![Open rt-hub route rules](images/open-rt-hub-route-rules.png)
 
@@ -337,11 +337,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Verify DRG configuration](images/verify-drg-configuration.png)
 
-- Click the back arrow to return to the DRG route tables list.
+    - Click the back arrow to return to the DRG route tables list.
 
     ![Return to DRG](images/return-to-drg-route-tables.png)
 
-- Click on the route table **rt-spoke**.
+    - Click on the route table **rt-spoke**.
 
     ![Open rt-spoke](images/open-rt-spoke-two-spoke.png)
 
@@ -352,7 +352,7 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Open rt-spoke rules](images/open-rt-spoke-static-route-rules-two-spoke.png)
 
-- Notice the single static route in `rt-spoke`: `0.0.0.0/0 → Hub VCN Attachment`. This sends all spoke traffic (including OSN-bound) to the Hub for firewall inspection.
+    - Notice the single static route in `rt-spoke`: `0.0.0.0/0 → Hub VCN Attachment`. This sends all spoke traffic (including OSN-bound) to the Hub for firewall inspection.
 
     ![Confirm rt-spoke default route](images/confirm-rt-spoke-default-route.png)
 
@@ -372,7 +372,7 @@ Open the selected firewall's Web GUI, then:
 
     ![Open Palo Alto router](images/open-palo-alto-virtual-router.png)
 
-- In the **Virtual Router - default** dialog, click on **Static Routes** in the left-hand menu.
+    - In the **Virtual Router - default** dialog, click on **Static Routes** in the left-hand menu.
 
     ![Open static routes](images/open-palo-alto-static-routes.png)
 
@@ -384,7 +384,7 @@ Open the selected firewall's Web GUI, then:
     - `route-to-spoke-2` (Destination `10.0.2.0/24`, Interface `ethernet1/2`, Next Hop `172.16.0.33`)
     - `route-to-osn-<n>` for each OSN **Address Object** (Destination OSN Address Object, Interface `ethernet1/2`, Next Hop `172.16.0.33`)
 
-The prerequisite automation retrieves Oracle's JSON file and updates the IP ranges in the OSN **Address Objects** and their address group; it does not create the static routes.
+    The prerequisite automation retrieves Oracle's JSON file and updates the IP ranges in the OSN **Address Objects** and their address group; it does not create the static routes.
 
 2. Click on the **OK** button to save the Virtual Router configuration.
 
@@ -418,12 +418,14 @@ The prerequisite automation retrieves Oracle's JSON file and updates the IP rang
 
     ![Validate OSN curl failure](images/validate-osn-curl-failure.png)
 
-> **Note:** Why this fails?
->  OCI VNICs default to MTU 9000 (jumbo frames), but the PA-VM's dataplane interfaces are set to MTU 1500 by default. Small packets like pings and the TCP handshake pass through fine, but the large TLS handshake response coming back from Object Storage exceeds 1500 bytes and gets silently dropped at the selected firewall. No error reaches the sender, so the spoke VM keeps retrying with oversized packets until TCP resets the connection. The failure is intermittent because TLS handshake size varies between requests; smaller responses occasionally slip through.
->  
->  The fix used in this workshop is to enable **TCP MSS clamping** on the PA-VM, which lowers the maximum segment size negotiated for each TCP session so both sides send packets small enough to fit through. It's a one-time firewall change with no reboot and no VM-side work, and it applies to every spoke VM automatically. This is the approach Palo Alto and Oracle both recommend for OCI VM-Series in hub-and-spoke designs.
->  
->  **An alternative solution** is to lower the spoke VM's NIC MTU to 1500 (`sudo ip link set dev enp0s5 mtu 1500`). It works for one or two VMs, but must be repeated on every VM, persisted across reboots, and sacrifices jumbo-frame performance inside the VCN.
+    > **Note:** Why this fails?
+    >  OCI VNICs default to MTU 9000 (jumbo frames), but the PA-VM's dataplane interfaces are set to MTU 1500 by default. Small packets like pings and the TCP handshake pass through fine, but the large TLS handshake response coming back from Object Storage exceeds 1500 bytes and gets silently dropped at the selected firewall. No error reaches the sender, so the spoke VM keeps retrying with oversized packets until TCP resets the connection. The failure is intermittent because TLS handshake size varies between requests; smaller responses occasionally slip through.
+    >  
+    >  The fix used in this workshop is to enable **TCP MSS clamping** on the PA-VM, which lowers the maximum segment size negotiated for each TCP session so both sides send packets small enough to fit through. It's a one-time firewall change with no reboot and no VM-side work, and it applies to every spoke VM automatically. This is the approach Palo Alto and Oracle both recommend for OCI VM-Series in hub-and-spoke designs.
+    >  
+    >  **An alternative solution** is to lower the spoke VM's NIC MTU to 1500 (`sudo ip link set dev enp0s5 mtu 1500`). It works for one or two VMs, but must be repeated on every VM, persisted across reboots, and sacrifices jumbo-frame performance inside the VCN.
+
+<!-- -->
 
 1. Click the **Network** tab.
 2. Click **Interfaces**.
@@ -443,7 +445,9 @@ The prerequisite automation retrieves Oracle's JSON file and updates the IP rang
 
     ![Validate OSN curl success](images/validate-osn-curl-success.png)
 
-- The selected firewall logs the session end-to-end
+    - The selected firewall logs the session end-to-end
+
+<!-- -->
 
 1. Open the selected firewall's **Monitor**.
 2. Click on **Traffic** log.

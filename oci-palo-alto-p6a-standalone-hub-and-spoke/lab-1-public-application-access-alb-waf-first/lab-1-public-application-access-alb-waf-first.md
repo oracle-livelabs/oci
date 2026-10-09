@@ -159,11 +159,11 @@ The diagram below summarises the routing plan for Lab 1.
 
     ![Open Networking and Virtual Cloud Networks](images/open-networking-virtual-cloud-networks.png)
 
-- Click on the **Hub VCN**.
+    - Click on the **Hub VCN**.
 
     ![Open Hub VCN](images/open-hub-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Hub VCN Routing](images/open-hub-vcn-routing.png)
 
@@ -183,7 +183,7 @@ This route table is attached to the **LB Subnet** in the Hub VCN. It forwards In
 
     ![Configure rt-lb route rules](images/configure-rt-lb-route-rules.png)
 
-> **Note:** The **target type** for the `10.0.0.0/24` route is **Private IP** pointing at the Palo Alto Untrust private IP (`172.16.0.20`), not the DRG. This is what forces the ALB-to-APP flow into the firewall instead of letting OCI deliver it directly through the DRG.
+    > **Note:** The **target type** for the `10.0.0.0/24` route is **Private IP** pointing at the Palo Alto Untrust private IP (`172.16.0.20`), not the DRG. This is what forces the ALB-to-APP flow into the firewall instead of letting OCI deliver it directly through the DRG.
 
 #### Step 3: Configure `rt-drg-ingress` (Hub VCN - DRG attachment ingress route table)
 
@@ -257,11 +257,11 @@ The DRG holds two custom route tables: **`rt-hub`** (used by the Hub VCN attachm
 
     ![Open Dynamic Routing Gateways](images/open-drg-navigation.png)
 
-- Click on the **DRG** that is already deployed.
+    - Click on the **DRG** that is already deployed.
 
     ![Open DRG](images/open-drg.png)
 
-- Click on the **Attachments** tab.
+    - Click on the **Attachments** tab.
 
     ![Open DRG Attachments](images/open-drg-attachments.png)
 
@@ -272,15 +272,15 @@ The DRG holds two custom route tables: **`rt-hub`** (used by the Hub VCN attachm
 
     ![Confirm one-spoke VCN attachments](images/confirm-vcn-attachments-one-spoke.png)
 
-- Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
+    - Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
 
     ![Open rt-hub from the Hub VCN attachment](images/open-rt-hub-one-spoke.png)
 
-- On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
+    - On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
 
     ![Open ird-hub](images/open-ird-hub.png)
 
-- Click on the **Statements** tab.
+    - Click on the **Statements** tab.
 
     ![Open ird-hub Statements](images/open-ird-hub-statements.png)
 
@@ -291,11 +291,11 @@ The DRG holds two custom route tables: **`rt-hub`** (used by the Hub VCN attachm
 
     ![Confirm one-spoke ird-hub statement](images/confirm-ird-hub-one-spoke.png)
 
-- Click on the route table **rt-hub**.
+    - Click on the route table **rt-hub**.
 
     ![Open rt-hub from DRG Routing](images/open-rt-hub-one-spoke-routing.png)
 
-- On the **rt-hub** Details page, click on the **Get all route rules** button to view the dynamic routes learned via `ird-hub`. 
+    - On the **rt-hub** Details page, click on the **Get all route rules** button to view the dynamic routes learned via `ird-hub`. 
 
     ![Open rt-hub route rules](images/open-rt-hub-route-rules.png)
 
@@ -306,11 +306,11 @@ The DRG holds two custom route tables: **`rt-hub`** (used by the Hub VCN attachm
 
     ![Confirm one-spoke rt-hub dynamic route](images/confirm-rt-hub-dynamic-routes-one-spoke.png)
 
-- Click the back arrow to return to the DRG route tables list.
+    - Click the back arrow to return to the DRG route tables list.
 
     ![Return to DRG route tables](images/return-to-drg-route-tables.png)
 
-- Click on the route table **rt-spoke**.
+    - Click on the route table **rt-spoke**.
 
     ![Open rt-spoke](images/open-rt-spoke-one-spoke.png)
 
@@ -321,7 +321,7 @@ The DRG holds two custom route tables: **`rt-hub`** (used by the Hub VCN attachm
 
     ![Open rt-spoke static route rules](images/open-rt-spoke-static-route-rules-one-spoke.png)
 
-- Notice the single static route in `rt-spoke`: `172.16.0.48/28 → Hub VCN Attachment`. This is what carries the spoke's LB-Subnet-bound return traffic back to the Hub for firewall inspection.
+    - Notice the single static route in `rt-spoke`: `172.16.0.48/28 → Hub VCN Attachment`. This is what carries the spoke's LB-Subnet-bound return traffic back to the Hub for firewall inspection.
 
     ![Confirm rt-spoke static route](images/confirm-rt-spoke-static-route.png)
 
@@ -340,13 +340,15 @@ Open the Palo Alto management Web GUI, then:
 
     ![Open Palo Alto Virtual Router](images/open-palo-alto-virtual-router.png)
 
-- In the **Virtual Router - default** dialog, click on **Static Routes** in the left-hand menu.
+    - In the **Virtual Router - default** dialog, click on **Static Routes** in the left-hand menu.
 
     ![Open Palo Alto Static Routes](images/open-palo-alto-static-routes.png)
 
-Make sure this is done:
-- On the **IPv4** sub-tab, click **Add** and create the first route `route-to-lb` (Destination `172.16.0.48/28`, Interface `ethernet1/1`, Next Hop **IP Address** `172.16.0.17`).
-- Click **Add** again and create the second route `route-to-spoke` (Destination `10.0.0.0/24`, Interface `ethernet1/2`, Next Hop **IP Address** `172.16.0.33`).
+    Make sure this is done:
+    - On the **IPv4** sub-tab, click **Add** and create the first route `route-to-lb` (Destination `172.16.0.48/28`, Interface `ethernet1/1`, Next Hop **IP Address** `172.16.0.17`).
+    - Click **Add** again and create the second route `route-to-spoke` (Destination `10.0.0.0/24`, Interface `ethernet1/2`, Next Hop **IP Address** `172.16.0.33`).
+
+<!-- -->
 
 1. Notice both routes are listed in the IPv4 table.
 2. Click on the **OK** button to save the Virtual Router configuration.
@@ -381,9 +383,9 @@ Make sure this is done:
 1. Notice the **Overall health** is **OK**.
 2. And the **IP address** shows the assigned public IP. 
 
-This confirms the ALB is up and the backend (APP-VM) is healthy.
+    This confirms the ALB is up and the backend (APP-VM) is healthy.
 
-![Public ALB health](images/public-alb-health.png)
+    ![Public ALB health](images/public-alb-health.png)
 
 <!-- -->
 

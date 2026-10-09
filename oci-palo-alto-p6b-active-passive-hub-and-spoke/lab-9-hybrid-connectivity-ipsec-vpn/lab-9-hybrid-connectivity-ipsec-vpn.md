@@ -106,11 +106,11 @@ The diagram below summarises the routing plan for Lab 9.
 
     ![Open Networking and Virtual Cloud Networks](images/open-networking-virtual-cloud-networks.png)
 
-- Click on the **Hub VCN**.
+    - Click on the **Hub VCN**.
 
     ![Open Hub VCN](images/open-hub-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Hub VCN Routing](images/open-hub-vcn-routing.png)
 
@@ -193,7 +193,7 @@ Each spoke subnet sends traffic for the Milan subnet (`172.16.1.0/28`) to the DR
 
     ![Configure rt-fe-01 Milan route](images/configure-rt-fe-01-milan-route.png)
 
-- Click on the route table for the **Backend Subnet** (`rt-be-01`).
+    - Click on the route table for the **Backend Subnet** (`rt-be-01`).
 
     ![Confirm rt-be-01](images/confirm-rt-be-01.png)
 
@@ -212,15 +212,15 @@ Each spoke subnet sends traffic for the Milan subnet (`172.16.1.0/28`) to the DR
 
     ![Confirm Spoke-1 route tables](images/confirm-spoke-1-route-tables.png)
 
-- Click on **Spoke-2 VCN**.
+    - Click on **Spoke-2 VCN**.
 
     ![Open Spoke-2 VCN](images/open-spoke-2-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Spoke-2 VCN Routing](images/open-spoke-2-vcn-routing.png)
 
-- Click on the route table for the Spoke-2 **Frontend Subnet** (`rt-fe-02`).
+    - Click on the route table for the Spoke-2 **Frontend Subnet** (`rt-fe-02`).
 
     ![Confirm rt-fe-02](images/confirm-rt-fe-02.png)
 
@@ -232,7 +232,7 @@ Each spoke subnet sends traffic for the Milan subnet (`172.16.1.0/28`) to the DR
 
     ![Configure rt-fe-02 Milan route](images/configure-rt-fe-02-milan-route.png)
 
-- Click the back arrow, then click on the route table for the Spoke-2 **Backend Subnet** (`rt-be-02`).
+    - Click the back arrow, then click on the route table for the Spoke-2 **Backend Subnet** (`rt-be-02`).
 
     ![Confirm rt-be-02](images/confirm-rt-be-02.png)
 
@@ -243,7 +243,7 @@ Each spoke subnet sends traffic for the Milan subnet (`172.16.1.0/28`) to the DR
 
     ![Configure rt-be-02 Milan route](images/configure-rt-be-02-milan-route.png)
 
-- All four spoke subnet route tables now carry `172.16.1.0/28 → DRG`, so any spoke workload can reach Milan through the Hub.
+    - All four spoke subnet route tables now carry `172.16.1.0/28 → DRG`, so any spoke workload can reach Milan through the Hub.
 
 #### Step 6: Configure DRG route tables (`ird-hub`, `rt-hub`, `rt-spoke`)
 
@@ -255,11 +255,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Open Dynamic Routing Gateways](images/open-drg-navigation.png)
 
-- Click on the **DRG**.
+    - Click on the **DRG**.
 
     ![Open DRG](images/open-drg.png)
 
-- Click on the **Attachments** tab.
+    - Click on the **Attachments** tab.
 
     ![Open DRG Attachments](images/open-drg-attachments.png)
 
@@ -270,15 +270,15 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Confirm two-spoke VCN attachments](images/confirm-two-spoke-vcn-attachments.png)
 
-- Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
+    - Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
 
     ![Open rt-hub from the Hub VCN attachment](images/open-rt-hub-two-spoke.png)
 
-- On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
+    - On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
 
     ![Open ird-hub](images/open-ird-hub.png)
 
-- Click on the **Statements** tab.
+    - Click on the **Statements** tab.
 
     ![Open ird-hub Statements](images/open-ird-hub-statements.png)
 
@@ -289,11 +289,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Confirm two-spoke ird-hub statements](images/confirm-two-spoke-ird-hub-statements.png)
 
-- On the DRG, click on the **Routing** tab and notice both `rt-hub` and `rt-spoke` are present. Click on the route table **rt-hub**.
+    - On the DRG, click on the **Routing** tab and notice both `rt-hub` and `rt-spoke` are present. Click on the route table **rt-hub**.
 
     ![Open rt-hub from DRG Routing](images/open-rt-hub-from-drg-routing-two-spoke.png)
 
-- On the **rt-hub** details page, click the **Get all route rules** button to view the dynamic routes.
+    - On the **rt-hub** details page, click the **Get all route rules** button to view the dynamic routes.
 
     ![Open rt-hub route rules](images/open-rt-hub-route-rules.png)
 
@@ -306,11 +306,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Verify the DRG configuration rt](images/verify-the-drg-configuration-rt.png)
 
-- Click the back arrow to return to the DRG route tables list.
+    - Click the back arrow to return to the DRG route tables list.
 
     ![Return to DRG route tables](images/return-to-drg-route-tables.png)
 
-- Click on the route table **rt-spoke**.
+    - Click on the route table **rt-spoke**.
 
     ![Open rt-spoke](images/open-rt-spoke-two-spoke.png)
 
@@ -321,8 +321,8 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Open rt-spoke static route rules](images/open-rt-spoke-static-route-rules-two-spoke.png)
 
-- Notice the single static route `172.16.1.0/28 → Hub VCN Attachment` (next hop attachment type **Virtual Cloud Network**). 
-- This is what carries Milan-bound spoke traffic back into the Hub for Palo Alto inspection.
+    - Notice the single static route `172.16.1.0/28 → Hub VCN Attachment` (next hop attachment type **Virtual Cloud Network**). 
+    - This is what carries Milan-bound spoke traffic back into the Hub for Palo Alto inspection.
 
     ![Confirm rt-spoke Milan route](images/confirm-rt-spoke-milan-route.png)
 
@@ -346,8 +346,8 @@ Open the active firewall's Web GUI, then:
 
     ![Open Palo Alto virtual router for IPSec](images/open-palo-alto-virtual-router-ipsec.png)
 
-- In the **Virtual Router - default** dialog (Router Settings → General), verify that `ethernet1/1`, `ethernet1/2`, `tunnel.1`, and `tunnel.2` are listed.
-- Click on the **ECMP** tab to enable load-sharing across the two IPSec tunnels.
+    - In the **Virtual Router - default** dialog (Router Settings → General), verify that `ethernet1/1`, `ethernet1/2`, `tunnel.1`, and `tunnel.2` are listed.
+    - Click on the **ECMP** tab to enable load-sharing across the two IPSec tunnels.
 
     ![Verify Palo Alto IPSec interfaces](images/verify-palo-alto-ipsec-interfaces.png)
 
@@ -380,7 +380,7 @@ Open the active firewall's Web GUI, then:
 
     ![Confirm IPSec static routes](images/confirm-ipsec-static-routes.png)
 
-- Notice that the **default** Virtual Router now shows **Static Routes: 5** and **ECMP status: Enabled**. Click on the **Commit** button at the top right.
+    - Notice that the **default** Virtual Router now shows **Static Routes: 5** and **ECMP status: Enabled**. Click on the **Commit** button at the top right.
 
     ![Commit Palo Alto IPSec and ECMP configuration](images/commit-palo-alto-ipsec-ecmp.png)
 
@@ -391,11 +391,11 @@ Open the active firewall's Web GUI, then:
 
     ![Confirm IPSec commit](images/confirm-ipsec-commit.png)
 
-- The **Commit Status** dialog shows the operation as **Pending** while the configuration is applied.
+    - The **Commit Status** dialog shows the operation as **Pending** while the configuration is applied.
 
     ![IPSec commit pending](images/ipsec-commit-pending.png)
 
-- Notice the **Commit Status** shows **Completed** and **Successful**.
+    - Notice the **Commit Status** shows **Completed** and **Successful**.
 
     ![IPSec commit successful](images/ipsec-commit-successful.png)
 
@@ -414,15 +414,15 @@ The Milan Private Subnet needs `10.0.1.0/24` and `10.0.2.0/24` routed to the **D
 
     ![Open Networking and Virtual Cloud Networks](images/open-networking-virtual-cloud-networks.png)
 
-- Click on **VCN-0** (CIDR `172.16.1.0/24`).
+    - Click on **VCN-0** (CIDR `172.16.1.0/24`).
 
     ![Open Milan VCN-0](images/open-milan-vcn-0.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Milan VCN-0 Routing](images/open-milan-vcn-0-routing.png)
 
-- Click on the route table attached to the Private Subnet (`rt-0`).
+    - Click on the route table attached to the Private Subnet (`rt-0`).
 
     ![Confirm Milan rt-0](images/confirm-milan-rt-0.png)
 
@@ -447,11 +447,11 @@ This lab keeps OCI's two default DRG route tables and import distributions:
 
     ![Open Milan DRG navigation](images/open-milan-drg-navigation.png)
 
-- Click on the Milan **DRG**. Notice that **Oracle redundancy status** is **Redundant**, reflecting the two IPSec tunnels configured in Part 4 of this workshop series.
+    - Click on the Milan **DRG**. Notice that **Oracle redundancy status** is **Redundant**, reflecting the two IPSec tunnels configured in Part 4 of this workshop series.
 
     ![Open Milan DRG](images/open-milan-drg.png)
 
-- Click on the **Attachments** tab.
+    - Click on the **Attachments** tab.
 
     ![Open Milan DRG Attachments](images/open-milan-drg-attachments.png)
 
@@ -462,7 +462,7 @@ This lab keeps OCI's two default DRG route tables and import distributions:
 
     ![Confirm Milan VCN attachment route table](images/confirm-milan-vcn-attachment-route-table.png)
 
-- Click on the **Autogenerated Drg Route Table for VCN attachments** link.
+    - Click on the **Autogenerated Drg Route Table for VCN attachments** link.
 
     ![Open Milan autogenerated DRG route table](images/open-milan-autogenerated-drg-route-table.png)
 
@@ -480,11 +480,11 @@ This lab keeps OCI's two default DRG route tables and import distributions:
 
     ![Milan ECMP routes](images/milan-ecmp-routes.png)
 
-- Click the back arrow to return to the DRG.
+    - Click the back arrow to return to the DRG.
 
     ![Return to Milan DRG](images/return-to-milan-drg.png)
 
-- On the DRG **Routing** tab, notice the two autogenerated tables (**Autogenerated Drg Route Table for RPC, VC, and IPSec attachments** and **Autogenerated Drg Route Table for VCN attachments**). Click on the **Attachments** tab to inspect the IPSec attachments next.
+    - On the DRG **Routing** tab, notice the two autogenerated tables (**Autogenerated Drg Route Table for RPC, VC, and IPSec attachments** and **Autogenerated Drg Route Table for VCN attachments**). Click on the **Attachments** tab to inspect the IPSec attachments next.
 
     ![Milan DRG route tables](images/milan-drg-route-tables.png)
 

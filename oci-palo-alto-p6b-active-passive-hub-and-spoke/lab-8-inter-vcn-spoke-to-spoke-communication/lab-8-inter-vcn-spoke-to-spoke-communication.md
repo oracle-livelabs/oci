@@ -90,11 +90,11 @@ The diagram below summarises the routing plan for Lab 8.
 
     ![Open Networking and Virtual Cloud Networks](images/open-networking-virtual-cloud-networks.png)
 
-- Click on the **Hub VCN**.
+    - Click on the **Hub VCN**.
 
     ![Open Hub VCN](images/open-hub-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Hub VCN Routing](images/open-hub-vcn-routing.png)
 
@@ -161,7 +161,7 @@ Each spoke must send the **other spoke's CIDR** to the DRG so the cross-spoke fl
 
     ![Configure rt-fe-01 inter-VCN route](images/configure-rt-fe-01-inter-vcn-route.png)
 
-- Back on the Spoke-1 **Routing** tab, click on the route table **rt-be-01**.
+    - Back on the Spoke-1 **Routing** tab, click on the route table **rt-be-01**.
 
     ![Confirm rt-be-01](images/confirm-rt-be-01.png)
 
@@ -180,15 +180,15 @@ Each spoke must send the **other spoke's CIDR** to the DRG so the cross-spoke fl
 
     ![Confirm Spoke-1 route tables](images/confirm-spoke-1-route-tables.png)
 
-- Click on **Spoke-2 VCN**.
+    - Click on **Spoke-2 VCN**.
 
     ![Open Spoke-2 VCN](images/open-spoke-2-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Spoke-2 VCN Routing](images/open-spoke-2-vcn-routing.png)
 
-- Click on the route table **rt-fe-02**. 
+    - Click on the route table **rt-fe-02**. 
 
     ![Confirm rt-fe-02](images/confirm-rt-fe-02.png)
 
@@ -200,7 +200,7 @@ Each spoke must send the **other spoke's CIDR** to the DRG so the cross-spoke fl
 
     ![Configure rt-fe-02 inter-VCN route](images/configure-rt-fe-02-inter-vcn-route.png)
 
-- Back on the Spoke-2 **Routing** tab, click on the route table **rt-be-02**.
+    - Back on the Spoke-2 **Routing** tab, click on the route table **rt-be-02**.
 
     ![Confirm rt-be-02](images/confirm-rt-be-02.png)
 
@@ -222,11 +222,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Open Dynamic Routing Gateways](images/open-drg-navigation.png)
 
-- Click on the **DRG**.
+    - Click on the **DRG**.
 
     ![Open DRG](images/open-drg.png)
 
-- Click on the **Attachments** tab.
+    - Click on the **Attachments** tab.
 
     ![Open DRG Attachments](images/open-drg-attachments.png)
 
@@ -237,15 +237,15 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Confirm two-spoke VCN attachments](images/confirm-two-spoke-vcn-attachments.png)
 
-- Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
+    - Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
 
     ![Open rt-hub from the Hub VCN attachment](images/open-rt-hub-two-spoke.png)
 
-- On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
+    - On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
 
     ![Open ird-hub](images/open-ird-hub.png)
 
-- Click on the **Statements** tab.
+    - Click on the **Statements** tab.
 
     ![Open ird-hub Statements](images/open-ird-hub-statements.png)
 
@@ -256,11 +256,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Confirm two-spoke ird-hub statements](images/confirm-two-spoke-ird-hub-statements.png)
 
-- On the DRG, click on the **Routing** tab and notice both `rt-hub` and `rt-spoke` are present. Click on the route table **rt-hub**.
+    - On the DRG, click on the **Routing** tab and notice both `rt-hub` and `rt-spoke` are present. Click on the route table **rt-hub**.
 
     ![Open rt-hub from DRG Routing](images/open-rt-hub-from-drg-routing-two-spoke.png)
 
-- On the **rt-hub** Details page, click on the **Get all route rules** button to view the dynamic routes learned via `ird-hub`.
+    - On the **rt-hub** Details page, click on the **Get all route rules** button to view the dynamic routes learned via `ird-hub`.
 
     ![Open rt-hub route rules](images/open-rt-hub-route-rules.png)
 
@@ -273,11 +273,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Verify the DRG configuration rt](images/verify-the-drg-configuration-rt.png)
 
-- Click the back arrow to return to the DRG.
+    - Click the back arrow to return to the DRG.
 
     ![Return to DRG route tables](images/return-to-drg-route-tables.png)
 
-- Click on the route table **rt-spoke**.
+    - Click on the route table **rt-spoke**.
 
     ![Open rt-spoke](images/open-rt-spoke-two-spoke.png)
 
@@ -288,7 +288,7 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Open rt-spoke static route rules](images/open-rt-spoke-static-route-rules-two-spoke.png)
 
-- Notice the **two static routes** in `rt-spoke`: `10.0.1.0/24 → Hub VCN Attachment` and `10.0.2.0/24 → Hub VCN Attachment`. The `10.0.1.0/24` route sends Spoke-2-to-Spoke-1 traffic through the Hub for firewall inspection. The `10.0.2.0/24` route does the same for Spoke-1-to-Spoke-2 traffic.
+    - Notice the **two static routes** in `rt-spoke`: `10.0.1.0/24 → Hub VCN Attachment` and `10.0.2.0/24 → Hub VCN Attachment`. The `10.0.1.0/24` route sends Spoke-2-to-Spoke-1 traffic through the Hub for firewall inspection. The `10.0.2.0/24` route does the same for Spoke-1-to-Spoke-2 traffic.
 
     ![Confirm rt-spoke inter-VCN routes](images/confirm-rt-spoke-inter-vcn-routes.png)
 
@@ -307,7 +307,7 @@ Open the active firewall's Web GUI, then:
 
     ![Open Palo Alto Virtual Router](images/open-palo-alto-virtual-router.png)
 
-- In the **Virtual Router - default** dialog, click on **Static Routes** in the left-hand menu.
+    - In the **Virtual Router - default** dialog, click on **Static Routes** in the left-hand menu.
 
     ![Open Palo Alto Static Routes](images/open-palo-alto-static-routes.png)
 

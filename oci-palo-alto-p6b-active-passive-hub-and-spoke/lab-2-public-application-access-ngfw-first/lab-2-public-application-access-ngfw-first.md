@@ -157,11 +157,11 @@ The diagram below summarises the routing plan for Lab 2.
 
     ![Open Networking and Virtual Cloud Networks](images/open-networking-virtual-cloud-networks.png)
 
-- Click on the **Hub VCN**.
+    - Click on the **Hub VCN**.
 
     ![Open Hub VCN](images/open-hub-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Hub VCN Routing](images/open-hub-vcn-routing.png)
 
@@ -237,11 +237,11 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Open Dynamic Routing Gateways](images/open-drg-navigation.png)
 
-- Click on the **DRG** that is already deployed.
+    - Click on the **DRG** that is already deployed.
 
     ![Open DRG](images/open-drg.png)
 
-- Click on the **Attachments** tab.
+    - Click on the **Attachments** tab.
 
     ![Open DRG Attachments](images/open-drg-attachments.png)
 
@@ -252,15 +252,15 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Confirm one-spoke VCN attachments](images/confirm-vcn-attachments-one-spoke.png)
 
-- Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
+    - Click on the **rt-hub** link in the **DRG route table** column for the **Hub VCN Attachment**.
 
     ![Open rt-hub from the Hub VCN attachment](images/open-rt-hub-one-spoke.png)
 
-- On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
+    - On the **rt-hub** Details page, click on the **ird-hub** link in the **Import route distribution** field.
 
     ![Open ird-hub](images/open-ird-hub.png)
 
-- Click on the **Statements** tab.
+    - Click on the **Statements** tab.
 
     ![Open ird-hub Statements](images/open-ird-hub-statements.png)
 
@@ -271,28 +271,28 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Confirm one-spoke ird-hub statement](images/confirm-ird-hub-one-spoke.png)
 
-- Click on the route table **rt-hub**.
+    - Click on the route table **rt-hub**.
 
     ![Open rt-hub from DRG Routing](images/open-rt-hub-one-spoke-routing.png)
 
-- On the **rt-hub** Details page, click on the **Get all route rules** button to view the dynamic routes learned via `ird-hub`. 
+    - On the **rt-hub** Details page, click on the **Get all route rules** button to view the dynamic routes learned via `ird-hub`. 
 
     ![Open rt-hub route rules](images/open-rt-hub-route-rules.png)
 
 <!-- -->
 
 1. Notice the **DYNAMIC** entries, both learned via the `ird-hub` import distribution:
-   - Destination `10.0.0.0/28` (the Spoke's App Subnet CIDR), next hop **Virtual Cloud Network → Spoke VCN Attachment**.
-   - Destination `10.0.0.16/28` (the Spoke's LB Subnet CIDR), next hop **Virtual Cloud Network → Spoke VCN Attachment**.
+    - Destination `10.0.0.0/28` (the Spoke's App Subnet CIDR), next hop **Virtual Cloud Network → Spoke VCN Attachment**.
+    - Destination `10.0.0.16/28` (the Spoke's LB Subnet CIDR), next hop **Virtual Cloud Network → Spoke VCN Attachment**.
 2. Click on the **Close** button.
 
     ![rt-hub dynamic routes](images/lab-2-public-application-access-ngfw-first.png)
 
-- Click the back arrow to return to the DRG route tables list.
+    - Click the back arrow to return to the DRG route tables list.
 
     ![Return to DRG route tables](images/return-to-drg-route-tables.png)
 
-- Click on the route table **rt-spoke**.
+    - Click on the route table **rt-spoke**.
 
     ![Open rt-spoke](images/open-rt-spoke-one-spoke.png)
 
@@ -303,7 +303,7 @@ The DRG holds two route tables: **`rt-hub`** (used by the Hub VCN attachment) an
 
     ![Open rt-spoke static route rules](images/open-rt-spoke-static-route-rules-one-spoke.png)
 
-- Notice the single static route in `rt-spoke`: `172.16.0.42/32 → Hub VCN Attachment`. This carries return traffic destined for the Palo Alto Trust floating IP back to the Hub VCN for firewall inspection.
+    - Notice the single static route in `rt-spoke`: `172.16.0.42/32 → Hub VCN Attachment`. This carries return traffic destined for the Palo Alto Trust floating IP back to the Hub VCN for firewall inspection.
 
     ![Confirm rt-spoke route](images/confirm-rt-spoke-route.png)
 
@@ -322,13 +322,15 @@ Open the active firewall's management Web GUI, then:
 
     ![Open Palo Alto Virtual Router](images/open-palo-alto-virtual-router.png)
 
-- In the **Virtual Router - default** dialog, click on **Static Routes** in the left-hand menu.
+    - In the **Virtual Router - default** dialog, click on **Static Routes** in the left-hand menu.
 
     ![Open Palo Alto Static Routes](images/open-palo-alto-static-routes.png)
 
-Make sure this is configured:
-- On the **IPv4** sub-tab, click **Add** and create the first route `route-to-spoke` (Destination `10.0.0.0/24`, Interface `ethernet1/2`, Next Hop **IP Address** `172.16.0.33`).
-- Click **Add** again and create the second route `route-to-internet` (Destination `0.0.0.0/0`, Interface `ethernet1/1`, Next Hop **IP Address** `172.16.0.17`).
+    Make sure this is configured:
+    - On the **IPv4** sub-tab, click **Add** and create the first route `route-to-spoke` (Destination `10.0.0.0/24`, Interface `ethernet1/2`, Next Hop **IP Address** `172.16.0.33`).
+    - Click **Add** again and create the second route `route-to-internet` (Destination `0.0.0.0/0`, Interface `ethernet1/1`, Next Hop **IP Address** `172.16.0.17`).
+
+<!-- -->
 
 1. Notice both routes are listed in the IPv4 table.
 2. Click on the **OK** button to save the Virtual Router configuration.
@@ -372,11 +374,13 @@ Both happen in a single NAT rule. Without SNAT specifically, the Private ALB wou
 
     ![Open Palo Alto NAT policy](images/open-palo-alto-nat-policy.png)
 
-- Click on the **Add** button at the bottom to create a new NAT rule.
+    - Click on the **Add** button at the bottom to create a new NAT rule.
 
     ![Add NAT rule](images/add-nat-rule.png)
 
-In the **NAT Policy Rule** dialog, configure the **General** tab:
+    In the **NAT Policy Rule** dialog, configure the **General** tab:
+
+<!-- -->
 
 1. Click on the **General** tab.
 2. Specify a **Name** for the NAT rule (e.g. `NAT-Inbound-to-ALB`).
@@ -386,7 +390,9 @@ In the **NAT Policy Rule** dialog, configure the **General** tab:
 
     ![Configure NAT rule General tab](images/configure-nat-rule-general.png)
 
-On the **Original Packet** tab (this is the **Pre-NAT** view - the packet fields as the active firewall first receives the packet):
+    On the **Original Packet** tab (this is the **Pre-NAT** view - the packet fields as the active firewall first receives the packet):
+
+<!-- -->
 
 1. Set the **Source Zone** to **untrust**.
 2. Set the **Destination Zone** to **untrust**.
@@ -398,7 +404,9 @@ On the **Original Packet** tab (this is the **Pre-NAT** view - the packet fields
 
     ![Configure original packet](images/configure-original-packet.png)
 
-On the **Translated Packet** tab, configure the **SNAT** (Source Address Translation) and **DNAT** (Destination Address Translation)
+    On the **Translated Packet** tab, configure the **SNAT** (Source Address Translation) and **DNAT** (Destination Address Translation)
+
+<!-- -->
 
 1. Under **Source Address Translation**, set the **Translation Type** to **Dynamic IP And Port**.
 2. Set **Address Type** to **Interface Address**.
@@ -410,7 +418,7 @@ On the **Translated Packet** tab, configure the **SNAT** (Source Address Transla
 
     ![Configure translated packet](images/configure-translated-packet.png)
 
-- Click on the **OK** button.
+    - Click on the **OK** button.
 
     ![Save NAT rule](images/save-nat-rule.png)
 

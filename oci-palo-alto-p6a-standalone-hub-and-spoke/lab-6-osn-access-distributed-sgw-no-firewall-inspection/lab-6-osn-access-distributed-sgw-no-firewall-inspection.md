@@ -108,11 +108,11 @@ The diagram below summarises the routing plan for Lab 6.
 
     ![Open Networking and Virtual Cloud Networks](images/open-networking-virtual-cloud-networks.png)
 
-- From the **Virtual Cloud Networks** list, click on **Spoke-1 VCN**.
+    - From the **Virtual Cloud Networks** list, click on **Spoke-1 VCN**.
 
     ![Open Spoke-1 VCN](images/open-spoke-1-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Spoke-1 VCN Routing](images/open-spoke-1-vcn-routing.png)
 
@@ -130,7 +130,7 @@ The diagram below summarises the routing plan for Lab 6.
 
     ![Configure rt-fe-01 local SGW route](images/configure-rt-fe-01-local-sgw-route.png)
 
-- Click on the route table for the **Backend Subnet** (`rt-be-01`).
+    - Click on the route table for the **Backend Subnet** (`rt-be-01`).
 
     ![Confirm rt-be-01](images/confirm-rt-be-01.png)
 
@@ -142,19 +142,19 @@ The diagram below summarises the routing plan for Lab 6.
 
     ![Configure rt-be-01 local SGW route](images/configure-rt-be-01-local-sgw-route.png)
 
-- Notice that both `rt-fe-01` and `rt-be-01` now have 1 rule each. Click the back arrow to return to the **Virtual Cloud Networks** list. 
+    - Notice that both `rt-fe-01` and `rt-be-01` now have 1 rule each. Click the back arrow to return to the **Virtual Cloud Networks** list. 
 
     ![Confirm Spoke-1 route tables](images/confirm-spoke-1-route-tables.png)
 
-- Navigate to **Spoke-2 VCN**
+    - Navigate to **Spoke-2 VCN**
 
     ![Open Spoke-2 VCN](images/open-spoke-2-vcn.png)
 
-- Click on the **Routing** tab.
+    - Click on the **Routing** tab.
 
     ![Open Spoke-2 VCN Routing](images/open-spoke-2-vcn-routing.png)
 
-- Click on the route table for the **Frontend Subnet** (`rt-fe-02`).
+    - Click on the route table for the **Frontend Subnet** (`rt-fe-02`).
 
     ![Confirm rt-fe-02](images/confirm-rt-fe-02.png)
 
@@ -166,7 +166,7 @@ The diagram below summarises the routing plan for Lab 6.
 
     ![Configure rt-fe-02 local SGW route](images/configure-rt-fe-02-local-sgw-route.png)
 
-- Click on the route table for the **Backend Subnet** (`rt-be-02`) to add the same rule.
+    - Click on the route table for the **Backend Subnet** (`rt-be-02`) to add the same rule.
 
     ![Confirm rt-be-02](images/confirm-rt-be-02.png)
 
