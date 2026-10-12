@@ -17,7 +17,7 @@ Estimated Time: 15 minutes
 
 ## Predefine Copy Blocks
 
-![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+![Alert Flat](../../gen-images/cautionflagextrasmalltransparent2.png)
 ****Please Note**** This adventure requires the entry of a User Prompt and an Output Specification. To streamline typing and eliminate any typing errors, these are shown in-line in the guide below and also available in the copy blocks below.<br><br>
 **User Prompt**:
 ```
@@ -357,11 +357,9 @@ If the user intent is to ask information about any existing FMLA absence or to s
     ![Deeplink](./images/workflow-agent-hcm-image36.jpg)
 
 
-39. Success!  ![checkered flag](../gen-images/checkeredflag.jpg)
+39. Success!  ![checkered flag](../../gen-images/checkeredflag.jpg)
 
     > (1): You have created a new absence and completed this Adventure.
-
-    ![Success](images/multi-agent-hcm-image28.jpg)
 
 ### Summary
 
@@ -383,5 +381,5 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 ## Acknowledgements
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
-* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie, Ray)
-* **Last Updated By/Date** - Sajid Saleem, Charlie Moff September 2026
+* **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Charlie, Ray)
+* **Last Updated By/Date** - Sajid Saleem, Charlie Moff October 2026

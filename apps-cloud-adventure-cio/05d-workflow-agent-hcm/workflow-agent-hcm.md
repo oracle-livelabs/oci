@@ -383,5 +383,5 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 ## Acknowledgements
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
-* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie, Ray)
-* **Last Updated By/Date** - Sajid Saleem, Charlie Moff September 2026
+* **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Charlie, Ray)
+* **Last Updated By/Date** - Sajid Saleem, Charlie Moff October 2026

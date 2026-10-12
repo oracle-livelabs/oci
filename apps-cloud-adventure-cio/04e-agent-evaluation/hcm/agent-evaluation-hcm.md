@@ -16,34 +16,34 @@ Estimated Time: 10 minutes
 
 ## Pre-requisite
 
-![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+![Alert Flat](../../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download the **Benefits-Evaluation.csv** file to your local desktop as below.
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05e-agent-evaluation-hcm/files/Benefits-Evaluation.csv)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](files/Benefits-Evaluation.csv)
 
 ## Begin Exercise
 
 1. In this activity you will create Evaluations for AI Agents and view results of evaluation runs.
 
-    ![AI Agent Team](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image001.jpg)
+    ![AI Agent Team](images/agent-evaluation-hcm-image001.jpg)
 
 2. To begin, you will navigate to the Monitoring and Evaluation tab within the AI Agent Studio.
 
     > (1) Click on the **Monitoring and Evaluation** tab <br>
 
-    ![Go to Monitoring and Evaluations](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image002.jpg)
+    ![Go to Monitoring and Evaluations](images/agent-evaluation-hcm-image002.jpg)
 
 3. The Monitoring and Evaluation page shows existing runs.  You'll go to Manage Evaluations to setup a new one.
 
     > (1) Click on the **Manage Evaluations** button <br>
 
-    ![Manage Evaluations](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image003.jpg)
+    ![Manage Evaluations](images/agent-evaluation-hcm-image003.jpg)
 
 4. Create a new Evalution.
 
-    > (1) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon to create a new Evaluation <br>
+    > (1) Click the ![Plus Icon](../../gen-images/plusicon.jpg) icon to create a new Evaluation <br>
 
-    ![Create New Evaluation](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image004.jpg)
+    ![Create New Evaluation](images/agent-evaluation-hcm-image004.jpg)
 
 5. You can define the information, including questions.  To simplify the question creation, you can use the pre-defined list of questions (CSV file) that is available for download in the Pre-Requisites section at the top of the lab.
 
@@ -54,103 +54,103 @@ As a pre-requisite for this adventure, please download the **Benefits-Evaluation
 
     > (2) Select **Random** radio button under Run Mode.<br>
 
-    > (3) Click the **Add from File** button ![Create Button](../gen-images/add_from_file.png).
+    > (3) Click the **Add from File** button ![Create Button](../../gen-images/add_from_file.png).
 
 
-    ![Enter Evaluation Data](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image005.jpg)
+    ![Enter Evaluation Data](images/agent-evaluation-hcm-image005.jpg)
 
 6. For this step, you'll upload the pre-defined file with the list of questions.<br>
 
-    ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download **Benefits-Evaluation.csv** file to your local desktop if you have not already done so as below.<br>
+    ![Alert flag](../../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download **Benefits-Evaluation.csv** file to your local desktop if you have not already done so as below.<br>
 
-    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05e-agent-evaluation-hcm/files/Benefits-Evaluation.csv)
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](files/Benefits-Evaluation.csv)
 
     > (1) then select the file (Benefits Evaluation.csv) from your **Downloads** folder on your PC/Mac and click the **Open** button.<br>
 
-    ![Load Questions File](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image006.jpg)
+    ![Load Questions File](images/agent-evaluation-hcm-image006.jpg)
 
 7. You can see that the questions are now visible. You can optionally scroll down to see all the questions. Next, you'll work on the Metrics.
 
     > (1) Click the **Metrics** tab. <br>
 
-    ![Navigate to Metrics tab](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image007.jpg)
+    ![Navigate to Metrics tab](images/agent-evaluation-hcm-image007.jpg)
 
 8. This shows the lists of Metrics available for this evaluation.
 
     > (1) **Review** the list of available metrics.  Note that you could use the Edit icon in the Actions column to make modifications.  This allows you to determine which metrics to include in the evaluation, whether threshold is enabled, and the condition of the threshold.  You'll use the defaults, so you won't make any edits.  <br>
-    > (2) Click the Create button.  ![Create button](../gen-images/createw.jpg)
+    > (2) Click the Create button.  ![Create button](../../gen-images/createw.jpg)
 
-    ![Review and Create](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image008.jpg)
+    ![Review and Create](images/agent-evaluation-hcm-image008.jpg)
 
 9. Now that the Evaluation is defined, it's time to initiate a run.
 
-    > (1) Click the icon ![dotdotdot button](../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number) and select **Initiate Evaluation Run** from the resulting dropdown.
+    > (1) Click the icon ![dotdotdot button](../../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number) and select **Initiate Evaluation Run** from the resulting dropdown.
 
-    ![Initiate Evaluation](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image009.jpg)
+    ![Initiate Evaluation](images/agent-evaluation-hcm-image009.jpg)
 
 10. The panel on the right side of the screen displays details about your evaluation run.
 
-    > (1) Click the **Run** button ![run button](../gen-images/run_button.png).
+    > (1) Click the **Run** button ![run button](../../gen-images/run_button.png).
 
-    ![Run Evaluation](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image010.jpg)
+    ![Run Evaluation](images/agent-evaluation-hcm-image010.jpg)
 
 11. Now it's time to review the status and results of your evaluation run.
 
-    > (1) Click the icon ![dotdotdot button](../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number) and select **View Evaluation Runs** from the resulting dropdown.
+    > (1) Click the icon ![dotdotdot button](../../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number) and select **View Evaluation Runs** from the resulting dropdown.
 
-    ![View Evaluation Run](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image011.jpg)
+    ![View Evaluation Run](images/agent-evaluation-hcm-image011.jpg)
 
 12. The Evaluation Run screen shows the current Status.
 
-    > (1) Click the **Refresh** button ![Refresh button](../gen-images/refresh_button.png).  If necessary, you can wait couple of minutes or repeat the refresh until the Status shows **Completed**.
+    > (1) Click the **Refresh** button ![Refresh button](../../gen-images/refresh_button.png).  If necessary, you can wait couple of minutes or repeat the refresh until the Status shows **Completed**.
 
-    ![Refresh while awaiting completion](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image012.jpg)
+    ![Refresh while awaiting completion](images/agent-evaluation-hcm-image012.jpg)
 
 13. Now that the Evaluation Run is complete, it's time to view the results
 
-    > (1) Click the icon ![dotdotdot button](../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number) and select **View Run Results** from the resulting dropdown.
+    > (1) Click the icon ![dotdotdot button](../../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Benefits Agent Evaluation** where **XX** is replaced with your user number) and select **View Run Results** from the resulting dropdown.
 
-    ![View Evaluation Run](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image013.jpg)
+    ![View Evaluation Run](images/agent-evaluation-hcm-image013.jpg)
 
 14. The Response performance screen can show a lot of information.  The first thing you'll do is resize the rows/columns to better show the data.
 
     > (1) **Right Click** on one of the row numbers and select **Resize to Fit** from the resulting dropdown.  You only need to do this for one row as it will resize the entire table. Repeat step if necessary.
 
-    ![Resize table](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image014.jpg)
+    ![Resize table](images/agent-evaluation-hcm-image014.jpg)
 
 15. You can see the expected and actual response. In addition, you have metrics related to Latency, Token Usage and Errors. If metrics do not meet the thresholds, they will be highlighted in Red.  Let's drill into a specific result for more details.
 
     > (1) Click the **URL** in the **Trace** column for **Row 4 (Are there FMLA benefits)**.
 
-    ![View Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image015.jpg)
+    ![View Trace](images/agent-evaluation-hcm-image015.jpg)
 
 16. The Trace steps are color coded.  See the Legend above the table results.  Let's view the details of the F1 FMLA Absence Agent.
 
     > (1) Click the **Worker Agent** bar in the **F1 FMLA Absence Agent** row.
 
-    ![View Agent Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image016.jpg)
+    ![View Agent Trace](images/agent-evaluation-hcm-image016.jpg)
 
 17. The right side panel appears and displays Trace details of the Agent.  You can review detailed metrics of this specific step, including inputs and outputs.
 
     > (1) You can review detailed metrics of this specific step, including inputs and outputs.  Note additional tabs for **Prompt** and **Memory**. </br>
-    > (2) When finished with your review, you can close the panel by clicking the icon ![dotdotdot button](../gen-images/dotdotdot.png) and selecting **Close** from the resulting dropdown.
+    > (2) When finished with your review, you can close the panel by clicking the icon ![dotdotdot button](../../gen-images/dotdotdot.png) and selecting **Close** from the resulting dropdown.
 
-    ![Review and Close Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image017.jpg)
+    ![Review and Close Trace](images/agent-evaluation-hcm-image017.jpg)
 
 18. You can review similar details for other steps within the Evaluation Trace, including LLM calls, Business Object calls, and other Tools used by your agent.  Close this page so you can return to your Evaluation Run screen.
 
-    > (1) Click the **Cancel** button ![cancel button](../gen-images/cancel_button_brown.png).
+    > (1) Click the **Cancel** button ![cancel button](../../gen-images/cancel_button_brown.png).
 
-    ![Review and Close Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image018.jpg)
+    ![Review and Close Trace](images/agent-evaluation-hcm-image018.jpg)
 
 19. Next, you can review Correctness results and complete this Adventure.
 
     > (1) Click the **Correctness** tab.  This tab shows correctness scores and LLM feedback for your various evaluation run questions.<br>
-    > (2) Click the **Cancel** button ![cancel button](../gen-images/cancel_button_brown.png).
+    > (2) Click the **Cancel** button ![cancel button](../../gen-images/cancel_button_brown.png).
 
-    ![Review and Close Trace](../05e-agent-evaluation-hcm/images/agent-evaluation-hcm-image019.jpg)
+    ![Review and Close Trace](images/agent-evaluation-hcm-image019.jpg)
 
-20. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+20. Congratulations!  ![checkered flag](../../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 

@@ -16,7 +16,7 @@ Estimated Time: 10-15 minutes
 
 ## Predefine Copy Blocks
 
-![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+![Alert Flat](../../gen-images/cautionflagextrasmalltransparent2.png)
 ****Please Note**** This adventure requires the entry of Agent Role, Prompt, and Topic definitions.  To streamline typing and eliminate any typing errors, these are shown in-line in the guide below and also available in the copy blocks below.<br><br>
 **Topic Instructions**:
 ```
@@ -461,7 +461,7 @@ Action:
     ![List of agents](images/bo-agent-hcm-image26.jpg)
 
 
-27. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+27. Congratulations!  ![checkered flag](../../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 
@@ -486,4 +486,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Charlie, Ray)
-* **Last Updated By/Date** - Sajid Saleem/Charlie Moff, September 2026
+* **Last Updated By/Date** - Sajid Saleem/Charlie Moff, October 2026
