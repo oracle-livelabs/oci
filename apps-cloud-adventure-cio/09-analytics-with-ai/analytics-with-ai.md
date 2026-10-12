@@ -14,188 +14,219 @@ Use machine learning and natural language conversational AI to analyze margin va
 
 Estimated Time: 15 minutes
 
-## Pre-requisite
+## Predefined Copy Blocks
+****Please Note**** For this adventure, we will do few steps using AI chat and prompts. To streamline typing and eliminate any typing errors, the prompts are shown in-line in the guide below and are also available in the following copy blocks.
+**Prompt 1**:
+```
+<copy>
+ Show me expense trend by quarter
+ </copy>
+```
+**Prompt 2**:
+```
+<copy>
+ Show me expenses by expense categories
+ </copy>
+```
+**Prompt 3**:
+```
+<copy>
+Show me similar information from HCM
+ </copy>
+```
+**Prompt 4**:
+```
+<copy>
+ Show me expense trend by quarter
+ </copy>
+```
+## Begin Exercise
 
-****Please Note**** For this adventure, we will do few steps using AI chat and prompts. To streamline typing and eliminate any typing errors, the prompts are shown in-line in the guide below and are also available in the Prompt-CrossFunctional-Analysis.txt.
-<br><br>
-![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
-As a pre-requisite for this adventure, please download following file to your local desktop
+1. Create Cross-Functional Analytics for Business Insights
 
-1. Prompt file for the Analytics AI Agent **(Prompt-CrossFunctional-Analysis.txt)**
-<br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../09-analytics-with-ai/files/Prompt-CrossFunctional-Analysis.txt)
+    ![Analytics Flow](images/analytics-with-ai-image1.jpg)
 
-## **Begin Exercise**
+2. On the landing page, we observe that Margin has been declining and require investigation. Two key drivers influencing Margin are Revenue and Cost. Because Revenue shows an upward trend, our focus shifts to investigating Cost.
 
-1. This activity guide helps business users to investigate and research data, ask relevant questions to understand Trends, Patterns and Outliers.
+    > (1) Hover over the tiles to see details. You can also expand them.
 
-    ![Analytics OBJs](../09-analytics-with-ai/images/analytics-with-ai-image001.jpg)
+    ![FDI home page observe Margin](images/analytics-with-ai-image2.jpg)
 
-2. Oracle Fusion Data Intelligence is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
+3. The search function leverages AI capabilities to scan your datasets and retrieve the requested information.
 
-    > (1) Click on the **‘Analytics’** tab. <br>
+    > (1) Enter **show me expense trend by quarter** into the search window and hit **enter** on your laptop.
 
-    > (2) Click on **Fusion Data Intelligence** icon. <br>
+    ![FDI home page enter prompt](images/analytics-with-ai-image3.jpg)
 
-    ![Home Screen](../09-analytics-with-ai/images/analytics-with-ai-image002.jpg)
+4. We will now start exploring the content to analyze various cost components using built-in platform AI capabilities to uncover the factors driving the increase
 
-3. You can now login to Analytics with your assigned username and password.  Customers will typically leverage single sign-on capabilities to eliminate this step during implementation.
+    > (1) Click on the **explore as workbook** icon as highlighted in red to open the analysis in edit mode.
 
-    > (1) Type your assigned username <br>
-    > (2) Type the Fusion Analytics Password (this can be copied from the AI Adventure start page) <br>
-    > (3) Click the **Sign In**  ![Plus create button](../gen-images/sign_in_button.png) button
+    ![Prompt results page](images/analytics-with-ai-image4.jpg)
 
-    ![Sign-in Screen](../09-analytics-with-ai/images/analytics-with-ai-image003.jpg)
+5. On the top right-hand corner, locate the AI icon which looks like stardust. This opens the AI panel which consist of Watchlists, Insights as well as Chat Assistant.
 
-4. After a successful login, you will land on the Oracle Analytics home page.  From the home page, you can review key business metrics and trends.
+    > (1) Click on the **Auto Insights** icon.
 
-    > (1) Hover over the tiles to see additional information.
-    ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) **Notice** that Margin has been going down and need to investigate the reason. Two attributes that influence Margin are Revenue and Cost. Since revenue seems to be increasing, let's investigate Cost.
+    ![New Workbook](images/analytics-with-ai-image5.jpg)
 
-    ![Analytics Home](../09-analytics-with-ai/images/analytics-with-ai-image004.jpg)
+6. We will use the AI Assistant to build our content.
 
-5. To further investigate costs, you caņ use the Universal Search feature at the top of the screen.  This search facilitates both data and object search.
+    > (1) Click on the **Assistant** tab to start the chat. <br>
 
-    > (1) Within the Search box, type in **show me expenses by quarter** and press **SHIFT + ENTER** keys or select click the **Press SHIFT+ENTER or click ti visualize data using "show me expenses by quarter" from the resulting dropdown.
+    > (2) Click on the **Maximize** icon to expand the chat.
 
-    ![Search for Info](../09-analytics-with-ai/images/analytics-with-ai-image005.jpg)
+    ![AI Assistant 1](images/analytics-with-ai-image6.jpg)
 
-6. The search function uses AI capability to scan through your datasets and brings back information as requested. In addition to building a visual it also creates a narrative.  You will now start exploring the content.
+7. We know expenses are trending higher and the forecast suggests that they will stay high. So, let’s break down expenses and look at the next level. Which expense categories are causing the increase.
 
-    > (1) Click on the **Explore as Workbook** ![Expore as Workbook](../gen-images/explore_as_workbook.png) icon as highlighted in red to open the analysis in edit mode.
+    > (1) Enter **show me expense by expense category** in the chat and hit **enter** on your laptop.
 
-    ![Explore as Workbook](../09-analytics-with-ai/images/analytics-with-ai-image006.jpg)
+    ![AI Assistant 2](images/analytics-with-ai-image7.jpg)
 
-7. In this step, you can familiarize yourself with the the environment, features and components of the New Workbook page.
+8. The chat assistant scans the dataset and creates a graph with relevant information.  Looks like Payroll expenses are trending high than the others and contributing to decreasing margins. Let’s organize the graph for better readability.
 
-    > (Blue) The Blue Box on the left is the data panel. This is where you will see all datasets. <br>
+    > (1) Enter **Change to horizontal bar and sort high to low** in the chat and hit **enter** on your laptop.
 
-    > (Yellow) The Yellow box in the middle is the grammar pane which has all finer visualization properties. <br>
+    ![Bar chat of Total Expenses by Expense Category](images/analytics-with-ai-image8.jpg)
 
-    > (Orange) The Orange panel on the right is the canvas used to build dashboards. <br>
+9. We can see the details about expenses, namely, which categories are causing it to increase.   It is **Payroll expenses** which is the highest and needs investigation.  Payroll details are part of HCM dataset
 
-    > (Green) The green boxes have menus to carry out various functions.
+    We will use Chat assistant to keep building analysis. This time we will ask a complex question asking to fetch related data from different data store
 
-    ![Review components of page](../09-analytics-with-ai/images/analytics-with-ai-image007.jpg)
+    > (1) Enter **show me similar information from HCM** in the chat and hit **enter** on your laptop.
 
-8. You can see that there is a consistent upward trend for the last three quarters and would like to determine if this will continue in the future as well.  To understand this trend, you can use built-in forecasting features.
+    ![Horizontal Bar chat of Total Expenses by Expense Category](images/analytics-with-ai-image9.jpg)
 
-    > (1) **Highlight** a data point on the line graph and **Right Click**. <br>
+10. The information presented is from Human Resources, which is from a different line of business, but it was very easy to co-relate. The account under Payroll expense category that is creating the most expense is Contract labor Why are we paying so much for contract resources?
 
-    > (2) Select **Add Statistics** from the resulting dropdown list. <br>
+    > (1) Click on the **back arrow** to go back to the landing page
 
-    > (3) Select **Forecast** from the resulting list of options.
+    ![Horizontal Bar chat of additional HCM Expenses.](images/analytics-with-ai-image10.jpg)
 
-    ![Forecast](../09-analytics-with-ai/images/analytics-with-ai-image008.jpg)
+11. Lets return to the main page
 
-9. The resulting forecast shows that the upward trend is going to continue for some time, hence it is important that we understand the root cause of this increase.
+    > (1) Click on the **back arrow** to go back to the landing page
 
-    > (1) Note the general upward trend of the forecast.
+    ![Save changes screen](images/analytics-with-ai-image11.jpg)
 
-    ![forecast trends up](../09-analytics-with-ai/images/analytics-with-ai-image009.jpg)
+12. Let’s also delete the previous analysis
 
-10. You can now investigate the various aspects of cost to understand the drivers contributing to the increase. On the top right-hand corner, locate the AI icon which looks like stardust. This opens the AI panel which consist of Watchlists, Insights as well as Chat Assistant.
+    > (1) Click on the **Delete Results** Icon to close the analysis.
 
-    > (1) Click on the **AI Icon** ![Caution Flag](../gen-images/ai_icon.jpg) in the top toolbar. <br>
+    ![delete previous analysis](images/analytics-with-ai-image12.jpg)
 
-    ![AI Icon](../09-analytics-with-ai/images/analytics-with-ai-image010.jpg)
+13. On the Home Page, locate the prebuilt Dashboard called HCM Talent Acquisition
 
-11. You can use chat to build out your content.
+    > (1) Click on the **HCM Talent Acquisitions** to open the dashboard
 
-    > (1) Click on the **Assistant** tab. <br>
+    ![FDI Home Screen access HCM Talent Acquisitors Dashboard](images/analytics-with-ai-image13.jpg)
 
-    ![AI Assistant](../09-analytics-with-ai/images/analytics-with-ai-image011.jpg)
+14. All important metrics related to HR are shown here.  They provide us with a clue as to why Contral Labor is high. The time to fill attribute is three times the goal, indicating we are not able to source candidates.
 
-12. You know expenses are trending higher and the forecast suggests that they will stay high. So, you want to break down expenses and look at the next level to hopefully see which expense categories are causing the increase.
+    > (1) Click on the **Back Arrow** to exit the dashboard
 
-     ![Caution Flag](../gen-images/cautionflagextrasmalltransparent2.png) **Please Note** that the following interactions leverage AI chat and prompts.  The prompts are shown in-line below, but are also available in the Prompt-CrossFunctional-Analysis.txt document.  [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../09-analytics-with-ai/files/Prompt-CrossFunctional-Analysis.txt)
+    ![HCM Talent Acquisition Dashboard](images/analytics-with-ai-image14.jpg)
 
-    > (1) Copy and paste **show me expense by expense categories** into the chat, as shown.
+15. FDI has a critical component called **Data Flow** that lets use it to mashup data from external sources like LinkedIn and Glassdoor. The first steps is to connect to a data file that is stored in Object Storage
 
-    ![Show me expenses](../09-analytics-with-ai/images/analytics-with-ai-image012.jpg)
+    > (1) Click on the **External_Candidate_Profile_DF-xxxxx*.
 
-13. Chat assistant scans the dataset and creates a graph with relevant information.  You can organize the graph for better readability.
+    ![FDI Home Screen access external data set](images/analytics-with-ai-image15.jpg)
 
-    > (1) Copy and paste **Change to horizontal bar and sort high to low** into the chat.
+16. Now we will run the Data Flow to generate new Data File.
 
-    ![horizontal bar](../09-analytics-with-ai/images/analytics-with-ai-image013.jpg)
+    > (1) Click on the **Run Data Flow** icon.
 
-14. You think that looks good and decide to add it to the canvas.
+    ![External Data Source 1](images/analytics-with-ai-image16.jpg)
 
-    > (1) Hover over the chart area to expose the submenu and then **click** the  ![Caution Flag](../gen-images/plusicon.jpg) icon to add the graph to the canvas <br>
+17. We can work on other tasks while the data flow is running in the back ground.
 
-    ![Add to canvas](../09-analytics-with-ai/images/analytics-with-ai-image014.jpg)
+    > (1) Click on the **Back Arrow** icon to navigate back to the home screen.
 
-15. Your new chart, Expenses by Expense Categories, has been added to the canvas.
+    ![External Data Source 2](images/analytics-with-ai-image17.jpg)
 
-    > (1) No actions required here.  Just confirm the addition of the new chart **Expenses by Expense Categories** to the left of the AI Assistant.  Also note that the AI Assistant sliding window is still available and waiting further interaction.
+18. Create a new workbook
 
-    ![Review Canvas](../09-analytics-with-ai/images/analytics-with-ai-image015.jpg)
+    > (1) Click on the **Create** button in the upper right corner.
 
-16. You can see the details about expenses, including which categories are causing it to increase. The Payroll expense is the highest and needs investigation.  Payroll details are part of HCM dataset, but that's not a issue as Analytics has access to all Fusion SaaS Application data and external data if necessary.  You will use the **Chat Assistant** to keep building analysis. This time we will ask a complex question asking to fetch related data from different data store
+    > (2) Click on **Workbook**.
 
-    > (1) Copy and paste **show me similar information from HCM - Core Transactions data** into the chat.
+    ![FDI Home Screen Create a new workbook](images/analytics-with-ai-image18.jpg)
 
-    ![Add HCM Data](../09-analytics-with-ai/images/analytics-with-ai-image016.jpg)
+19. Add Data
 
-17. You can see the response, but prefer another format.
+    > (1) Select **Fusion Data Model** by clicking on the checkbox.
 
-    > (1) Copy and paste **change to vertical bar** into the chat.
+    > (2) Click on the **Add to Workbook** button.
 
-    ![Vertical Bar](../09-analytics-with-ai/images/analytics-with-ai-image017.jpg)
+    ![Add Data](images/analytics-with-ai-image19.jpg)
 
+20. Let us understand the existing turnover
 
-18. The format looks better, but You need a little more information to better understand the trend, so you decide to add a time period.
+    > (1) Close the Assistant by clicking on the **X** icon. <br>
 
-    > (1) Copy and paste **Add month from HCM - Core Transactions data** into the chat.
+    > (2) Click on the **>** Icon to expand the HCM Core transactions data set. <br>
 
-    ![Add Month](../09-analytics-with-ai/images/analytics-with-ai-image018.jpg)
+    > (3) Click on **Job Role** and **Turnover while pressing the **Ctrl** key on your laptop.
 
-19. Your new graph looks like this. That's the data you'd like to see, but feel it would be better in a more readable format.
+    ![Configuring the new workbook](images/analytics-with-ai-image20.jpg)
 
-    > (1) Copy and paste **Change to a Stacked Bar** into the AI Assistant chat.
+21. Now we will choose best visualization
 
-    ![Stacked Bar](../09-analytics-with-ai/images/analytics-with-ai-image019.jpg)
+    > (1) Right click over either **Job Role** or **Turnover**. <br>
 
-20. You think that's better, but realize it needs to be sorted by month to better understand any chronological trends.
+    > (2) Click on **Create Best Visualization**.
 
-    > (1) Copy and paste **Sort month low to high** into the chat.
+    ![choose best visualization](images/analytics-with-ai-image21.jpg)
 
-    ![change sort](../09-analytics-with-ai/images/analytics-with-ai-image020.jpg)
+22. We now see turnover by skills.  Let’s add the data file that we created
 
-21. This visual provides the information you are looking for, so you decide to add iţ to the canvas.
+    > (1) Click on the **Menu** Icon to the left of the **Auto (Bar)**. <br>
 
-    > (1) Hover over the chart area to expose the submenu and then **click** the  ![Plus icon](../gen-images/plusicon.jpg) icon to add the graph to the canvas <br>
+    > (2) Click on **Add Data**.
 
-    ![Add to canvas](../09-analytics-with-ai/images/analytics-with-ai-image021.jpg)
+    ![Add data file that we created](images/analytics-with-ai-image22.jpg)
 
-22. You decide to focus on the information on the canvas and close the Assistant for now.
+23. Add Data
 
-    > (1) **Click** the  ![X Icon](../gen-images/icon011_x.png) icon to the right of the **Assistant** tab to close it.<br>
+    > (1) Select the **External Candidate Profile data file** by clicking on the checkbox. <br>
 
-    ![Close AI Assistant](../09-analytics-with-ai/images/analytics-with-ai-image022.jpg)
+    > (2) Click on the **Add to Workbook** button.
 
-23. On the main canvas you will now see the entire dashboard. You want to add legend to the Stacked Bar
+    ![Add Data](images/analytics-with-ai-image23.jpg)
 
-    > (1) Select the Stacked Bar and while it is in highlighted, please click on the Tuner icon  ![AI Tuner Icon](../gen-images/ai_tuner_icon.png) as shown in the image<br>
+24. Minimize the Fusion Data Set
 
-    ![Tuner Icon](../09-analytics-with-ai/images/analytics-with-ai-image023.jpg)
+    > (1) Select the **Down Arrow** to the left of **Fusion Data Model**.
 
-24. You decide to add the Legend to the bottom of the graph.
+    ![Minimize the Fusion Data Set](images/analytics-with-ai-image24.jpg)
 
-    > (1) Find the **Legend Position** int he list of available options, as shown. <br>
-    > (2) Select the **Legend Position**. <br>
-    > (3) Select **Bottom** from the resulting dropdown.
+25. We should compare this with the external candidates to find profiles that match
 
-    ![Change Legend](../09-analytics-with-ai/images/analytics-with-ai-image024.jpg)
+    > (1) Choose all columns while holding the **Shift** Key. <br>
 
-25. Deeper analysis shows that while Base Salaries & Wages has been high, it is also constant. What has increased in the last few quarters is the overtime and the contract labor .
+    > (2) Right click over the columns you selected. <br>
 
-    > You conclude that the current canvas property clarifies your concern.  Increasing expenses seem to be a continuing trend and, within your largest expense category of Payroll Expenses, Contract Labor has been consistently increasing and likely needs further investigate.
+    > (3) Select **Pick Visualization**.
 
-    ![Note Results](../09-analytics-with-ai/images/analytics-with-ai-image025.jpg)
+    ![Configuring the new workbook](images/analytics-with-ai-image25.jpg)
 
-26. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+26. Select Table View
+
+    > (1) Click on the **Table** Icon
+
+    ![Select Table View](images/analytics-with-ai-image26.jpg)
+
+27. You will now see data side by side.
+
+    > (1) Click on the columns with turnover.
+
+    > (2) You will see relevant candidates that match the profile, <br>
+
+    ![Turnover by Job role Dashboard](images/analytics-with-ai-image27.jpg)
+
+28. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 

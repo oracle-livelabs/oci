@@ -1,0 +1,5 @@
+Prompts
+1) Show me expense trend by quarter
+2) Show me expenses by expense categories
+3) Change to horizontal bar and sort high to low
+4) Show me similar information from HCM

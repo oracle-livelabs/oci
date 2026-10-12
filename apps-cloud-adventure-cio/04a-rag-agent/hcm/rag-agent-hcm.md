@@ -1,0 +1,201 @@
+# Create Document Tool and AI Agent (RAG) using AI Agent Studio
+
+## Introduction
+
+AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
+
+### Objectives
+
+In this activity you will use Oracle Fusion AI Agent Studio to
+* Create a Document Tool that references your benefits policy documents.
+* Create a Benefits Advisor Agent using the above Tool.
+
+Estimated Time: 10-15 minutes
+
+## Pre-requisite
+
+![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+As a pre-requisite for this adventure, please download following files
+1. Policy document file to your local desktop as below.
+<br>
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05a-rag-agent-hcm/files/AI-Adventure-Benefits-Policies.pdf)
+<br>
+2. Prompt file for the AI Agent
+<br>
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05a-rag-agent-hcm/files/prompt-rag-agent-hcm.txt)
+
+## Begin Exercise
+
+1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
+
+    ![AI RAG Objectives](../05a-rag-agent-hcm/images/rag-agent-hcm-image001.jpg)
+
+2. The first step is to navigate to AI Agent Studio.
+
+    > (1) Click on the **Tools** tab <br>
+    > (2) Select the **AI Agent Studio** tile
+
+    ![Navigate to AI Agent Studio](../05a-rag-agent-hcm/images/rag-agent-hcm-image002.jpg)
+
+3. Next, we're going to create a Tool.
+
+    > (1) Click the ![Tools](../gen-images/tools.jpg) button/tab at the bottom of the page
+
+    ![Open tools](../05a-rag-agent-hcm/images/rag-agent-hcm-image003.jpg)
+
+
+4. Tool Creation
+
+    > (1) Click the ![add tool](../gen-images/plusadd.jpg) button to create a new tool
+
+    ![Create Tool](../05a-rag-agent-hcm/images/rag-agent-hcm-image004.jpg)
+
+5. Here, you will define your first Tool, a Document Tool.  This will allow the Agent to use the content of the documents to respond to user questions.
+
+    > (1) Enter the following fields:
+    * Tool Type: select **Document** from the dropdown<br>
+    * Tool Name: Enter **CIOXX Benefits Document Tool**, where **XX** is replaced with your user number.<br>
+    * Family: select **HCM** from the dropdown<br>
+    * Product: select **Benefits** from the dropdown<br>
+    * Description: Enter **Benefits Document Tool** <br>
+
+    > (2) **Scroll Down** to the Documents area where you can add documents.
+
+      ![Edit tool info](../05a-rag-agent-hcm/images/rag-agent-hcm-image005.jpg)
+
+6. Here, you caņ begin to add your document(s).  These documents will be processed in the background via the Oracle Database Vector Search capability to allow use by your AI Agent.
+
+    > (1) Click the ![button](../gen-images/addw.jpg) button under **Documents** <br>
+
+    > (2) **Scroll Down** to see the Documents fields and upload your document.
+
+      ![Edit tool info](../05a-rag-agent-hcm/images/rag-agent-hcm-image006.jpg)
+
+7. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop if you have not already done so as below.
+    <br>
+
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/CloudAdventureBenefitsHighlights.pdf)
+
+     > (1) Enter the following fields:
+    * Name: Enter **CA Benefits Documents** <br>
+    * Status: Select **Ready to publish** from the dropdown<br>
+    * Description: Enter **Benefits Documents**<br>
+
+     > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (CloudAdventureBenefitsHighlights.pdf) from your **Downloads** folder on your PC.<br>
+
+     > (3) Click the **Save** ![Save Button](../gen-images/save.jpg) button on the bottom right<br>
+
+     > (4) Click the **Create button** ![Create Button](../gen-images/createw.jpg) on the top right corner of the screen.<br>
+
+      ![tool create](../05a-rag-agent-hcm/images/rag-agent-hcm-image007.jpg)
+
+    **Congratulations!  You’ve completed your first step and created a Policy Document Tool.**
+
+8. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
+
+    >  (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agentsbutton.jpg) at the bottom of the page.
+
+    ![Agents Page](../05a-rag-agent-hcm/images/rag-agent-hcm-image008.jpg)
+
+9. Here you can see any existing agents.  But you want to create one.
+
+    > (1) Click the **+ Add** button ![Add button Image](../gen-images/plusadd.jpg).
+
+    ![Add Agent](../05a-rag-agent-hcm/images/rag-agent-hcm-image009.jpg)
+
+10. Define the details of the Agent.
+
+    > (1) First, you'll enter the fields as described below:<br>
+    * Agent Name: **CIOXX Benefits Advisor Agent** where **XX** is replaced with your user number.<br>
+    * Family: Select **HCM** from the dropdown<br>
+    * Product: Select  **Benefits** from the dropdown<br>
+    * Maximum Interactions: **10** <br>
+    * Description: **Benefits Advisor Agent** <br>
+    * Agent Persona and Role: **You are a Benefits Analyst.  Your role is to efficiently access and interpret company-specific benefits documents, providing workers with clear, actionable guidance on their eligibility, coverage and compliance recommendations.**<br>
+    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.***  To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below. 
+    <br><br>
+    Alternatively, prompt text is available in **Prompt-Benefits-Advisor-Agent.txt** file that you can download to your local desktop as below.
+    <br>
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../05a-rag-agent-hcm/files/prompt-rag-agent-hcm.txt)
+    <br>
+    Once done, please open this file and copy the contents into the Prompt field. <br>
+
+    > (2) **Scroll Down** to confirm that the entire prompt has been copied into the Prompt field.<br>
+    > (3) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
+
+    ![Create Agent](../05a-rag-agent-hcm/images/rag-agent-hcm-image010.jpg)
+
+```
+<copy>
+AGENT ROLE
+
+As a Benefits Analyst, your role is to efficiently access and interpret company-specific benefits documents, providing workers with clear, actionable guidance on their eligibility, coverage, and compliance requirements.
+
+RESPONSIBILITIES
+
+Your responsibilities include:
+
+Benefit Policies:
+  - Clearly explain the eligibility, coverage, and compliance requirements outlined in the company benefits policies.
+  - Use the AIA_Benefits_Document_Tool tool to retrieve policy details when answering questions.
+
+IMPORTANT GUIDELINES
+  - Provide concise, factual answers based strictly on the data retrieved.
+  - Never fabricate or assume information.
+  - Format your responses clearly and professionally for easy readability. </copy>
+```
+
+11. Now that you have the Agent, you need to add Tools to it.
+
+    > (1) Click the **Tools** ![Tools Hammer Icon](../gen-images/toolhammericon.jpg) button on the left icon bar.<br>
+    > (2) Enter **CIOXX** in the Ask Oracle field, where **XX** is replaced with your user number, and press the **<****Enter****>** key or select **CIOXX** from the resulting dropdown.<br>
+    > (3) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon next to the CIOXX Benefits Document Tool where **XX** is your user number. ***You may need to click it twice.***
+
+    ![add tool](../05a-rag-agent-hcm/images/rag-agent-hcm-image011.jpg)
+
+
+12. You can confirm the details of tool and continue
+
+    > (1) Click the **+ Add** button ![Add button Image](../gen-images/addb.jpg).
+
+    ![Add Agent](../05a-rag-agent-hcm/images/rag-agent-hcm-image012.jpg)
+
+13. That's it!  If necessary, you can add additional tools to your agent.  But no additional ones are required for this adventure, so you can finish the Agent creation.
+
+    > (1) Click the ![Create button Image](../gen-images/createw.jpg) button on the top right.
+
+    ![Create Agent](../05a-rag-agent-hcm/images/rag-agent-hcm-image013.jpg)
+
+14. The pop-up message is highlighting that you're creating a custom agent, which requires you to have the appropriate subscription before publishing to your production environment.  For this lab you can go ahead and Publish.
+
+    > (1). Click the ![Agent Teams](../gen-images/publish.png) button/tab in the pop-up message.
+
+
+    ![Create Agent](../05a-rag-agent-hcm/images/rag-agent-hcm-image014.jpg)
+
+15. You’ve just created your first AI Agent.  In the next Adventure you will put this agent to work as part of an Agent Team.
+
+      ![Add Tools Create](../05a-rag-agent-hcm/images/rag-agent-hcm-image015.jpg) <br>
+
+16. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+
+    > **You've completed this Adventure**. Please close this tab.
+
+### Summary
+
+AI Agent Studio is a design-time environment that empowers you to create, configure, validate, and deploy AI agents to meet your organization's needs.
+
+With AI Agent Studio, you can easily extend preconfigured workflows, and build new workflows and agentic apps. AI Agent Studio is fully integrated into Oracle Fusion Cloud Applications, providing secure and seamless access to the knowledge stores, tools, and APIs of Fusion Applications. This integration enables agents to be deployed directly into the flow, ensuring an efficient process.
+
+## Learn More
+
+* [AI Agent Studio](https://docs.oracle.com/en/cloud/saas/fusion-ai/26c/aiaas/overview-of-ai-agent-studio.html)
+* [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
+* [AI for Fusion Applications](https://www.oracle.com/applications/fusion-ai/)
+* [Oracle Documentation](http://docs.oracle.com)
+
+## Acknowledgements
+
+* **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
+* **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Charlie, Ray)
+* **Last Updated By/Date** - Sajid Saleem/Charlie Moff, September 2026
