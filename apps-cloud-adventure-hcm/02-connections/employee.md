@@ -2,13 +2,13 @@
 
 ## Introduction
 
-In this lab, you will explore Oracle Cloud HCM as an employee. You will use My Activity Center, provide feedback in Connections, and submit an absence request. 
+In this activity, you will explore Oracle Cloud HCM as an employee. You will use My Activity Center, provide feedback in Connections, and submit an absence request. 
 
 Estimated Time: 12 minutes
 
 ## Objectives
 
-In this lab, you will:
+In this activity, you will:
 * Explore and personalize My Activity Center.
 * View events on your timeline.
 * Find a colleague and provide feedback in Connections.
