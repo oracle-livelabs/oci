@@ -31,14 +31,14 @@ Estimated Time: 15 minutes
 **Prompt 3**:
 ```
 <copy>
-Show me similar information from HCM
+Change to horizontal bar and sort high to low
  </copy>
 ```
 **Prompt 4**:
 ```
 <copy>
- Show me expense trend by quarter
- </copy>
+ Show me similar information from HCM
+</copy>
 ```
 ## Begin Exercise
 
@@ -80,7 +80,8 @@ Show me similar information from HCM
 
 7. We know expenses are trending higher and the forecast suggests that they will stay high. So, let’s break down expenses and look at the next level. Which expense categories are causing the increase.
 
-    > (1) Enter **show me expense by expense category** in the chat and hit **enter** on your laptop.
+    > (1) Enter **show me expense by expense categories** in the chat and hit **enter** on your laptop.
+
 
     ![AI Assistant 2](images/analytics-with-ai-image7.jpg)
 
@@ -94,7 +95,7 @@ Show me similar information from HCM
 
     We will use Chat assistant to keep building analysis. This time we will ask a complex question asking to fetch related data from different data store
 
-    > (1) Enter **show me similar information from HCM** in the chat and hit **enter** on your laptop.
+    > (1) Enter **Show me similar information from HCM** in the chat and hit **enter** on your laptop.
 
     ![Horizontal Bar chat of Total Expenses by Expense Category](images/analytics-with-ai-image9.jpg)
 
@@ -120,9 +121,9 @@ Show me similar information from HCM
 
     > (1) Click on the **HCM Talent Acquisitions** to open the dashboard
 
-    ![FDI Home Screen access HCM Talent Acquisitors Dashboard](images/analytics-with-ai-image13.jpg)
+    ![FDI Home Screen access HCM Talent Acquisitions Dashboard](images/analytics-with-ai-image13.jpg)
 
-14. All important metrics related to HR are shown here.  They provide us with a clue as to why Contral Labor is high. The time to fill attribute is three times the goal, indicating we are not able to source candidates.
+14. All important metrics related to HR are shown here.  They provide us with a clue as to why Contract Labor is high. The time to fill attribute is three times the goal, indicating we are not able to source candidates.
 
     > (1) Click on the **Back Arrow** to exit the dashboard
 
@@ -236,12 +237,12 @@ You discovered how effortlessly Fusion Data Intelligence enables the creation of
 
 ## Learn More
 
-* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
+* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r3/index.html)
 * [Fusion Data Intelligence](https://www.oracle.com/fusion-ai-data-platform/)
 * [Oracle Documentation](https://docs.oracle.com)
 
 ## Acknowledgements
 
 * **Author** - Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services
-* **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, July 2026
+* **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Ray, Charlie)
+* **Last Updated By/Date** - Sajid Saleem, October 2026
