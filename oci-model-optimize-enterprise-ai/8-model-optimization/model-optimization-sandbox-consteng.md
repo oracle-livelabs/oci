@@ -26,7 +26,7 @@ Follow only the subsection for your chosen application path in Task 2. **Launch 
 
 2. Select **Supplier recommendation**, submit the prompt, and record the model shown in the runtime bar and the approximate response time.
 
-3. Download the [synthetic structural-steel delivery image](images/austin-steel-delivery-synthetic-consteng.png). Start a fresh conversation (**Reset conversation** in Launch), use the paperclip in the prompt composer to attach the downloaded image, and submit the following prompt. Record the selected model and approximate response time.
+3. Download the [synthetic structural-steel delivery image][synthetic-steel-image]. Start a fresh conversation (**Reset conversation** in Launch), use the paperclip in the prompt composer to attach the downloaded image, and submit the following prompt. Record the selected model and approximate response time.
 
     ![Synthetic steel delivery for Austin Regional Bank project AUS-BANK-01](images/austin-steel-delivery-synthetic-consteng.png)
 
@@ -39,6 +39,8 @@ Follow only the subsection for your chosen application path in Task 2. **Launch 
     The placard matches the seeded project, asset `STR-AUS-STEEL-01`, supplier Atlas Structural Fabrication, and purchase order `PO-88142`. The image is synthetic, not inspection evidence. Supplier status and readiness must come from governed data; a photograph cannot establish certification, material grade, acceptance, or structural safety.
 
     Confirm that the attachment preview appears before submitting. Expect observations about the steel, staging, and placard, with assumptions identified separately. Use the same image and prompt for the routed comparison in Task 3. Keep the visual task separate from a database question so the answer does not skip the image description in favor of supplier records.
+
+[synthetic-steel-image]: images/austin-steel-delivery-synthetic-consteng.png
 
 ## Task 2: Enable model routing
 
