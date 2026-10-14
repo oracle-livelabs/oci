@@ -62,17 +62,33 @@ Estimated time: 30 min
     api-key2=(SAMPLE) sk-xxxxxxxxxxxxxx
     OBJECT_STORAGE_NAME=(SAMPLE) bucket-123456
     
+    LiveLab
+    =======
+    Username=(sample) LL123456-USER
+    
     Optional
     ========
     hugging-face-token=(SAMPLE) hf_xxxxxxxxxxxxxxxxxxxx
     BASE_URL=(sample) https://inference.generativeai.eu-frankfurt-1.oci.oraclecloud.com/openai/v1/chat/completions
     GENAI_DAC_ENDPOINT_OCID=(SAMPLE) ocid1.generativeaiendpoint.oc1.xxxxxxxxxx
 
-
-
     -----------------------------------------------------------------------
     </copy>
     ```  
+2. Since you are in LiveLab SandBox, a part of the work was done already for you.
+    - Click on the view info
+    - Copy the values in your notes
+        - ##Username##
+        - and ##COMPARTMENT_OCID##   
+
+    ![LiveLab View Info](images/livelab-view-info.png)   
+
+3. Now, be sure to navigate to your compartment in LiveLab. If not things like Cloud Shell, Cloud Editor, or creation of resources will not work. 
+    - Click on the Hamburger Menu
+    - Storage -> Buckets
+    - Then in the Applied Filters - Choose Compartment - LiveLabs - ##Username## (from above)
+    ![LiveLab Compartment](images/livelab-compartment1.png)   
+    ![LiveLab Compartment](images/livelab-compartment2.png)     
 
 ## Task 2: Create a Compartment (Done for you)
 
@@ -100,6 +116,7 @@ First, create an OpenAI-compatible API key.
 
     ![API_KEY](images/api_key1.png)
 
+3. Choose your compartment "LiveLabs/##Username##", where ##Username## is the login that you used to log in OCI. (See notes)
 3. Go to **API Keys** on the right side.
 4. Click **Create API key**.
 

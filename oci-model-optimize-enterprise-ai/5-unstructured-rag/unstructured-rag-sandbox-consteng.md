@@ -47,6 +47,10 @@ In this lab, you will:
 
     Copy the following worksheet into your text file. Fill in the values available in the Sandbox Resource List. Add the project and vector-store identifiers after creating those resources. The same workshop region fills all three region entries.
 
+    **Match labels, not variable names:** **Compartment OCID** supplies `OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID`; **Region** supplies all three region variables (use the identifier such as `us-ashburn-1`, not the display name); and **ADB OCID** supplies `OCI_ADB_DATABASE_OCID`. **DB Tools Enrichment Connection OCID** and **DB Tools Query Connection OCID** go into the two connection fields in Lab 2, not the worksheet's application-secret field. **Sample App PAR** is `CONFIGURED_SAMPLE_APP_PAR` for Build; **Launch Helper PAR** is `LAUNCH_HELPER_PAR` for Launch. These application variable names will not appear verbatim in the resource list.
+
+    **Launch path:** The helper already contains the pre-provisioned values. Keep this worksheet as a reference; you only need to enter the project OCID, unstructured vector store ID, and semantic store OCID when launching. OCI config file and profile entries apply only to Build.
+
     > **Important:** The resource list may show only the **Admin Password Secret OCID**. This is not the application schema secret. The configured sample app and Launch helper already contain the secret for the `CONSTRUCTION_ENGINEERING` database user. Preserve that generated value; do not replace it with the ADMIN secret or copy the secret password into your worksheet.
 
     ```
@@ -159,6 +163,8 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
 5. Click **Create**.
 
 6. Wait for the vector store to appear in the list, then open it. An empty vector store can remain **In progress** until its first ingestion finishes. Continue with connector creation in Task 5; do not wait for an empty store to become **Completed**. The final readiness check follows the data sync.
+
+    If connector creation returns **Vector store is not in a valid state**, the newly created store may still be provisioning. Cancel the connector form, refresh the vector stores list after a short wait, and reopen the store once provisioning completes. Check that no connector was created before retrying. Do not delete and recreate the vector store for this transient error. **Completed** with zero files is not ingestion readiness; the nonzero processed-file check still follows the sync.
 
 7. Open the vector store details page.
 
