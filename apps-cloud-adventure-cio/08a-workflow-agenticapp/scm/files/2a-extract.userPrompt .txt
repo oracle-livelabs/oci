@@ -1,3 +1,0 @@
-Based on the output from {{$context.$nodes.GET_SALES_ORDER_SUBMITTED.$output}}, extract a list of sales orders with columns for Sales Order#, Business Unit Name, Sold-To-Customer, Sales Order Amount based on sum of lines amount, sales order status and submittedDate in the format of YYYY-MM-DD. 
-
-Set riskLevel to "" for each sales order

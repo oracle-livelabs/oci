@@ -1,1 +1,0 @@
-{{$context.$nodes.SETUP_SALES_ORDER_DATE_RANGE.$output.result}}
