@@ -132,15 +132,12 @@ Action:
 
 1. Create FMLA/Benefits Business Object Agent
 
-
     ![Adventure Flow](images/bo-agent-hcm-image1.jpg)
 
 2. Open AI Agent Studio
 
     > (1) Click the **Tools** menu tab<br>
-
     > (2) Click the **AI Agent Studio** tile
-
 
     ![Springboard page](images/bo-agent-hcm-image2.jpg)
 
@@ -150,27 +147,22 @@ Action:
 
     > (2) Click on the **Pin** Icon to expand the menu.
 
-
-
     ![Expand Menu](images/bo-agent-hcm-image3.jpg)
 
 4. Open Resources
 
     > (1) Click the **Resources** Menu Option
 
-
     ![Open Resources](images/bo-agent-hcm-image4.jpg)
 
 5. View Tools
     > (1) Click the **Tools** tab at the top of the screen.
-
 
     ![View Tools](images/bo-agent-hcm-image5.jpg)
 
 6. Add Tool
 
     > (1) Click the **Add** button to create a new Tool
-
 
     ![Create Tool](images/bo-agent-hcm-image6.jpg)
 
@@ -179,10 +171,9 @@ Action:
     > (1) Enter the following fields as shown:
 
     * Tool Type:  Select **Business Object** from the dropdown
-
     * Tool Name:  **CIOXX YYY Absence BO Tool**, where XX is replaced with your user number and YYY is replaced with your initials.
-
-    * Family:  Select **HCM** from the dropdown* Product:  Select **Absences** from the dropdown<br>
+    * Family:  Select **HCM** from the dropdown
+    * Product:  Select **Absences** from the dropdown<br>
 
     > (2) Press the **Generate** button to generate description information. <br>
 
@@ -226,9 +217,7 @@ Action:
 
     * Family:  Select **Common** from the dropdown* Product:  Select **Other** from the dropdown<br>
 
-
     > (2) Click the **Add Instruction** region.
-
 
     ![Enter Topic Details](images/bo-agent-hcm-image12.jpg)
 
@@ -258,9 +247,7 @@ RESPONSE GUIDELINES
 
     > (1) **Review** the generated prompt.  It will leverage the information you’ve entered, including the instructions.  You can made edits, if needed.<br>
 
-
     > (2) Click the **Go** button. <br>
-
 
     ![Generate Topic Description](images/bo-agent-hcm-image14.jpg)
 
@@ -268,15 +255,12 @@ RESPONSE GUIDELINES
 
     > (1) **Review** the generated description and make any desired changes. <br>
 
-
     > (2) Click the **Create & Close** button. <br>
-
 
     ![Create and Save Topic](images/bo-agent-hcm-image15.jpg)
 
 16. View Agents
     > (1) Click the **Agents** tab at the top of the screen.
-
 
     ![View Agents](images/bo-agent-hcm-image16.jpg)
 
@@ -293,7 +277,10 @@ RESPONSE GUIDELINES
 
     * Agent Name:  **CIOXX YYY Absence Agent**, where XX is replaced with your user number and YYY is replaced with your initials.
 
-    * Family:  Select **HCM** from the dropdown* Product:  Select **Absences** from the dropdown* Description: **Absence Benefit Agent*** Maximum Interactions: **5**<br>
+    * Family:  Select **HCM** from the dropdown
+    * Product:  Select **Absences** from the dropdown
+    * Description: **Absence Benefit Agent**
+    * Maximum Interactions: **5**<br>
 
     > (2) Press the **Generate** button to generate description information.
 
@@ -302,7 +289,6 @@ RESPONSE GUIDELINES
 19. Generate Description
 
     > (1) Press the **Go** button to accept the generated description.
-
 
     ![Generate Description](images/bo-agent-hcm-image19.jpg)
 
@@ -420,11 +406,9 @@ Action:
 4. Report the result returned by the tool. </copy>
 ```
 
-22. Next you’ll add the Absence Tool that you previously created. 
-    > (1) Type **CIOXX YYY** in the Search by name, description or code field under Available Tools, , where XX is replaced with your user number and YYY is replaced with your initials.  This replaces the AIA search you did previously<br>
+22. Next you’ll add the Absence Tool that you previously created.
+    > (1) Type **CIOXX YYY** in the Search by name, description or code field under Available Tools, where XX is replaced with your user number and YYY is replaced with your initials.  This replaces the AIA search you did previously<br>
     > (2) Hover over the **CIOXX YYY Absence BO Tool** and click the **+** sign.
-
-     
 
     ![Add Tools to your Agent](images/bo-agent-hcm-image22.jpg)
 
@@ -442,15 +426,11 @@ Action:
     > (1) Type **CIOXX YYY** in the Search by name, description or code field under Available Topics, where XX is replaced with your user number and YYY is replaced with your initials. <br>
     > (2) Hover over the **CIOXX YYY Response Guidelines Topics and click the **+** sign.
 
-     
-
     ![Add More Tools](images/bo-agent-hcm-image24.jpg)
 
 25. That’s it.  You’ve created your Agent with 3 tools (one that you created, one standard tool, and one that your AI Adventure Pit Crew pre-created for this Adventure.   You’re ready to save and complete this Adventure .  One standard tool, one pre-created, and one you just created today.
 
     > (1) Click the **Create & Close** button on the bottom toolbar.
-
-     
 
     ![Create and Close](images/bo-agent-hcm-image25.jpg)
 

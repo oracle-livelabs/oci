@@ -8,8 +8,8 @@ AI Agent Studio for Fusion Applications is a comprehensive platform for creating
 
 In this activity you will use Oracle Fusion AI Agent Studio to
 * Create an Agentic Application
-* Define Agentic App sections to display various output formats (eg. graphics)
-* Create Drilldown Action
+* Add Specialized Agents and Actions
+* Test Agentic App
 
 Estimated Time: 10-15 minutes
 
@@ -53,7 +53,7 @@ Estimated Time: 10-15 minutes
     > (1) Enter **CIO XX YYY Sales Order Workspace** as a name.  **XX** is your assigned account for this lab and **YYY*** is your initials.  Copy and paste the name into description. <br>
 
 
-    > (2) Click on **Create**.Slide Name: Application Name
+    > (2) Click on **Create**.
 
     ![Create a name and add a description to your agentic app.](images/agenticapp-scm-image5.jpg)
 
@@ -67,14 +67,13 @@ Estimated Time: 10-15 minutes
 7. At the very bottom of the App Settings panel, the Page Options section shows various layout options.
 
 
-    > (1) Select the 2nd icon that depicts two equal sized columns.Slide Name:  Select Two Columns
-
+    > (1) Select the 2nd icon that depicts two equal sized columns.
     ![At the very bottom of the App Settings panel, the Page Options section shows various layout options.](images/agenticapp-scm-image7.jpg)
 
 8. You’ll now see 2 Add Section columns.   This is where you will add content.
 
 
-    > (1) Click the **Add Section** box on the left, enter **CIOXX YYY** in the **Search by agent name** field, and select **CIO XX YYY Sales Order Workflow** from the resulting dropdown box.  Remember, XX is user assigned user number and YYY are your initials.
+    > (1) Click the **Add Section** box on the left, enter **CIOXX YYY** in the **Search by agent name** field, and select **CIO XX YYY Sales Order Workflow** from the resulting dropdown box.  Remember, XX is assigned user number and YYY are your initials.
 
     > (2) Name this Section by entering **Sales Orders** into the Name field in the App Settings panel.
 
@@ -82,32 +81,31 @@ Estimated Time: 10-15 minutes
 
 9. Next, you’ll add a Section on the right.
 
-    > (1) Click the **Add Section** box on the right, enter **AIA** in the **Search by agent name** field, and select **AIA Sales Order Risk Evaluation** from the resulting dropdown box.  
-
-    > (2) Name this Section by entering **Review Sales Orders** into the Name field in the App Settings panel.> (3) Click the **Play** icon on the bottom toolbar to see how your Agentic App looks so far.
+    > (1) Click the **Add Section** box on the right, enter **AIA** in the **Search by agent name** field, and select **AIA Sales Order Risk Evaluation** from the resulting dropdown box.<br>
+    > (2) Name this Section by entering **Review Sales Orders** into the Name field in the App Settings panel.<br>
+    > (3) Click the **Play** icon on the bottom toolbar to see how your Agentic App looks so far.
 
     ![Select Left Column](images/agenticapp-scm-image9.jpg)
 
 10. Review the various capabilities of the Agentic App and then prepare to add some additional capabilities.
 
-
-    > (1) Note some key features of your application.  An **Ask Oracle** field for interacting with your application, summary of important page content, and detailed Sales Order transaction information.> (2) Click the **Edit** button on the bottom toolbar to put the Agentic App back into Edit mode.Slide Name:  Review and edit
+    > (1) Note some key features of your application.  An **Ask Oracle** field for interacting with your application, summary of important page content, and detailed Sales Order transaction information.<br>
+    > (2) Click the **Edit** button on the bottom toolbar to put the Agentic App back into Edit mode.
 
     ![Review the various capabilities of the Agentic App and then prepare to add some additional capabilities.](images/agenticapp-scm-image10.jpg)
 
 11. You can add additional capabilities like like Actions and Communications (e.g. Powerpoint, Word, PDF, Email, Text and Podcasts).    You’ll setup a new Action.
 
-    > (1) Click on the **Agentic App** definition icon on the bottom toolbar (2nd icon from the left).
-
-    > (2) The resulting menu allows you to add additional capabilities.  You want to add a **Action**, so click the **+** icon to the right of **Actions**
+    > (1) Click on the **Agentic App** definition icon on the bottom toolbar (2nd icon from the left).<br>
+    > (2) The resulting menu allows you to add additional capabilities.  You want to add an **Action**, so click the **+** icon to the right of **Actions**
 
     ![Add Action](images/agenticapp-scm-image11.jpg)
 
 12. You can add additional capabilities like Actions and Communications (e.g. Powerpoint, Word, PDF, Email, Text and Podcasts).    You’ll setup a new Action.
 
-    > (1) Click in the **Add Step** box and select **Switch App Context** from the resulting dropdown. Slide Name:  Add Action Step
+    > (1) Click in the **Add Step** box and select **Switch App Context** from the resulting dropdown.
 
-    ![You can add additional capabilities like Actions and Communications (e.g. Powerpoint, Word, PDF, Email, Text and Podcasts).    You’ll setup a new Action.](images/agenticapp-scm-image12.jpg)
+    ![You can add additional capabilities like Actions and Communications (e.g. Powerpoint, Word, PDF, Email, Text and Podcasts). You’ll setup a new Action.](images/agenticapp-scm-image12.jpg)
 
 13. You want to allow this Action Step to leverage the Agent Payload as Context for this action.
 
@@ -123,7 +121,7 @@ Estimated Time: 10-15 minutes
 
 15. You can specify which or your included Agents you want to refresh.
 
-    > (1) Click in the **Select refresh targets** and select **AIA Sales Order Risk Evaluation** from the dropdown.
+    > (1) Click in the **Select refresh targets** and select **AIA Sales Order Reviewer** from the dropdown.
 
     ![Set Refresh](images/agenticapp-scm-image15.jpg)
 
@@ -135,7 +133,6 @@ Estimated Time: 10-15 minutes
 
 17. Ready to test.
 
-
     > (1) Click the **Play** icon on the bottom toolbar to see how your Agentic App looks so far.
 
     ![Play](images/agenticapp-scm-image17.jpg)
@@ -143,29 +140,26 @@ Estimated Time: 10-15 minutes
 18. Review your Agentic App.
 
 
-    > (1) Note that the Agentic App provides a summary of your Sales Order Risk Levels 
-
-    > (2) You want to review the Risk associated to the order with the **High** risk level.  Click the **Review** button next to the order with a High Risk Level.
+    > (1) Note that the Agentic App provides a summary of your Sales Order Risk Levels<br>
+    > (2) You want to review Sales Order with the **High** risk level.  Click the **Review** button next to the order with a High Risk Level.
 
     ![Select High Risk](images/agenticapp-scm-image18.jpg)
 
 19. Review High Risk Order.
 
 
-    > (1) Review response related to this Risk order.
-
+    > (1) Review response related to this Risk order.<br>
     > (2) To send notifications related to this order, click the **High Risk Order Notification** button.
 
     ![Send Notification](images/agenticapp-scm-image19.jpg)
 
 20. Review Notification.
 
-
-    > (1) Review the prepared notificationSlide Name:  Notification
+    > (1) Review the prepared notification
 
     ![Review Notification.](images/agenticapp-scm-image20.jpg)
 
-26. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+26. Congratulations!  ![checkered flag](../../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 

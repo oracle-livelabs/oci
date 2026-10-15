@@ -79,7 +79,6 @@ If the user intent is to ask information about any existing FMLA absence or to s
 
     > (1) Click the **Add** button to create a new Workflow
 
-
     ![Create Workflow](./images/workflow-agent-hcm-image5.jpg)
 
 6. Workflow Settings: Details
@@ -92,7 +91,6 @@ If the user intent is to ask information about any existing FMLA absence or to s
 
     > (2) Click on **Create**
 
-
     ![Enter Workflow Settings Detail](./images/workflow-agent-hcm-image6.jpg)
 
 7. Workflows can include a lot of components including data components, logic, workflow controls, human approval, loops, switches, code nodes and much more.  You can see these in the Component Palette
@@ -101,7 +99,8 @@ If the user intent is to ask information about any existing FMLA absence or to s
 
     ![Show Component Palette](./images/workflow-agent-hcm-image7.jpg)
 
-8. You can Click and Drag to add nodes to your workflow. > (1) Click the  **Black Circle Icon** under the play icon and drag to the **Dotted Rectangle** region below it.<br>
+8. You can Click and Drag to add nodes to your workflow. 
+    > (1) Click the  **Black Circle Icon** under the play icon and drag to the **Dotted Rectangle** region below it.<br>
 
     > (2) Release the mouse once in the drag is complete.
 
@@ -111,7 +110,6 @@ If the user intent is to ask information about any existing FMLA absence or to s
 
     > (1) Select  **LLM** from the dropdown list
 
-
     ![Add LLM node](./images/workflow-agent-hcm-image9.jpg)
 
 10. Enter Basic Information about this node.
@@ -119,7 +117,6 @@ If the user intent is to ask information about any existing FMLA absence or to s
     > (1) Type **Get User Intent** in the Name field<br>
 
     > (2) Scroll Down
-
 
     ![Enter Node Name](./images/workflow-agent-hcm-image10.jpg)
 
@@ -214,11 +211,9 @@ If the user intent is to ask information about any existing FMLA absence or to s
 
     > (2) Click the **+ Add** button to allow you to enter another value. <br>
 
-    > (3) Enter **CheckandSubmitFMLAAbsnce** for the 2nd case value field. <br>
+    > (3) Enter **CheckandSubmitFMLAAbsence** for the 2nd case value field. <br>
 
     > (4) Click the **x** icon in the top right corner of the Agent panel to close the panel.  Your work is always auto-saving.
-
-
 
     ![Enter Case values](./images/workflow-agent-hcm-image19.jpg)
 

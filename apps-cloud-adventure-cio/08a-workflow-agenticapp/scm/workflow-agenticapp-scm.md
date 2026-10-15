@@ -213,7 +213,8 @@ Set riskLevel to "" for each sales order
 
     > (2) Select Type **AIA** in the **Business Object** field and select **AIA Sales Order** from the Business Object dropdown <br>  
 
-    > (3) Select **getSalesOrderBySubmittedDateRange** rom the **Function** dropdown.> (4) Scroll down.
+    > (3) Select **getSalesOrderBySubmittedDateRange** rom the **Function** dropdown.
+    > (4) Scroll down.
 
     ![Define Business Object](images/workflow-agenticapp-scm-image10.jpg)
 
@@ -245,7 +246,7 @@ Set riskLevel to "" for each sales order
 
     ![Show Component Palette](images/workflow-agenticapp-scm-image14.jpg)
 
-15. Here you’ll enter the prompt information and output specifiations for this node.  You want the workflow to determine whether the user is asking a query about benefit policies or trying to work with absences and leaves.
+15. Here you’ll enter the prompt information and output specifications for this node.  You want the workflow to determine whether the user is asking a query about benefit policies or trying to work with absences and leaves.
 
     > (1) Enter the **User Prompt**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the ***copy block*** below or from the downloadable file provided in the pre-requisites for this lab.<br>
     > (2) Enter the **Output Specification**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the ***copy block*** below or from the downloadable file provided in the pre-requisites for this lab.<br>
@@ -350,7 +351,8 @@ Set riskLevel to "" for each sales order
 
 20. Here you’ll enter the prompt information for this node.  You want the workflow to output specific information for each sales order.
 
-    > (1) Enter the **User Prompt**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the ***copy block*** below or from the downloadable file provided in the pre-requisites for this lab.<br>> (2) Scroll down.
+    > (1) Enter the **User Prompt**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the ***copy block*** below or from the downloadable file provided in the pre-requisites for this lab.<br>
+    > (2) Scroll down.
 
 
     ![Enter user prompt](images/workflow-agenticapp-scm-image20.jpg)
@@ -412,7 +414,9 @@ Set riskLevel to "" for each sales order
 
 21. You can enable various capabilities for how this workflow interacts with a resulting Agentic App.
 
-    > (1) Click the **On** option for the **Enable Actions for the widgets** options under **App Experience**Enter the **User Prompt**.  To streamline this step, we've pre-created the prompt. The prompt text is available in the copy block below or from the downloadable file provided in the pre-requisites for this lab.<br>> (2) Click the **x** icon in the top right corner of the Business Object panel to close the panel. 
+    > (1) Click the **On** option for the **Enable Actions for the widgets** options under **App Experience**
+    > (2) Select **Multi-Record Widget** in list of Widgets.<br>
+    > (3) Click the **x** icon in the top right corner to close the panel.
 
     ![Enable actions for widgets](images/workflow-agenticapp-scm-image21.jpg)
 
