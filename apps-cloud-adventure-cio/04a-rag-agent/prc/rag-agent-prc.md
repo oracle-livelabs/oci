@@ -15,41 +15,41 @@ Estimated Time: 10-15 minutes
 
 ## Pre-requisite
 
-![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+![Alert Flat](../../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download following files to your local desktop
 1. Policy document file **(ProcurementPolicies.pdf)**
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/ProcurementPolicies.pdf)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](files/ProcurementPolicies.pdf)
 <br>
 2. Prompt file for the AI Agent **(Prompt-Procurement-Policy-Advisor.txt)**
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/prompt-rag-agent-prc.txt)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](files/prompt-rag-agent-prc.txt)
 
 ## Begin Exercise
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
-    ![AI RAG Objectives](../07a-rag-agent-prc/images/rag-agent-prc-image001.jpg)
+    ![AI RAG Objectives](images/rag-agent-prc-image001.jpg)
 
 2. The first step is to navigate to AI Agent Studio.
 
     > (1) Click on the **Tools** tab<br>
     > (2) Select the **AI Agent Studio** tile
 
-    ![Navigate to AI Agent Studio](../07a-rag-agent-prc/images/rag-agent-prc-image002.jpg)
+    ![Navigate to AI Agent Studio](images/rag-agent-prc-image002.jpg)
 
 3. Next, we're going to create a Tool
 
-    > (1) Click the ![Tools](../gen-images/tools.jpg) button/tab at the bottom of the page
+    > (1) Click the ![Tools](../../gen-images/tools.jpg) button/tab at the bottom of the page
 
-    ![Open tools](../07a-rag-agent-prc/images/rag-agent-prc-image003.jpg)
+    ![Open tools](images/rag-agent-prc-image003.jpg)
 
 
 4. Tool Creation
 
-    > (1) Click the ![add tool](../gen-images/plusadd.jpg) button to create a new tool
+    > (1) Click the ![add tool](../../gen-images/plusadd.jpg) button to create a new tool
 
-    ![Create Tool](../07a-rag-agent-prc/images/rag-agent-prc-image004.jpg)
+    ![Create Tool](images/rag-agent-prc-image004.jpg)
 
 5. Here, you will define your first Tool, a Document Tool.  This will allow the Agent to use the content of the documents to respond to user questions.
 
@@ -60,14 +60,14 @@ As a pre-requisite for this adventure, please download following files to your l
     * Product: select **Self Service Procurement** from the dropdown<br>
     * Description: Enter **Cloud Adventure Procurement Policy Document Tool** <br>
 
-    > (2) Click the ![Add button](../gen-images/addw.jpg) button under **Documents**<br>
+    > (2) Click the ![Add button](../../gen-images/addw.jpg) button under **Documents**<br>
 
     > (3) **Scroll Down** to see the Documents fields and upload your document.
 
-    ![Edit Suppliers View](../07a-rag-agent-prc/images/rag-agent-prc-image005.jpg)
+    ![Edit Suppliers View](images/rag-agent-prc-image005.jpg)
 
 
-6. ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop if you have not already done so as below.
+6. ![Alert flag](../../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download policy document file to your local desktop if you have not already done so as below.
     <br>
 
     [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](./files/ProcurementPolicies.pdf)
@@ -78,29 +78,29 @@ As a pre-requisite for this adventure, please download following files to your l
     * Status: Select **Ready to publish** from the dropdown<br>
     * Description: Enter **Procurement Policy Documents**<br>
 
-    > (2) Click on the ![Drag-and-drop](../gen-images/dandd.jpg) region and then select the file (ProcurementPolicies.pdf) from your **Downloads** folder on your PC.<br>
+    > (2) Click on the ![Drag-and-drop](../../gen-images/dandd.jpg) region and then select the file (ProcurementPolicies.pdf) from your **Downloads** folder on your PC.<br>
 
-    > (3) Click the **Save** ![Save Button](../gen-images/save.jpg) button on the bottom right<br>
+    > (3) Click the **Save** ![Save Button](../../gen-images/save.jpg) button on the bottom right<br>
 
-    > (4) Click the **Create button** ![Create Button](../gen-images/createw.jpg) on the top right corner of the screen.<br>
+    > (4) Click the **Create button** ![Create Button](../../gen-images/createw.jpg) on the top right corner of the screen.<br>
 
-    ![tool create](../07a-rag-agent-prc/images/rag-agent-prc-image006.jpg)
+    ![tool create](images/rag-agent-prc-image006.jpg)
 
     **Congratulations!  You’ve completed your first step and created a Policy Document Tool.**
 
 
 7. Now, you'll create your first Agent!  You'll do that from the Agent screen within the AI Agent Studio.
 
-    > (1) Click the  **Agents** button/tab ![Agent Image](../gen-images/agenticon.jpg) at the bottom of the page.
+    > (1) Click the  **Agents** button/tab ![Agent Image](../../gen-images/agenticon.jpg) at the bottom of the page.
 
-    ![Agents Page](../07a-rag-agent-prc/images/rag-agent-prc-image007.jpg)
+    ![Agents Page](images/rag-agent-prc-image007.jpg)
 
 8. Here, you can see any existing agents.  But you want to create a new one.
 
-    > (1) Click the **+ Add** button ![Add button Image](../gen-images/addw.jpg).
+    > (1) Click the **+ Add** button ![Add button Image](../../gen-images/addw.jpg).
 
 
-    ![Add Agent](../07a-rag-agent-prc/images/rag-agent-prc-image008.jpg)
+    ![Add Agent](images/rag-agent-prc-image008.jpg)
 
 9. Define the Details of the Agent.
 
@@ -111,17 +111,17 @@ As a pre-requisite for this adventure, please download following files to your l
     * Maximum Interactions: **10** <br>
     * Description: **Cloud Adventure Procurement Policy Advisor Agent** <br>
     * Agent Persona and Role: **As a Procurement Policy Advisor, your role is to efficiently access and interpret company-specific procurement policy documents, providing workers with clear, actionable guidance on company procurement requirements.**
-    * Prompt: ![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.*** To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below.
+    * Prompt: ![Alert Flat](../../gen-images/cautionflagextrasmalltransparent2.png) ***Please note that the Prompt is a critical part of the Agent Definition as it provides guidance for the Agent.*** To streamline this step, we've pre-created the prompt. The prompt text is available in the **copy block** below.
     <br><br>
     Alternatively, prompt text is available in **Prompt-Procurement-Policy-Advisor-Agent.txt** file that you can download to your local desktop as below.
     <br>
-    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/prompt-rag-agent-prc.txt)
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](files/prompt-rag-agent-prc.txt)
     <br>
     Once done, please open this file and copy the contents into the Prompt field. <br>
 
-    > (2) Click the Create Button ![Create Button](../gen-images/createb.jpg) <br>
+    > (2) Click the Create Button ![Create Button](../../gen-images/createb.jpg) <br>
 
-    ![Create Agent](../07a-rag-agent-prc/images/rag-agent-prc-image009.jpg)
+    ![Create Agent](images/rag-agent-prc-image009.jpg)
 
 ```
 <copy>
@@ -144,53 +144,50 @@ IMPORTANT GUIDELINES
 
 10. You’ve now created your first Agent.  Now you’ll add Tools to the Agent.  You'll add the document tool created earlier.
 
-    > (1) Click the Tools icon ![Tool Hammer Icon](../gen-images/toolhammericon.jpg) on the left.
+    > (1) Click the Tools icon ![Tool Hammer Icon](../../gen-images/toolhammericon.jpg) on the left.
 
-    ![Add Tools](../07a-rag-agent-prc/images/rag-agent-prc-image010.jpg) <br>
+    ![Add Tools](images/rag-agent-prc-image010.jpg) <br>
 
 11. Find the appropriate tool and add it to your agent.
 
     > (1) Enter **CIOXX**, where **XX** is replaced with your user number, in the Ask Oracle field and press the **<****Enter****>** key or select **CIOXX** from the resulting dropdown.<br>  This filters the list of tools for easier selection. <br>
-    > (2) Click the ![Plus Icon](../gen-images/plusicon.jpg) next to the tool name **CIOXX Procurement Policy Document Tool**, where **XX** is replaced with your user number.<br>
+    > (2) Click the ![Plus Icon](../../gen-images/plusicon.jpg) next to the tool name **CIOXX Procurement Policy Document Tool**, where **XX** is replaced with your user number.<br>
 
-    ![Add tool](../07a-rag-agent-prc/images/rag-agent-prc-image011.jpg)
+    ![Add tool](images/rag-agent-prc-image011.jpg)
 
 12. You can review the details of the Tool, including the option to require human approval.
 
-    > (1) Click the Add button ![Add Button](../gen-images/addb.jpg).
+    > (1) Click the Add button ![Add Button](../../gen-images/addb.jpg).
 
-    ![Add Tools Complete](../07a-rag-agent-prc/images/rag-agent-prc-image012.jpg) <br>
+    ![Add Tools Complete](images/rag-agent-prc-image012.jpg) <br>
 
 13. That's it! Let's save this and continue.
 
-    > (1) Click the **Create** button ![Create Button](../gen-images/createw.jpg) on the top right.
+    > (1) Click the **Create** button ![Create Button](../../gen-images/createw.jpg) on the top right.
 
-    ![Add Tools Create](../07a-rag-agent-prc/images/rag-agent-prc-image013.jpg) <br>
+    ![Add Tools Create](images/rag-agent-prc-image013.jpg) <br>
 
 14. Click on Publish to continue.
 
- ![Publish Agent](../07a-rag-agent-prc/images/rag-agent-prc-image014.jpg) <br>
+ ![Publish Agent](images/rag-agent-prc-image014.jpg) <br>
 
 15. You’ve just created your first AI Agent.  In the next adventure, you will put this agent to work as part of an Agent Team.<br>
 
-    ![Agent Created](../07a-rag-agent-prc/images/rag-agent-prc-image015.jpg) <br>
+    ![Agent Created](images/rag-agent-prc-image015.jpg) <br>
 
-16. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+16. Congratulations!  ![checkered flag](../../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
-As you have seen here, AI Agent Studio puts customers in the driver’s seat, helping empower you to design the future of AI in your organizations on top of a bedrock of trust and safety. AI Agent Studio includes a built-in testing environment, validation, and traceability tools to confirm accuracy. Oracle maintains the same data controls at a user level, which means no individual sees data or AI recommendations that they do not have access to.
+AI Agent Studio is a design-time environment that empowers you to create, configure, validate, and deploy AI agents to meet your organization's needs.
 
-AI Agent Studio empowers enterprises to configure and build AI agents that extend their workforce and help achieve new levels of productivity. It allows you to harness the full potential of AI agents and transform the way work gets done in your organization.
-AI Agent Studio is a design-time environment that provides a set of tools to create, customize, validate, and deploy GenAI features and AI agents to meet the specific needs of the organization. It is the same unified environment Oracle uses to internally build agents, made available now to customers and partners to customize and extend agents from Oracle-provided pre-configured templates or to create new agents and multi-agent workflows.
-
-Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion Cloud Applications on our trusted, high performance Oracle Cloud Infrastructure (OCI), which means it can easily and securely access Fusion knowledge stores, tools, and APIs and allows agents to be deployed directly into the flow of work. This approach means maximum flexibility and customization without sacrificing reliability or performance.
+With AI Agent Studio, you can easily extend preconfigured workflows, and build new workflows and agentic apps. AI Agent Studio is fully integrated into Oracle Fusion Cloud Applications, providing secure and seamless access to the knowledge stores, tools, and APIs of Fusion Applications. This integration enables agents to be deployed directly into the flow, ensuring an efficient process.
 
 ## Learn More
 
-* [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
+* [AI Agent Studio](https://docs.oracle.com/en/cloud/saas/fusion-ai/26d/aiaas/overview-of-ai-agent-studio.html)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
 * [AI for Fusion Applications](https://www.oracle.com/applications/fusion-ai/)
 * [Oracle Documentation](http://docs.oracle.com)
@@ -198,5 +195,5 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 ## Acknowledgements
 
 * **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
-* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, July 2026
+* **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Charlie, Ray)
+* **Last Updated By/Date** - Sajid Saleem/Charlie Moff, October 2026

@@ -12,13 +12,13 @@ Estimated Workshop Time: 2-3 hours
 
 This Activity Guide will lead you along the way through a set of Adventure Labs
 
-(1) **Create AI Agents**: Create AI agents with specialized tools and topics using Oracle’s Fusion AI Agent Studio.<br>
+(1) **Create AI Agent**: Create AI agents with specialized tools and topics using Oracle’s Fusion AI Agent Studio.<br>
 
 (2) **Build Workflow**: Experience Oracle’s Fusion AI Agent Studio to orchestrate workflows across multiple specialized agents. <br>
 
 (3) **Build Agentic Workflow**: Create an enterprise agentic workflow by combining deterministic policy-based rules with autonomous AI reasoning across one or more agents to seamlessly automate complex business processes.<br>
 
-(4) **Create Agentic App**: Create Agentic Apps to deliver a unified user experience powered by multiple specialized agents working together behind the scenes.<br>
+(4) **Create Agentic Application**: Create Agentic Apps to deliver a unified user experience powered by multiple specialized agents working together behind the scenes.<br>
 
 (5) **Analytics with AI**: Learn how Fusion Data Intelligence provides a unified view and meaningful insights into your company’s operations. You will get hands-on experience using AI to analyze business data and uncover actionable insights.<br>
 

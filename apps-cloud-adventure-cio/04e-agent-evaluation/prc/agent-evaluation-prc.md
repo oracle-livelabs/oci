@@ -17,34 +17,34 @@ Estimated Time: 10 minutes
 
 ## Pre-requisite
 
-![Alert Flat](../gen-images/cautionflagextrasmalltransparent2.png)
+![Alert Flat](../../gen-images/cautionflagextrasmalltransparent2.png)
 As a pre-requisite for this adventure, please download the **Procurement-Evaluation.csv** file to your local desktop as below.
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07e-agent-evaluation-prc/files/Procurement-Evaluation.csv)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](files/Procurement-Evaluation.csv)
 
 ## Begin Exercise
 
 1. In this activity you will create Evaluations for AI Agents and view results of evaluation runs.
 
-    ![AI Agent Team](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image001.jpg)
+    ![AI Agent Team](images/agent-evaluation-prc-image001.jpg)
 
 2. To begin, you will navigate to the Monitoring and Evaluation tab within the AI Agent Studio.
 
     > (1) Click on the **Monitoring and Evaluation** tab <br>
 
-    ![Go to Monitoring and Evaluations](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image002.jpg)
+    ![Go to Monitoring and Evaluations](images/agent-evaluation-prc-image002.jpg)
 
 3. The Monitoring and Evaluation page shows existing runs.  You'll go to Manage Evaluations to setup a new one.
 
     > (1) Click on the **Manage Evaluations** button <br>
 
-    ![Manage Evaluations](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image003.jpg)
+    ![Manage Evaluations](images/agent-evaluation-prc-image003.jpg)
 
 4. Create a new Evaluation.
 
-    > (1) Click the ![Plus Icon](../gen-images/plusicon.jpg) icon to create a new Evaluation <br>
+    > (1) Click the ![Plus Icon](../../gen-images/plusicon.jpg) icon to create a new Evaluation <br>
 
-    ![Create New Evaluation](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image004.jpg)
+    ![Create New Evaluation](images/agent-evaluation-prc-image004.jpg)
 
 5. You can define the information, including questions.  To simplify the question creation, you can use the pre-defined list of questions (CSV file) that is available for download in the Pre-Requisites section at the top of the lab.
 
@@ -55,120 +55,121 @@ As a pre-requisite for this adventure, please download the **Procurement-Evaluat
 
     > (2) Select **Random** radio button under Run Mode.<br>
 
-    > (3) Click the **Add from File** button ![Create Button](../gen-images/add_from_file.png).
+    > (3) Click the **Add from File** button ![Create Button](../../gen-images/add_from_file.png).
 
 
-    ![Enter Evaluation Data](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image005.jpg)
+    ![Enter Evaluation Data](images/agent-evaluation-prc-image005.jpg)
 
 6. For this step, you'll upload the pre-defined file with the list of questions.<br>
 
-    ![Alert flag](../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download **Procurement-Evaluation.csv** file to your local desktop if you have not already done so as below.<br>
+    ![Alert flag](../../gen-images/cautionflagextrasmalltransparent2.png) As a pre-requisite for this step, please download **Procurement-Evaluation.csv** file to your local desktop if you have not already done so as below.<br>
 
-    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07e-agent-evaluation-prc/files/Procurement-Evaluation.csv)
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](files/Procurement-Evaluation.csv)
 
     > (1) then select the file (Benefits Evaluation.csv) from your **Downloads** folder on your PC/Mac and click the **Open** button.<br>
 
-    ![Load Questions File](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image006.jpg)
+    ![Load Questions File](images/agent-evaluation-prc-image006.jpg)
 
 7. You can see that the questions are now visible.  Next, you'll work on the Metrics.
 
     > (1) Click the **Metrics** tab. <br>
 
-    ![Navigate to Metrics tab](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image007.jpg)
+    ![Navigate to Metrics tab](images/agent-evaluation-prc-image007.jpg)
 
 8. This shows the lists of Metrics available for this evaluation.
 
     > (1) **Review** the list of available metrics.  Note that you could use the Edit icon in the Actions column to make modifications.  This allows you to determine which metrics to include in the evaluation, whether threshold is enabled, and the condition of the threshold.  You'll use the defaults, so you won't make any edits.  <br>
-    > (2) Click the Create button.  ![Create button](../gen-images/createw.jpg)
+    > (2) Click the Create button.  ![Create button](../../gen-images/createw.jpg)
 
-    ![Review and Create](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image008.jpg)
+    ![Review and Create](images/agent-evaluation-prc-image008.jpg)
 
 9. Now that the Evaluation is defined, it's time to initiate a run.
 
-    > (1) Click the **...** icon ![dotdotdot button](../gen-images/dotdotdot.png) in the record for you previously defined Evaluation Name (eg. **CIOXX Purchase Requisitions Agent Evaluation**) and select **Initiate Evaluation Run** from the resulting dropdown.
+    > (1) Click the **...** icon ![dotdotdot button](../../gen-images/dotdotdot.png) in the record for you previously defined Evaluation Name (eg. **CIOXX Purchase Requisitions Agent Evaluation**) and select **Initiate Evaluation Run** from the resulting dropdown.
 
-    ![Initiate Evaluation](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image009.jpg)
+    ![Initiate Evaluation](images/agent-evaluation-prc-image009.jpg)
 
 10. The panel on the right side of the screen displayed detailed about your planned run.
 
-    > (1) Click the **Run** button ![run button](../gen-images/run_button.png).
+    > (1) Click the **Run** button ![run button](../../gen-images/run_button.png).
 
-    ![Run Evaluation](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image010.jpg)
+    ![Run Evaluation](images/agent-evaluation-prc-image010.jpg)
 
 11. Now it's time to review the status and results of your evaluation run.
 
-    > (1) Click the icon ![dotdotdot button](../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Purchase Requisitions Agent Evaluation** where **XX** is replaced with your user number) and select **View Evaluation Run** from the resulting dropdown.
+    > (1) Click the icon ![dotdotdot button](../../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Purchase Requisitions Agent Evaluation** where **XX** is replaced with your user number) and select **View Evaluation Run** from the resulting dropdown.
 
-    ![View Evaluation Run](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image011.jpg)
+    ![View Evaluation Run](images/agent-evaluation-prc-image011.jpg)
 
 12. The Evaluation Run screen shows the current Status.
 
-    > (1) Click the **Refresh** button ![Refresh button](../gen-images/refresh_button.png).  If necessary, you can repeat the refresh until the Status shows **Completed**.
+    > (1) Click the **Refresh** button ![Refresh button](../../gen-images/refresh_button.png).  If necessary, you can repeat the refresh until the Status shows **Completed**.
 
-    ![Refresh while awaiting completion](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image012.jpg)
+    ![Refresh while awaiting completion](images/agent-evaluation-prc-image012.jpg)
 
 13. Now that the Evaluation Run is complete, it's time to view the results
 
-    > (1) Click the icon ![dotdotdot button](../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Purchase Requisition Agent Evaluation** where **XX** is replaced with your user number) and select **View Evaluation Runs** from the resulting dropdown.
+    > (1) Click the icon ![dotdotdot button](../../gen-images/dotdotdot.png) in the Actions column for the evaluation record you created (eg. **CIOXX Purchase Requisition Agent Evaluation** where **XX** is replaced with your user number) and select **View Evaluation Runs** from the resulting dropdown.
 
-    ![View Evaluation Run](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image013.jpg)
+    ![View Evaluation Run](images/agent-evaluation-prc-image013.jpg)
 
 14. The Response performance screen can show a lot of information.  The first thing you'll do is resize the rows/colums to better show the data.
 
     > (1) **Right Click** on one of the row numbers and select **Resize to Fit** from the resulting dropdown.  You only need to do this for one row as it will resize the entire table. Repeat step if necessary.
 
-    ![Resize table](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image014.jpg)
+    ![Resize table](images/agent-evaluation-prc-image014.jpg)
 
 15. You can see the expected and actual response. In addition, you have metrics related to Latency, Token Usage and Errors. If metrics do not meet the thresholds, they will be highlighted in Red.  Let's drill into a specific result for more details.
 
     > (1) Click the **URL** in the **Trace** column for **Row 1 (What are laptop policies for purchases)**.
 
-    ![View Trace](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image015.jpg)
+    ![View Trace](images/agent-evaluation-prc-image015.jpg)
 
 16. The Trace steps are color coded.  See the Legend above the table results.  Let's view the details of the F1 AIA Purchase Requisitions Agent.
 
     > (1) Click the **Worker Agent** bar in the **F1 AIA Purchase Requisitions Agent** row.
 
-    ![View Agent Trace](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image016.jpg)
+    ![View Agent Trace](images/agent-evaluation-prc-image016.jpg)
 
 17. The right side panel appears and show Trace details of the Agent.  You can review detailed metrics of this specific step, including inputs and outputs.
 
     > (1) You can review detailed metrics of this specific step, including inputs and outputs.  Note additional tabs for **Prompt** and **Memory**. </br>
-    > (2) When finished with your review, you can close the panel by clicking the icon ![dotdotdot button](../gen-images/dotdotdot.png) and selecting **Close** from the resulting dropdown.
+    > (2) When finished with your review, you can close the panel by clicking the icon ![dotdotdot button](../../gen-images/dotdotdot.png) and selecting **Close** from the resulting dropdown.
 
-    ![Review and Close Trace](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image017.jpg)
+    ![Review and Close Trace](images/agent-evaluation-prc-image017.jpg)
 
 18. You can review similar details for other steps within the Evaluation Trace, including LLM calls, Business Object calls, and other Tools used buy your agent.  Close this page so you can return to your Evaluation Run screen.
 
-    > (1) Click the **Cancel** button ![cancel button](../gen-images/cancel_button_brown.png).
+    > (1) Click the **Cancel** button ![cancel button](../../gen-images/cancel_button_brown.png).
 
-    ![Review and Close Trace](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image018.jpg)
+    ![Review and Close Trace](images/agent-evaluation-prc-image018.jpg)
 
 19. Next, you can review Correctness results and finish up this Adventure.
 
     > (1) Click the **Correctness** tab.  This tab shows you correctness scores and LLM feedback for your various evaluation run questions. <br>
-    > (2) Click the **Cancel** button ![cancel button](../gen-images/cancel_button_brown.png).
+    > (2) Click the **Cancel** button ![cancel button](../../gen-images/cancel_button_brown.png).
 
-    ![Review and Close Trace](../07e-agent-evaluation-prc/images/agent-evaluation-prc-image019.jpg)
+    ![Review and Close Trace](images/agent-evaluation-prc-image019.jpg)
 
-20. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+20. Congratulations!  ![checkered flag](../../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 
 ### Summary
 
-Oracle Fusion AI Agent Studio provides evaluation capabilities to validate AI Agents against key metrics such as Accuracy, Latency, and Consumption. Monitoring and Evaluation are not optional and an after thought, they are core to operationalize AI at Enterprise Scale.
+AI Agent Studio is a design-time environment that empowers you to create, configure, validate, and deploy AI agents to meet your organization's needs.
+
+With AI Agent Studio, you can easily extend preconfigured workflows, and build new workflows and agentic apps. AI Agent Studio is fully integrated into Oracle Fusion Cloud Applications, providing secure and seamless access to the knowledge stores, tools, and APIs of Fusion Applications. This integration enables agents to be deployed directly into the flow, ensuring an efficient process.
 
 ## Learn More
 
-* [AI Agent Studio Solution Brief](https://www.oracle.com/a/ocom/docs/applications/fusion-apps-ai-agent-studio-solution-brochure.pdf)
+* [AI Agent Studio](https://docs.oracle.com/en/cloud/saas/fusion-ai/26d/aiaas/overview-of-ai-agent-studio.html)
 * [AI Agents for Fusion Applications](https://www.oracle.com/applications/fusion-ai/ai-agents/)
-* [Monitor and Evaluate AI Agents](https://docs.oracle.com/en/cloud/saas/fusion-ai/aiaas/monitor-and-evaluate-ai-agents.html)
 * [AI for Fusion Applications](https://www.oracle.com/applications/fusion-ai/)
 * [Oracle Documentation](http://docs.oracle.com)
 
 ## Acknowledgements
 
-* **Author** - Charlie Moff, Distinguished SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist
-* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, July 2026
+* **Author** - Stephen Chung, Principal SaaS Cloud Technologist; Sajid Saleem, Master Principal SaaS Cloud Technologist; Charlie Moff, Distinguished SaaS Cloud Technologist
+* **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Sohel, Xavier, Charlie, Ray)
+* **Last Updated By/Date** - Sajid Saleem, October 2026
