@@ -15,23 +15,30 @@ Create the buckets and Functions application, then deploy a Python function from
 ### Prerequisites
 
 - Complete **Get Started** using the sandbox or own-tenancy instructions.
-- Have access to the prepared private network, log group, runtime IAM, learner permissions, and resource sheet. You create the buckets and application below.
-- Use the assigned resource names if they differ from the examples.
+- Have access to the private network, log group, and permissions verified in **Get Started**. You create the buckets and application below.
+- Keep your notes from **Get Started** available. Sandbox learners record their own chosen names; own-tenancy learners use the resource sheet from their setup stack or administrator.
 - Optional: access to an AI coding assistant; the tested reference code is also provided.
+
+Replace uppercase placeholders with the values in your notes. Screenshots show example names and regions; use your own values and keep all resources in the region selected in **Get Started**. For a sandbox, always use your assigned compartment.
 
 ## Task 1: Create the incoming and output buckets
 
 **Time:** 5-7 minutes.
 
-1. Open **Storage > Object Storage & Archive Storage > Buckets** and select `LAB_COMPARTMENT` from your resource sheet.
+1. Open **Storage > Object Storage & Archive Storage > Buckets** and select `LAB_COMPARTMENT` from your notes.
 
-2. Select **Create bucket**. Enter `INCOMING_BUCKET_NAME` exactly as supplied. Keep **Namespace** scope, **Standard** storage, and Oracle-managed encryption. Leave optional auto-tiering, versioning, and event emission disabled, then create the bucket. Its visibility should be **Private** after creation; do not make it public.
+2. Select **Create bucket** and enter the name for your incoming bucket:
+
+    - **Sandbox:** Choose `inventory-<your-suffix>-incoming`, replacing `<your-suffix>` with the suffix you recorded in **Get Started**, for example `inventory-jd482731-incoming`. Names must be unique within the tenancy's namespace and region, even across different compartments. If the name is already taken, choose a different suffix. Record the successfully created bucket's exact name as `INCOMING_BUCKET_NAME`.
+    - **Own tenancy:** Use `incoming_bucket_name` from your resource sheet exactly. Your setup's runtime permissions depend on that name.
+
+    Keep **Namespace** scope, **Standard** storage, and Oracle-managed encryption. Leave optional auto-tiering, versioning, and event emission disabled, then create the bucket. Its visibility should be **Private** after creation; do not make it public.
 
 3. Open the incoming bucket's **Details > Features**. Beside **Emit object events**, select **Enable**, then confirm **Enable**. Verify that the setting is **Enabled**.
 
-4. Create a second private Standard bucket using `OUTPUT_BUCKET_NAME`. Leave **Emit object events disabled** on this bucket.
+4. Create a second private Standard bucket. In a **sandbox**, choose `inventory-<your-suffix>-output` and record its exact name as `OUTPUT_BUCKET_NAME`. In **your own tenancy**, use `output_bucket_name` from your resource sheet exactly. Leave **Emit object events disabled** on this bucket.
 
-5. Verify that both buckets are empty and their names exactly match the resource sheet. Bucket-scoped runtime policies use these names; choosing different names can prevent the function from reading inputs or writing reports.
+5. Verify that both buckets are empty and their names exactly match your notes. Keep the two names distinct: you will copy them into the application configuration and use the incoming bucket name in the Events rule.
 
     > **Checkpoint:** You created two separate private buckets. Only the incoming bucket emits events, so report writes will not start the workflow again.
 
@@ -41,20 +48,20 @@ Create the buckets and Functions application, then deploy a Python function from
 
 1. Open **Developer Services > Functions > Applications** and select `LAB_COMPARTMENT`.
 
-2. Select **Create application**. Enter `APPLICATION_NAME` from the resource sheet.
+2. Select **Create application**. In a **sandbox**, choose a name such as `inventory-jd482731-app`, using your own suffix, and record it as `APPLICATION_NAME`. In **your own tenancy**, use `application_name` from the resource sheet.
 
-3. Select the supplied `VCN_NAME` and `SUBNET_NAME`. Use the x86 architecture/shape (`GENERIC_X86`), not Arm: the supplied deployment archive contains x86-64 dependencies. Leave other optional settings at their defaults and create the application.
+3. Select the `VCN_NAME` and **private** `SUBNET_NAME` recorded in **Get Started**. If the network selector asks for a compartment, use `LAB_COMPARTMENT`. Sandbox reservations also provide a public subnet; do not select it for this application. Use the x86 architecture/shape (`GENERIC_X86`), not Arm: the supplied deployment archive contains x86-64 dependencies. Leave other optional settings at their defaults and create the application.
 
-4. Open the application's **Configuration** tab and select **Manage configuration**. Select **Add configuration** for each of the following four rows. Enter each key exactly, including underscores, and copy the values from your resource sheet.
+4. Open the application's **Configuration** tab and select **Manage configuration**. Select **Add configuration** for each of the following four rows. Enter each key exactly, including underscores, and replace the value descriptions with the actual values in your notes.
 
     | Key | Value |
     | --- | --- |
-    | `INPUT_BUCKET` | Your `incoming_bucket_name` value |
-    | `OUTPUT_BUCKET` | Your `output_bucket_name` value |
-    | `OBJECT_STORAGE_NAMESPACE` | Your `object_storage_namespace` value |
+    | `INPUT_BUCKET` | Exact incoming bucket name (`INCOMING_BUCKET_NAME`) |
+    | `OUTPUT_BUCKET` | Exact output bucket name (`OUTPUT_BUCKET_NAME`) |
+    | `OBJECT_STORAGE_NAMESPACE` | Namespace recorded in **Get Started** |
     | `LOW_STOCK_THRESHOLD` | `10` |
 
-5. Select **Save changes**. Check spelling, bucket names, and namespace. The namespace is not your compartment name or bucket name. If needed, find it in the tenancy's Object Storage information.
+5. Select **Save changes**. Check spelling, bucket names, and namespace. The namespace is not your compartment name or bucket name. If you need to retrieve it again, run `oci os ns get --query data --raw-output` in Cloud Shell while signed in to the lab tenancy. Sandbox users do not need access to the tenancy details page.
 
     > **Checkpoint:** The application groups your function with its private network and shared configuration. It contains no function yet.
 
@@ -64,7 +71,7 @@ Create the buckets and Functions application, then deploy a Python function from
 
 1. Open the application's **Monitoring** tab and find **Logs**.
 
-2. In the **Function Invocation Logs** row, open **Actions > Enable log**. Select `LAB_COMPARTMENT` and the prepared `LOG_GROUP_NAME`.
+2. In the **Function Invocation Logs** row, open **Actions > Enable log**. Select `LAB_COMPARTMENT` and the `LOG_GROUP_NAME` recorded in **Get Started**. For a sandbox, this is the log group you created; for your own tenancy, it was provided by the setup stack or administrator.
 
 3. Name the log `inventory-invocations`. Under **Show advanced options > Log retention**, keep **1 month (default) (30 days)**, then enable the log.
 
@@ -199,7 +206,7 @@ Create the buckets and Functions application, then deploy a Python function from
 
 1. Search for **Events** in the Console and select **Rules** under **Events Service**, not the OS Management or Autonomous Linux results. Select `LAB_COMPARTMENT`.
 
-2. Select **Create rule**, name the rule `EVENT_RULE_NAME`, and use a description such as `Process new supplier inventory CSV files`.
+2. Select **Create rule**. In a **sandbox**, choose a name such as `inventory-jd482731-upload`, using your own suffix, and record it as `EVENT_RULE_NAME`. In **your own tenancy**, use `event_rule_name` from the resource sheet. Enter a description such as `Process new supplier inventory CSV files`.
 
 3. Configure the event condition:
 
@@ -209,7 +216,7 @@ Create the buckets and Functions application, then deploy a Python function from
     | Service | Object Storage |
     | Event type | Object - Create |
 
-4. Click the **Description** field to leave the event-type dropdown. Select **Add condition > Attribute**, then choose `bucketName`. Type `INCOMING_BUCKET_NAME` from your resource sheet and press **Enter** to add the value. Click **Description** again to leave the dropdown. Avoid Escape while editing: it can close the whole draft. This condition restricts the rule to your incoming bucket.
+4. Click the **Description** field to leave the event-type dropdown. Select **Add condition > Attribute**, then choose `bucketName`. Type the exact incoming bucket name recorded as `INCOMING_BUCKET_NAME` in your notes and press **Enter** to add the value. Click **Description** again to leave the dropdown. Avoid Escape while editing: it can close the whole draft. This condition restricts the rule to your incoming bucket.
 
 5. Add a **Functions** action and select the `LAB_COMPARTMENT` compartment, `APPLICATION_NAME` application, and **inventory-reporter** function.
 
@@ -267,4 +274,4 @@ You may now **proceed to the next lab** for the optional exercises, or finish us
 ## Acknowledgements
 
 - **Author** - Graham Shroyer
-- **Last Updated By/Date** - Graham Shroyer, September 2026
+- **Last Updated By/Date** - Graham Shroyer, October 2026

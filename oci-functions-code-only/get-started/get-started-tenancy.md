@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Prepare the resources that your function will use in your own OCI tenancy. A small Terraform package creates the private network and log group, and can create the function's runtime permissions with administrator approval. OCI Resource Manager runs this package for you; you do not need Terraform installed on your computer.
+Prepare the resources that your function will use in your own OCI tenancy. A small Terraform package creates the private network, log group, and function runtime permissions when you enable the administrator option below. OCI Resource Manager runs this package for you; you do not need Terraform installed on your computer.
 
 **Estimated Time:** 15–20 minutes with administrator access already arranged. If your administrator has provided a completed foundation and resource sheet, start at Task 2.
 
@@ -16,12 +16,12 @@ Prepare the resources that your function will use in your own OCI tenancy. A sma
 
 - An OCI account and access to **US Midwest (Chicago)** (`us-chicago-1`).
 - An existing, isolated lab **compartment**: a container used to organize resources and control access. Do not use production resources or share the compartment with another learner.
-- Administrator assistance to confirm service limits and configure permissions. Give your administrator the [administrator setup guide](../author/administrator-setup.md). The foundation does not grant your user account additional access.
+- Administrator access, or assistance from your tenancy administrator, to confirm service limits and configure permissions. If you administer your own tenancy, perform the administrator steps yourself. Otherwise, give your administrator the [administrator setup guide](../author/administrator-setup.md). The foundation does not grant your user account additional access.
 - Your tenancy's **home region**, which is where tenancy-wide identity resources are managed. It may differ from Chicago, where you will run this lab.
 
 ## Task 1: Deploy the foundation in your own tenancy
 
-Your administrator can perform this task for you. A successful deployment is not a substitute for configuring your learner permissions.
+Perform this task with an account authorized to create IAM dynamic groups and policies, or ask your administrator to perform it for you. Your function has its own identity: it does not inherit your administrator permissions.
 
 1. Sign in to the [OCI Console](https://cloud.oracle.com/) with your tenancy credentials. Select **US Midwest (Chicago)** in the region selector. Confirm your lab compartment and home region with your administrator.
 
@@ -39,15 +39,15 @@ Your administrator can perform this task for you. A successful deployment is not
     | Workload region | `us-chicago-1` |
     | Tenancy home region | Your actual home region; it may not be Chicago |
     | Lab name prefix | A short lowercase label, such as `inventory` |
-    | Create runtime IAM | Administrator decision below |
+    | Create runtime IAM | **Enable (checked)** when setting up your own tenancy as an administrator |
 
-    **Create runtime IAM** is off by default. IAM means Identity and Access Management. An authorized administrator may enable this option after reviewing the dynamic group and three policy statements in the setup guide. A dynamic group identifies the lab's functions; the policy permits them to read the incoming bucket and create or overwrite reports, and permits the Functions service to use the lab network.
+    **Keep Create runtime IAM enabled, even if you are a tenancy administrator.** IAM means Identity and Access Management. The current package selects this checkbox by default; if you downloaded an earlier package, select it yourself. This option creates a dynamic group identifying the lab's functions and a policy that lets them read the incoming bucket and create or overwrite output reports. It also permits the Functions service to use the lab network. Review the scoped permissions in the [administrator setup guide](../author/administrator-setup.md) before applying them.
 
-    If this option remains off, the administrator must establish those permissions separately using the `administrator_runtime_iam` output. Neither choice creates learner user/group policies.
+    Leave this option off **only if an administrator has already configured equivalent runtime permissions for this lab compartment and its exact bucket names**. Being able to upload a file yourself does not give the function permission to read it. Neither choice creates learner user/group policies.
 
 6. Continue to the review page. Clear **Run apply** if selected, and create the stack. On the stack details page, select **Actions > Plan**, then **Plan** in the side panel. Wait for **Succeeded** and review the job's **Logs**.
 
-    Expect six additions: a VCN, service gateway, route table, security list, private subnet, and log group. If runtime IAM is enabled, expect eight additions including the dynamic group and policy. The VCN also has OCI-created default network resources. The plan must not change or delete existing resources or create the buckets, application, function, Events rule, or invocation log.
+    With runtime IAM enabled, expect eight additions: a VCN, service gateway, route table, security list, private subnet, log group, dynamic group, and policy. Expect six additions only when runtime IAM is deliberately managed separately. The VCN also has OCI-created default network resources. The plan must not change or delete existing resources or create the buckets, application, function, Events rule, or invocation log.
 
 7. After your administrator approves the plan, return to **Stack details > Actions > Apply**. Under **Apply job plan resolution**, select the successful saved plan instead of **Automatically approved**. Select **Apply** and wait for **Succeeded**.
 
@@ -79,7 +79,9 @@ Your administrator can perform this task for you. A successful deployment is not
 
 4. Open **Developer tools > Cloud Shell** in the Console header. On first use, close any informational notice and enter `N` if asked whether to run the introductory tutorial. Wait for the terminal prompt. The welcome message may identify the tenancy's home region; keep the Console workload region set to Chicago.
 
-5. Confirm with your administrator that both your learner permissions and the function's runtime permissions are ready. An Apply with `create_runtime_iam=false` does not establish runtime permissions.
+5. Confirm that both your user permissions and the function's runtime permissions are ready. For the standard administrator-led setup, verify the Apply created the dynamic group and runtime policy. An Apply with `create_runtime_iam=false` does not establish runtime permissions; if you used that setting, confirm the equivalent permissions exist before continuing.
+
+    **If you already applied the stack with runtime IAM off:** do not create another stack. If no equivalent dynamic group or policy was created separately, edit the existing stack's variables, enable **Create runtime IAM**, and run a new **Plan**. With all other inputs unchanged, expect only two additions: the dynamic group and policy. Review and apply that saved plan, then allow permissions to take effect. If equivalent IAM resources already exist, ask their owner to resolve ownership before changing the setting. An older six-resource Apply can show **Succeeded** even though the function still lacks Object Storage access.
 
     **Checkpoint:** You have a compartment, private network, log group, resource sheet, and access. You will create the two buckets, application, function, invocation log, and Events rule in Lab 1.
 
@@ -88,4 +90,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 
 - **Author** - Graham Shroyer
-- **Last Updated By/Date** - Graham Shroyer, September 2026
+- **Last Updated By/Date** - Graham Shroyer, October 2026
