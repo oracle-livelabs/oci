@@ -8,14 +8,14 @@
         },
         {
             "title": "Lab 1: Create an AI Agent",
-            "filename": "../../05b-bo-agent-hcm/bo-agent-hcm.md"
+            "filename": "../../04b-bo-agent/hcm/bo-agent-hcm.md"
         },
         {
-            "title": "Lab 2: Assemble a Workflow",
-            "filename": "../../05d-workflow-agent-hcm/workflow-agent-hcm.md"
+            "title": "Lab 2: Create a Workflow",
+            "filename": "../../04d-worfklow-agent/hcm/workflow-agent-hcm.md"
         },
         {
-            "title": "Lab 3: Create a Workflow",
+            "title": "Lab 3: Create an Agentic Workflow",
             "filename": "../../08a-workflow-agenticapp/scm/workflow-agenticapp-scm.md"
         },
         {

@@ -12,15 +12,15 @@ Estimated Workshop Time: 2-3 hours
 
 This Activity Guide will lead you along the way through a set of Adventure Labs
 
-(1) **Configure UI**: Experience the power of configuration capabilities of Oracle Fusion Cloud Applications to accommodate your business requirements and empower end users to do their job effectively.<br>
+(1) **Create AI Agents**: Create AI agents with specialized tools and topics using Oracle’s Fusion AI Agent Studio.<br>
 
-(2) **Extend UI**: Experience the ability to create new application pages that enhance end user productivity. Oracle Fusion Cloud offers powerful extension capabilities natively within the application. <br>
+(2) **Build Workflow**: Experience Oracle’s Fusion AI Agent Studio to orchestrate workflows across multiple specialized agents. <br>
 
-(3) **Create AI Agents and Agent Teams**: Experience Oracle’s AI Agent Studio and see how AI is changing enterprise applications. Leverage AI Agent Studio’s to create AI Agents and AI Agent Teams, and deploy AI Agents for automating business processes.<br>
+(3) **Build Agentic Workflow**: Create an enterprise agentic workflow by combining deterministic policy-based rules with autonomous AI reasoning across one or more agents to seamlessly automate complex business processes.<br>
 
-(4) **Monitor and Evaluate AI Agents**: Monitor and gain insights into how AI agents are performing, and evaluate the agents for accuracy, performance, latency and usage.<br>
+(4) **Create Agentic App**: Create Agentic Apps to deliver a unified user experience powered by multiple specialized agents working together behind the scenes.<br>
 
-(5) **Analytics with AI**: Learn how Fusion Data Intelligence provides a unified view and meaningful insights into your company’s operations. You will get hands-on experience in answering questions regarding your enterprise health by leveraging pre-built AI insights and creating cross-functional analytics across different lines of business.<br>
+(5) **Analytics with AI**: Learn how Fusion Data Intelligence provides a unified view and meaningful insights into your company’s operations. You will get hands-on experience using AI to analyze business data and uncover actionable insights.<br>
 
 ## Learn More
 Let's create your team name for your AI Adventure!
@@ -29,5 +29,5 @@ Let's create your team name for your AI Adventure!
 
 ## Acknowledgements
 * **Author** - Sajid Saleem, Master Principal Cloud Technologist
-* **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, July 2026
+* **Contributors** - The AI Adventure Team (Gus, Sajid, Casey, Stephen, Ray, Sohel, Xavier, Charlie)
+* **Last Updated By/Date** - Sajid Saleem, October 2026
