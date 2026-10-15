@@ -9,7 +9,7 @@
     },
     {
       "title": "Get Started",
-      "description": "Locate your assigned network, retrieve the namespace, create a log group, and record your lab values.",
+      "description": "Sign in to your sandbox and prepare a notes table to fill in during the lab.",
       "filename": "../../get-started/get-started-sandbox.md"
     },
     {

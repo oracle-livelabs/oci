@@ -27,8 +27,10 @@ See [administrator setup](administrator-setup.md) for IAM and the reservation co
 No application or bucket should exist in a fresh learner reservation. Own-tenancy
 learners copy `resource_sheet` from the stack output; its names include a
 compartment-derived suffix. Sandbox learners use Tenancy Information for their
-assigned region and compartment, locate the existing VCN/private subnet, and
-record their own chosen names in personal notes. They create their log group.
+assigned region and compartment and prepare a notes table. During Lab 1, they
+record their chosen names as they create resources, select the available VCN and
+private subnet in the application form, retrieve the namespace before configuration,
+and create their log group before enabling invocation logging.
 The code archive remains the verified Python 3.12 x86-64 package. Cloud Shell may
 be Arm because the checker/packager use only the standard library and copy SDK
 bytes without importing/rebuilding native deployment libraries.

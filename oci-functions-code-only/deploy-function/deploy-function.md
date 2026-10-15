@@ -4,7 +4,7 @@
 
 Create the buckets and Functions application, then deploy a Python function from a ZIP archive and connect it to an Object Storage upload event. Verify that an inventory CSV automatically produces restock and rejected-record reports.
 
-**Estimated Time:** 45–55 minutes.
+**Estimated Time:** 50–60 minutes.
 
 ### Objectives
 
@@ -15,7 +15,7 @@ Create the buckets and Functions application, then deploy a Python function from
 ### Prerequisites
 
 - Complete **Get Started** using the sandbox or own-tenancy instructions.
-- Have access to the private network, log group, and permissions verified in **Get Started**. You create the buckets and application below.
+- Have the assigned compartment, network, and permissions provided by your sandbox reservation or own-tenancy setup. Sandbox learners create their log group in Task 3; own-tenancy learners use the group provided during setup.
 - Keep your notes from **Get Started** available. Sandbox learners record their own chosen names; own-tenancy learners use the resource sheet from their setup stack or administrator.
 - Optional: access to an AI coding assistant; the tested reference code is also provided.
 
@@ -29,7 +29,7 @@ Replace uppercase placeholders with the values in your notes. Screenshots show e
 
 2. Select **Create bucket** and enter the name for your incoming bucket:
 
-    - **Sandbox:** Choose `inventory-<your-suffix>-incoming`, replacing `<your-suffix>` with the suffix you recorded in **Get Started**, for example `inventory-jd482731-incoming`. Names must be unique within the tenancy's namespace and region, even across different compartments. If the name is already taken, choose a different suffix. Record the successfully created bucket's exact name as `INCOMING_BUCKET_NAME`.
+    - **Sandbox:** Choose a short suffix using lowercase letters and digits, such as your initials followed by six random digits. Use it in `inventory-<your-suffix>-incoming`, for example `inventory-jd482731-incoming`; choose your own suffix rather than copying the example. Avoid personal or confidential information in names. Names must be unique within the tenancy's namespace and region, even across different compartments. If the name is already taken, choose a different suffix. Record the successfully created bucket's exact name as `INCOMING_BUCKET_NAME` and reuse your suffix for the remaining resources.
     - **Own tenancy:** Use `incoming_bucket_name` from your resource sheet exactly. Your setup's runtime permissions depend on that name.
 
     Keep **Namespace** scope, **Standard** storage, and Oracle-managed encryption. Leave optional auto-tiering, versioning, and event emission disabled, then create the bucket. Its visibility should be **Private** after creation; do not make it public.
@@ -44,38 +44,53 @@ Replace uppercase placeholders with the values in your notes. Screenshots show e
 
 ## Task 2: Create and configure the Functions application
 
-**Time:** 8-10 minutes.
+**Time:** 10-12 minutes.
 
 1. Open **Developer Services > Functions > Applications** and select `LAB_COMPARTMENT`.
 
 2. Select **Create application**. In a **sandbox**, choose a name such as `inventory-jd482731-app`, using your own suffix, and record it as `APPLICATION_NAME`. In **your own tenancy**, use `application_name` from the resource sheet.
 
-3. Select the `VCN_NAME` and **private** `SUBNET_NAME` recorded in **Get Started**. If the network selector asks for a compartment, use `LAB_COMPARTMENT`. Sandbox reservations also provide a public subnet; do not select it for this application. Use the x86 architecture/shape (`GENERIC_X86`), not Arm: the supplied deployment archive contains x86-64 dependencies. Leave other optional settings at their defaults and create the application.
+3. If the network selector asks for a compartment, use `LAB_COMPARTMENT`. In a **sandbox**, select the only available VCN. Of the two subnet options, select the **private subnet**, not the public subnet. In **your own tenancy**, select `VCN_NAME` and the private `SUBNET_NAME` from your setup notes. Use the x86 architecture/shape (`GENERIC_X86`), not Arm: the supplied deployment archive contains x86-64 dependencies. Leave other optional settings at their defaults and create the application.
 
-4. Open the application's **Configuration** tab and select **Manage configuration**. Select **Add configuration** for each of the following four rows. Enter each key exactly, including underscores, and replace the value descriptions with the actual values in your notes.
+4. Find the Object Storage namespace before entering the application configuration. In a **sandbox**, open **Developer tools > Cloud Shell** in the Console header. On first use, close any informational notice and enter `N` if asked whether to run the introductory tutorial. Wait for the terminal prompt, then run:
+
+    ```bash
+    oci os ns get --query data --raw-output
+    ```
+
+    Record the single returned value as `OBJECT_STORAGE_NAMESPACE` in your notes. The **namespace** identifies the tenancy's Object Storage space; it is not a compartment or bucket name. You do not need an API key or access to the tenancy details page. If the command fails, use **Need Help?** rather than guessing a namespace.
+
+    In **your own tenancy**, use the namespace from your setup notes, or run the same command to retrieve it again. The namespace name is the same across regions. Cloud Shell may show a different home region in its welcome message; keep the Console region selector on your lab's selected region.
+
+5. Minimize Cloud Shell if it is open. Open the application's **Configuration** tab and select **Manage configuration**. Select **Add configuration** for each of the following four rows. Enter each key exactly, including underscores, and replace the value descriptions with the actual values in your notes.
 
     | Key | Value |
     | --- | --- |
     | `INPUT_BUCKET` | Exact incoming bucket name (`INCOMING_BUCKET_NAME`) |
     | `OUTPUT_BUCKET` | Exact output bucket name (`OUTPUT_BUCKET_NAME`) |
-    | `OBJECT_STORAGE_NAMESPACE` | Namespace recorded in **Get Started** |
+    | `OBJECT_STORAGE_NAMESPACE` | Namespace from step 4 |
     | `LOW_STOCK_THRESHOLD` | `10` |
 
-5. Select **Save changes**. Check spelling, bucket names, and namespace. The namespace is not your compartment name or bucket name. If you need to retrieve it again, run `oci os ns get --query data --raw-output` in Cloud Shell while signed in to the lab tenancy. Sandbox users do not need access to the tenancy details page.
+6. Select **Save changes**. Check that both bucket names match your notes and the namespace contains no extra spaces or quotes.
 
     > **Checkpoint:** The application groups your function with its private network and shared configuration. It contains no function yet.
 
 ## Task 3: Enable application invocation logging
 
-**Time:** 2-3 minutes.
+**Time:** 5 minutes.
 
-1. Open the application's **Monitoring** tab and find **Logs**.
+1. Prepare the log group, which is a container for your application's logs:
 
-2. In the **Function Invocation Logs** row, open **Actions > Enable log**. Select `LAB_COMPARTMENT` and the `LOG_GROUP_NAME` recorded in **Get Started**. For a sandbox, this is the log group you created; for your own tenancy, it was provided by the setup stack or administrator.
+    - **Sandbox:** Search for **Logging** in the Console and select **Logs** under **Logging**. Expand the service navigation and select **Log Groups**. Select your assigned compartment, then **Create log group**. Confirm the compartment and choose a name using your suffix, such as `inventory-jd482731-logs`. Enter a description such as `Inventory function lab logs`, then select **Create**. When the details page opens, record the exact name as `LOG_GROUP_NAME`. If creation fails, use **Need Help?**.
+    - **Own tenancy:** Use the `LOG_GROUP_NAME` supplied in **Get Started**; do not create a second group.
 
-3. Name the log `inventory-invocations`. Under **Show advanced options > Log retention**, keep **1 month (default) (30 days)**, then enable the log.
+2. Open **Functions > Applications**, select `LAB_COMPARTMENT`, and open `APPLICATION_NAME`. Open the application's **Monitoring** tab and find **Logs**.
 
-4. Verify that the log status is **Active**. It may be empty until you invoke the function later.
+3. In the **Function Invocation Logs** row, open **Actions > Enable log**. Select `LAB_COMPARTMENT` and `LOG_GROUP_NAME` from your notes.
+
+4. Name the log `inventory-invocations`. Under **Show advanced options > Log retention**, keep **1 month (default) (30 days)**, then enable the log.
+
+5. Verify that the log status is **Active**. It may be empty until you invoke the function later.
 
     ![Application Monitoring tab showing Function Invocation Logs with Active status](images/invocation-log-active.jpg)
 
