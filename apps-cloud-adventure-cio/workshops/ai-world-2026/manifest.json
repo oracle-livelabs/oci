@@ -1,0 +1,35 @@
+{
+    "workshoptitle": "AI Adventure Guide – SaaS Applications Platform",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../00-introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Create an AI Agent",
+            "filename": "../../04b-bo-agent/hcm/bo-agent-hcm.md"
+        },
+        {
+            "title": "Lab 2: Build a Workflow",
+            "filename": "../../04d-worfklow-agent/hcm/workflow-agent-hcm.md"
+        },
+        {
+            "title": "Lab 3: Build an Agentic Workflow",
+            "filename": "../../08a-workflow-agenticapp/scm/workflow-agenticapp-scm.md"
+        },
+        {
+            "title": "Lab 4: Create an Agentic Application",
+            "filename": "../../08b-agentic-app/scm/agentic-app-scm.md"
+        },
+        {
+            "title": "Lab 5: Analytics with AI",
+            "filename": "../../09-analytics/ai/analytics-ai.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
