@@ -129,7 +129,7 @@ Change to horizontal bar and sort high to low
 
     ![HCM Talent Acquisition Dashboard](images/analytics-with-ai-image14.jpg)
 
-15. FDI has a critical component called **Data Flow** that lets use it to mashup data from external sources like LinkedIn and Glassdoor. The first steps is to connect to a data file that is stored in Object Storage
+15. FDI has a critical component called **Data Flow** that provides ability to mashup data from external sources like LinkedIn and Glassdoor. The first steps is to connect to a data file that is stored in Object Storage
 
     > (1) Click on the **External_Candidate_Profile_DF-xxxxx*.
 
@@ -227,7 +227,7 @@ Change to horizontal bar and sort high to low
 
     ![Turnover by Job role Dashboard](images/analytics-with-ai-image27.jpg)
 
-28. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+28. Congratulations!  ![checkered flag](../../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 

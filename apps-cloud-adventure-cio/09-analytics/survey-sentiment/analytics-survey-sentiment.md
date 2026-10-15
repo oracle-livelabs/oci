@@ -18,7 +18,7 @@ Estimated Time: 15 minutes
 
 1. In this activity, you will leverage pre-built machine learning capabilities (sentiment analysis) on survey data to understand employee sentiment.
 
-    ![Analytics OBJs](../09-analytics-ai-sentiment/images/aianalytics_objs2.jpg)
+    ![Analytics OBJs](images/aianalytics_objs2.jpg)
 
 2. Oracle Fusion Data Intelligence is a family of prebuilt, cloud-native analytics applications for Oracle Cloud Applications that provide line-of-business users with ready-to-use insights to improve decision-making.
 
@@ -26,23 +26,23 @@ Estimated Time: 15 minutes
 
     > (2) Click on **Fusion Data Intelligence** icon. <br>
 
-    ![Home Screen](../09-analytics-ai-sentiment/images/aiimage001.jpg)
+    ![Home Screen](images/aiimage001.jpg)
 
 3. You will land on Oracle Analytics home page.
 
     > (1) Enter your assigned username and Analytics Password.  <br>
 
-    ![Sign-in Screen](../09-analytics-ai-sentiment/images/aiimage001a.jpg)
+    ![Sign-in Screen](images/aiimage001a.jpg)
 
 4. From home page, click on create button on top right corner to start the data flow process for building model out.
 
     > (1) Click on the **Create Button**. <br>
 
-    ![Analytics Home](../09-analytics-ai-sentiment/images/aiimage009.jpg)
+    ![Analytics Home](images/aiimage009.jpg)
 
     > (1) Click on **Data Flow**. <br>
 
-    ![Analytics Home](../09-analytics-ai-sentiment/images/aiimage010.jpg)
+    ![Analytics Home](images/aiimage010.jpg)
 
 5. Data Flow page pops up but also a dialog box asking to Add Data.
 
@@ -52,13 +52,13 @@ Estimated Time: 15 minutes
 
     > (3) Click **Add**. <br>
 
-    ![New Data Flow](../09-analytics-ai-sentiment/images/aiimage011.jpg)
+    ![New Data Flow](images/aiimage011.jpg)
 
 6. We will use pre-built machine learning based sentiment analysis to analyze Survey Data.
 
     > (1) Drag **Analyze Sentiment** on the left side until we get a blue box next to Survey Data. <br>
 
-    ![New Data Flow](../09-analytics-ai-sentiment/images/aiimage012.jpg)
+    ![New Data Flow](images/aiimage012.jpg)
 
 7. Now that we have “Analyze Sentiment” we have to point the model as to what we want it to analyze, In this case we want to have a sentiment analysis on employees comments. The Sentiment Analysis will analyze the comments and assign a positive, neutral, or negative attribute to each comment.
 
@@ -68,19 +68,19 @@ Estimated Time: 15 minutes
 
     > (3) Click on **EmployeeComment**. <br>
 
-    ![New Data Flow](../09-analytics-ai-sentiment/images/aiimage013.jpg)
+    ![New Data Flow](images/aiimage013.jpg)
 
 8. We are ready to save the model data.
 
     > (1) drag over “**Save Dataset** to our data flow. <br>
 
-    ![New Data Flow](../09-analytics-ai-sentiment/images/aiimage014.jpg)
+    ![New Data Flow](images/aiimage014.jpg)
 
     > (1) Enter **Survey Sentiment CIOXX and your initials** where **XX** is replaced with your user number in data set name. <br>
 
     > (2) Click the **Save** button. <br>
 
-    ![New Data Flow](../09-analytics-ai-sentiment/images/aiimage015.jpg)
+    ![New Data Flow](images/aiimage015.jpg)
 
 9. A dialog box pops up asking name to save Data Flow As.
 
@@ -88,19 +88,19 @@ Estimated Time: 15 minutes
 
     > (2) Click on **Ok**. <br>
 
-    ![New Data Flow](../09-analytics-ai-sentiment/images/aiimage016.jpg)
+    ![New Data Flow](images/aiimage016.jpg)
 
 10. Now you will run the data flow model.
 
     > (1) Click on the **Run** button. <br>
 
-    ![Sentiment Data Flow](../09-analytics-ai-sentiment/images/aiimage017.jpg)
+    ![Sentiment Data Flow](images/aiimage017.jpg)
 
 11. Will take approximately 30 seconds to run. You can start going back to build out a workbook with the data set generated.
 
     > (1) Click on the **back** button. <br>
 
-    ![Sentiment Data Flow](../09-analytics-ai-sentiment/images/aiimage018.jpg)
+    ![Sentiment Data Flow](images/aiimage018.jpg)
 
 12. Now that we have Sentiment Data Flow created, lets build some analysis with the model.
 
@@ -108,7 +108,7 @@ Estimated Time: 15 minutes
 
     > (2) Click on **Workbook**. <br>
 
-    ![Sentiment Data Flow](../09-analytics-ai-sentiment/images/aiimage019.jpg)
+    ![Sentiment Data Flow](images/aiimage019.jpg)
 
 13. Dialog pop up asking for what data we would like to Add.
 
@@ -118,7 +118,7 @@ Estimated Time: 15 minutes
 
     > (3) Click on **Add to Workbook**. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage022.jpg)
+    ![New Workbook](images/aiimage022.jpg)
 
 14. Notice that we have emotion as an attribute derived from sentiment analysis. We will start with analyzing head count based on emotion.
 
@@ -126,17 +126,17 @@ Estimated Time: 15 minutes
 
     > (2) Select **headcount** and drag both attributes into the canvas. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage023.jpg)
+    ![New Workbook](images/aiimage023.jpg)
 
 15. Now we will move emotion to Color for better visualization
 
     > (1) Click and drag **emotion** onto color. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage024.jpg)
+    ![New Workbook](images/aiimage024.jpg)
 
     > (1) Drag over Department attribute to “Trellis Columns”. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage025.jpg)
+    ![New Workbook](images/aiimage025.jpg)
 
     > (1) While holding down the control key, select **emotion**. <br>
 
@@ -144,13 +144,13 @@ Estimated Time: 15 minutes
 
     > (3) Drag both to the line below the current bar graph. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage026.jpg)
+    ![New Workbook](images/aiimage026.jpg)
 
 16. We can bring in the comments and add some color emotion to them.
 
     > (1) Click and drag **emotion** onto color. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage027.jpg)
+    ![New Workbook](images/aiimage027.jpg)
 
     > (1) Click on the bar chart to reveal the filter icon. <br>
 
@@ -158,25 +158,25 @@ Estimated Time: 15 minutes
 
     > (3) Then click on the **Preview Icon**. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage028.jpg)
+    ![New Workbook](images/aiimage028.jpg)
 
 17. We see the survey results across all departments.  Now we will use the filter feature to look at the different sentiments.
 
     > (1) Click on any **green bar** to view all positive comments. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage029.jpg)
+    ![New Workbook](images/aiimage029.jpg)
 
     > (1) Click on any **orange bar** to view all neutral comments. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage030.jpg)
+    ![New Workbook](images/aiimage030.jpg)
 
     > (1) Click on any **blue bar** to view all positive comments. <br>
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage031.jpg)
+    ![New Workbook](images/aiimage031.jpg)
 
-    ![New Workbook](../09-analytics-ai-sentiment/images/aiimage032.jpg)
+    ![New Workbook](images/aiimage032.jpg)
 
-24. Congratulations!  ![checkered flag](../gen-images/checkeredflag.jpg)
+24. Congratulations!  ![checkered flag](../../gen-images/checkeredflag.jpg)
 
     > **You've completed this Adventure**. Please close this tab.
 
@@ -186,12 +186,12 @@ You discovered how effortlessly Fusion Data Intelligence enables the creation of
 
 ## Learn More
 
-* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r2/index.html)
+* [Get Started with Oracle Fusion Data Intelligence](https://docs.oracle.com/en/cloud/saas/analytics/26r3/index.html)
 * [Fusion Data Intelligence](https://www.oracle.com/fusion-ai-data-platform/)
 * [Oracle Documentation](https://docs.oracle.com)
 
 ## Acknowledgements
 
-* **Author** - Xavier Ramirez, Senior Analytics Solution Engineer, Advanced Technology Services, Nate Weinsaft, Master Principal Solution Engineer, Advanced Technology Services, Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services
-* **Contributors** - The Cloud Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem; July 2026
+* **Author** - Xavier Ramirez, Senior Analytics Solution Engineer, Advanced Technology Services, Sohel Jeelani, Distinguished Analytics Solution Engineer, Advanced Technology Services
+* **Contributors** - The AI Adventure Team (Gus, Ray, Sajid, Casey, Stephen, Sohel, Xavier, Charlie)
+* **Last Updated By/Date** - Sajid Saleem; October 2026
