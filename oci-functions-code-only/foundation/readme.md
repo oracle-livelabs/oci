@@ -24,7 +24,10 @@ IP, or container registry. Learners create the application-facing resources.
 - home_region: actual tenancy home region for IAM, not an assumed fixed region.
 - name_prefix: 3-20 lowercase characters; default inventory. An eight-character
   compartment-derived suffix is added. Use one stack per learner compartment.
-- create_runtime_iam: false by default; true requires administrator authorization.
+- create_runtime_iam: the own-tenancy Resource Manager form defaults to true;
+  an authorized administrator reviews and applies the scoped permissions. The
+  Terraform CLI/module default remains false for platform-managed deployments;
+  automated callers must explicitly choose their IAM ownership model.
 
 resource_sheet contains network IDs, log group, exact bucket/application/rule names,
 namespace, and configuration values. administrator_runtime_iam contains the matching
@@ -41,6 +44,10 @@ Upload the supplied functions-foundation.zip using Create Stack > My configurati
 Review variables, run Plan, then Apply after administrator review. Resource Manager
 supplies authentication; do not add keys or passwords to variables. Supply actual
 home-region and compartment values. IAM administration must already be authorized.
+Keep Create runtime IAM checked for a new administrator-led own-tenancy setup.
+The function does not inherit the signed-in user's administrator permissions.
+Clear this checkbox only when equivalent runtime IAM is already managed separately.
+Changing the package's form default does not change variables in existing stacks.
 
 The package uses OCI provider 7.x and Terraform >=1.5,<2.0. The source includes
 mock-provider tests that require Terraform >=1.7; these tests are not part of the
