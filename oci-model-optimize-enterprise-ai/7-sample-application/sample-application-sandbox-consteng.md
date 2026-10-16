@@ -18,8 +18,6 @@ Estimated Time: 30 minutes
         └── .env
 ```
 
-This is the file structure used throughout the lab.
-
 ### Objectives
 
 In this lab, you will:
@@ -34,13 +32,13 @@ In this lab, you will:
 
 ### Prerequisites
 
-This lab assumes you have:
+Before starting this lab:
 
-- Completed the Semantic Store lab
-- Have Python installed on your computer or be able to install it
-- Be comfortable with running terminal/command-line commands to copy, rename, edit text files, create folders etc.
-- Be able to download the zip archive for the sample application, unzip it and run it as a Python script
-- Be able to install Python dependencies with `python -m pip`
+- Complete the Semantic Store lab.
+- Install Python on your computer, or install it in Task 1.
+- Be comfortable using a terminal to copy, rename, and edit files and create folders.
+- Be able to download and extract the sample application ZIP and run a Python script.
+- Be able to install Python dependencies with `python -m pip`.
 
 > **Note:** If your computer already has Python 3.10 and above installed and `python3 --version` on Mac or `py -3 --version` on Windows shows a valid Python version, move to Task 2.
 
@@ -345,6 +343,8 @@ This lab assumes you have:
 
 3. Confirm that `OCI_ADB_MCP_USERNAME=CONSTRUCTION_ENGINEERING` and `OCI_AUTH_MODE=config_file` are already present.
 
+    Preserve the generated `OCI_ADB_MCP_PASSWORD_SECRET_OCID`. It identifies the password secret for `CONSTRUCTION_ENGINEERING`, not the ADMIN password secret displayed in the reservation information. No password lookup or replacement is required.
+
 4. If you used an OCI profile name other than `DEFAULT`, update `OCI_CONFIG_PROFILE`. Keep both `OCI_GENAI_MODEL_ROUTING_ENABLED=false` and `OCI_GENAI_PROMPT_PROTECTION_ENABLED=false`. You will implement and enable those capabilities in Labs 4 and 5.
 
 5. Save `.env`. Do not commit it because it contains tenancy-specific identifiers.
@@ -508,4 +508,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Contributors** — Oracle LiveLabs Platform Team
+- **Last Updated By/Date** — Eli Schilling, October 2026

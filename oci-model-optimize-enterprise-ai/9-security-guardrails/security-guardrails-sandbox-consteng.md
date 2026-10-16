@@ -18,11 +18,13 @@ Estimated Time: 15 minutes
 - A healthy application from Lab 3
 - Model routing may be on or off
 
+Follow only your chosen path in Task 1. **Launch (Lab 3B)** enables the packaged guardrail in the application's configuration panel; you do not need Lab 3A, a local Python installation, or any code edits. **Build (Lab 3A)** adds the check in your local sample-app source.
+
 ## Task 1: Enable prompt-injection protection
 
 ### Build path: add the ApplyGuardrails check
 
-1. Stop the local application with Ctrl+C and open `app.py`.
+1. In the terminal running your Build application, press Ctrl+C. In your code editor, use **File > Open Folder** to open the extracted sample-app folder from Lab 3A (the folder containing `app.py` and `.env`), then open `app.py` from the file list. Save changes in this extracted folder, not inside the downloaded ZIP.
 
 2. Add this import with the other local imports:
 
@@ -106,4 +108,6 @@ You may now proceed to Lab 6.
 
 ## Acknowledgements
 
-- **Author** - Oracle LiveLabs
+- **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Contributors** — Oracle LiveLabs Platform Team
+- **Last Updated By/Date** — Eli Schilling, October 2026

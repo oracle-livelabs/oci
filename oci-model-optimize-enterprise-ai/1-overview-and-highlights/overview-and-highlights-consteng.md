@@ -44,4 +44,6 @@ The Launch path packages only application code in OCIR. Tenant-specific OCIDs ar
 
 ## Acknowledgements
 
-- **Author** - Oracle LiveLabs
+- **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Contributors** — Oracle LiveLabs Platform Team
+- **Last Updated By/Date** — Eli Schilling, October 2026

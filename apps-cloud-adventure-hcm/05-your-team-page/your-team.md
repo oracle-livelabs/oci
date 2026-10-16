@@ -2,13 +2,13 @@
 
 ## Introduction
 
-In this lab, you will learn how to create new journey experiences. 
+In this activity, you will learn how to create new journey experiences. 
 
 Estimated Time: 7 minutes
 
 ## Objectives
 
-In this lab, you will::
+In this activity, you will::
 * Set up a Journey. 
 
 ## Task 1: Journeys Setup

@@ -27,6 +27,8 @@ This lab assumes you have:
 
 1. Select **Vector stores**.
 
+    > **Console navigation:** If **Vector stores** is not visible on the Generative AI overview, select **Applications** and expand the left navigation to find it.
+
 1. Select the reservation-specific child compartment from your sandbox resource list.
 
 1. Click **Create vector store**.
@@ -62,7 +64,11 @@ This lab assumes you have:
 
 1. Wait for `seer-construction-semantic` to reach **Active** and confirm that semantic enrichment completed successfully. Do not continue while enrichment is queued, running, or failed.
 
-1. Copy the semantic store OCID and record it as the value for `Structured semantic store OCID`.
+1. Click **seer-construction-semantic** in the vector stores list to open its details. Find **OCID**, click **Copy**, and record the complete value as `Structured semantic store OCID` (`OCI_GENAI_SEMANTIC_STORE_OCID` in the worksheet). This identifier starts with `ocid1.generativeaisemanticstore`; do not copy the unstructured store's `vs_` identifier or a Database Tools connection OCID.
+
+    If the value is abbreviated, open the **...** action menu at the right of the **OCID** row and select **Copy** to copy the full identifier.
+
+    ![Copy the semantic store OCID from its details page](images/semantic-copy-ocid-consteng.jpg)
 
 At this stage, the Semantic Store can generate SQL from natural language against the governed construction Gold views and execute it through the workshop database connection.
 
@@ -74,4 +80,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
-- **Author** - Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
+- **Contributors** — Oracle LiveLabs Platform Team
+- **Last Updated By/Date** — Eli Schilling, October 2026

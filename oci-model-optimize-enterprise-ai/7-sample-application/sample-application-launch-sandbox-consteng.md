@@ -40,7 +40,11 @@ For this workshop, you use OCI Container Instances because it provides a simple,
 
 ## Task 3: Download and inspect the generated helper
 
-1. Open Cloud Shell in the workshop region.
+1. In the OCI Console, confirm the workshop region in the top navigation. Open **Developer tools** (the terminal icon near the top right), then select **Cloud Shell**, not **Code Editor**. Wait for the terminal prompt before entering commands.
+
+    ![Open Cloud Shell from the OCI Console Developer tools menu](images/open-cloud-shell-menu-consteng.jpg)
+
+    Cloud Shell may display the tenancy home region as its **session region**. That is where the shell runs, not necessarily where your workshop resources run. Preserve the helper's workshop `REGION` value; its OCI commands target that region. If Cloud Shell itself reports an authorization error, contact the workshop facilitator rather than changing IAM policies.
 
 2. Copy the **Launch helper PAR** from the Sandbox Resource List and run the following commands. Replace `<launch-helper-par>` with the complete URL.
 
@@ -79,7 +83,11 @@ For this workshop, you use OCI Container Instances because it provides a simple,
 
 ## Task 5: Validate the application
 
-1. Open the application URL. If the page is not ready immediately, wait 30 seconds and refresh. The Gradio application responds on port `8080`.
+1. In Cloud Shell, find the **Application URL** printed at the end of the helper's successful launch output, after the Container Instance reaches **ACTIVE**. Copy the complete `http://<public-ip>:8080/` address and open it in a new browser tab. This is not the OCIR **Image URL** or either download PAR from the Sandbox Resource List. Keep Cloud Shell open so you can return to the output.
+
+    ![Application URL in the successful Cloud Shell launch output](images/launch-application-url-consteng.jpg)
+
+    If the page is not ready immediately, wait 30 seconds and refresh. The Gradio application responds on port `8080`. If no application URL was printed, inspect the helper's error before retrying; do not launch a duplicate instance.
 
     ![Seer Construction Intelligence application](images/seer-gradio-home-consteng.png)
 
@@ -107,4 +115,6 @@ You may now proceed to Lab 4. Keep the application open.
 
 ## Acknowledgements
 
-- **Author** - Oracle LiveLabs
+- **Author** — Eli Schilling, Technical Engagement Services, Oracle
+- **Contributors** — Oracle LiveLabs Platform Team
+- **Last Updated By/Date** — Eli Schilling, October 2026
