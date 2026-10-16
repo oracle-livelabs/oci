@@ -215,7 +215,8 @@ Action:
 
     * Tool Name:  **CIOXX YYY Response Guidelines Topic**, where XX is replaced with your user number and YYY is replaced with your initials.
 
-    * Family:  Select **Common** from the dropdown* Product:  Select **Other** from the dropdown<br>
+    * Family:  Select **Common** from the dropdown
+    * Product:  Select **Other** from the dropdown<br>
 
     > (2) Click the **Add Instruction** region.
 
