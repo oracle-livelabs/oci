@@ -1,0 +1,37 @@
+{
+    "workshoptitle": "Rotate Backend Certificates with Multiple Certificate Support in OCI Network Firewall",
+    "help": "luis.catalan.hernandez@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Architecture, objectives, prerequisites, and certificate renewal workflow.",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "Sign in to your own OCI tenancy.",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Prepare the VCN, Apache Servers, and Load Balancer",
+            "filename": "../../lab-1-prepare-environment/lab-1-prepare-environment.md"
+        },
+        {
+            "title": "Lab 2: Create the Firewall Policy and Two Mapped Secrets",
+            "filename": "../../lab-2-create-mapped-secrets/lab-2-create-mapped-secrets.md"
+        },
+        {
+            "title": "Lab 3: Configure Multiple Certificate Inspection",
+            "filename": "../../lab-3-configure-inspection/lab-3-configure-inspection.md"
+        },
+        {
+            "title": "Lab 4: Rotate or Renew a Certificate Before It Expires",
+            "filename": "../../lab-4-rotate-certificates/lab-4-rotate-certificates.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to common problems and directions for receiving help.",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

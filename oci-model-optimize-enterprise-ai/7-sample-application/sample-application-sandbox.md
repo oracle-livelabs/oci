@@ -1,4 +1,4 @@
-# Sample Application
+# Lab 3A: Build the Sample Application
 
 ## Introduction
 
@@ -72,9 +72,11 @@ This lab assumes you have:
     </copy>
     ```
 
-## Task 2: Extract the sample application
+## Task 2: Download and extract the configured sample application
 
-1. Download [sample-app.zip](files/sample-app.zip).
+1. Copy the **Configured sample app PAR** from the Sandbox Resource List and open it in a new browser tab. Save the download as `sample-app.zip`.
+
+    The pre-authenticated request, or PAR, expires after the workshop. The archive already contains a generated `.env` file with the compartment, region, Autonomous AI Database, and Vault secret values from your sandbox.
 
     > **Note for Windows:** Extract the app near a short path, such as `C:\labs\sample-app`, before you create the virtual environment or install dependencies. Deep folder paths can cause Windows path-length failures in generated OCI SDK files. If your organization allows it, enabling Windows long paths also avoids this issue.
 
@@ -329,111 +331,25 @@ This lab assumes you have:
 
     ![Windows verify files](./images/windows-verify-files.png)
 
-## Task 4: Create the app environment file
+## Task 4: Complete the app environment file
 
-1. Change into the app directory.
+1. Change into the extracted `sample-app` directory.
 
-    On Mac:
+2. Open the generated `.env` file. The sandbox-specific OCI foundation values are already populated.
 
-    ```bash
-    <copy>
-    cd sample-app
-    </copy>
-    ```
-
-    On Windows PowerShell:
-
-    ```powershell
-    <copy>
-    Set-Location .\sample-app
-    </copy>
-    ```
-
-2. Rename the environment template file `.env.example` to `.env`.
-
-    On Mac you can do this on finder (make sure that you can see hidden file using the keyboard shortcut Shift + CMD + Period) or in the terminal:
-
-    ```bash
-    <copy>
-    mv .env.example .env
-    </copy>
-    ```
-
-    On Windows you can do this in File Explorer or using PowerShell:
-
-    ```powershell
-    <copy>
-    Rename-Item .env.example .env
-    </copy>
-    ```
-
-3. Open your sandbox values worksheet from the Unstructured RAG lab.
-
-4. Open `.env` in your favorite editor. You can also use `nano` for Mac or `notepad` for Windows.
-
-5. Replace the blank values in `.env` with the values from your sandbox resource list and your workshop notes.
+3. Add only the three resources that you created in Labs 1 and 2.
 
     ```text
-    OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID=<Compartment OCID from the sandbox resources list>
-    OCI_GENAI_PROJECT_OCID=<Project OCID from your notes>
-    OCI_GENAI_VECTOR_STORE_IDS=<Unstructured Vector store ID from your notes>
-    OCI_ADB_DATABASE_OCID=<ADB OCID from the sandbox resources list>
-    OCI_ADB_MCP_PASSWORD_SECRET_OCID=<Admin Password Secret OCID from the sandbox resources list>
-    OCI_GENAI_SEMANTIC_STORE_OCID=<Structured semantic store OCID from your notes>
+    OCI_GENAI_PROJECT_OCID=<Project OCID>
+    OCI_GENAI_VECTOR_STORE_IDS=<Unstructured vector store ID starting with vs_>
+    OCI_GENAI_SEMANTIC_STORE_OCID=<Semantic store OCID>
     ```
 
-6. Set each region value to the `Workshop region` value from your sandbox resource list (the same value in all of them).
+4. Keep `OCI_AUTH_MODE=config_file`. If you used a profile name other than `DEFAULT`, update `OCI_CONFIG_PROFILE`. The default `OCI_CONFIG_FILE=~/.oci/config` works on macOS and Windows because the app expands the home directory.
 
-    > **Note:** the region name takes the following format <country code>-<region name>-<number>, for example: `us-ashburn-1` or `ca-toronto-1` etc. Please make sure not to paste any other information or spaces/new lines in the region value.
+5. Keep `OCI_GENAI_MODEL_ROUTING_ENABLED=false`. You will enable it in Lab 4 without editing Python code.
 
-
-    ```text
-    OCI_ADB_MCP_REGION=<Workshop region>
-    OCI_ADB_MCP_PASSWORD_SECRET_REGION=<Workshop region>
-    OCI_GENAI_REGION=<Workshop region>
-    ```
-
-7. Set the OCI config path and profile. Update the `OCI_CONFIG_PROFILE` if you changed it from `DEFAULT`. Please note that in this file, we have to use the full path of your home directory.
-
-    On Mac:
-
-    If you don't know your home directory, the following two commands will print the folder to the screen. You can copy the full folder name to the `.env` file and append `/.oci/config`.
-
-    ```text
-    cd ~
-    pwd
-    ```
-
-    ```text
-    OCI_CONFIG_FILE=/Users/<user-name>/.oci/config
-    OCI_CONFIG_PROFILE=DEFAULT
-    ```
-
-    On Windows:
-
-    If you don't know your home directory, the following two commands will print the folder to the screen. You can copy the full folder name to the `.env` file and append `\.oci\config`.
-
-    ```text
-    cd $HOME
-    pwd
-    ```
-
-    ```text
-    OCI_CONFIG_FILE=c:\Users\<user name>\.oci\config
-    OCI_CONFIG_PROFILE=DEFAULT
-    ```
-
-8. Keep the advanced defaults. You will be able to change those later.
-
-    End result on Mac:
-
-    ![Terminal edit .env file](./images/terminal-edit-dot-env.png)
-
-    End result on Windows:
-
-    ![Notepad edit .env file](./images/notepad-edit-dot-env.png)
-
-9. Save the `.env` file.
+6. Save `.env`. Do not commit it because it contains tenancy-specific identifiers.
 
 ## Task 5: Install dependencies
 

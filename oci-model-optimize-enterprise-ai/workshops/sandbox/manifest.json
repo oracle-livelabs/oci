@@ -11,28 +11,32 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Unstructured RAG",
+            "title": "Lab 1: Unstructured RAG",
             "filename": "../../5-unstructured-rag/unstructured-rag-sandbox.md"
         },
         {
-            "title": "Semantic Store",
+            "title": "Lab 2: Semantic Store",
             "filename": "../../6-semantic-store/semantic-store-sandbox.md"
         },
         {
-            "title": "Sample Application",
+            "title": "Lab 3A: Build the Sample Application",
             "filename": "../../7-sample-application/sample-application-sandbox.md"
         },
         {
-            "title": "Model Optimization",
-            "filename": "../../8-model-optimization/model-optimization.md"
+            "title": "Lab 3B: Launch the Sample Application",
+            "filename": "../../7-sample-application/sample-application-launch-sandbox.md"
         },
         {
-            "title": "Security Guardrails",
-            "filename": "../../9-security-guardrails/security-guardrails.md"
+            "title": "Lab 4: Model Optimization",
+            "filename": "../../8-model-optimization/model-optimization-sandbox.md"
         },
         {
-            "title": "Quiz",
-            "filename": "../../10-quiz/quiz.md"
+            "title": "Lab 5: Security Guardrails",
+            "filename": "../../9-security-guardrails/security-guardrails-sandbox.md"
+        },
+        {
+            "title": "Lab 6: Knowledge Check",
+            "filename": "../../10-quiz/knowledge-check.md"
         },
         {
             "title": "Need Help?",

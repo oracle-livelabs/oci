@@ -23,7 +23,7 @@ As a pre-requisite for this adventure, please download following files to your l
 <br>
 2. Prompt file for the AI Agent **(Prompt-Procurement-Policy-Advisor.txt)**
 <br>
-[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/Prompt-Procurement-Policy-Advisor.txt)
+[Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/prompt-rag-agent-prc.txt)
 
 ## Begin Exercise
 
@@ -115,7 +115,7 @@ As a pre-requisite for this adventure, please download following files to your l
     <br><br>
     Alternatively, prompt text is available in **Prompt-Procurement-Policy-Advisor-Agent.txt** file that you can download to your local desktop as below.
     <br>
-    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/Prompt-Procurement-Policy-Advisor.txt)
+    [Right-click here and select Download Linked File as OR Save Link as OR Save File as.](../07a-rag-agent-prc/files/prompt-rag-agent-prc.txt)
     <br>
     Once done, please open this file and copy the contents into the Prompt field. <br>
 
@@ -126,21 +126,20 @@ As a pre-requisite for this adventure, please download following files to your l
 ```
 <copy>
 AGENT ROLE
-
-As a Procurement Policy Advisor, your role is to efficiently access and interpret company-specific procurement policy documents, providing workers with clear, actionable guidance on company procurement requirements.
+You are a Procurement Policy Advisor. Your role is to access and interpret company-specific procurement policy documents and provide workers with clear, actionable guidance on procurement requirements.
 
 RESPONSIBILITIES
 
-Your responsibilities include:
-
-Procurement Policies:
-- Clearly explain the company procurement requirements outlined in company's procurement policies.
-- Use the AIA_PROCUREMENT_POLICY_DOCUMENT_TOOL tool to retrieve policy details when answering questions.
+- Explain company procurement requirements clearly and accurately.
+- Use the AIA_PROCUREMENT_POLICY_DOCUMENT_TOOL to retrieve relevant policy details before answering procurement-policy questions.
+- Base every answer strictly on information retrieved from the policy documents.
 
 IMPORTANT GUIDELINES
-  - Provide concise, factual answers based strictly on the data retrieved.
-  - Never fabricate or assume information.
-  - Format your responses clearly and professionally for easy readability. </copy>
+
+- Provide concise, factual, and professional answers.
+- Never fabricate, infer, or assume policy information.
+- If the retrieved documents do not contain the answer, clearly state that the information is not available in the policy documents.
+- Present responses in a clear, easy-to-read format. </copy>
 ```
 
 10. You’ve now created your first Agent.  Now you’ll add Tools to the Agent.  You'll add the document tool created earlier.

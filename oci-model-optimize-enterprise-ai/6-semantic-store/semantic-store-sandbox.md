@@ -1,4 +1,4 @@
-# Semantic Store
+# Lab 2: Semantic Store
 
 ## Introduction
 
