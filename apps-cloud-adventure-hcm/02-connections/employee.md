@@ -16,50 +16,41 @@ In this activity, you will:
 
 ## Task 1: Explore My Activity Center
 
-Access **My Activity Center** directly from the home screen. 
 1. In the **‘Me’** tab, click the **‘My Activity Center’ tile.**
      
     ![My Activity Center Tile](images/myactivitycentertile.png)
 
-    Explore My Activity Center.
-1. Click the **arrow** to the right of your analytics header to view different information across the HCM platform (these analytics can be drillable).
-        
-    ![My Activity Center](images/myactivitycenter.png)
-
 2. Click the **‘View More’** link under your quick actions tiles to personalize your quick actions.
-3. **Un-pin** any of the six quick actions, and **pin** the **‘Personal Details’** quick action (if not already done).
-4. When you’re done with your selections, click the ‘X’ at the top-right to save your quick actions.
+3. **Un-pin** any of the quick actions, and **pin** the **‘Personal Details’** quick action (if not already done).
+4. When you’re done with your selections, click the **‘X’** at the top-right to save your quick actions.
      
-    ![My Activity Center Pins](images/macpins.png)
+    ![My Activity Center Pins](images/macpins2.png)
 
-5. **Scroll** down to your event timeline. Click the **graph** icon and then **zoom out (-)** as much as possible to view more events.
-6. Here, you can view events such as holidays, work anniversaries, payslips, and year-end documents. Some events can be opened to view additional details.
+5. **Scroll down** to your event timeline. Click the **graph** icon and then **zoom out (-)** as much as possible to view more events. Here, you can view events such as holidays, work anniversaries, payslips, year-end documents, and more. Some events can be clicked to view additional details.
      
     ![My Activity Center Graph](images/macgraph.png)
 
 ## Task 2:  Provide Feedback in Connections
 
-Access Connections and leave feedback.
 1. Click the **‘View Connections’** button, under your profile picture.
-2. Click **'Dismiss'** if a pop-up appears. 
      
     ![Accessing Connections](images/viewconnections.png)
- 
+
+2. Click **'Dismiss'** if a pop-up appears. 
+
     ![Dismiss Pop-up](images/connectionsdismiss.png)
 
 3. In the search bar, **type in ‘Curtis Feitty’** and **click** his name from the list.
      
     ![Connections Drop-Down](images/connectionsdropdown.png)
 
-4. Review the details on his Connections page.
-5. When you’re done, scroll down to the **‘What Others Think’** table and click the **pencil icon,** to leave him feedback on the stellar work he’s done with onboarding new employees.
+4. Review the details on his Connections page. When you’re done, scroll down to the **‘What Others Think’** table and click the **pencil icon,** to leave him feedback. You may **save** your feedback at the bottom-right of the screen.
      
-    ![Give Feedback](images/givefeedback.png)
+    ![Give Feedback](images/givefeedback2.png)
 
 ## Task 3: Absence Request
 
-Oracle Cloud HCM can handle any type of absence, to include automating which absences different employees can request/view, based on specific/local rules. This logic also includes accruals and entitlements.
-1. Go back to the home page, under the **Me** tab and **Quick Actions** column to the left, click **Add Absence.**
+1. Go back to the **home** page, under the **Me** tab and Quick Actions column to the left, click **Add Absence.**
      
     ![Add Absence Quick Action](images/addabsenceqa.png)
 
@@ -71,14 +62,16 @@ Oracle Cloud HCM can handle any type of absence, to include automating which abs
      
     ![Submit Absence Request](images/submitabsence.png)
 
+4. Congratulations, you've successfully completed the Employee Lab!
+
 ## Checkpoint
 
 Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Complete the **Employee Section Questions**, and rise to the top of the leaderboard!
     
-![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
+[![Cloud Adventure Checkpoint](images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
     
 ## Acknowledgements
 * **Author** - Mark Sarmiento, HCM Solution Engineer
 * **Contributors** -  Mark Sarmiento, HCM Solution Engineer
-* **Last Updated By/Date** - Mark Sarmiento, September 2026
+* **Last Updated By/Date** - Mark Sarmiento, October 2026
 

@@ -97,9 +97,9 @@ Easily create and maintain your journey experiences in Journeys Setup.
 
 Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Complete the **HR Admin Section Questions**, and rise to the top of the leaderboard!
     
-![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
+[![Cloud Adventure Checkpoint](images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
 
 ## Acknowledgements
 * **Author** - Zachary Sobeck, Principal Solution Engineer
 * **Contributors** -  Zachary Sobeck, Principal Solution Engineer
-* **Last Updated By/Date** - Mark Sarmiento, September 2026
+* **Last Updated By/Date** - Mark Sarmiento, October 2026
