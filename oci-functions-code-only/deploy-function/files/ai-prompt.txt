@@ -1,0 +1,32 @@
+Write a Python module named inventory.py containing:
+process_inventory(csv_text, threshold=10)
+
+Return a tuple of two CSV strings in this order:
+1. restock CSV, with header record_id,sku,warehouse,quantity
+2. rejected CSV, with header record_id,reason
+
+Rules:
+- Use only the Python standard library. No OCI calls, AI service calls, or file access.
+- Require the input header record_id,sku,warehouse,quantity in that exact order.
+  Raise ValueError for a missing, duplicate, reordered, or unexpected header.
+- Accept an optional UTF-8 BOM at the beginning of the input.
+- Require threshold to be an integer >= 0 (not a Boolean).
+- Process rows in input order. Strip surrounding whitespace from all fields.
+- For wrong field counts, reject with reason invalid_column_count.
+- For any blank required value, reject with reason missing_value.
+- Accept quantity only as one or more ASCII digits (0-9). Reject negative,
+  decimal, signed, or spelled-out values with reason invalid_quantity.
+- Normalize sku and warehouse to uppercase. Do not uppercase record_id.
+- Include a valid row in the restock report only when quantity < threshold.
+  Exactly 10 is not low stock when threshold is 10.
+- Write accepted quantities in normal whole-number form, with no leading zeroes.
+- A rejected row includes its stripped record_id and the reason. Continue with
+  the remaining rows; never convert an invalid quantity to zero.
+- Use csv.reader/DictReader and csv.writer/DictWriter, not manual string splitting.
+- Both returned strings must contain their header even when there are no data rows.
+- Use newline '\n' in output. Malformed CSV quoting should raise an error.
+
+Return only the module's code. Our supplied OCI adapter handles the event,
+Object Storage reads/writes, configuration, and diagnostic logs.
+
+Check your result using the supplied verify_inventory.py and fixtures.

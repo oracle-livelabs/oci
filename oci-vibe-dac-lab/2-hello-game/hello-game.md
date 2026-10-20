@@ -30,7 +30,7 @@ For more information: https://opencode.ai/
     ````
     <copy>    
     cd $HOME
-    wget https://livelabs.oracle.com/cdn/oci/oci-vibe-dac-lab/2-hello-game/files/oci-vibe-dac.zip
+    wget --no-cache https://livelabs.oracle.com/cdn/oci/oci-vibe-dac-lab/2-hello-game/files/oci-vibe-dac.zip
     unzip oci-vibe-dac.zip
     cd oci-vibe-dac
     cat install_opencode.sh
@@ -38,23 +38,24 @@ For more information: https://opencode.ai/
     </copy>    
     ````
 
-    If you have issue with the above link, you can also clone from the original git repo.
+    ![Install](images/opencode_install1.png)   
+
+    If you have an issue with the above link, you can also clone from the original git repo.
     ````
     <copy>    
     cd $HOME
     git clone https://github.com/mgueury/oci-vibe-dac.git
+    cd oci-vibe-dac
     ...
     </copy>    
-    ````
-
-    ![Install](images/opencode_install1.png)    
+    ```` 
 
     You will be asked some questions. The answers depend on whether you use a Dedicated AI Cluster.
     - Without a DAC:
         - If you have access to the Chicago region, use the proposed default value.
         - Or look up the model and region here: https://docs.oracle.com/en-us/iaas/Content/generative-ai/model-endpoint-regions.htm. Find the base URL here: https://docs.oracle.com/en-us/iaas/api/#/en/generative-ai-inference/20231130/
         - Here is an example:    
-            - Model ID: ex: *xai.grok-4.20-0309-reasoning*
+            - Model ID: ex: *xai.grok-4.7*
             - OCI Generative AI base URL: *https://inference.generativeai.us-chicago-1.oci.oraclecloud.com/20231130/actions/v1*
             - Model name: *Grok*
             - API Key: *sk-xxx* (see your notes in previous lab)
@@ -80,6 +81,7 @@ For more information: https://opencode.ai/
 
     ````
     <copy>    
+    source ~/.bashrc
     cd $HOME/oci-vibe-dac/hello
     opencode
     </copy>    
@@ -122,7 +124,7 @@ For more information: https://opencode.ai/
 
 3. Type: *Deploy it.*
 
-   This uses a skill explained later in Task 5.
+   This uses a skill explained later in Task 6.
 
     ![Space Invaders](images/opencode_game2.png)
 
@@ -157,7 +159,7 @@ For more information: https://opencode.ai/
 
 ## Task 5: Mobile : plan + build
 
-1. Start OpenCode in the space-invaders directory.
+1. Start OpenCode in the mobile directory.
 
     ````
     <copy>    
@@ -204,17 +206,17 @@ description: Deploy the files in the current project directory to its existing O
 
 1. Treat the current working directory as the project to upload; do not change directories before running:
 
-'''bash
-project_directory=$(pwd -P)
-repository_root=$(git rev-parse --show-toplevel)
-'''
+    '''bash
+    project_directory=$(pwd -P)
+    repository_root=$(git rev-parse --show-toplevel)
+    '''
 
 2. Verify that `$repository_root/.bucket-name` exists and is nonempty. If it is missing, stop and tell the user to run `bucket_create.sh` first; do not create a bucket.
 3. Upload the recorded project directory with the repository uploader:
 
-'''bash
-"$repository_root/bucket_upload.sh" "$project_directory"
-'''
+    '''bash
+    "$repository_root/bucket_upload.sh" "$project_directory"
+    '''
 
 4. Show the end user the public HTML URL(s) given at the end of the script.
 </copy>  

@@ -1,0 +1,6 @@
+record_id,sku,warehouse,quantity
+INV-001,AB-101,PHX,2
+INV-002,AB-102,SJC,4
+INV-003,AB-103,ORD,5
+INV-004,AB-104,PHX,7
+INV-005,AB-105,PHX,9

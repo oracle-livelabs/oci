@@ -8,7 +8,7 @@
         },
         {
             "title": "Get Started",
-            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs.md"
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login-livelabs.md"
         },
         {
             "title": "Setup",
@@ -43,12 +43,12 @@
             "filename": "../../9-security-guardrails/security-guardrails.md"
         },
         {
-            "title": "Quiz",
-            "filename": "../../10-quiz/quiz.md"
+            "title": "Knowledge Check",
+            "filename": "../../10-quiz/knowledge-check.md"
         },
         {
             "title": "Need Help?",
-            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
         }
     ]
 }

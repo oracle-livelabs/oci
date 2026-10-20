@@ -1,4 +1,4 @@
-# Unstructured RAG
+# Lab 1: Unstructured RAG
 
 ## Introduction
 
@@ -39,7 +39,9 @@ In this lab, you will:
     | Unstructured Vector store ID, for example | Vector store created in this lab | `OCI_GENAI_VECTOR_STORE_IDS` | `.env` |
     | Structured semantic store OCID | Semantic Store lab | `OCI_GENAI_SEMANTIC_STORE_OCID` | `.env` |
     | OCI config file path | Sample Application lab | `OCI_CONFIG_FILE` | `.env` |
-    | OCI config profile | Sample Application lab | `OCI_CONFIG_PROFILE` | `.env` |
+    | Configured sample app PAR | Sandbox resource list |  | Build path download |
+    | Launch helper PAR | Sandbox resource list |  | Launch path download |
+    | OCI config profile | Build path | `OCI_CONFIG_PROFILE` | `.env` |
 
     Copy the following values into your text file. Fill in each value as you complete the workshop. At this time, you should fill in the six values found on the Sandbox Resource List.
 
@@ -54,6 +56,8 @@ In this lab, you will:
     (OCI Gen AI)                OCI_GENAI_PROJECT_OCID=
     (OCI Gen AI)                OCI_GENAI_VECTOR_STORE_IDS=
     (OCI Gen AI)                OCI_GENAI_SEMANTIC_STORE_OCID=
+    (Sandbox Resource List)     CONFIGURED_SAMPLE_APP_PAR=
+    (Sandbox Resource List)     LAUNCH_HELPER_PAR=
     (Sample Application Lab)    OCI_CONFIG_FILE=
     (Sample Application Lab)    OCI_CONFIG_PROFILE=
     

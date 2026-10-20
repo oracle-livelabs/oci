@@ -18,6 +18,8 @@ You will use a hybrid inference pattern:
 
 By the end of the workshop, you will understand how multi-model routing helps an AI application stay useful for users while controlling inference cost.
 
+Sandbox participants choose one application path after creating both retrieval sources: **Build** runs the Python app locally for code-level exploration, while **Launch** deploys the pre-built app to OCI Container Instances with resource-principal authentication. Both paths continue to the same model optimization, security guardrails, and Knowledge Check labs.
+
 Estimated Time: 1 hour 30 minutes
 
 ### Objectives
@@ -37,10 +39,8 @@ In this workshop, you will learn how to:
 In order to successfully complete this workshop you will need:
 
 - General familiarity with the OCI console
-- Have Python installed on your computer or be able to install it
-- Be comfortable with running terminal/command line commands to edit text files, create folders etc.
-- Be able to download the zip archive for the sample application, unzip it and run it as a python script
-- Be able to install python dependencies with `pip`.
+- For the Build path, have Python 3.10 or later and be comfortable running terminal commands.
+- For the Launch path, be comfortable running a short helper script in OCI Cloud Shell.
 
 ## Solution Architecture
 
