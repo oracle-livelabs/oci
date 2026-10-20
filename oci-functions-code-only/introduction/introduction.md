@@ -37,7 +37,7 @@ Setting up a new tenancy, obtaining administrator permissions, or waiting for ad
 
 3. The function reads the CSV, normalizes product codes, checks quantities, and writes reports into a separate output bucket. The output prefix is named after the input file. For example, `inventory-run1.csv` produces `inventory-run1/restock-report.csv` and `inventory-run1/rejected-records.csv`. A prefix looks like a folder in the Console.
 
-4. In **Get Started**, prepare or locate your network, log group, and permissions. In **Lab 1**, create the buckets and application, check the Python code, deploy the function, and connect the event. In optional **Lab 2**, change a configuration value and troubleshoot a rejected record using OCI Logging.
+4. In **Get Started**, follow the sign-in and setup instructions for your environment. Sandbox learners prepare a notes table to fill in during the lab; own-tenancy learners complete the foundation setup. In **Lab 1**, create the buckets and application, configure logging, check the Python code, deploy the function, and connect the event. In optional **Lab 2**, change a configuration value and troubleshoot a rejected record using OCI Logging.
 
     The AI assistant is optional and is used only while preparing code. No AI service is called when the deployed function runs.
 

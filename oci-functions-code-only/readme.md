@@ -67,9 +67,12 @@ The function archive, all four cloud exercises, and the Cloud Shell checks were
 verified in the authoring environment on September 17, 2026. See
 [validation evidence](author/validation.md).
 
-The shared [foundation](foundation/readme.md) and downloadable Resource Manager
+The own-tenancy [foundation](foundation/readme.md) and downloadable Resource Manager
 package prepare the network/log group and optionally administrator-approved runtime
-IAM. Learners build the application-facing resources. See
+IAM. The sandbox instead uses its reservation's assigned compartment, network,
+and policies; learners retrieve the namespace, choose their resource names, and
+create a log group without a supplied resource sheet. Both paths have learners
+build the application-facing resources. See
 [administrator setup](author/administrator-setup.md) and
 [initialization ownership](author/initialization.md).
 

@@ -24,7 +24,7 @@ Estimated Time: 10 minutes
 
 ## Rotation Workflow
 
-![Clone the active policy, add the renewed mapping, associate the clone, renew Apache, and remove the old mapping through another policy clone.](images/certificate-rotation.svg)
+![Clone the active policy, add the renewed mapping, associate the clone, renew Apache, and remove the old mapping through another policy clone.](images/certificate-rotation.png)
 
 ## Task 1: Clone the policy currently associated with the firewall
 
