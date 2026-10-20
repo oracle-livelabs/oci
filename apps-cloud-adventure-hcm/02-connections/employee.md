@@ -24,7 +24,7 @@ In this activity, you will:
 3. **Un-pin** any of the quick actions, and **pin** the **‘Personal Details’** quick action (if not already done).
 4. When you’re done with your selections, click the **‘X’** at the top-right to save your quick actions.
      
-    ![My Activity Center Pins](images/macpins2.png)
+    ![My Activity Center Pins](images/MACPins2.png)
 
 5. **Scroll down** to your event timeline. Click the **graph** icon and then **zoom out (-)** as much as possible to view more events. Here, you can view events such as holidays, work anniversaries, payslips, year-end documents, and more. Some events can be clicked to view additional details.
      
@@ -46,7 +46,7 @@ In this activity, you will:
 
 4. Review the details on his Connections page. When you’re done, scroll down to the **‘What Others Think’** table and click the **pencil icon,** to leave him feedback. You may **save** your feedback at the bottom-right of the screen.
      
-    ![Give Feedback](images/givefeedback2.png)
+    ![Give Feedback](images/GiveFeedback2.png)
 
 ## Task 3: Absence Request
 
