@@ -40,7 +40,7 @@ Easily manage and view candidates in your hiring/recruiting area.
 7. Explore the candidate profile, such as the **AI generated, Screening and interview highlights or Candidate summary** in the Overview tab.
 8. Access different areas of the candidate's profile through the various **tabs.**
 
-    ![Applicant Overview](images/CandidateProfile3.png)
+    ![Applicant Overview](images/candidate-profile3.png)
 
 9. To the top-right of the screen, you may use the **arrows** to quickly move to different candidate profiles for those that applied to this requisition.
 
