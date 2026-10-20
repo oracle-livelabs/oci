@@ -96,10 +96,10 @@ Process a promotion for an employee. Continue working from the **Team Activity C
 
 Adventure awaits, [click HERE](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE) to access the Cloud Adventure Checkpoint - Complete the **Manager Section Questions**, and rise to the top of the leaderboard!
     
-![Cloud Adventure](images/cloud-adventure-checkpoint-image.png)
+[![Cloud Adventure Checkpoint](images/cloud-adventure-checkpoint-image.png)](http://apex.oracle.com/pls/apex/f?p=159406:LOGIN_TEAM:::::CC:HCMCLOUDADVENTURE)
 
 ## Acknowledgements
 * **Author** - Dorcas Conyers, Principal Sales Consultant
 * **Contributors** -  Dorcas Conyers, Principal Sales Consultant
-* **Last Updated By/Date** - Mark Sarmiento, September 2026
+* **Last Updated By/Date** - Mark Sarmiento, October 2026
 
