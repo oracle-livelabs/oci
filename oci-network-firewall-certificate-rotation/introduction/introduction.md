@@ -27,7 +27,7 @@ Estimated Workshop Time: 35 minutes after the supporting resources are ready. Al
 
 ## Architecture
 
-![OCI Load Balancer connects through OCI Network Firewall to two Apache HTTPS backends with different certificates.](images/architecture.svg)
+![OCI Load Balancer connects through OCI Network Firewall to two Apache HTTPS backends with different certificates.](images/architecture.png)
 
 The OCI Load Balancer (LB) accepts client HTTPS and establishes a separate HTTPS connection to the selected Apache backend. OCI Network Firewall sits **after the LB**, between the LB and backend subnets, and inspects these backend connections.
 

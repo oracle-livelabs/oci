@@ -2,63 +2,52 @@
 
 ## Introduction
 
-Use the environment supplied with your LiveLabs sandbox reservation. Its foundation provides the private network, log group, and permissions. You will create the buckets, application, function, invocation log, and Events rule in Lab 1.
+Sign in to your LiveLabs sandbox and prepare a place to record your lab values. Your compartment, VCN, public and private subnets, and required permissions are already provided. You will select or create the resources you need as you work through Lab 1.
 
-**Estimated Time:** 5–10 minutes after your reservation is ready.
+**Estimated Time:** 5 minutes after your reservation is ready.
 
 ### Objectives
 
 - Sign in to your reserved environment.
-- Record your assigned compartment and resource names.
-- Verify access to the network, log group, and Cloud Shell.
+- Identify your assigned region and compartment.
+- Prepare a notes table to fill in during Lab 1.
 
 ### Prerequisites
 
 - An active, ready LiveLabs sandbox reservation for this workshop.
-- The sign-in information and resource sheet supplied with that reservation.
+- The sign-in and tenancy information supplied with that reservation.
 - A browser with file uploads and downloads available.
 
 ## Task 1: Access your reserved sandbox
 
 1. Open your LiveLabs reservation and follow its sign-in instructions. Use the sandbox credentials provided with the reservation, not your own tenancy credentials.
 
-2. Wait until the reservation is ready. In the OCI Console, select the assigned **US Midwest (Chicago)** region and your assigned compartment. A **compartment** organizes resources and controls access; use only the one assigned to you.
+2. Wait until the reservation is ready. Find your assigned region and compartment in the reservation's **Tenancy Information**. In the OCI Console, select that region. This workshop does not require Chicago: keep all your lab resources in the region assigned to your reservation. A **compartment** organizes resources and controls access; use your assigned compartment whenever a page or form asks for one.
 
-3. Open the reservation's resource sheet. Keep it available throughout the workshop. It lists the foundation resources and the exact names you will use when creating resources in Lab 1.
+3. If the reservation is not ready or its assigned region or compartment is unclear, use **Need Help?** in the workshop menu. Do not deploy the own-tenancy stack or create another compartment, VCN, or subnet in the sandbox. The required policies are already applied; do not create or modify IAM policies yourself.
 
-4. If the reservation is not ready, the sheet is missing, or access fails, use **Need Help?** in the workshop menu to request reservation assistance. Do not deploy the own-tenancy stack or create a second foundation in the sandbox.
+## Task 2: Prepare your lab notes
 
-## Task 2: Record and verify your resources
+1. Copy this table into a text editor or notes application on your computer. Record only your assigned region and compartment now. Leave the remaining values blank: Lab 1 will tell you when to find or choose each one.
 
-1. Replace uppercase placeholders in the lab instructions with the corresponding resource-sheet values. Do not type the placeholders literally.
+    | Value to record | When to fill it in | Your value |
+    | --- | --- | --- |
+    | Region | Now: Tenancy Information | |
+    | `LAB_COMPARTMENT` | Now: assigned compartment in Tenancy Information | |
+    | `INCOMING_BUCKET_NAME` | Lab 1, Task 1: create input bucket | |
+    | `OUTPUT_BUCKET_NAME` | Lab 1, Task 1: create output bucket | |
+    | `APPLICATION_NAME` | Lab 1, Task 2: create application | |
+    | `OBJECT_STORAGE_NAMESPACE` | Lab 1, Task 2: retrieve in Cloud Shell | |
+    | `LOG_GROUP_NAME` | Lab 1, Task 3: create log group | |
+    | `EVENT_RULE_NAME` | Lab 1, Task 6: create Events rule | |
 
-    | Instruction placeholder | Resource sheet field |
-    | --- | --- |
-    | `LAB_COMPARTMENT` | `compartment_ocid` (select the matching compartment) |
-    | `VCN_NAME` | `vcn_name` |
-    | `SUBNET_NAME` | `subnet_name` |
-    | `LOG_GROUP_NAME` | `log_group_name` |
-    | `INCOMING_BUCKET_NAME` | `incoming_bucket_name` |
-    | `OUTPUT_BUCKET_NAME` | `output_bucket_name` |
-    | `APPLICATION_NAME` | `application_name` |
-    | `EVENT_RULE_NAME` | `event_rule_name` |
-    | Object Storage namespace | `object_storage_namespace` |
+2. Keep your notes available throughout the workshop. Uppercase placeholders in the instructions refer to your recorded values; do not type the placeholders literally. You do not need to find or record network names. When you create the application, you will select the available VCN and its private subnet.
 
-    An **OCID** uniquely identifies an OCI resource. The Object Storage **namespace** identifies the tenancy's Object Storage space; it is not a bucket or compartment name.
-
-2. Open **Networking > Virtual cloud networks**. Select `LAB_COMPARTMENT` in the compartment filter and open `VCN_NAME`. Under **Subnets**, confirm `SUBNET_NAME` exists and is a private regional subnet. Do not change its network rules.
-
-3. Search for **Logging** in the Console and select **Logs** under **Logging**. Expand the service navigation and select **Log Groups**. Select `LAB_COMPARTMENT` and confirm `LOG_GROUP_NAME` exists. You will enable the application's invocation log in Lab 1.
-
-4. Open **Developer tools > Cloud Shell** in the Console header. On first use, close any informational notice and enter `N` if asked whether to run the introductory tutorial. Wait for the terminal prompt. The welcome message may identify the tenancy's home region; keep the Console workload region set to Chicago.
-
-5. If a resource is missing or you cannot open Cloud Shell, use **Need Help?** before continuing. Do not create or modify IAM policies yourself.
-
-    **Checkpoint:** You have the assigned compartment, private network, log group, resource sheet, and access. The application-facing resources are left for you to create in Lab 1.
+    **Checkpoint:** You are signed in to the assigned region and have your compartment recorded. The rest of your notes table is ready to fill in during Lab 1.
 
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
 
 - **Author** - Graham Shroyer
-- **Last Updated By/Date** - Graham Shroyer, September 2026
+- **Last Updated By/Date** - Graham Shroyer, October 2026

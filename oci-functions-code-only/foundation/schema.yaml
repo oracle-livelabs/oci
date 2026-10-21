@@ -51,8 +51,8 @@
     "create_runtime_iam": {
       "type": "boolean",
       "title": "Create runtime IAM (administrator only)",
-      "default": false,
-      "description": "Creates a dynamic group and scoped policies. Leave unchecked only if an administrator installs the generated IAM requirements separately."
+      "default": true,
+      "description": "Keep enabled when an administrator sets up their own tenancy. Your function does not inherit your administrator permissions. Creates a function dynamic group, input-read/output-write policies, and Functions network access. Disable only when equivalent runtime IAM is managed separately."
     }
   }
 }
