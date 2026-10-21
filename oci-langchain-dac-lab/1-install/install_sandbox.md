@@ -178,6 +178,43 @@ DAC-hosted models run on dedicated infrastructure in your tenancy. Use a DAC-hos
 
 Documentation: https://docs.oracle.com/en-us/iaas/Content/generative-ai/import-model-from-hugging-face.htm#top
 
+### Limit Request
+1. First, decide which model you want to import. New models are released each month. The best model for your use case depends on several factors, including cost, speed, and quality. See the [list of supported models](https://docs.oracle.com/en-us/iaas/Content/generative-ai/imported-models.htm).
+
+2. Once you have chosen a model—for example, Google Gemma (`google/gemma-4-31b-it`)—you will see several compatible GPU shapes. If you already have sizing requirements in mind, choose a shape that meets them. Otherwise, start with a small shape for testing. Dedicated AI clusters (DACs) have a minimum commitment of one hour, so you can run a short test to evaluate the model. Use the Oracle Cost Estimator to estimate the cost.
+
+    ![Compatible GPU shapes](images/limit-gemma-model.png)
+
+3. If you choose H100x2, your tenancy administrator must first request a service limit increase.
+
+4. In the OCI Console, click the **question mark (?)** at the top of the screen, then select **Request Limit Increase**.
+
+    ![Request a limit increase](images/limit-request.png)
+
+5. Complete the request as follows:
+
+    - **Request Name:** H100 for DAC
+    - **Description:** H100 for DAC
+    - Click **Next**.
+    - Under **Requested items**, click **Add**.
+        - **Service:** Generative AI
+        - Click **Next**.
+        - **Limit:** `dedicated-unit-h100-count` – H100 Dedicated units count
+        - Verify that you are requesting the increase for the correct region.
+
+        ![Select the limit and region](images/limit-request2.png)
+
+        - Enter **2** as the requested value.
+        - Click **Save**.
+    - Click **Next**.
+    - Click **Submit**.
+
+    Your limit increase request will then appear in the list. Wait for approval, or contact your Oracle representative for help expediting the approval process.
+
+    ![Submitted limit increase request](images/limit-request3.png)
+
+
+### Installation
 1. Create a Hugging Face token.
     - Open https://huggingface.co/ in your browser.
     - Log in or sign up.
