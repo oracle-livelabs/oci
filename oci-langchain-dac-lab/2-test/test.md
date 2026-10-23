@@ -59,6 +59,9 @@ Let's install the examples in Cloud Editor.
     </copy>    
     ````
 
+    If for some reason, you prefer to run it on your laptop and *wget* is not installed. Just use *curl* instead.
+
+
 6. After installation, the command *"source .venv/bin/activate"* activates the Python virtual environment. It must remain active to run any of the examples.
 
     If you close and restart Cloud Editor, reactivate the virtual environment by running:
@@ -192,7 +195,7 @@ In the previous sample, the graph is written explicitly. This example uses LangC
     - *I am travelling to Brussels, BE today. What should I wear?*
     - *What about footwear?*
 
-    Notice that the second answer can use the city and weather context from the previous turn.
+    Notice that the second answer can use the city and weather context from the previous turn. Like in the above LangGraph sample. 
 
 6. Type `quit` to leave the program.
 
