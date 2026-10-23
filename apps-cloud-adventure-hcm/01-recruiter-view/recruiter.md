@@ -29,7 +29,7 @@ Easily manage and view candidates in your hiring/recruiting area.
 
 3. **Clear** the filter(s) under the requisition search bar.
 
-    ![Clear Filters](images/clearfilter.png)
+    ![Clear Filters](images/clearfilters.png)
 
 4. Search **1011** in the requisition search bar. The result should show Interdimensional Operations Analyst - AIA (requisition number 1011).
 5. Click the **number** under the **'Applications' column.**
@@ -48,7 +48,7 @@ Easily manage and view candidates in your hiring/recruiting area.
 
 10. When you're finished exploring Candidate Profiles, click the **Requisitions** tab at the **bottom** of the page.
 
-    ![Requisitions Tab](images/requisitionstab.png)
+    ![Requisitions Tab](images/requisitions-tab.png)
 
 ## Task 2: Use AI to Assist in Updating and/or Creating a Requisition
 
