@@ -48,7 +48,7 @@ Easily manage and view candidates in your hiring/recruiting area.
 
 10. When you're finished exploring Candidate Profiles, click the **Requisitions** tab at the **bottom** of the page.
 
-    ![Requisitions Tab](images/requisitionstab.png)
+    ![Requisitions Tab](images/requisitions-tab.png)
 
 ## Task 2: Use AI to Assist in Updating and/or Creating a Requisition
 
