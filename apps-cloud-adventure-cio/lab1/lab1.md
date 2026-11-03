@@ -2,12 +2,12 @@
 
 ## Path 1: Grant AI Access
 
-### **Introduction**
+### Introduction
 
   Welcome to Oracle’s AI Adventure for Security Administration.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
 
-### **Objectives**
+### Objectives
 
   During this adventure, you will perform a time sensitive task of granting permissions to a user.
 
@@ -15,7 +15,7 @@
 
   Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-### **Begin Exercise**
+### Begin Adventure
 
 1. During this adventure, you will perform a time sensitive task of granting permissions to a user.  These are the steps you will perform:
 
@@ -41,7 +41,7 @@
 
     ![Roles Screen](../01-security-ai/images/secaiimage003.jpg)
 
-4.	Using the pull-down demo to copy the role as described below.  Modifications should always be done to copies.
+4. Using the pull-down demo to copy the role as described below.  Modifications should always be done to copies.
 
     > (1) Click on the Pull-Down Menu. <br>
 
@@ -58,7 +58,7 @@
 
     ![Roles Screen](../01-security-ai/images/secaiimage005.jpg)
 
-6.	Notice that you are provided with a list of ordered steps at the top.  For this example, we will only use steps 1, 2 and 7.
+6. Notice that you are provided with a list of ordered steps at the top.  For this example, we will only use steps 1, 2 and 7.
 
     > (1) Add **your initials and xx Code** to the beginning of the **Role Name** <br>
     > (2) Add **your initials and xx Code** to the beginning of the **Role Code** as shown. <br>
@@ -66,20 +66,20 @@
 
     ![Copy Roles Screen](../01-security-ai/images/secaiimage006.jpg)
 
-7.	Using Function Security Policy, you will add the privilege the user needs
+7. Using Function Security Policy, you will add the privilege the user needs
 
     > (1) Press the **+ Add Function Security Policy** button.
 
     ![Function Security Policy](../01-security-ai/images/secaiimage007.jpg)
 
-8.	You will now search for the required policy and add it.
+8. You will now search for the required policy and add it.
 
     > (1) Type **Create Supplier Negotiation** in the search field<br>
     > (2) Select the **Create Supplier Negotiation** privilege from the resulting dropdown as shown.
 
     ![Function Security Policy](../01-security-ai/images/secaiimage008.jpg)
 
-9.	Continue adding
+9. Continue adding
 
     > (1) Press the **Add Privilege to Role** button.
 
@@ -204,19 +204,20 @@
 
 
 ## Path 2: Request Access with Risk Management
-### **Request Access with Risk Management**
 
-### **Introduction**
+### Request Access with Risk Management
+
+### Introduction
 
 Welcome to Oracle’s AI Adventure for Risk Management.  This is a fresh and unique way to offer you a chance for hands-on experience of highly differentiated and specifically curated content of numerous vignettes related to Oracle SaaS Applications Configuration and Administration. We hope you will enjoy today’s adventure exploring a complete and unified solution for your business.
 
-### **Objectives**
+### Objectives
 
 During this adventure, request role access via Risk Management and experience the review and approval process.
 
 Estimated Time: 15 minutes
 
-### **Begin Exercise**
+### Begin Adventure
 
 1. During this adventure, request role access via Risk Management and experience the review and approval process.  These are the steps you will perform:
 
@@ -379,4 +380,4 @@ Security Console is used to quickly manage user access to the entire Fusion appl
 ## Acknowledgements
 * **Author** - Nate Weinsaft, Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, December 2025
+* **Last Updated By/Date** - Sajid Saleem, November 2026

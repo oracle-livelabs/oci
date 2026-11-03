@@ -4,18 +4,20 @@
 
 ## **Path 1: Assemble and Test an AI Agent Team using AI Agent Studio**
 
-### **Introduction**
+### Introduction
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
 
-### **Objectives**
+### Objectives
 
 In this activity you will use Oracle Fusion AI Agent Studio to
 * Create and assemble an Agent Team that includes your previously created Benefits Advisor Agent and FMLA Absence Agent.
 * Test the Agent Team
 
-### **Begin Exercise**
+Estimated Time: 10-15 minutes
+
+### Begin Adventure
 
 1. In this activity you will learn the power and ease building Agentic AI with the Oracle AI Agent Studio
 
@@ -136,7 +138,7 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
     ![agent dialogue 2](../05b-agent-team-hcm/images/benimage015.jpg) <br>
 
-16. The Agent  checks with HCM Cloud and confirms existing leave requests, if any.  It also offers to create a new request for you if you provide the requested start and end dates.
+16. The Agent checks with HCM Cloud and confirms existing leave requests, if any.  It also offers to create a new request for you if you provide the requested start and end dates.
 
     You decide to tell the Agent that you’re interested in creating an FMLA absence, but you do so without initially providing the requested dates.
 
@@ -181,23 +183,24 @@ In this activity you will use Oracle Fusion AI Agent Studio to
 
 ## **Path 2: Create a Guided Journey and Embed your AI Agent Team**
 
-### **Introduction**
+### Introduction
 
 AI Agent Studio for Fusion Applications is a comprehensive platform for creating, extending, deploying and managing AI Agents and Agent Teams across the enterprise. Oracle AI Agent Studio delivers easy-to-use tools, including advanced testing, robust validation, and built-in security, that helps Oracle Fusion Applications customers and partners create and manage AI agents. Leveraging the same technology that Oracle uses to create AI agents, Oracle AI Agent Studio enables users to easily extend pre-packaged agents and/or create new agents and then deploy and manage them.
 
 
-### **Objectives**
+### Objectives
 
 In this activity you will embed your AI Agent Team in the application for use by end users.
 * Create a Guided Journey and Task that references the AI Agent Team.
 * Use Visual Builder Studio to Configure the My Maintenance Work page with the Guided Journey.
 * Interact with your AI Agent
 
+Estimated Time: 10-15 minutes
 
-### **Begin Exercise**
+### Begin Adventure
 
 
-1.  In this activity, you will embed your AI Agent Team in the application for use by end users.
+1. In this activity, you will embed your AI Agent Team in the application for use by end users.
 
     ![AI Embed Objectives](../06b-embed-agent-scm/images/scmimage001.jpg)
 
@@ -254,8 +257,8 @@ In this activity you will embed your AI Agent Team in the application for use by
 
 8. You'll use Visual Builder to configure the page with the Guided Journey.
 
-    >  (1)  Confirm that **M001 - Seattle Maintenance** is the organization selected in the My Maintenance Work dropdown at the top of the screen.  If not, select **M001 - Seattle Maintenance** from the dropdown.<br>
-    >  (2)  Click the **logged in user icon** icon next to the bell icon in the top right corner and then select **Edit Page in Visual Builder Studio** from the resulting dropdown.<br>
+    > (1)  Confirm that **M001 - Seattle Maintenance** is the organization selected in the My Maintenance Work dropdown at the top of the screen.  If not, select **M001 - Seattle Maintenance** from the dropdown.<br>
+    > (2)  Click the **logged in user icon** icon next to the bell icon in the top right corner and then select **Edit Page in Visual Builder Studio** from the resulting dropdown.<br>
 
     ![launch visual builder studio](../06b-embed-agent-scm/images/scmimage008.jpg)
 
@@ -267,9 +270,9 @@ In this activity you will embed your AI Agent Team in the application for use by
 
 10. You can now configure various aspects of the My Maintenance Work screen.  The Journey is simple as it's the first page property on the list.
 
-    >  (1) Enter **CIOXX\_GUIDED\_JOURNEY** in the **journeycode** field on the right **Page Properties** panel.<br>
+    > (1) Enter **CIOXX\_GUIDED\_JOURNEY** in the **journeycode** field on the right **Page Properties** panel.<br>
 
-    >  (2) Click the **Preview** icon ![Preview Button](../gen-images/preview.png) on the toolbar on the top right of the page.  This will launch a new tab showing your newly configured screen in a full-functioning preview mode.<br>
+    > (2) Click the **Preview** icon ![Preview Button](../gen-images/preview.png) on the toolbar on the top right of the page.  This will launch a new tab showing your newly configured screen in a full-functioning preview mode.<br>
 
     ![Configure Journey Property and Preview](../06b-embed-agent-scm/images/scmimage010.jpg)
 
@@ -346,4 +349,4 @@ Like our AI capabilities, Oracle AI Agent Studio was built natively into Fusion 
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist; Casey Doody, Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, November 2026

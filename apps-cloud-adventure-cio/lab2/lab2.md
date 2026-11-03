@@ -3,13 +3,13 @@
 <!-- rem ## Path 1: Configure -->
 ## **Path 1: Configure the Change Salary Experience**
 
-### **Introduction**
+### Introduction
 
 Oracle offers hundreds of prebuilt pages, workflows and forms “out of the box” as part of the Oracle Fusion Cloud.  Many of our customers want to configure these pages and workflows to meet their specific business needs.  You can unify your experience in our applications by using Redwood.
 
 Oracle Redwood is Oracle Fusion’s new design system that enhances the user experience through a visually stimulating, easy-to-use interface. By uniting customer-inspired design philosophies with industry-leading technology solutions, Oracle Redwood helps companies reduce costs, foster efficiency, revitalize the customer journey, and evolve continuously toward the future.
 
-### **Objectives**
+### Objectives
 
 In this lab, you will use Redwood to quickly and efficiently improve the user experience in Oracle Fusion Cloud.
 
@@ -17,7 +17,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-### **Begin Exercise**
+### Begin Adventure
 
 1. You will use Redwood, Oracle’s next-generation design system, and Visual Builder to quickly and efficiently update Change Salary Page for Non-HR managers.
 
@@ -46,7 +46,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Change Salary Page](../02-configure-hcm/images/image004.png)
 
-4.  You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.  You need to enter in some information to access the form
+4. You have entered the Change Salary Form.  Now you will quickly review the current configuration of the Change Salary Form.  You need to enter in some information to access the form
 
 
     > (1) When does the salary will start?: Type a **future date** <br>
@@ -75,7 +75,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Select Project](../02-configure-hcm/images/image009.png)
 
-7.  Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the app dev lifecycle: design, build, test, and deploy.
+7. Welcome to Oracle Visual Builder Studio (VB Studio), a robust application development platform that helps your team effectively plan and manage your work throughout all stages of the app dev lifecycle: design, build, test, and deploy.
 
     Now we will use VB Studio to make the required changes to the Change Salary Form.
 
@@ -95,7 +95,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Fields and Regions](../02-configure-hcm/images/image012.png)
 
-9.  Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
+9. Note that rules are based on a hierarchy.  The rules on top supersede the rules below .
 
     Now we will add the conditions that applies this rule to all non-HR personnel
 
@@ -113,7 +113,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
      **Note:** This configuration displays this version of the Change Salary Form to all people who are not assigned to the Human Resource Manager Role
 
-10.  Now you want to add and hide fields.
+10. Now you want to add and hide fields.
 
      > Click on the **Drop Down** ![drop down icon](../02-configure-hcm/images/icon013_dropdown.png)  Icon to the left of Salary to expand the salary section.
 
@@ -143,7 +143,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
     ![Validation](../02-configure-hcm/images/image022.png)
 
-12.  Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
+12. Now you will set the conditions for this rule so that the form will not accept any adjustment percentage greater than 15%.
 
      > Click on **Edit**.
 
@@ -164,7 +164,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
       The form will not allow any user to enter an adjustment percentage greater than 15%.
 
 
-13.  Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
+13. Now you will configure the error message users will see if they enter in an Adjustment Percentage greater than 15%.
 
      > (1) Summary: **Adjustment Percentage is too high**.    <br>
 
@@ -175,7 +175,7 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
      ![Create Validation](../02-configure-hcm/images/image028.png)
 
 
-14.  Well done. You have configured a new rule for Non-HR personnel.
+14. Well done. You have configured a new rule for Non-HR personnel.
 
 Redwood offers a quick way to review your changes as they appear in the application.
 
@@ -184,7 +184,7 @@ Redwood offers a quick way to review your changes as they appear in the applicat
 > (2) A new window will pop up.
 ![Create Validation](../02-configure-hcm/images/image031.png)
 
-15.  You have reentered the Change Salary Form.  Let’s review the changes.  You need to enter the required information before you can move to the next screen.
+15. You have reentered the Change Salary Form.  Let’s review the changes.  You need to enter the required information before you can move to the next screen.
 
 > (1) When does the salary will start?: Type a **future date** <br>
 
@@ -196,7 +196,7 @@ Redwood offers a quick way to review your changes as they appear in the applicat
 
 ![Change Salary Page 2nd page](../02-configure-hcm/images/image033.png)
 
-16.  Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
+16. Note that Annualized Full-Time Salary and Compa-Ratio are no longer visible while Action Reason is now Visible.
 
 Now we will test the validation for the Adjustment Amount Percentage.
 
@@ -204,13 +204,13 @@ Now we will test the validation for the Adjustment Amount Percentage.
 
 ![Change Salary Screen 2](../02-configure-hcm/images/image034.png)
 
-17.  The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
+17. The system gives us a warning that the increase in salary is outside the worker’s salary range.  You will ignore this warning.
 
 > Click **Continue.**
 
 ![Change Salary Screen 2](../02-configure-hcm/images/image035.png)
 
-18.  The system will not allow the user to continue because the Adjustment Percentage exceeds 15% due to the field validation we configured.
+18. The system will not allow the user to continue because the Adjustment Percentage exceeds 15% due to the field validation we configured.
 
 ![Change Salary Screen 2 error message](../02-configure-hcm/images/image036.png)
 
@@ -224,11 +224,11 @@ Now we will test the validation for the Adjustment Amount Percentage.
 
 ## **Path 2: Extend with new Supplier Screen**
 
-### **Introduction**
+### Introduction
 
 Oracle Cloud Applications include an embedded tool called Visual Builder.  Visual Builder is the same tool that Oracle uses to develop application screens and it's available for you to create additional screens.  These screens can leverage both Oracle Cloud Application data and, if necessary, data from external systems.
 
-### **Objectives**
+### Objectives
 
 In this lab, you will use Visual Builder to create an application screen.
 
@@ -236,7 +236,7 @@ Estimated Time: 15 minutes
 
 Do not forget to answer the Adventure Check Point questions at the end of the exercise!
 
-### **Begin Exercise**
+### Begin Adventure
 
 1. In this lab, you will Use Visual Builder to build a new Supplier Screen.
 
@@ -453,13 +453,13 @@ Do not forget to answer the Adventure Check Point questions at the end of the ex
 
 32. You can select the same or different fields for out Edit Page.  Since the request was to create a simple page, you'll just add a few fields.
 
-     > (1)  Click **'Checkbox'** next to the following fields.  Note that you will likely need to scroll the list of fields: <br>
+     > (1) Click **'Checkbox'** next to the following fields.  Note that you will likely need to scroll the list of fields: <br>
 
       - Supplier<br>
       - SupplierNumber<br>
       - TaxpayerId<br>
 
-    > (2)  Confirm the list of selected fields. <br>
+    > (2) Confirm the list of selected fields. <br>
     > (3) Click the **Finish** button.
 
     ![edit page quick start](../03-extend/images/image031.png)
@@ -504,4 +504,4 @@ The two tasks of this adventure introduced you to a few of the capabilities that
 ## Acknowledgements
 * **Author** - Charlie Moff, Distinguished Cloud Technologist; Casey Doody, Cloud Technologist; Sajid Saleem, Master Principal Cloud Technologist
 * **Contributors** - The AI Adventure Team (Gus, Kris, Sajid, Casey, Stephen, Jamil, Sohel, Xavier, Nate, Charlie)
-* **Last Updated By/Date** - Sajid Saleem, November 2025
+* **Last Updated By/Date** - Sajid Saleem, November 2026

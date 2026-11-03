@@ -8,28 +8,28 @@
         },
         {
             "title": "Lab 1: Create an AI Agent",
-            "filename": "../../05b-bo-agent-hcm/bo-agent-hcm.md"
+            "filename": "../../04b-bo-agent/hcm/bo-agent-hcm.md"
         },
         {
-            "title": "Lab 2: Assemble a Multi-Agent Workflow",
-            "filename": "../../05c-multi-agent-hcm/multi-agent-hcm.md"
+            "title": "Lab 2: Build a Workflow",
+            "filename": "../../04d-workflow-agent/hcm/workflow-agent-hcm.md"
         },
         {
-            "title": "Lab 3: Extend a Workflow Agent",
-            "filename": "../../08a-workflow-agenticapp-prc/workflow-agenticapp-prc.md"
+            "title": "Lab 3: Build an Agentic Workflow",
+            "filename": "../../08a-workflow-agenticapp/scm/workflow-agenticapp-scm.md"
         },
         {
-            "title": "Lab 4: Build an Agentic Application",
-            "filename": "../../08b-agentic-app-prc/agentic-app-prc.md"
+            "title": "Lab 4: Create an Agentic Application",
+            "filename": "../../08b-agentic-app/scm/agentic-app-scm.md"
         },
         {
             "title": "Lab 5: Analytics with AI",
-            "filename": "../../09-analytics-with-ai/analytics-with-ai.md"
+            "filename": "../../09-analytics/ai/analytics-ai.md"
         },
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+            "filename":"https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
         }
     ]
 }

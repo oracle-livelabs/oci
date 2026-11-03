@@ -1,0 +1,12 @@
+Based on the user’s message in {{$context.$system.$inputMessage}}, identify the user’s primary intent.
+
+If the user asks about available employee benefits, set userIntent to Policy.
+
+If the user requests one of the following
+- Query for existing absences OR FMLA absences
+- Query for existing leaves OR FMLA leaves
+- Create a new absence
+- Create a new leave 
+Set userIntent to Leave.
+
+Return only the userIntent value.
