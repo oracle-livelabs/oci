@@ -22,11 +22,21 @@ Follow only the subsection for your chosen application path in Task 2. **Launch 
 
 ## Task 1: Record the baseline
 
+The **baseline** is the application before routing: both the text question and the image question use the primary model. You will repeat these two requests with routing enabled and check whether the model changes appropriately while the answers remain useful. This is a model-selection and answer-quality exercise, not a formal speed benchmark or a measured cost-saving claim.
+
+For Launch, **Primary model** and **Text model** in Runtime configuration identify the configured candidates, not two models running simultaneously. With routing off, every request uses the primary model (normally `google.gemini-2.5-pro`). With routing on, text-only requests use the text model (normally `google.gemini-2.5-flash`), while images stay on the primary model. The **Model** value in the runtime bar identifies the model selected for the submitted request; record it after submitting, rather than treating the configuration labels as the result. Build participants can also check the terminal's model log.
+
+After each completed request, the metrics strip below the conversation shows **Selected model**, **App response time**, **Input tokens**, **Output tokens**, and **Responses API calls**. Record these values for each comparison. App response time covers server-side handling, including guardrail checks, conversation setup, retrieval, tool follow-ups, and answer delivery by the app. It excludes file upload, browser/network transit to the app, and queue wait before the handler starts; it is not model-only latency.
+
+Token counts sum the usage returned by the Responses API across the initial call and all SQL-tool follow-up calls for that submission. They are not a conversation total and do not count separate NL2SQL/guardrail service usage or hidden service-internal calls. The call counter counts application-level Responses API invocations, not SDK transport retries. **Unavailable** means usage was missing or incomplete, not zero usage. A blocked prompt can show zero Responses API calls; that does not mean guardrail processing was free. Metrics clear on reset and update for the next request.
+
+If you are using an older app without the metrics strip, use a stopwatch from submission until the complete answer and **Ready** status, and label this **manual end-to-end time**. Do not compare manual timing directly with app timing. Enter **Not measured** when necessary; the model and answer checks remain sufficient to complete the lab.
+
 1. Open **Runtime configuration** on the right side of the Launch application. Enable **Specification search** and **Governed project data**, and leave **Model routing** and **Prompt-injection protection** disabled for the baseline. Close the panel and confirm that the runtime bar shows **Routing** disabled. In the Build path, confirm the equivalent `.env` settings, including `OCI_GENAI_MODEL_ROUTING_ENABLED=false`, and restart the local app if you changed them.
 
-2. Select **Supplier recommendation**, submit the prompt, and record the model shown in the runtime bar and the approximate response time.
+2. Start a fresh conversation with **Reset conversation**. Select **Supplier recommendation**, submit the prompt, and record the selected model, app response time, input/output tokens, and Responses API call count from the metrics strip. Keep this answer for comparison in Task 3.
 
-3. Download the [synthetic structural-steel delivery image][synthetic-steel-image]. Start a fresh conversation (**Reset conversation** in Launch), use the paperclip in the prompt composer to attach the downloaded image, and submit the following prompt. Record the selected model and approximate response time.
+3. Download the [synthetic structural-steel delivery image][synthetic-steel-image], or reuse the PNG from Lab 3A Task 9. Start a fresh conversation (**Reset conversation**), use the paperclip in the prompt composer to attach the downloaded image, and submit the following prompt. Record the same metrics as for the text request. Both baseline requests should select the primary model.
 
     ![Synthetic steel delivery for Austin Regional Bank project AUS-BANK-01](images/austin-steel-delivery-synthetic-consteng.png)
 
@@ -81,7 +91,7 @@ Follow only the subsection for your chosen application path in Task 2. **Launch 
 
 ## Task 3: Test the routing policy
 
-1. Select **Supplier recommendation** and submit the prompt.
+1. Select **Reset conversation**, then select **Supplier recommendation** and submit the same text-only prompt used in Task 1.
 
 2. Confirm that the runtime bar reports the lower-cost text model for this text-only request.
 
@@ -105,16 +115,20 @@ Follow only the subsection for your chosen application path in Task 2. **Launch 
 
     If the assistant refuses this relevant construction image, record the prompt, selected model, and response, then contact the facilitator. Do not interpret refusal as successful image analysis or disable security controls to force an answer.
 
-4. Compare capability, latency, response depth, and grounding with the baseline. Use the same prompts and start a new conversation for each comparison so that earlier image attachments and conversation history do not affect model selection or token usage.
+4. Complete the comparison below using the two baseline requests from Task 1 and their matching routed requests from this task. Record the image metrics before submitting the additional supplier follow-up, which replaces the displayed metrics. A single run may be slower even with the text model; this does not mean routing failed.
 
-    | Workload | Routing disabled: model / response time | Routing enabled: model / response time | Evidence quality and capability |
+    | Workload | Routing off: model / seconds / input tokens / output tokens / calls | Routing on: model / seconds / input tokens / output tokens / calls | Answer checks: met / partly met / not met, with one example |
     | --- | --- | --- | --- |
     | Supplier recommendation (text only) | | | |
     | Construction image (same image and prompt) | | | |
 
-5. Discuss the cost trade-off: routing moves eligible text requests to the configured lower-cost model while preserving the stronger model for images. The runtime bar shows model selection, not billable token counts. Response time is not a proxy for cost; do not claim a measured saving from latency alone.
+    **Supplier answer checks:** Does the answer stay within `AUS-BANK-01`, identify Atlas Structural Fabrication, and include recommendation status, fit score, risk level, and an explanation grounded in the returned records? Check the seeded values **RECOMMENDED**, **97**, and **LOW**. A fluent answer that invents supplier facts does not meet the checks.
 
-6. **Optional quantitative comparison:** If you have captured token usage for every model call, look up the current input and output prices for those exact models on the [Oracle Cloud price list](https://www.oracle.com/cloud/price-list/). Record the model, price date, currency, and unit. For prices per one million tokens, calculate:
+    **Image answer checks:** Does the answer describe visible steel members, their staging, and the placard, distinguish assumptions from observations, and avoid claiming inspection approval or structural safety? This checks image-analysis capability, not database retrieval. Wording and answer length do not need to match the baseline.
+
+5. Discuss the cost trade-off: routing moves eligible text requests to the configured lower-cost model while preserving the stronger model for images. Compare answer checks alongside model selection and reported tokens. Responses API follow-up calls can increase both time and usage; fewer tokens or lower latency alone do not establish a lower cost across different models.
+
+6. **Optional advanced exercise: estimate Responses API model-call cost.** Use the displayed input/output totals only when both are available, all counted calls used the same model, and you are comparing fresh conversations. Skip this step if usage is incomplete or the model's pricing requires usage details the app does not display. You do not need a numerical cost calculation to complete the lab. Look up current prices for those exact models on the [Oracle Cloud price list](https://www.oracle.com/cloud/price-list/). Record the model, price date, currency, and unit. For prices per one million tokens, calculate:
 
     ```text
     Call cost = (input tokens x input price + output tokens x output price) / 1,000,000
@@ -124,7 +138,9 @@ Follow only the subsection for your chosen application path in Task 2. **Launch 
 
     Calculate the savings percentage only when the baseline cost is greater than zero. If a model uses another billing unit, use that unit and its corresponding usage instead of the token formula.
 
-    Include tool follow-up calls, not just the final response. Apply any separately priced image input, caching, or service charges according to the model's pricing rules. The packaged app does not currently display complete per-call usage, so a numerical savings calculation is optional and requires separately collected usage; otherwise report the qualitative trade-off only.
+    The displayed totals already include Responses API tool follow-up calls; do not add them a second time. Apply any separately priced image input, caching, or other model charges only when their corresponding usage details are available. This estimate excludes separate NL2SQL, guardrail, database, retrieval, and hosting costs. It is not total application cost. If different models were used within one submission, collect per-model usage separately rather than multiplying the aggregate total by one price.
+
+    For example, with **illustrative prices only**, 1,000 input tokens and 500 output tokens at $1/$3 per million cost $0.0025. The same usage at $0.20/$0.60 costs $0.0005, an 80% model-call reduction for that hypothetical pair. These are not Oracle prices, workshop measurements, or total application costs; actual usage can differ between models.
 
 ## Task 4: Optional additional-model experiment
 
@@ -146,4 +162,4 @@ You may now proceed to Lab 5.
 
 - **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
 - **Contributors** — Oracle LiveLabs Platform Team
-- **Last Updated By/Date** — Eli Schilling, October 2026
+- **Last Updated By/Date** — Eli Schilling, November 2026

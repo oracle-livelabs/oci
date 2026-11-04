@@ -452,7 +452,7 @@ Before starting this lab:
     - Data sync job status
     - Vector store file count
 
-4. Notice the steps the application took to generate the response as described in the terminal. Also, notice the model used to process the request.
+4. Notice the steps the application took to generate the response as described in the terminal. After completion, review the metrics strip below the conversation: selected model, app response time, reported input/output tokens, and Responses API call count. Tokens include Responses API follow-up calls for this submission; separate NL2SQL and guardrail usage is not included. **Unavailable** means usage was not fully reported, not zero. Lab 4 uses these metrics for comparison.
 
 
 ## Task 8: Test governed construction-data retrieval
@@ -483,18 +483,20 @@ Your exact answer can vary by model. Success means the answer is scoped to proje
 
 ## Task 9: Test an image prompt
 
-1. Attach a construction drawing, inspection image, or specification screenshot that does not contain confidential information.
+1. Download the [synthetic structural-steel delivery image][synthetic-steel-image] provided for this workshop. Save the PNG to your computer. This is the same image you will reuse in Lab 4; you do not need to supply your own image.
 
-1. In the chat input, attach the downloaded image and add the following prompt:
+1. Select **Reset conversation**, use the paperclip in the chat input to attach the downloaded PNG, and wait until its attachment preview appears. Add the following prompt:
 
     ```text
     <copy>
-    Summarize the visible construction or engineering details in five bullets. Separate observations from assumptions.
+    For project AUS-BANK-01, describe only what is visibly shown in this synthetic construction image: the structural-steel members, their staging, and the project placard. Separate observations from assumptions. Do not query the database, infer certification or inspection approval, or treat the image as inspection evidence.
     </copy>
     ```
 
 
-1. Confirm that the app responds using the image contents.
+1. Confirm that the answer describes the visible steel, staging, and project placard, and separates observations from assumptions. A supplier database answer alone does not demonstrate image analysis. The image is synthetic, not inspection evidence; it cannot establish structural safety or approval. Keep the downloaded PNG for the baseline and routing comparison in Lab 4.
+
+[synthetic-steel-image]: ../8-model-optimization/images/austin-steel-delivery-synthetic-consteng.png
 
 At this stage, Seer Construction Intelligence can retrieve specification evidence, query governed construction Gold views through the Semantic Store and ADB MCP, analyze an image prompt, and call models managed by OCI Enterprise AI.
 We've also observed that the same LLM is being used to serve all requests. We are going to change that in the next lab.
@@ -510,4 +512,4 @@ You may now **proceed to the next lab**.
 
 - **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
 - **Contributors** — Oracle LiveLabs Platform Team
-- **Last Updated By/Date** — Eli Schilling, October 2026
+- **Last Updated By/Date** — Eli Schilling, November 2026
