@@ -36,7 +36,7 @@ For this workshop, you use OCI Container Instances because it provides a simple,
 
 3. Keep the project OCID, unstructured vector store ID, and semantic store OCID available. These are the only values the helper asks you to enter.
 
-4. Confirm that the LiveLabs public subnet security list permits inbound TCP traffic on port `8080`. The workshop uses the subnet security list; it does not require a network security group.
+4. The LiveLabs public subnet must permit inbound TCP traffic on port `8080` and outbound access to the supplied OCIR image and workshop OCI endpoints. This is a pre-provisioned prerequisite, not a request to create a network or change IAM. The workshop uses subnet security lists, not a network security group. If you cannot inspect networking or the prerequisite is missing, ask the facilitator; do not modify the sandbox policies or network.
 
 ## Task 3: Download and inspect the generated helper
 
@@ -46,7 +46,7 @@ For this workshop, you use OCI Container Instances because it provides a simple,
 
     Cloud Shell may display the tenancy home region as its **session region**. That is where the shell runs, not necessarily where your workshop resources run. Preserve the helper's workshop `REGION` value; its OCI commands target that region. If Cloud Shell itself reports an authorization error, contact the workshop facilitator rather than changing IAM policies.
 
-2. Copy the **Launch helper PAR** from the Sandbox Resource List and run the following commands. Replace `<launch-helper-par>` with the complete URL.
+2. Copy **Launch helper PAR** (also shown as **Launch Helper PAR**) from the Sandbox Resource List and run the following commands. Replace `<launch-helper-par>` with the complete URL. This is the shell-script download, not **Configured sample app PAR**/**Sample App PAR**, which is the Build ZIP. PARs expire; use your current reservation's link and do not share it publicly.
 
     ```bash
     <copy>
@@ -64,6 +64,8 @@ For this workshop, you use OCI Container Instances because it provides a simple,
     ```
 
     The compartment, public subnet, Construction Engineering database and Vault secret, region, public OCIR image URL, port `8080`, and resource sizing come from Terraform. The script does not contain an OCI user credential.
+
+    **Launch image** in the generated resource list may appear as **Image URL** in LiveLabs. It is the registry address used to pull the container, not the browser URL for the running app. Preserve the helper's generated regional image value; a public repository needs no learner OCIR login, but the subnet must still be able to reach that registry.
 
 ## Task 4: Launch Seer Construction Intelligence
 
@@ -89,6 +91,8 @@ For this workshop, you use OCI Container Instances because it provides a simple,
 
     If the page is not ready immediately, wait 30 seconds and refresh. The Gradio application responds on port `8080`. If no application URL was printed, inspect the helper's error before retrying; do not launch a duplicate instance.
 
+    This is a temporary training endpoint using HTTP without an application sign-in, not a production-hardened deployment. Use only the seeded construction data and supplied synthetic image. Do not upload private documents or enter credentials into the chat.
+
     ![Seer Construction Intelligence application](images/seer-gradio-home-consteng.png)
 
 2. Select **Specification requirements** under **Try a prompt**, then submit the inserted prompt.
@@ -103,12 +107,15 @@ For this workshop, you use OCI Container Instances because it provides a simple,
 
     ![Seer Construction Intelligence runtime configuration](images/seer-gradio-config-consteng.png)
 
+    The metrics strip below the conversation records the last submission's selected model, app response time, reported input/output tokens, and Responses API call count. **Primary model** and **Text model** in the panel are configured candidates; only the selected model handles a given Responses API request. Lab 4 explains how to compare these results. If the metrics are unavailable, do not interpret them as zero usage.
+
 If either test fails, recheck the three entered resource identifiers and the readiness states from Task 2. You do not need to replace the Container Instance to enable the capabilities in Labs 4 and 5.
 
 You may now proceed to Lab 4. Keep the application open.
 
 ## Learn More
 
+- [OCI Generative AI Hosted Applications and Deployments](https://docs.oracle.com/en-us/iaas/Content/generative-ai/applications-deployments.htm)
 - [Overview of OCI Container Instances](https://docs.oracle.com/en-us/iaas/Content/container-instances/overview-of-container-instances.htm)
 - [OCI Generative AI IAM-based authentication](https://docs.oracle.com/en-us/iaas/Content/generative-ai/oci-genai-auth.htm)
 - [OCI Generative AI application deployment permissions](https://docs.oracle.com/en-us/iaas/Content/generative-ai/deploy-permissions.htm)
@@ -117,4 +124,4 @@ You may now proceed to Lab 4. Keep the application open.
 
 - **Author** — Eli Schilling, Technical Engagement Services, Oracle
 - **Contributors** — Oracle LiveLabs Platform Team
-- **Last Updated By/Date** — Eli Schilling, October 2026
+- **Last Updated By/Date** — Eli Schilling, November 2026

@@ -32,7 +32,7 @@ Token counts sum the usage returned by the Responses API across the initial call
 
 If you are using an older app without the metrics strip, use a stopwatch from submission until the complete answer and **Ready** status, and label this **manual end-to-end time**. Do not compare manual timing directly with app timing. Enter **Not measured** when necessary; the model and answer checks remain sufficient to complete the lab.
 
-1. Open **Runtime configuration** on the right side of the Launch application. Enable **Specification search** and **Governed project data**, and leave **Model routing** and **Prompt-injection protection** disabled for the baseline. Close the panel and confirm that the runtime bar shows **Routing** disabled. In the Build path, confirm the equivalent `.env` settings, including `OCI_GENAI_MODEL_ROUTING_ENABLED=false`, and restart the local app if you changed them.
+1. For **Launch**, open **Runtime configuration** on the right side of the application. Enable **Specification search** and **Governed project data**, and leave **Model routing** and **Prompt-injection protection** disabled. Close the panel and confirm that the runtime bar shows **Routing** disabled. For **Build**, both retrieval paths are enabled in the starter; confirm that `.env` retains `OCI_GENAI_MODEL_ROUTING_ENABLED=false` and `OCI_GENAI_PROMPT_PROTECTION_ENABLED=false`. Restart the local app if you changed these values. Build has no Runtime configuration menu.
 
 2. Start a fresh conversation with **Reset conversation**. Select **Supplier recommendation**, submit the prompt, and record the selected model, app response time, input/output tokens, and Responses API call count from the metrics strip. Keep this answer for comparison in Task 3.
 
@@ -138,6 +138,8 @@ If you are using an older app without the metrics strip, use a stopwatch from su
 
     Calculate the savings percentage only when the baseline cost is greater than zero. If a model uses another billing unit, use that unit and its corresponding usage instead of the token formula.
 
+    When using the displayed aggregate token totals for one model, apply the formula once to those totals to obtain the run's Responses API model cost. The sum-of-calls formula is the equivalent method when you have separate per-call records; do not use both methods together.
+
     The displayed totals already include Responses API tool follow-up calls; do not add them a second time. Apply any separately priced image input, caching, or other model charges only when their corresponding usage details are available. This estimate excludes separate NL2SQL, guardrail, database, retrieval, and hosting costs. It is not total application cost. If different models were used within one submission, collect per-model usage separately rather than multiplying the aggregate total by one price.
 
     For example, with **illustrative prices only**, 1,000 input tokens and 500 output tokens at $1/$3 per million cost $0.0025. The same usage at $0.20/$0.60 costs $0.0005, an 80% model-call reduction for that hypothetical pair. These are not Oracle prices, workshop measurements, or total application costs; actual usage can differ between models.
@@ -146,11 +148,11 @@ If you are using an older app without the metrics strip, use a stopwatch from su
 
 1. Choose another text-capable model available in the workshop region.
 
-2. For the Build path, set `OCI_GENAI_CHEAPER_MODEL` in `.env` and restart the local app. For the Launch path, edit the generated helper's `CHEAPER_MODEL` value and launch a separate experiment instance.
+2. For **Build**, keep the Lab 4 routing code and `OCI_GENAI_MODEL_ROUTING_ENABLED=true`, set `OCI_GENAI_CHEAPER_MODEL` in `.env`, and restart the local app. For **Launch**, copy the downloaded helper to a separate experiment file, change only `CHEAPER_MODEL` to the candidate model ID, and run that copy with the same three lab-created identifiers. This creates an additional paid instance (1 OCPU and 4 GB); confirm capacity and facilitator approval before doing so. Record its Container Instance OCID and application URL. In the experiment app, explicitly enable **Model routing**: each newly launched instance starts with routing disabled.
 
-3. Run the same governed-data prompt across the candidates and record latency, evidence quality, and relative cost. Keep image input on a model that explicitly supports images.
+3. Run the same governed-data prompt in fresh conversations across the candidates and record selected model, app response time, reported tokens, API call count, and the answer checks from Task 3. Discuss price only with the qualifications in Task 3; token counts alone do not establish relative cost. Keep image input on the original image-capable primary model.
 
-4. Delete an experiment instance when you finish. The workshop's main Launch instance does not need to be replaced for the standard routing exercise.
+4. For Launch, delete only the additional experiment instance when finished, using its recorded OCID to distinguish it from the workshop's main instance. Return to the original app for Lab 5. For Build, restore the original `OCI_GENAI_CHEAPER_MODEL` value and restart. The main Launch instance does not need replacement for the standard routing exercise.
 
 You may now proceed to Lab 5.
 

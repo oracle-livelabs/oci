@@ -23,11 +23,13 @@ In this lab, you will:
 
 1. The sandbox environment has already provisioned the OCI foundation resources for this workshop. You will be able to see the OCIDs and other resource values in the sandbox environment alongside the login and tenancy information. We will use this information as we progress through the workshop.
 
-    ![Sandbox details](images/sandbox-details.png)
+    Open **View Login Info** to find the reservation's tenancy, region, compartment, and environment details. The example below shows only the tenancy-information panel; use your own reservation's values, not the example region.
+
+    ![Reservation tenancy information with region and compartment fields](images/reservation-information-consteng.png)
 
 2. When any task asks you to select a compartment, expand **LiveLabs** and select the reservation-specific child compartment named like `LL<reservation>-COMPARTMENT`. Do not select the parent **LiveLabs** compartment.
 
-3. Use your favorite editor to create a simple worksheet for the values used by the sample app and Gen AI tools.
+3. Use your favorite editor to create a simple worksheet for the values used by the sample app and OCI Enterprise AI tools. **Sandbox Resource List** below means the reservation's environment details, or its generated **Workshop resource list**. LiveLabs may shorten the Terraform labels; the aliases below refer to the same values.
 
     | Value | Where to get it | Later `.env` variable | Where value is needed |
     | --- | --- | --- | --- |
@@ -47,7 +49,7 @@ In this lab, you will:
 
     Copy the following worksheet into your text file. Fill in the values available in the Sandbox Resource List. Add the project and vector-store identifiers after creating those resources. The same workshop region fills all three region entries.
 
-    **Match labels, not variable names:** **Compartment OCID** supplies `OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID`; **Region** supplies all three region variables (use the identifier such as `us-ashburn-1`, not the display name); and **ADB OCID** supplies `OCI_ADB_DATABASE_OCID`. **DB Tools Enrichment Connection OCID** and **DB Tools Query Connection OCID** go into the two connection fields in Lab 2, not the worksheet's application-secret field. **Sample App PAR** is `CONFIGURED_SAMPLE_APP_PAR` for Build; **Launch Helper PAR** is `LAUNCH_HELPER_PAR` for Launch. These application variable names will not appear verbatim in the resource list.
+    **Match labels, not variable names:** **Workshop compartment OCID** (or **Compartment OCID**) supplies `OCI_GENAI_GUARDRAILS_COMPARTMENT_OCID`; **Workshop region** (or **Region**) supplies all three region variables (use the identifier such as `us-ashburn-1`, not the display name); and **AI Lakehouse Autonomous Database OCID** (or **ADB OCID**) supplies `OCI_ADB_DATABASE_OCID`. **Database Tools Enrichment connection OCID** and **Database Tools Query connection OCID** may be shortened to **DB Tools Enrichment Connection OCID** and **DB Tools Query Connection OCID**. They go into the two connection fields in Lab 2, not the worksheet's application-secret field. **Configured sample app PAR** (or **Sample App PAR**) is `CONFIGURED_SAMPLE_APP_PAR` for Build; **Launch helper PAR** is `LAUNCH_HELPER_PAR` for Launch. These application variable names will not appear verbatim in the resource list.
 
     **Launch path:** The helper already contains the pre-provisioned values. Keep this worksheet as a reference; you only need to enter the project OCID, unstructured vector store ID, and semantic store OCID when launching. OCI config file and profile entries apply only to Build.
 
@@ -73,6 +75,8 @@ In this lab, you will:
     ```
 
     As we progress through the following tasks and labs, you will fill in the missing values that we will use for the sample app in a later lab.
+
+    This is a notes worksheet, not an executable script or a replacement `.env`. Preserve the `.env` generated for Build and add only the missing lab-created identifiers there. A PAR is a temporary download URL, not a resource OCID; do not publish or share it outside your reservation.
 
 ## Task 2: Create the OCI Enterprise AI project
 
@@ -106,7 +110,7 @@ Each project supports separate lifecycle and compliance boundaries. Reference th
 
     Use the reservation-specific child compartment from your sandbox resource list.
 
-    ![Create the Seer Construction Intelligence project](images/create-project-basic-information-consteng.jpg)
+    ![Create the Seer Construction Intelligence project](images/create-project-basic-information-review-consteng.jpg)
 
 1. Observe the response and conversation retention for the workshop.
 
@@ -130,6 +134,8 @@ The sandbox already includes the Object Storage bucket that stores the source do
 
 3. Open the bucket named in your sandbox resource list.
 
+    Look for **Seer Construction Group evidence bucket**. Do not confuse the bucket name with **Evidence base URI** (`oci://...`), a download PAR, or the vector store that you create next.
+
 4. Click the **Objects** tab.
 
 5. Confirm that the bucket contains `austin_structural_engineering_specification.pdf`.
@@ -138,13 +144,11 @@ The sandbox already includes the Object Storage bucket that stores the source do
 
 ## Task 4: Create the unstructured vector store
 
-The unstructured vector store scans files, splits them into chunks, embeds the chunks for semantic search, and stores the results. The support agent can use the vector store content to answer user questions.
+The unstructured vector store scans files, splits them into chunks, embeds the chunks for semantic search, and stores the results. The construction assistant can use the vector store content to answer user questions.
 
 1. In the Console navigation menu, go to **Analytics & AI**, then **Generative AI**.
 
 2. Select **Vector stores**.
-
-    ![Construction Engineering vector stores](images/vector-stores-consteng.jpg)
 
 3. Click **Create vector store**.
 
@@ -158,7 +162,7 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
     - Select the reservation-specific child compartment from your sandbox resource list.
     - Under **Data source type**, select **Unstructured data**.
 
-    ![Create the construction evidence vector store](images/create-vector-store-consteng.jpg)
+    ![Create the construction evidence vector store](images/create-vector-store-review-consteng.jpg)
 
 5. Click **Create**.
 
@@ -170,7 +174,7 @@ The unstructured vector store scans files, splits them into chunks, embeds the c
 
     ![Construction evidence vector store before ingestion](images/vector-store-details-consteng.png)
 
-8. Copy the **Vector store ID** and record it as the value for `Unstructured Vector store ID`. The value should look like `vs_iad_3vw620r...`.
+8. Copy the **Vector store ID** and record it as `Unstructured vector store ID` (`OCI_GENAI_VECTOR_STORE_IDS`). It starts with `vs_`; the remainder depends on your assigned region. Do not copy a connector, data-sync, or semantic-store OCID.
 
 ## Task 5: Create the data sync connector
 
@@ -192,6 +196,8 @@ The data sync connector facilitates the processing pipeline where files are read
     ```
 
     ![Select all files in the construction evidence bucket, including the Austin structural engineering specification](images/select-construction-evidence-consteng.png)
+
+    The same bucket can also contain the generated sample-app ZIP and Launch helper shell script. Those are delivery artifacts, not construction evidence. With **Select all in bucket** enabled, they may appear as unsupported/skipped files; the required ingestion result is the PDF completing successfully, not every object being treated as a document.
 
 4. Click **Create**.
 
@@ -221,7 +227,7 @@ The data sync connector facilitates the processing pipeline where files are read
 
 12. Return to the vector store details page.
 
-13. Confirm that the completed file count is `1`. Do not continue until the data sync job is **Succeeded**, the vector store is **Completed**, and the processed file count is nonzero.
+13. Confirm that `austin_structural_engineering_specification.pdf` is completed in the store's file list and the completed file count is at least `1`. Do not continue until the data sync job is **Succeeded**, the vector store is **Completed**, and the PDF has been processed. A **Completed** store badge with zero completed files is not readiness. If the job remains queued/running or reports a failure, record its status and work request/error details for the facilitator; do not repeatedly recreate stores or launch duplicate sync jobs.
 
     ![Completed construction vector store with one processed PDF](images/processed-file-count-consteng.png)
 
@@ -239,4 +245,4 @@ You may now **proceed to the next lab**.
 
 - **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
 - **Contributors** — Oracle LiveLabs Platform Team
-- **Last Updated By/Date** — Eli Schilling, October 2026
+- **Last Updated By/Date** — Eli Schilling, November 2026

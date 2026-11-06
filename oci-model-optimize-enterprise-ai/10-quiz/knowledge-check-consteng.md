@@ -14,8 +14,8 @@ Estimated Time: 5 minutes
 
 ### Prerequisites
 
-- Completed Labs 1 through 5
-- Successfully tested either application path
+- Completed Labs 1 and 2, either Lab 3A or Lab 3B, then Labs 4 and 5
+- Successfully tested the chosen application path; the optional additional-model experiment is not required
 
 ## Task 1: Complete the knowledge check
 
@@ -87,18 +87,18 @@ Estimated Time: 5 minutes
     - The semantic store chooses the model.
     - ApplyGuardrails is skipped.
     - Every model runs in parallel.
-    > The routing rule optimizes narrow text workloads while preserving multimodal capability.
+    > This sample selects by current-submission modality (text versus image), not by a measured reasoning-complexity score. Check answer quality and reported usage; lower latency alone does not prove savings.
 
     Q: What does the app do when ApplyGuardrails flags prompt injection at or above the threshold?
     - Routes the prompt to the cheaper model.
     - Stores the prompt in Object Storage.
     * Blocks the prompt before calling the model.
     - Executes it through ADB MCP Server.
-    > The guardrail is evaluated before the Responses API call and fails closed.
+    > When prompt-injection protection is enabled, the submitted text is checked before the Responses API call and service errors stop the request. This is not image-content moderation.
     ```
 
 ## Acknowledgements
 
 - **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
 - **Contributors** — Oracle LiveLabs Platform Team
-- **Last Updated By/Date** — Eli Schilling, October 2026
+- **Last Updated By/Date** — Eli Schilling, November 2026
