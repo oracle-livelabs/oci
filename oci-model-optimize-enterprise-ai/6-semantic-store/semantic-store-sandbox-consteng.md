@@ -43,9 +43,9 @@ This lab assumes you have:
     Connection type: OCI Database tool
     ```
 
-    ![Create the Construction Engineering semantic store](images/semantic-store-consteng.jpg)
+    ![Create the Construction Engineering semantic store](images/semantic-store-review-consteng.jpg)
 
-    Use the connection OCIDs from your sandbox resource list:
+    Use the **Database Tools Enrichment connection OCID** and **Database Tools Query connection OCID** from your Sandbox Resource List (LiveLabs may shorten these labels to **DB Tools Enrichment Connection OCID** and **DB Tools Query Connection OCID**). Use the same workshop region as Lab 1.
 
     ```text
     Enrichment connection ID: <DB Tools Enrichment Connection OCID>
@@ -58,7 +58,7 @@ This lab assumes you have:
 
 1. Click **Test query connection** to make sure the semantic store can use the connection to connect to the database.
 
-    ![Configure the Construction Engineering database connections](images/create-structured-semantic-store-consteng.jpg)
+    ![Configure the Construction Engineering database connections](images/create-structured-semantic-store-review-consteng.jpg)
 
 1. Click **Create**.
 
@@ -70,9 +70,13 @@ This lab assumes you have:
 
     ![Copy the semantic store OCID from its details page](images/semantic-copy-ocid-consteng.jpg)
 
-At this stage, the Semantic Store can generate SQL from natural language against the governed construction Gold views and execute it through the workshop database connection.
+At this stage, the semantic store has enriched metadata for generating SQL against the governed construction Gold views. In the sample application, NL2SQL generates SQL, the application validates its project scope, and ADB MCP Server executes it. Creating the store has not yet tested that complete application path.
 
-You may now **proceed to the next lab**.
+The list should now include both `seer-construction-evidence` from Lab 1 and `seer-construction-semantic` from this lab. Screenshot compartments and OCIDs are examples; continue using your own reservation's identifiers.
+
+![Construction Engineering vector stores after completing Labs 1 and 2](../5-unstructured-rag/images/vector-stores-review-consteng.jpg)
+
+Choose **Lab 3A: Build the Sample Application** to run and modify Python locally, or **Lab 3B: Launch the Sample Application** to deploy the pre-built container. Complete only one path, then continue to Lab 4.
 
 ## Learn More
 
@@ -82,4 +86,4 @@ You may now **proceed to the next lab**.
 
 - **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
 - **Contributors** — Oracle LiveLabs Platform Team
-- **Last Updated By/Date** — Eli Schilling, October 2026
+- **Last Updated By/Date** — Eli Schilling, November 2026

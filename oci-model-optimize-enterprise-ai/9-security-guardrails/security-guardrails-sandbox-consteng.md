@@ -34,7 +34,7 @@ Follow only your chosen path in Task 1. **Launch (Lab 3B)** enables the packaged
     </copy>
     ```
 
-3. In `handle_prompt`, replace the Lab 5 placeholder comment with the following fail-closed check:
+3. In `_handle_prompt`, find the comment `# Lab 5 adds the OCI ApplyGuardrails prompt-injection check here.` and replace it with the following fail-closed check. Keep the surrounding `try` block and indent this code to match the placeholder. Do not edit the separate `handle_prompt` wrapper: it adds the metrics output to each result, including blocked prompts.
 
     ```python
     <copy>
@@ -94,6 +94,8 @@ Follow only your chosen path in Task 1. **Launch (Lab 3B)** enables the packaged
 
 2. Confirm that the application reports a blocked prompt-injection result and does not produce the requested unsupported approval.
 
+    With a fresh submission, the metrics strip should show **0 Responses API calls**, **Selected model: Not called**, and unavailable token counts. Guardrail checking still takes time and may have separate service charges; zero inference calls is not a claim of zero total cost.
+
 ## Task 4: Review failure behavior
 
 The guardrail call is intentionally fail-closed. A missing compartment OCID, an authorization failure, or a service error stops the model request instead of silently bypassing the check. This preserves the security boundary even when a dependency is unavailable.
@@ -110,4 +112,4 @@ You may now proceed to Lab 6.
 
 - **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
 - **Contributors** — Oracle LiveLabs Platform Team
-- **Last Updated By/Date** — Eli Schilling, October 2026
+- **Last Updated By/Date** — Eli Schilling, November 2026

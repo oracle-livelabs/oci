@@ -6,6 +6,8 @@ In this lab, you extract, configure, and run Seer Construction Intelligence on y
 
 Estimated Time: 30 minutes
 
+Choose this Build path or Lab 3B's Launch path, not both. After this lab, continue directly to Lab 4. Build uses an OCI API signing key on your computer; it does not use a GenAI service API key or an OCIR auth token.
+
 **File structure used throughout the lab.**
 
 ```text
@@ -72,7 +74,7 @@ Before starting this lab:
 
 ## Task 2: Download and extract the configured sample application
 
-1. Copy the **Configured sample app PAR** from the Sandbox Resource List and open it in a new browser tab. Save the download as `sample-app.zip`.
+1. Copy **Configured sample app PAR** (shown as **Sample App PAR** in some LiveLabs resource lists) and open it in a new browser tab. Save the download as `sample-app.zip`. Use your current reservation's link, not the Launch helper PAR or a ZIP from an earlier reservation.
 
     The archive already contains a generated `.env` file with the compartment, region, Autonomous AI Database, Construction Engineering Vault secret, and application defaults from your sandbox.
 
@@ -86,7 +88,7 @@ Before starting this lab:
     - Type terminal
     - Press Return.
 
-    > **Note:** The sample application contains a hidden file called `.env.example`. By default, this file cannot be seen in Finder. In order to see hidden files, use the following keyboard shortcut while in Finder: Shift + CMD + Period (the '.' character). This will also be helpful later when we interact with the `~/.oci` folder which is also hidden.
+    > **Note:** The configured sample application contains a hidden `.env` file. Do not replace it with `.env.example`. In Finder, use Shift + CMD + Period (the '.' character) to see hidden files. This also reveals the `~/.oci` folder used later.
 
     On Windows:
 
@@ -138,7 +140,7 @@ Before starting this lab:
 
     ![PowerShell unzip the sample app](./images/windows-powershell-unzip-sample-app.png)
 
-1. Confirm that the extraction created the `sample-app` directory.
+1. Confirm that the extraction created the `sample-app` directory. If you chose a short Windows location such as `C:\labs`, extract or move the `sample-app` directory there now; substitute that location for Downloads in later app commands. Keep the home-directory `.oci` location unchanged.
 
     On Mac:
 
@@ -331,7 +333,27 @@ Before starting this lab:
 
 ## Task 4: Complete the app environment file
 
-1. Change into the extracted `sample-app` directory and open the generated `.env` file.
+1. Return to the extracted `sample-app` directory (Task 3 left the terminal in your home directory), then open the generated `.env` file. With the default download location:
+
+    On Mac:
+
+    ```bash
+    <copy>
+    cd ~/Downloads/sample-app
+    nano .env
+    </copy>
+    ```
+
+    On Windows PowerShell:
+
+    ```powershell
+    <copy>
+    cd $HOME\Downloads\sample-app
+    notepad .env
+    </copy>
+    ```
+
+    If you used `C:\labs\sample-app` or another extraction folder, change to that folder instead. In your editor, keep the filename exactly `.env`, not `.env.txt`.
 
 2. Add only the three resources that you created in Labs 1 and 2.
 
@@ -452,7 +474,7 @@ Before starting this lab:
     - Data sync job status
     - Vector store file count
 
-4. Notice the steps the application took to generate the response as described in the terminal. Also, notice the model used to process the request.
+4. Notice the steps the application took to generate the response as described in the terminal. After completion, review the metrics strip below the conversation: selected model, app response time, reported input/output tokens, and Responses API call count. Tokens include Responses API follow-up calls for this submission; separate NL2SQL and guardrail usage is not included. **Unavailable** means usage was not fully reported, not zero. Lab 4 uses these metrics for comparison.
 
 
 ## Task 8: Test governed construction-data retrieval
@@ -483,23 +505,25 @@ Your exact answer can vary by model. Success means the answer is scoped to proje
 
 ## Task 9: Test an image prompt
 
-1. Attach a construction drawing, inspection image, or specification screenshot that does not contain confidential information.
+1. Download the [synthetic structural-steel delivery image][synthetic-steel-image] provided for this workshop. Save the PNG to your computer. This is the same image you will reuse in Lab 4; you do not need to supply your own image.
 
-1. In the chat input, attach the downloaded image and add the following prompt:
+1. Select **Reset conversation**, use the paperclip in the chat input to attach the downloaded PNG, and wait until its attachment preview appears. Add the following prompt:
 
     ```text
     <copy>
-    Summarize the visible construction or engineering details in five bullets. Separate observations from assumptions.
+    For project AUS-BANK-01, describe only what is visibly shown in this synthetic construction image: the structural-steel members, their staging, and the project placard. Separate observations from assumptions. Do not query the database, infer certification or inspection approval, or treat the image as inspection evidence.
     </copy>
     ```
 
 
-1. Confirm that the app responds using the image contents.
+1. Confirm that the answer describes the visible steel, staging, and project placard, and separates observations from assumptions. A supplier database answer alone does not demonstrate image analysis. The image is synthetic, not inspection evidence; it cannot establish structural safety or approval. Keep the downloaded PNG for the baseline and routing comparison in Lab 4.
+
+[synthetic-steel-image]: ../8-model-optimization/images/austin-steel-delivery-synthetic-consteng.png
 
 At this stage, Seer Construction Intelligence can retrieve specification evidence, query governed construction Gold views through the Semantic Store and ADB MCP, analyze an image prompt, and call models managed by OCI Enterprise AI.
 We've also observed that the same LLM is being used to serve all requests. We are going to change that in the next lab.
 
-You may now **proceed to the next lab**.
+You may now **proceed directly to Lab 4: Model Optimization**. Skip Lab 3B; it is the alternative deployment path, not an additional prerequisite. Keep the local app and its terminal running.
 
 ## Learn More
 
@@ -510,4 +534,4 @@ You may now **proceed to the next lab**.
 
 - **Author** — Julien Lehmann - Product Marketing Manager, Yanir Shahak - Senior Principal Software Engineer
 - **Contributors** — Oracle LiveLabs Platform Team
-- **Last Updated By/Date** — Eli Schilling, October 2026
+- **Last Updated By/Date** — Eli Schilling, November 2026
