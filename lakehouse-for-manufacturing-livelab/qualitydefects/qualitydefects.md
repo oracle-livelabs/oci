@@ -7,7 +7,6 @@ In this section of the demonstration, we will be showcasing how AI Vision Servic
 **“The global image recognition market size was USD 23.82 billion in 2019 and is projected to reach USD 86.32 billion by 2027, exhibiting a CAGR of 17.6% during the forecast period.”**
 
 
-
 ### **OCI Vision Introduction**
 
 Oracle Cloud Infrastructure (OCI) Vision is an AI service for performing deep-learning–based image analysis at scale. Vision is a serverless, multi-tenant service, accessible using the Console, or over REST APIs. It enables you to upload images to detect and classify objects in them. If you have lots of images, you can process them in batch via asynchronous API endpoints
@@ -39,6 +38,7 @@ Oracle Cloud Infrastructure (OCI) Vision is an AI service for performing deep-le
 Estimated Time: 30 minutes
 
 ### Objectives
+
 In this workshop, you will:
 
 * Learn how to use OCI Vision service for quality detection using the product output images.
@@ -62,24 +62,25 @@ Note – For In-depth knowledge of AI Vision service, please refer to the below 
 
 Follow these steps to create a Project in Vision.
 
-   1. In the console navigation menu, click **Analytics & AI**.
-   2. Under **AI Services**, click **Vision**.
-   3. From the Vision Console page, under **Custom Models**, click **Projects**.
+1. In the console navigation menu, click **Analytics & AI**.
+1. Under **AI Services**, click **Vision**.
+1. From the Vision Console page, under **Custom Models**, click **Projects**.
       The **Project List** page is displayed.
-   4. Click **Create Project**.
+1. Click **Create Project**.
       The **Create Project** panel is displayed.
-   5. Select a **Compartment** to create the Project.
-   6. Give the Project a **Name**. For example Vision demo. Avoid entering confidential information.
-   7. (Optional) Enter a **Description** for the Project. It should help others identify it.
-   8. Click **Create Project**.
+1. Select a **Compartment** to create the Project.
+1. Give the Project a **Name**. For example Vision demo. Avoid entering confidential information.
+1. (Optional) Enter a **Description** for the Project. It should help others identify it.
+1. Click **Create Project**.
 
     ![OCI Vision Service](images/oci-vision-service.png)
-	![Select project](images/select-project.png)
-	![Create vision project](images/create-vision-project.png)
+    ![Select project](images/select-project.png)
+    ![Create vision project](images/create-vision-project.png)
 
 ## Task 2: Create Custom Model
 
 In Choose Model type to train Select **Object detection**.
+
 | Feature              | Description                                    | Details on Console                                                                                                                                                                                                                                                                                                                                                                         |
 | -------------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Image classification | Categorizes object(s) within an image          | Select "Image Classification." Labels and confidence scores will appear under the Results pane. [Reference](https://oracle-livelabs.github.io/analytics-ai/oci-artificial-intelligence/ai-vision/analyze-vision/images/image-classification.png)                                                                                                                                           |
@@ -105,11 +106,11 @@ In Choose Model type to train Select **Object detection**.
 
  Select the **Training duration**.
 
-  * **Recommended training** - Vision automatically selects the training duration to create the optimal model. The training might take up to 24 hours.
+* **Recommended training** - Vision automatically selects the training duration to create the optimal model. The training might take up to 24 hours.
 
-  * **Quick training** - This option produces a model that is not fully optimized but is available in about an hour.
+* **Quick training** - This option produces a model that is not fully optimized but is available in about an hour.
 
-  * **Custom** - This option allows you to set your maximum training duration (in hours).
+* **Custom** - This option allows you to set your maximum training duration (in hours).
 
 
 Review the information you provided in the previous steps. You can make any changes, by clicking **Previous**.
@@ -128,7 +129,7 @@ Once the model completes training, let's test the model.
 
 To test the model, you can choose an image from the local machine or an object Storage bucket.
 
-For this lab, you can download [Images](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/OCE-20220913.zip) and use any of these images for testing Vision model.
+For this lab, you can download [Images](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles/OCE-20220913.zip) and use any of these images for testing Vision model.
 
 ![Select image](images/select-image.png)
 
@@ -149,11 +150,12 @@ As seen from the analysis the AI vision service was successfully able to identif
 
 Reference -
 
-[ https://www.alliedmarketresearch.com/image-recognition-market](https://www.alliedmarketresearch.com/image-recognition-market)
+[https://www.alliedmarketresearch.com/image-recognition-market](https://www.alliedmarketresearch.com/image-recognition-market)
 
-[ https://www.fortunebusinessinsights.com/industry-reports/image-recognition-market-101855](https://www.fortunebusinessinsights.com/industry-reports/image-recognition-market-101855)
+[https://www.fortunebusinessinsights.com/industry-reports/image-recognition-market-101855](https://www.fortunebusinessinsights.com/industry-reports/image-recognition-market-101855)
 
 ## Acknowledgements
+
 * **Author**
     * Biswanath Nanda, Principal Cloud Architect, Cloud Engineering
     * Jyothish Busipalle, Principal Cloud Architect, Cloud Engineering
