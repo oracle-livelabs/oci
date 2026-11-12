@@ -27,7 +27,7 @@ This lab assumes you have:
 
 ## Task 1: Provision resources
 
-1. Download the provided archive of the code: [labfiles_falco-on-oke-main.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles%2Ffalco-on-oke-main.zip)
+1. Download the provided archive of the code: [labfiles_falco-on-oke-main.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles%2Ffalco-on-oke-main.zip)
 
 2. In your OCI tenancy go to **Developer Services → Resource Manager → Stacks → Create Stack**.  
 

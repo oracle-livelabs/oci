@@ -68,7 +68,7 @@ But before you continue, you need to perform the first step, **Create Dataset** 
 
     ![Data labeling on Github](./images/data-labeling-examples.png " ")
 
-3. Alternatively you can also download this python code. [data-labeling-python-code.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/partner-solutions/oas-and-vision/lab2.zip) to your computer.
+3. Alternatively you can also download this python code. [data-labeling-python-code.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/partner-solutions/oas-and-vision/lab2.zip) to your computer.
 
 4. Extract the zip file, it creates a folder structure similar 
 

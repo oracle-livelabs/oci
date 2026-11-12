@@ -101,7 +101,7 @@ component which
 
 </copy>
 ```
-> **Note**: Verify your dialog flow here (<a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/labfiles/dialogflow_task2.txt">Link</a>).
+> **Note**: Verify your dialog flow here (<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/labfiles/dialogflow_task2.txt">Link</a>).
 
 3. We will add the dialog flow for *Positive Health* intent. Here we are going to display a card carousel with images, text, and links to redirect to different videos.
 
@@ -153,7 +153,7 @@ component which
         startTheraphy: "startTheraphy"
 </copy>
 ```
-> **Note**: Verify your dialog flow (<a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_step2.txt">Link</a>) and ignore the "The state with the name 'findPatientDetails' was not found." error.
+> **Note**: Verify your dialog flow (<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_step2.txt">Link</a>) and ignore the "The state with the name 'findPatientDetails' was not found." error.
 
 - Go ahead and test the flow. 
 
@@ -262,7 +262,7 @@ RegisterPatientBag: "RegisterPatientBag"
 </copy>
 ```
 
-> **Note**: Verify your dialog flow (<a href = "https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_task3.txt">Link</a>) and You should still be able to test even though you see there are errors in your validation
+> **Note**: Verify your dialog flow (<a href = "https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_task3.txt">Link</a>) and You should still be able to test even though you see there are errors in your validation
 
 
   ![Conversation Tester](images/conversation-tester.png)
@@ -645,7 +645,7 @@ Add the *findDoctor* dialog after the *selectTime* component.
 
 </copy>
 ```
-> **Note**: Verify your end-to-end dialog flow (<a href="https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_lab4.txt">Link</a>) and ignore the warnings.
+> **Note**: Verify your end-to-end dialog flow (<a href="https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/dialogflow_lab4.txt">Link</a>) and ignore the warnings.
 
 
 ## Summary

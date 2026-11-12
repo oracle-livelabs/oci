@@ -22,7 +22,7 @@ In this task we will provide you with a link where you can download the Python s
 
 1. Log in to OCI as states in previous section "Getting Started".
 
-1.	Download the [security assessment script.](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/security_assessment.py)
+1.	Download the [security assessment script.](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/security_assessment.py)
     Now you can run that security assessment script in the Oracle Cloud Shell. In order to do that, open the Oracle Cloud Shell by clicking in the Cloud Shell icon in the Console header:
 
     ![Open Cloud Shell](images/cloud-shell-icon.png "Open Cloud Shell")
@@ -89,7 +89,7 @@ In this task we will provide you with a link where you can download the Python s
 
 In this task, similar process should be followed, but this time you will execute the compliance assessment.
 
-1. Download the [CIS reports script](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/oci-library/cis_reports.py) and save it locally.
+1. Download the [CIS reports script](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/cis_reports.py) and save it locally.
 
 2. Upload the script in the Cloud Shell terminal by doing drag and drop as you did with the security assessment script in previous task. 
 
