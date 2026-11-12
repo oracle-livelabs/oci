@@ -1,6 +1,7 @@
 # Setup the Environment
 
 ## Introduction
+
 This lab walks you through the steps to configure your cloud environment, define security and access controls, and create an Oracle Container Engine for Kubernetes (OKE) cluster.
 
 Estimated Time: 15 minutes
@@ -27,17 +28,17 @@ A compartment is a virtual container within your Cloud account used to organize 
 
       Expand the list of services and navigate down to **Identity** ---> **Compartments**.
 
-      ![Compartments](images/iam-compartments.png " ")
+    ![Compartments](images/iam-compartments.png " ")
 
-2. Select the **Create Compartment** button.
+1. Select the **Create Compartment** button.
 
     ![Create Compartment](images/create-compartment.png " ")
 
-3. Enter **devlivedemo** in the **Name** field and give your Compartment a brief description. Click the **Create Compartment** button to complete the creation.
+1. Enter **devlivedemo** in the **Name** field and give your Compartment a brief description. Click the **Create Compartment** button to complete the creation.
 
     ![Compartment Wizard](images/compartment-wizard.png " ")
 
-4. Most likely, you'll be returned to the **IAM** --> **Compartments** page. Click on your new Compartment name **devlivedemo** to open the Compartment Details page. Locate and record the unique identifier (**OCID**) for this Compartment. This identifier is required in Task 2.
+1. Most likely, you'll be returned to the **IAM** --> **Compartments** page. Click on your new Compartment name **devlivedemo** to open the Compartment Details page. Locate and record the unique identifier (**OCID**) for this Compartment. This identifier is required in Task 2.
 
     ![Compartment OCID](images/compartment-ocid.png " ")
 
@@ -48,47 +49,48 @@ Dynamic groups allow you to assign permissions to Virtual Machines and allow the
 
 1. In the OCI Management Console open the Main Menu, navigate to **Identity** --> **Dynamic Groups**.
 
-      ![Dynamic Groups](images/dynamic-groups.png " ")
+    ![Dynamic Groups](images/dynamic-groups.png " ")
 
-2. Select the **Create Dynamic Group** button.
+1. Select the **Create Dynamic Group** button.
 
-      ![Create Dynamic Group](images/create-dynamic-group.png " ")
+    ![Create Dynamic Group](images/create-dynamic-group.png " ")
 
-3. Enter **devlivedg** in the **Name** field and give your Dynamic Group a brief description.
+1. Enter **devlivedg** in the **Name** field and give your Dynamic Group a brief description.
 
-      ![Create Dynamic Group Wizard](images/dynamic-group-wizard-1.png " ")
+    ![Create Dynamic Group Wizard](images/dynamic-group-wizard-1.png " ")
 
-4. Next we will create **Matching Rules** to select which Virtual Machines should be included in this Dynamic Group. In a production environment, you may be very selective about the specific Virtual Machines that may be included in this group to strictly limit the permissions they inherit. In this workshop, we will create a rule to include all Virtual Machines within the devlivedemo Compartment created in Task 1. **Add the following statement** in the **Matching Rules** --> **RULE 1** box.
-   **Note:** Change the OCID to match your OCID recorded in Task 1, keeping the single quotes surrounding this value. If you no longer have this OCID readily available, it may be obtained by navigating to the **Identity** --> **Compartments** --> **devlivedemo** property page.  
+1. Next we will create **Matching Rules** to select which Virtual Machines should be included in this Dynamic Group. In a production environment, you may be very selective about the specific Virtual Machines that may be included in this group to strictly limit the permissions they inherit. In this workshop, we will create a rule to include all Virtual Machines within the devlivedemo Compartment created in Task 1. **Add the following statement** in the **Matching Rules** --> **RULE 1** box.
+    **Note:** Change the OCID to match your OCID recorded in Task 1, keeping the single quotes surrounding this value. If you no longer have this OCID readily available, it may be obtained by navigating to the **Identity** --> **Compartments** --> **devlivedemo** property page.  
 
     ```
     instance.compartment.id = 'ocid1.compartment.oc1..aaaaaa-YOUR-ACTUAL-COMPARTMENT-OCID-cnjfzjhfi2nbgv3yq'
     ```
 
-      ![Create Dynamic Group Wizard](images/dynamic-group-wizard-2.png " ")
+    ![Create Dynamic Group Wizard](images/dynamic-group-wizard-2.png " ")
 
-5. Click **Create** to complete the process and close the dialog screen.
+1. Click **Create** to complete the process and close the dialog screen.
 
-6. Next we will create **Policies** for your Dynamic Group to grant Virtual Machines the ability to push logs to the Logging Service and Metrics to the Monitoring Service.  
+1. Next we will create **Policies** for your Dynamic Group to grant Virtual Machines the ability to push logs to the Logging Service and Metrics to the Monitoring Service.  
 
-7. Navigate to the **Identity** --> **Policies** page and ensure **Compartment** devlivedemo is selected in the left column.
+1. Navigate to the **Identity** --> **Policies** page and ensure **Compartment** devlivedemo is selected in the left column.
 
-      ![IAM Policies](images/iam-policies.png " ")
+    ![IAM Policies](images/iam-policies.png " ")
 
-8. Click **Create**, name your new policy "devlivepolicy" and give it a brief description. For **Compartment** select your root compartment.
+1. Click **Create**, name your new policy "devlivepolicy" and give it a brief description. For **Compartment** select your root compartment.
 
-      ![Create Policy Wizard](images/create-policy.png " ")
+    ![Create Policy Wizard](images/create-policy.png " ")
 
-9. In the **Policy Builder** section select the **Show manual editor** option. Enter the following code in the policy box, as shown in the figure below:
+1. In the **Policy Builder** section select the **Show manual editor** option. Enter the following code in the policy box, as shown in the figure below:
 
     ```
-   Allow dynamic-group devlivedg to use log-content in compartment devlivedemo
-   Allow dynamic-group devlivedg to use metrics in compartment devlivedemo
-   Allow dynamic-group devlivedg to manage functions-family in compartment devlivedemo
+       Allow dynamic-group devlivedg to use log-content in compartment devlivedemo
+       Allow dynamic-group devlivedg to use metrics in compartment devlivedemo
+       Allow dynamic-group devlivedg to manage functions-family in compartment devlivedemo
     ```
-      ![Customize - Advanced](images/customize-advanced.png " ")
 
-10. Click **Create** to complete the process and close the dialog screen.
+    ![Customize - Advanced](images/customize-advanced.png " ")
+
+1. Click **Create** to complete the process and close the dialog screen.
 
 ## Task 3: Deploy an OKE (Oracle Container Engine for Kubernetes) Cluster
 
@@ -96,40 +98,40 @@ Container Engine for Kubernetes (OKE) is an Oracle-managed container orchestrati
 
 1. In the OCI Management Console, choose a region to deploy your OKE cluster.
 
-      ![Region Selection](images/region.png " ")
+    ![Region Selection](images/region.png " ")
 
-2. Open the Main Menu, Navigate to **Developer Services** --> **Kubernetes Clusters (OKE)**
+1. Open the Main Menu, Navigate to **Developer Services** --> **Kubernetes Clusters (OKE)**
 
-      ![OKE Service](images/Select-OKE.png " ")
+    ![OKE Service](images/select-oke.png " ")
 
-3. Ensure **Compartment** devlivedemo is selected in the drop down box on the left navigation bar.
+1. Ensure **Compartment** devlivedemo is selected in the drop down box on the left navigation bar.
 
-      ![Select Compartment](images/select-compartment.png " ")
+    ![Select Compartment](images/select-compartment.png " ")
 
-4. Select the **Create Cluster** button
+1. Select the **Create Cluster** button
 
-      ![Create Cluster](images/create-cluster-1.png " ")
+    ![Create Cluster](images/create-cluster-1.png " ")
 
-5. In the **Create Cluster** dialog screen enter select **Quick Create** and then **Launch Workflow**.
+1. In the **Create Cluster** dialog screen enter select **Quick Create** and then **Launch Workflow**.
 
-      ![Quick Create](images/quick-create.png " ")
+    ![Quick Create](images/quick-create.png " ")
 
-6. On the **Quick Create Cluster** details page keep the default settings, or optionally choose a custom cluster name, worker node shape, etc.  
+1. On the **Quick Create Cluster** details page keep the default settings, or optionally choose a custom cluster name, worker node shape, etc.  
 
-      ![Quick Create Properties](images/cluster-defaults.png " ")
+    ![Quick Create Properties](images/cluster-defaults.png " ")
 
       **Optional:** Since this is a non-production evaluation cluster, consider reducing the number of worker nodes as shown below to minimize the deployment of underutilized resources. Cloud computing allows for easy scaling up (and down!) to match your exact resource requirements.
 
-      ![Quick Create Properties](images/Node-Count.png " ")
+    ![Quick Create Properties](images/node-count.png " ")
 
       Select **Next** to review.
 
 
-7. In the **Quick Create Cluster** review page, select **Create Cluster** to launch the deployment.
+1. In the **Quick Create Cluster** review page, select **Create Cluster** to launch the deployment.
 
-      ![Quick Create Review](images/create-cluster-2.png " ")
+    ![Quick Create Review](images/create-cluster-2.png " ")
 
-8. The cluster deployment process may take a few minutes to complete. In the meantime, let's move on to the final step of your cloud environment setup.
+1. The cluster deployment process may take a few minutes to complete. In the meantime, let's move on to the final step of your cloud environment setup.
 
 
 ## Task 4: Launch Cloud Shell
@@ -138,68 +140,69 @@ The final step of this section is to launch Cloud Shell, download sample code fi
 
 1. In the OCI Management Console, ensure you have selected the same region as your OKE cluster created in Task 3. Select the **Cloud Shell** icon in the upper right corner of the toolbar (see image below).  
 
-      ![Cloud Shell](images/Cloud-Shell.png " ")
+    ![Cloud Shell](images/cloud-shell.png " ")
 
       This will launch a small virtual machine configured with your specific OCI user permissions. A direct shell connection will open in the console window. You can minimize and maximize this shell as desired.
 
-            ![Cloud Shell](images/Cloud-Shell-Cluster.png " ")
+    ![Cloud Shell](images/cloud-shell-cluster.png " ")
 
       Within the Cloud Shell session , download the **sample code** files by executing the following wget command:
 
-      ```
-      wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/devlive-hol.zip
+    ```
+    wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/oci-library/devlive-hol.zip
 
-      ```
+    ```
 
       Unzip the package by executing the following command:
 
-      ```
-      unzip devlive-hol.zip
-      ```
+    ```
+    unzip devlive-hol.zip
+    ```
 
-2. By this time your OKE cluster should be online and available. In necessary, wait a few more moments. Navigate to **Developer Services** --> **Kubernetes Clusters (OKE)** if you are not already on this console page. Click on your cluster name **cluster1** to open the cluster properties page. Locate and open the **Quick Start** shortcut link on the lower left navigation bar to open the **Quick Start: Deploy Sample App** instructions.
+1. By this time your OKE cluster should be online and available. In necessary, wait a few more moments. Navigate to **Developer Services** --> **Kubernetes Clusters (OKE)** if you are not already on this console page. Click on your cluster name **cluster1** to open the cluster properties page. Locate and open the **Quick Start** shortcut link on the lower left navigation bar to open the **Quick Start: Deploy Sample App** instructions.
 
-      ![Quick Start](images/Quick-Start.png " ")
+    ![Quick Start](images/quick-start.png " ")
 
       Select **Access Cluster**
 
-            ![Access Cluster](images/Access-Cluster.png " ")
+    ![Access Cluster](images/access-cluster.png " ")
 
       Ensure **Cloud Shell Access** is selected. You should be able to skip Step 1, unless your Cloud Shell session has closed. Perform Step 2 by executing the listed command in your Cloud Shell session.
 
-      ![Access Cluster](images/kube-config.png " ")
+    ![Access Cluster](images/kube-config.png " ")
 
       Click **Close** to exit the Access Your Cluster dialog.
 
       Continue implementing steps 2 and 3 listed in the **Quick Start: Deploy Sample App** dialog. This will verify connectivity to your cluster and the ability to deploy apps from your Cloud Shell session.
 
-      ![Continue QuickStart](images/Continue-Quick-Start.png " ")
+    ![Continue QuickStart](images/continue-quick-start.png " ")
 
       After completing step 3, verify the deployment is active by executing the following command:
-      ```
-      $ kubectl get deployments
-      ```
+
+    ```
+    kubectl get deployments
+    ```
 
       Your output should be similar to the following:
 
-      ```
-      NAME               READY   UP-TO-DATE   AVAILABLE   AGE
-      nginx-deployment    2/2     2            2          16s
-      ```
+    ```
+    NAME               READY   UP-TO-DATE   AVAILABLE   AGE
+    nginx-deployment    2/2     2            2          16s
+    ```
 
       Finally, delete the sample deployment by executing the following command:
 
-      ```
-      $ kubectl delete deployment nginx-deployment
-      ```
+    ```
+    kubectl delete deployment nginx-deployment
+    ```
 
       You should see confirmation similar to the following:
 
-      ```
-      deployment.apps "nginx-deployment" deleted
-      ```
+    ```
+    deployment.apps "nginx-deployment" deleted
+    ```
 
- **Congratulations!**  You have completed **Setup the Environment**. You may proceed to **OKE Apps and OCI Logging**
+    **Congratulations!**  You have completed **Setup the Environment**. You may proceed to **OKE Apps and OCI Logging**
 
 ## Learn More
 
@@ -209,5 +212,6 @@ The final step of this section is to launch Cloud Shell, download sample code fi
 * [OCI Cloud Shell](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cloudshellintro.htm)
 
 ## Acknowledgements
+
 * **Author** - Randall Barnes, Solution Architect, OCI Observability Team
 * **Last Updated Date** - July, 2021
