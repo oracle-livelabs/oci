@@ -35,46 +35,46 @@ Basic data labeling tool is provided within OCI. With this data labeling tool, y
 But before you continue, you need to perform the first step, **Create Dataset** based on your object storage based image library.
 
 1. Navigate to Data Labeling page. From the **Navigator** menu select **Analytics & AI** and then **Data Labeling**.
- 
 
-2. Go to datasets. Click on **Datasets** link under **Data Labeling** on the left side of the page.
- 
 
-3. Create a new dataset. This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you have created for this workshop).   
+1. Go to datasets. Click on **Datasets** link under **Data Labeling** on the left side of the page.
+
+
+1. Create a new dataset. This will open **Dataset list** page in selected compartment (make sure you are in correct compartment as you might need to change compartment to the one you have created for this workshop).
   
     Select *Images* from **Dataset format** and *Single label* for **Annotation class**.
   
     Click **Next**
   
-4. Click *Select from Object storage* and select *Object storage bucket location* where the Breast cancer images have been uploaded.
-   
+1. Click *Select from Object storage* and select *Object storage bucket location* where the Breast cancer images have been uploaded.
+
   
-5. Add labels
+1. Add labels
   
     Enter two labels: **BREAST\-WITH\-CANCER**, **NORMAL\-BREAST** in **Labels set** field.
 
     Click **Next** and Review the details provided and click **Create**
 
-6. Your vision model will look like as shown below, for example **Lung Cancer Image Classification Model**, Here you can upload new custom images and check for the Model confidence score and train the model further if required. 
+1. Your vision model will look like as shown below, for example **Lung Cancer Image Classification Model**, Here you can upload new custom images and check for the Model confidence score and train the model further if required.
 
     ![Data labeling on Github](./images/vision-model.png " ")
   
- 
+
 ## Task 2: Bulk image labeling
 
 1. We have 5000+ images to label. This is too much to label images manually, hence we will use a python program to label images programmatically.
 
-2. Oracle provides code which can be adjusted and used in your specific case. You can find the *original code* on [Github](https://github.com/oracle-samples/oci-data-science-ai-samples/tree/master/data_labeling_examples).
+1. Oracle provides code which can be adjusted and used in your specific case. You can find the *original code* on [Github](https://github.com/oracle-samples/oci-data-science-ai-samples/tree/master/data_labeling_examples).
 
     ![Data labeling on Github](./images/data-labeling-examples.png " ")
 
-3. Alternatively you can also download this python code. [data-labeling-python-code.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/partner-solutions/oas-and-vision/lab2.zip) to your computer.
+1. Alternatively you can also download this python code. [data-labeling-python-code.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/partner-solutions/oas-and-vision/lab2.zip) to your computer.
 
-4. Extract the zip file, it creates a folder structure similar 
+1. Extract the zip file, it creates a folder structure similar
 
     ![extract structure](images/view-extraction.png =60%x*)
- 
-5. Update *config.py* file with required configuration parameters
+
+1. Update *config.py* file with required configuration parameters
 
     In order to run the data labeling program properly, you need to make some changes in */data-labeling/config.py* and */.oci/config* files.
 
@@ -106,7 +106,8 @@ But before you continue, you need to perform the first step, **Create Dataset** 
     # maximum number of DLS Dataset records that can be retrieved from the list_records API operation for labeling
     # limit=1000 is the hard limit for list_records
     list_records_limit = 1000</copy>
-    ``` 
+    ```
+
     Review the main.py  
 
     ```python
@@ -146,9 +147,9 @@ But before you continue, you need to perform the first step, **Create Dataset** 
         print()
     main()
     </copy>
-    ``` 
-   
-6. You can finally start with bulk image labeling. Run *main.py*.
+    ```
+
+1. You can finally start with bulk image labeling. Run *main.py*.
 
     ```text
     <copy>python3 main.py</copy>
@@ -159,19 +160,20 @@ But before you continue, you need to perform the first step, **Create Dataset** 
 ## Task 3: Verify Bulk Data labeled images
 
 1. Verify if all the files have been labeled by our python code.
- 
 
-2. We can click on the image and update label if required or verify the label
 
-Please refer [OCI Data Labeling Service](https://docs.oracle.com/en-us/iaas/Content/data-labeling/using/home.htm) for more details 
- 
+1. We can click on the image and update label if required or verify the label
+
+    Please refer [OCI Data Labeling Service](https://docs.oracle.com/en-us/iaas/Content/data-labeling/using/home.htm) for more details
+
   
-This concludes this lab. You can **proceed to the next lab**.
+    This concludes this lab. You can **proceed to the next lab**.
 
 ## Learn More
 
 * [OCI Data Labeling](https://docs.oracle.com/en-us/iaas/data-labeling/data-labeling/using/home.htm)
- 
+
 ## Acknowledgements
+
 * **Author** - Madhusudhan Rao B M, Principal Product Manager, Oracle Database
 * **Last Updated By/Date** - Sept 26th, 2025.
